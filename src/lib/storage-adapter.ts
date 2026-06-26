@@ -138,6 +138,61 @@ export const devicesAdapter = {
 }
 
 // ───────── AUTH ─────────
+export const usersAdapter = {
+  async list(): Promise<AppUser[]> {
+    if (!isSupabaseEnabled) return []
+
+    const { data, error } = await supabase
+      .from('users')
+      .select('*')
+      .order('nome')
+
+    if (error) throw error
+    return (data || []) as AppUser[]
+  },
+
+  async create(input: {
+    nome: string
+    email: string
+    password: string
+    role: AppUser['role']
+    telefone?: string
+  }): Promise<AppUser> {
+    if (!isSupabaseEnabled) throw new Error('Supabase nao configurado')
+
+    const { data, error } = await supabase.functions.invoke('manage-user', {
+      body: { action: 'create', user: input },
+    })
+
+    if (error) throw error
+    if (data?.error) throw new Error(data.error)
+    return data.user as AppUser
+  },
+
+  async update(id: string, updates: Partial<AppUser>): Promise<AppUser> {
+    if (!isSupabaseEnabled) throw new Error('Supabase nao configurado')
+
+    const { data, error } = await supabase.functions.invoke('manage-user', {
+      body: { action: 'update', userId: id, updates },
+    })
+
+    if (error) throw error
+    if (data?.error) throw new Error(data.error)
+    return data.user as AppUser
+  },
+
+  async delete(id: string): Promise<void> {
+    if (!isSupabaseEnabled) throw new Error('Supabase nao configurado')
+
+    const { data, error } = await supabase.functions.invoke('manage-user', {
+      body: { action: 'delete', userId: id },
+    })
+
+    if (error) throw error
+    if (data?.error) throw new Error(data.error)
+  },
+}
+
 export const authAdapter = {
   async signIn(email: string, password: string): Promise<AppUser> {
     if (!isSupabaseEnabled) {
@@ -161,7 +216,10 @@ export const authAdapter = {
       .eq('id', data.user.id)
       .maybeSingle()
 
-    if (profile && !profileError) return profile as unknown as AppUser
+    if (profile && !profileError) {
+      if (!profile.ativo) throw new Error('Usuario desativado. Fale com o administrador.')
+      return profile as unknown as AppUser
+    }
 
     return {
       id: data.user.id,
@@ -189,7 +247,13 @@ export const authAdapter = {
       .eq('id', data.session.user.id)
       .maybeSingle()
 
-    if (profile) return profile as unknown as AppUser
+    if (profile) {
+      if (!profile.ativo) {
+        await supabase.auth.signOut()
+        return null
+      }
+      return profile as unknown as AppUser
+    }
 
     return {
       id: data.session.user.id,

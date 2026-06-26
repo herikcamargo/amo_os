@@ -22,6 +22,7 @@ interface AppState {
   authReady: boolean
 
   setUser: (user: AppUser | null) => void
+  setUsers: (users: AppUser[]) => void
   setOrders: (orders: ServiceOrder[]) => void
   addOrder: (order: ServiceOrder) => void
   updateOrder: (id: string, updates: Partial<ServiceOrder>) => void
@@ -60,6 +61,7 @@ export const useStore = create<AppState>()(
       isCloudConnected: isSupabaseEnabled,
 
       setUser: (user) => set({ user }),
+      setUsers: (users) => set({ users }),
       setOrders: (orders) => set({ orders }),
 
       addOrder: (order) => set((s) => ({ orders: [order, ...s.orders] })),

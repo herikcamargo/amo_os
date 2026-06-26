@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import {
   ChevronLeft, UsersRound, Plus, Shield, Edit2, Trash2,
@@ -7,15 +7,33 @@ import {
 import { useStore } from '@/store/useStore'
 import { IconBtn } from '@/components/ui/IconBtn'
 import { can, roleLabel, roleColor, roleDescription } from '@/lib/permissions'
-import { generateId } from '@/lib/utils'
+import { isSupabaseEnabled, usersAdapter } from '@/lib/storage-adapter'
 import type { AppUser, UserRole } from '@/types/database'
 import toast from 'react-hot-toast'
 
+interface UserFormData extends Partial<AppUser> {
+  password?: string
+}
+
 export function UserManagement() {
   const navigate = useNavigate()
-  const { user, users, addUser, updateUser, removeUser } = useStore()
+  const { user, users, setUsers, addUser, updateUser, removeUser } = useStore()
   const [editing, setEditing] = useState<AppUser | null>(null)
   const [creating, setCreating] = useState(false)
+  const [loading, setLoading] = useState(false)
+
+  useEffect(() => {
+    if (!can(user, 'manage_users') || !isSupabaseEnabled) return
+
+    setLoading(true)
+    usersAdapter.list()
+      .then(setUsers)
+      .catch((err) => {
+        console.error('Falha ao carregar usuarios:', err)
+        toast.error('Nao consegui carregar os usuarios')
+      })
+      .finally(() => setLoading(false))
+  }, [setUsers, user])
 
   if (!can(user, 'manage_users')) {
     return (
@@ -26,30 +44,87 @@ export function UserManagement() {
         </div>
         <div className="bg-surface-card rounded-[20px] border border-red-500/20 p-8 text-center">
           <Lock size={28} className="text-red-400 mx-auto mb-3" />
-          <p className="text-sm text-gray-400">Apenas administradores podem gerenciar usuários.</p>
+          <p className="text-sm text-gray-400">Apenas administradores podem gerenciar usuarios.</p>
         </div>
       </div>
     )
   }
 
-  const handleDelete = (id: string, nome: string) => {
+  const handleDelete = async (id: string, nome: string) => {
     if (id === user?.id) {
-      toast.error('Você não pode excluir a si mesmo')
+      toast.error('Voce nao pode excluir a si mesmo')
       return
     }
-    if (confirm(`Excluir o usuário "${nome}"? Esta ação não pode ser desfeita.`)) {
+
+    if (!confirm(`Excluir o usuario "${nome}"? Esta acao nao pode ser desfeita.`)) return
+
+    try {
+      if (isSupabaseEnabled) await usersAdapter.delete(id)
       removeUser(id)
-      toast.success(`Usuário ${nome} removido`)
+      toast.success(`Usuario ${nome} removido`)
+    } catch (err) {
+      const message = err instanceof Error ? err.message : 'Erro desconhecido'
+      toast.error(`Nao consegui excluir: ${message}`)
     }
   }
 
-  const handleToggleActive = (u: AppUser) => {
+  const handleToggleActive = async (u: AppUser) => {
     if (u.id === user?.id) {
-      toast.error('Você não pode desativar a si mesmo')
+      toast.error('Voce nao pode desativar a si mesmo')
       return
     }
-    updateUser(u.id, { ativo: !u.ativo })
-    toast.success(u.ativo ? `${u.nome} desativado` : `${u.nome} ativado`)
+
+    try {
+      const updates = { ativo: !u.ativo }
+      const saved = isSupabaseEnabled ? await usersAdapter.update(u.id, updates) : { ...u, ...updates }
+      updateUser(u.id, saved)
+      toast.success(u.ativo ? `${u.nome} desativado` : `${u.nome} ativado`)
+    } catch (err) {
+      const message = err instanceof Error ? err.message : 'Erro desconhecido'
+      toast.error(`Nao consegui atualizar: ${message}`)
+    }
+  }
+
+  const handleSave = async (data: UserFormData) => {
+    try {
+      if (editing) {
+        const saved = isSupabaseEnabled ? await usersAdapter.update(editing.id, data) : { ...editing, ...data }
+        updateUser(editing.id, saved)
+        toast.success('Usuario atualizado')
+      } else {
+        if (isSupabaseEnabled && !data.password) {
+          toast.error('Senha inicial obrigatoria')
+          return
+        }
+
+        const newUser = isSupabaseEnabled
+          ? await usersAdapter.create({
+            nome: data.nome || '',
+            email: data.email || '',
+            password: data.password || '',
+            role: data.role || 'atendente',
+            telefone: data.telefone,
+          })
+          : {
+            id: crypto.randomUUID(),
+            nome: data.nome || '',
+            email: data.email || '',
+            role: data.role || 'atendente',
+            ativo: true,
+            telefone: data.telefone,
+            created_at: new Date().toISOString(),
+          }
+
+        addUser(newUser)
+        toast.success('Usuario criado')
+      }
+
+      setEditing(null)
+      setCreating(false)
+    } catch (err) {
+      const message = err instanceof Error ? err.message : 'Erro desconhecido'
+      toast.error(`Nao consegui salvar: ${message}`)
+    }
   }
 
   return (
@@ -57,8 +132,10 @@ export function UserManagement() {
       <div className="flex items-center gap-3 pt-2 mb-6">
         <IconBtn onClick={() => navigate('/ajustes')}><ChevronLeft size={22} /></IconBtn>
         <div className="flex-1">
-          <h1 className="text-xl md:text-2xl font-bold tracking-tight">Usuários</h1>
-          <p className="text-xs text-gray-500 mt-0.5">{users.length} usuário(s) cadastrado(s)</p>
+          <h1 className="text-xl md:text-2xl font-bold tracking-tight">Usuarios</h1>
+          <p className="text-xs text-gray-500 mt-0.5">
+            {loading ? 'Carregando usuarios...' : `${users.length} usuario(s) cadastrado(s)`}
+          </p>
         </div>
         <button
           onClick={() => setCreating(true)}
@@ -68,7 +145,6 @@ export function UserManagement() {
         </button>
       </div>
 
-      {/* Legenda de perfis */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-6">
         {(['admin', 'atendente', 'tecnico'] as UserRole[]).map((role) => (
           <div
@@ -87,7 +163,6 @@ export function UserManagement() {
         ))}
       </div>
 
-      {/* Lista */}
       <div className="bg-surface-card rounded-[20px] border border-white/5 divide-y divide-white/5">
         {users.map((u) => (
           <UserRow
@@ -101,31 +176,11 @@ export function UserManagement() {
         ))}
       </div>
 
-      {/* Modal de edição/criação */}
       {(editing || creating) && (
         <UserModal
           user={editing}
           onClose={() => { setEditing(null); setCreating(false) }}
-          onSave={(data) => {
-            if (editing) {
-              updateUser(editing.id, data)
-              toast.success('Usuário atualizado')
-            } else {
-              const newUser: AppUser = {
-                id: generateId(),
-                nome: data.nome || '',
-                email: data.email || '',
-                role: data.role || 'atendente',
-                ativo: data.ativo ?? true,
-                telefone: data.telefone,
-                created_at: new Date().toISOString(),
-              }
-              addUser(newUser)
-              toast.success('Usuário criado')
-            }
-            setEditing(null)
-            setCreating(false)
-          }}
+          onSave={handleSave}
         />
       )}
     </div>
@@ -153,7 +208,7 @@ function UserRow({ user, isMe, onEdit, onDelete, onToggle }: {
           <span className="font-semibold text-sm">{user.nome}</span>
           {isMe && (
             <span className="text-[9px] uppercase font-bold px-1.5 py-0.5 rounded-full bg-brand/20 text-brand">
-              Você
+              Voce
             </span>
           )}
           {!user.ativo && (
@@ -209,19 +264,34 @@ function UserRow({ user, isMe, onEdit, onDelete, onToggle }: {
 function UserModal({ user, onClose, onSave }: {
   user: AppUser | null
   onClose: () => void
-  onSave: (data: Partial<AppUser>) => void
+  onSave: (data: UserFormData) => void | Promise<void>
 }) {
   const [nome, setNome] = useState(user?.nome || '')
   const [email, setEmail] = useState(user?.email || '')
   const [telefone, setTelefone] = useState(user?.telefone || '')
   const [role, setRole] = useState<UserRole>(user?.role || 'atendente')
+  const [password, setPassword] = useState('')
+  const [saving, setSaving] = useState(false)
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     if (!nome.trim() || !email.trim()) {
-      toast.error('Nome e e-mail são obrigatórios')
+      toast.error('Nome e e-mail sao obrigatorios')
       return
     }
-    onSave({ nome, email, telefone: telefone || undefined, role })
+    if (!user && password.length < 6) {
+      toast.error('A senha inicial precisa ter pelo menos 6 caracteres')
+      return
+    }
+
+    setSaving(true)
+    await onSave({
+      nome: nome.trim(),
+      email: email.trim().toLowerCase(),
+      telefone: telefone.trim() || undefined,
+      role,
+      password: password || undefined,
+    })
+    setSaving(false)
   }
 
   return (
@@ -232,41 +302,19 @@ function UserModal({ user, onClose, onSave }: {
       >
         <div className="w-10 h-1 rounded-full bg-white/20 mx-auto mb-4 md:hidden" />
         <div className="flex items-center justify-between mb-5">
-          <h2 className="text-lg font-bold">{user ? 'Editar usuário' : 'Novo usuário'}</h2>
+          <h2 className="text-lg font-bold">{user ? 'Editar usuario' : 'Novo usuario'}</h2>
           <button onClick={onClose} className="text-gray-400 hover:text-white">
             <X size={20} />
           </button>
         </div>
 
         <div className="space-y-4">
-          <div>
-            <label className="block text-sm text-gray-400 mb-1.5">Nome *</label>
-            <input
-              value={nome}
-              onChange={(e) => setNome(e.target.value)}
-              placeholder="Nome completo"
-              className="w-full h-11 px-3 rounded-xl bg-surface-input border border-white/5 focus:border-brand outline-none text-sm"
-            />
-          </div>
-          <div>
-            <label className="block text-sm text-gray-400 mb-1.5">E-mail *</label>
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="usuario@amocelular.com"
-              className="w-full h-11 px-3 rounded-xl bg-surface-input border border-white/5 focus:border-brand outline-none text-sm"
-            />
-          </div>
-          <div>
-            <label className="block text-sm text-gray-400 mb-1.5">Telefone</label>
-            <input
-              value={telefone}
-              onChange={(e) => setTelefone(e.target.value)}
-              placeholder="(16) 99999-9999 (opcional)"
-              className="w-full h-11 px-3 rounded-xl bg-surface-input border border-white/5 focus:border-brand outline-none text-sm"
-            />
-          </div>
+          <Field label="Nome *" value={nome} onChange={setNome} placeholder="Nome completo" />
+          <Field label="E-mail *" value={email} onChange={setEmail} placeholder="usuario@amocelular.com" type="email" />
+          <Field label="Telefone" value={telefone} onChange={setTelefone} placeholder="(16) 99999-9999 (opcional)" />
+          {!user && (
+            <Field label="Senha inicial *" value={password} onChange={setPassword} placeholder="Minimo 6 caracteres" type="password" />
+          )}
 
           <div>
             <label className="block text-sm text-gray-400 mb-1.5">Perfil de acesso</label>
@@ -298,12 +346,34 @@ function UserModal({ user, onClose, onSave }: {
 
           <button
             onClick={handleSubmit}
-            className="w-full h-12 rounded-xl bg-brand font-semibold text-sm flex items-center justify-center gap-2 active:scale-95 hover:scale-[1.02] transition-all"
+            disabled={saving}
+            className="w-full h-12 rounded-xl bg-brand font-semibold text-sm flex items-center justify-center gap-2 active:scale-95 hover:scale-[1.02] transition-all disabled:opacity-60"
           >
-            <UsersRound size={16} /> {user ? 'Salvar alterações' : 'Criar usuário'}
+            <UsersRound size={16} /> {saving ? 'Salvando...' : user ? 'Salvar alteracoes' : 'Criar usuario'}
           </button>
         </div>
       </div>
+    </div>
+  )
+}
+
+function Field({ label, value, onChange, placeholder, type = 'text' }: {
+  label: string
+  value: string
+  onChange: (value: string) => void
+  placeholder: string
+  type?: string
+}) {
+  return (
+    <div>
+      <label className="block text-sm text-gray-400 mb-1.5">{label}</label>
+      <input
+        type={type}
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+        placeholder={placeholder}
+        className="w-full h-11 px-3 rounded-xl bg-surface-input border border-white/5 focus:border-brand outline-none text-sm"
+      />
     </div>
   )
 }
