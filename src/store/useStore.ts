@@ -1,7 +1,7 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 import type { ServiceOrder, AppUser } from '@/types/database'
-import { ordersAdapter, isSupabaseEnabled } from '@/lib/storage-adapter'
+import { authAdapter, ordersAdapter, isSupabaseEnabled } from '@/lib/storage-adapter'
 
 interface Notification {
   id: string
@@ -19,6 +19,7 @@ interface AppState {
   notifications: Notification[]
   osCounter: number
   loading: boolean
+  authReady: boolean
 
   setUser: (user: AppUser | null) => void
   setOrders: (orders: ServiceOrder[]) => void
@@ -33,6 +34,8 @@ interface AppState {
   markAllNotificationsRead: () => void
   nextOsNumber: () => string
   setLoading: (loading: boolean) => void
+  initializeAuth: () => Promise<void>
+  signOut: () => Promise<void>
   resetToDemo: () => void
   syncFromSupabase: () => Promise<void>
   isCloudConnected: boolean
@@ -43,10 +46,7 @@ const DEMO_DATA = buildDemoData()
 export const useStore = create<AppState>()(
   persist(
     (set, get) => ({
-      user: {
-        id: 'u1', nome: 'Herik', email: 'admin@amocelular.com',
-        role: 'admin', ativo: true, created_at: '2026-01-01T00:00:00Z',
-      },
+      user: null,
       users: [
         { id: 'u1', nome: 'Herik', email: 'admin@amocelular.com', role: 'admin', ativo: true, created_at: '2026-01-01T00:00:00Z' },
         { id: 'u2', nome: 'Bia Souza', email: 'bia@amocelular.com', role: 'atendente', ativo: true, telefone: '(16) 99000-0001', created_at: '2026-02-01T00:00:00Z' },
@@ -56,6 +56,7 @@ export const useStore = create<AppState>()(
       notifications: DEMO_DATA.notifications,
       osCounter: 124,
       loading: false,
+      authReady: false,
       isCloudConnected: isSupabaseEnabled,
 
       setUser: (user) => set({ user }),
@@ -118,6 +119,32 @@ export const useStore = create<AppState>()(
 
       setLoading: (loading) => set({ loading }),
 
+      initializeAuth: async () => {
+        if (!isSupabaseEnabled) {
+          set({ user: null, authReady: true })
+          return
+        }
+
+        set({ loading: true })
+        try {
+          const user = await authAdapter.getSession()
+          set({ user, authReady: true, loading: false })
+        } catch (err) {
+          console.warn('Falha ao carregar sessão do Supabase:', err)
+          set({ user: null, authReady: true, loading: false })
+        }
+      },
+
+      signOut: async () => {
+        try {
+          await authAdapter.signOut()
+        } catch (err) {
+          console.warn('Falha ao sair do Supabase:', err)
+        } finally {
+          set({ user: null, orders: [], notifications: [], loading: false })
+        }
+      },
+
       resetToDemo: () => set({
         orders: DEMO_DATA.orders,
         notifications: DEMO_DATA.notifications,
@@ -138,7 +165,17 @@ export const useStore = create<AppState>()(
     }),
     {
       name: 'amo-os-storage',
-      version: 1,
+      version: 2,
+      partialize: (state) => ({
+        users: state.users,
+        orders: state.orders,
+        notifications: state.notifications,
+        osCounter: state.osCounter,
+      }),
+      migrate: (persisted) => {
+        if (!persisted || typeof persisted !== 'object') return persisted
+        return { ...(persisted as object), user: null, authReady: false, loading: false }
+      },
     },
   ),
 )

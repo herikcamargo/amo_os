@@ -167,7 +167,7 @@ export const authAdapter = {
       id: data.user.id,
       nome: data.user.user_metadata?.nome || data.user.email?.split('@')[0] || 'Usuario',
       email: data.user.email || email,
-      role: 'admin',
+      role: 'atendente',
       ativo: true,
       created_at: data.user.created_at || new Date().toISOString(),
     }
@@ -195,7 +195,7 @@ export const authAdapter = {
       id: data.session.user.id,
       nome: data.session.user.user_metadata?.nome || data.session.user.email?.split('@')[0] || 'Usuario',
       email: data.session.user.email || '',
-      role: 'admin',
+      role: 'atendente',
       ativo: true,
       created_at: data.session.user.created_at || new Date().toISOString(),
     }

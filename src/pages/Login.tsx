@@ -9,6 +9,7 @@ import toast from 'react-hot-toast'
 export function Login() {
   const navigate = useNavigate()
   const { setUser, users, isCloudConnected } = useStore()
+  const allowDemoLogin = !isCloudConnected && !import.meta.env.PROD
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [showPass, setShowPass] = useState(false)
@@ -30,6 +31,12 @@ export function Login() {
       } finally {
         setLoading(false)
       }
+      return
+    }
+
+    if (!allowDemoLogin) {
+      toast.error('Supabase nao configurado. Verifique as variaveis na Vercel.')
+      setLoading(false)
       return
     }
 
@@ -119,7 +126,7 @@ export function Login() {
           </button>
         </form>
 
-        {!isCloudConnected && (
+        {allowDemoLogin && (
           <div className="mt-8">
             <div className="text-center mb-3">
               <div className="text-[10px] uppercase tracking-wider text-gray-500 font-bold">

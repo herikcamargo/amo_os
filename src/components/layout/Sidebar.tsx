@@ -18,13 +18,18 @@ const NAV_ITEMS = [
 export function Sidebar() {
   const navigate = useNavigate()
   const location = useLocation()
-  const { user, notifications, isCloudConnected } = useStore()
+  const { user, notifications, isCloudConnected, signOut } = useStore()
   const unread = useMemo(() => notifications.filter((n) => !n.read).length, [notifications])
   const visibleNav = NAV_ITEMS.filter((it) => !it.requires || can(user, it.requires))
 
   const isActive = (key: string) => {
     if (key === '/') return location.pathname === '/'
     return location.pathname.startsWith(key)
+  }
+
+  const handleSignOut = async () => {
+    await signOut()
+    navigate('/login', { replace: true })
   }
 
   return (
@@ -109,7 +114,11 @@ export function Sidebar() {
               {user ? roleLabel(user.role) : ''}
             </div>
           </div>
-          <button className="text-gray-500 hover:text-red-400 transition-colors">
+          <button
+            onClick={handleSignOut}
+            title="Sair da conta"
+            className="text-gray-500 hover:text-red-400 transition-colors"
+          >
             <LogOut size={16} />
           </button>
         </div>

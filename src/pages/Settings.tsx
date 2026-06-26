@@ -8,7 +8,7 @@ import { can, roleLabel } from '@/lib/permissions'
 
 export function Settings() {
   const navigate = useNavigate()
-  const { user, isCloudConnected } = useStore()
+  const { user, isCloudConnected, signOut } = useStore()
   const canManageUsers = can(user, 'manage_users')
   const canManageDb = can(user, 'manage_database')
   const canManageIntegrations = can(user, 'manage_integrations')
@@ -58,6 +58,11 @@ export function Settings() {
     },
   ]
 
+  const handleSignOut = async () => {
+    await signOut()
+    navigate('/login', { replace: true })
+  }
+
   return (
     <div className="px-5 pt-3">
       <div className="pt-2 mb-6">
@@ -102,7 +107,10 @@ export function Settings() {
         </div>
       ))}
 
-      <button className="w-full h-12 rounded-xl bg-red-500/10 border border-red-500/20 text-red-400 font-semibold text-sm flex items-center justify-center gap-2 active:scale-95 transition-transform mb-8">
+      <button
+        onClick={handleSignOut}
+        className="w-full h-12 rounded-xl bg-red-500/10 border border-red-500/20 text-red-400 font-semibold text-sm flex items-center justify-center gap-2 active:scale-95 transition-transform mb-8"
+      >
         <LogOut size={16} /> Sair da conta
       </button>
 

@@ -15,13 +15,21 @@ import { CloudSetup } from '@/pages/CloudSetup'
 import { UserManagement } from '@/pages/UserManagement'
 
 export default function App() {
-  const { user, isCloudConnected, syncFromSupabase } = useStore()
+  const { user, authReady, isCloudConnected, initializeAuth, syncFromSupabase } = useStore()
 
   useEffect(() => {
-    if (user && isCloudConnected) {
+    initializeAuth()
+  }, [initializeAuth])
+
+  useEffect(() => {
+    if (authReady && user && isCloudConnected) {
       syncFromSupabase()
     }
-  }, [user, isCloudConnected, syncFromSupabase])
+  }, [authReady, user, isCloudConnected, syncFromSupabase])
+
+  if (!authReady) {
+    return <LoadingScreen />
+  }
 
   if (!user) {
     return (
@@ -49,5 +57,25 @@ export default function App() {
       <Route path="/login" element={<Navigate to="/" replace />} />
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
+  )
+}
+
+function LoadingScreen() {
+  return (
+    <div className="min-h-screen bg-surface text-white flex items-center justify-center px-6">
+      <div className="w-full max-w-[320px] text-center">
+        <div className="text-[32px] font-black tracking-tight">
+          Amo<span className="text-brand">Celular</span>
+          <span className="text-brand text-xl align-top ml-0.5">♥</span>
+        </div>
+        <div className="text-[10px] tracking-[0.25em] text-gray-500 font-medium mt-1.5">
+          ASSISTENCIA TECNICA
+        </div>
+        <div className="mt-8 h-1.5 rounded-full bg-white/10 overflow-hidden">
+          <div className="h-full w-1/2 rounded-full bg-brand animate-shimmer" />
+        </div>
+        <div className="text-xs text-gray-500 mt-4">Carregando sessão...</div>
+      </div>
+    </div>
   )
 }
