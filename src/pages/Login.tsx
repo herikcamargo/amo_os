@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { Eye, EyeOff, Shield } from 'lucide-react'
 import { useStore } from '@/store/useStore'
 import { roleColor, roleLabel } from '@/lib/permissions'
+import { authAdapter } from '@/lib/storage-adapter'
 import toast from 'react-hot-toast'
 
 export function Login() {
@@ -16,6 +17,21 @@ export function Login() {
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault()
     setLoading(true)
+
+    if (isCloudConnected) {
+      try {
+        const profile = await authAdapter.signIn(email, password)
+        setUser(profile)
+        toast.success(`Bem-vindo, ${profile.nome}!`)
+        navigate('/')
+      } catch (err) {
+        const message = err instanceof Error ? err.message : 'Erro desconhecido'
+        toast.error(`Nao consegui entrar: ${message}`)
+      } finally {
+        setLoading(false)
+      }
+      return
+    }
 
     setTimeout(() => {
       const match = users.find((u) => u.email.toLowerCase() === email.toLowerCase() && u.ativo)

@@ -12,6 +12,18 @@ import type { ServiceOrder, Customer, Device, AppUser } from '@/types/database'
 
 export const isSupabaseEnabled = !isDemoMode
 
+type CreateOrderInput = Omit<ServiceOrder, 'id' | 'numero' | 'created_at' | 'updated_at' | 'created_by'> & {
+  created_by?: string | null
+}
+
+type CreateDeviceInput = Omit<Device, 'id' | 'created_at'>
+
+const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i
+
+function validUuidOrNull(value?: string | null) {
+  return value && UUID_RE.test(value) ? value : null
+}
+
 // ───────── ORDERS ─────────
 export const ordersAdapter = {
   async list(): Promise<ServiceOrder[]> {
@@ -26,7 +38,7 @@ export const ordersAdapter = {
     return (data || []).map(rowToOrder)
   },
 
-  async create(order: Omit<ServiceOrder, 'id' | 'numero' | 'created_at' | 'updated_at'>): Promise<ServiceOrder> {
+  async create(order: CreateOrderInput): Promise<ServiceOrder> {
     if (!isSupabaseEnabled) throw new Error('Supabase não configurado')
 
     const { data, error } = await supabase
@@ -39,7 +51,7 @@ export const ordersAdapter = {
         condicao_estetica: order.condicao_estetica,
         valor_servico: order.valor_servico,
         garantia_dias: order.garantia_dias,
-        created_by: order.created_by,
+        created_by: validUuidOrNull(order.created_by),
       })
       .select()
       .single()
@@ -111,7 +123,7 @@ export const customersAdapter = {
 
 // ───────── DEVICES ─────────
 export const devicesAdapter = {
-  async create(device: Omit<Device, 'id' | 'created_at'>): Promise<Device> {
+  async create(device: CreateDeviceInput): Promise<Device> {
     if (!isSupabaseEnabled) throw new Error('Supabase não configurado')
 
     const { data, error } = await supabase
@@ -143,13 +155,22 @@ export const authAdapter = {
     const { data, error } = await supabase.auth.signInWithPassword({ email, password })
     if (error) throw error
 
-    const { data: profile } = await supabase
+    const { data: profile, error: profileError } = await supabase
       .from('users')
       .select('*')
       .eq('id', data.user.id)
-      .single()
+      .maybeSingle()
 
-    return profile as unknown as AppUser
+    if (profile && !profileError) return profile as unknown as AppUser
+
+    return {
+      id: data.user.id,
+      nome: data.user.user_metadata?.nome || data.user.email?.split('@')[0] || 'Usuario',
+      email: data.user.email || email,
+      role: 'admin',
+      ativo: true,
+      created_at: data.user.created_at || new Date().toISOString(),
+    }
   },
 
   async signOut(): Promise<void> {
@@ -166,9 +187,18 @@ export const authAdapter = {
       .from('users')
       .select('*')
       .eq('id', data.session.user.id)
-      .single()
+      .maybeSingle()
 
-    return profile as unknown as AppUser | null
+    if (profile) return profile as unknown as AppUser
+
+    return {
+      id: data.session.user.id,
+      nome: data.session.user.user_metadata?.nome || data.session.user.email?.split('@')[0] || 'Usuario',
+      email: data.session.user.email || '',
+      role: 'admin',
+      ativo: true,
+      created_at: data.session.user.created_at || new Date().toISOString(),
+    }
   },
 }
 

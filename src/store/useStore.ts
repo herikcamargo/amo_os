@@ -63,13 +63,29 @@ export const useStore = create<AppState>()(
 
       addOrder: (order) => set((s) => ({ orders: [order, ...s.orders] })),
 
-      updateOrder: (id, updates) => set((s) => ({
-        orders: s.orders.map((o) => o.id === id ? { ...o, ...updates } : o),
-      })),
+      updateOrder: (id, updates) => {
+        set((s) => ({
+          orders: s.orders.map((o) => o.id === id ? { ...o, ...updates } : o),
+        }))
 
-      deleteOrder: (id) => set((s) => ({
-        orders: s.orders.filter((o) => o.id !== id),
-      })),
+        if (isSupabaseEnabled) {
+          void ordersAdapter.update(id, updates).catch((err) => {
+            console.warn('Falha ao atualizar OS no Supabase:', err)
+          })
+        }
+      },
+
+      deleteOrder: (id) => {
+        set((s) => ({
+          orders: s.orders.filter((o) => o.id !== id),
+        }))
+
+        if (isSupabaseEnabled) {
+          void ordersAdapter.delete(id).catch((err) => {
+            console.warn('Falha ao excluir OS no Supabase:', err)
+          })
+        }
+      },
 
       addUser: (user) => set((s) => ({ users: [...s.users, user] })),
 

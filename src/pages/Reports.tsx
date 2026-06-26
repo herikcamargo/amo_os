@@ -12,10 +12,6 @@ export function Reports() {
   const navigate = useNavigate()
   const { orders, user } = useStore()
 
-  if (!can(user, 'view_reports')) {
-    return <AccessDenied onBack={() => navigate('/')} />
-  }
-
   const stats = useMemo(() => {
     const total = orders.length
     const abertas = orders.filter((o) => !['entregue', 'cancelado'].includes(o.status)).length
@@ -34,6 +30,10 @@ export function Reports() {
 
     return { total, abertas, faturamento, ticket, byStatus, byBrand }
   }, [orders])
+
+  if (!can(user, 'view_reports')) {
+    return <AccessDenied onBack={() => navigate('/')} />
+  }
 
   return (
     <div className="px-5 pt-3 pb-6">

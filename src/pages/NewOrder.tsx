@@ -6,10 +6,11 @@ import {
 } from 'lucide-react'
 import { useStore } from '@/store/useStore'
 import { IconBtn } from '@/components/ui/IconBtn'
-import { CHECK_ENTRADA, CONDICAO_ESTETICA_LABELS, ACESSORIOS_OPTIONS, MARCAS } from '@/lib/constants'
+import { CHECK_ENTRADA, CONDICAO_ESTETICA_LABELS, ACESSORIOS_OPTIONS, MARCAS, MODELOS_POR_MARCA } from '@/lib/constants'
 import { generateId } from '@/lib/utils'
 import { compressImage, formatFileSize } from '@/lib/image-compressor'
 import { uploadToDrive } from '@/lib/google-drive'
+import { customersAdapter, devicesAdapter, isSupabaseEnabled, ordersAdapter } from '@/lib/storage-adapter'
 import type { ServiceOrder, Customer, Device, CondicaoEstetica } from '@/types/database'
 import toast from 'react-hot-toast'
 
@@ -35,7 +36,7 @@ const STEPS: { key: Step; label: string; icon: typeof User }[] = [
 
 export function NewOrder() {
   const navigate = useNavigate()
-  const { addOrder, nextOsNumber } = useStore()
+  const { addOrder, nextOsNumber, user } = useStore()
   const [step, setStep] = useState<Step>('cliente')
   const [saving, setSaving] = useState(false)
 
@@ -108,6 +109,11 @@ export function NewOrder() {
   const [obsChecklist, setObsChecklist] = useState('')
 
   const stepIndex = STEPS.findIndex((s) => s.key === step)
+  const modeloQuery = modelo.trim().toLowerCase()
+  const modelosSugeridos = (MODELOS_POR_MARCA[marca] || [])
+    .filter((m) => !modeloQuery || m.toLowerCase().includes(modeloQuery))
+    .slice(0, 12)
+
   const canNext = () => {
     if (step === 'cliente') return nome.trim() && telefone.trim()
     return true
@@ -125,40 +131,112 @@ export function NewOrder() {
 
   const handleSave = async () => {
     setSaving(true)
-    const customerId = generateId()
-    const deviceId = generateId()
-    const orderId = generateId()
-    const now = new Date().toISOString()
-    const orderNum = nextOsNumber()
+    try {
+      const now = new Date().toISOString()
+      const condicaoEstetica = { ...condicao, descricao: descCondicao || undefined }
+      let savedOrder: ServiceOrder
 
-    // Upload fotos para Google Drive (ou localStorage em demo)
-    const photosWithBlob = photos.filter((p) => p.blob)
-    if (photosWithBlob.length > 0) {
-      toast.loading(`Enviando ${photosWithBlob.length} foto(s)...`, { id: 'upload' })
-      for (const photo of photosWithBlob) {
-        try {
-          await uploadToDrive(photo.blob!, `${photo.label}.jpg`, orderNum)
-        } catch {
-          console.warn(`Falha ao enviar foto ${photo.label}`)
+      if (isSupabaseEnabled) {
+        toast.loading('Salvando OS na nuvem...', { id: 'save-os' })
+
+        const customer = await customersAdapter.create({
+          nome: nome.trim(),
+          telefone: telefone.trim(),
+          cpf: cpf.trim() || null,
+        })
+
+        const device = await devicesAdapter.create({
+          customer_id: customer.id,
+          marca: marca.trim(),
+          modelo: modelo.trim(),
+          cor: cor.trim(),
+          imei: imei.trim() || null,
+          senha_desbloqueio: senhaDesbloqueio.trim() || null,
+          acessorios,
+        })
+
+        const order = await ordersAdapter.create({
+          customer_id: customer.id,
+          device_id: device.id,
+          status: 'recebido',
+          problema_relatado: problema.trim(),
+          condicao_estetica: condicaoEstetica,
+          valor_servico: 0,
+          garantia_dias: 0,
+          created_by: user?.id || null,
+          customer,
+          device,
+        })
+
+        savedOrder = { ...order, customer, device }
+        toast.success(`OS ${savedOrder.numero} salva na nuvem!`, { id: 'save-os' })
+      } else {
+        const customerId = generateId()
+        const deviceId = generateId()
+        const orderId = generateId()
+        const orderNum = nextOsNumber()
+
+        const customer: Customer = {
+          id: customerId,
+          nome: nome.trim(),
+          telefone: telefone.trim(),
+          cpf: cpf.trim() || null,
+          created_at: now,
+        }
+        const device: Device = {
+          id: deviceId,
+          customer_id: customerId,
+          marca: marca.trim(),
+          modelo: modelo.trim(),
+          cor: cor.trim(),
+          imei: imei.trim() || null,
+          senha_desbloqueio: senhaDesbloqueio.trim() || null,
+          acessorios,
+          created_at: now,
+        }
+
+        savedOrder = {
+          id: orderId,
+          numero: orderNum,
+          customer_id: customerId,
+          device_id: deviceId,
+          status: 'recebido',
+          problema_relatado: problema.trim(),
+          condicao_estetica: condicaoEstetica,
+          valor_servico: 0,
+          garantia_dias: 0,
+          created_by: user?.id || 'u1',
+          created_at: now,
+          updated_at: now,
+          customer,
+          device,
         }
       }
-      toast.success(`${photosWithBlob.length} foto(s) salva(s)!`, { id: 'upload' })
-    }
 
-    const customer: Customer = { id: customerId, nome, telefone, cpf: cpf || null, created_at: now }
-    const device: Device = { id: deviceId, customer_id: customerId, marca, modelo, cor, imei: imei || null, acessorios, created_at: now }
-    const order: ServiceOrder = {
-      id: orderId, numero: orderNum, customer_id: customerId, device_id: deviceId,
-      status: 'recebido', problema_relatado: problema,
-      condicao_estetica: { ...condicao, descricao: descCondicao || undefined },
-      valor_servico: 0, garantia_dias: 0, created_by: 'u1',
-      created_at: now, updated_at: now, customer, device,
-    }
+      addOrder(savedOrder)
 
-    addOrder(order)
-    toast.success(`OS ${orderNum} criada!`)
-    setSaving(false)
-    navigate(`/os/${orderId}`)
+      const photosWithBlob = photos.filter((p) => p.blob)
+      if (photosWithBlob.length > 0) {
+        toast.loading(`Enviando ${photosWithBlob.length} foto(s)...`, { id: 'upload' })
+        for (const photo of photosWithBlob) {
+          try {
+            await uploadToDrive(photo.blob!, `${photo.label}.jpg`, savedOrder.numero)
+          } catch {
+            console.warn(`Falha ao enviar foto ${photo.label}`)
+          }
+        }
+        toast.success(`${photosWithBlob.length} foto(s) salva(s)!`, { id: 'upload' })
+      }
+
+      if (!isSupabaseEnabled) toast.success(`OS ${savedOrder.numero} criada!`)
+      navigate(`/os/${savedOrder.id}`)
+    } catch (err) {
+      console.error('Falha ao criar OS:', err)
+      const message = err instanceof Error ? err.message : 'Erro desconhecido'
+      toast.error(`Nao consegui salvar a OS: ${message}`)
+    } finally {
+      setSaving(false)
+    }
   }
 
   const toggleAcessorio = (a: string) => {
@@ -218,6 +296,26 @@ export function NewOrder() {
             </div>
           </div>
           <Input label="Modelo" value={modelo} onChange={setModelo} placeholder="Ex: iPhone 13, Galaxy S22" />
+          {marca && modelosSugeridos.length > 0 && (
+            <div className="space-y-2">
+              <label className="block text-sm text-gray-400">Modelos sugeridos</label>
+              <div className="flex flex-wrap gap-2">
+                {modelosSugeridos.map((m) => (
+                  <button
+                    key={m}
+                    onClick={() => setModelo(m)}
+                    className={`text-xs px-3 py-1.5 rounded-full border transition-colors ${
+                      modelo === m
+                        ? 'bg-brand/20 border-brand text-white'
+                        : 'bg-white/5 border-white/10 text-gray-400 hover:border-brand/40 hover:text-white'
+                    }`}
+                  >
+                    {m}
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
           <Input label="Cor" value={cor} onChange={setCor} placeholder="Cor do aparelho" />
           <Input label="IMEI" value={imei} onChange={setImei} placeholder="15 dígitos (opcional)" />
           <Input label="Senha de desbloqueio" value={senhaDesbloqueio} onChange={setSenhaDesbloqueio} placeholder="PIN, padrão ou senha" type="password" />
