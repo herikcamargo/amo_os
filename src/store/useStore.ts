@@ -1,6 +1,7 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 import type { ServiceOrder, AppUser } from '@/types/database'
+import { ordersAdapter, isSupabaseEnabled } from '@/lib/storage-adapter'
 
 interface Notification {
   id: string
@@ -29,6 +30,8 @@ interface AppState {
   nextOsNumber: () => string
   setLoading: (loading: boolean) => void
   resetToDemo: () => void
+  syncFromSupabase: () => Promise<void>
+  isCloudConnected: boolean
 }
 
 const DEMO_DATA = buildDemoData()
@@ -44,6 +47,7 @@ export const useStore = create<AppState>()(
       notifications: DEMO_DATA.notifications,
       osCounter: 124,
       loading: false,
+      isCloudConnected: isSupabaseEnabled,
 
       setUser: (user) => set({ user }),
       setOrders: (orders) => set({ orders }),
@@ -84,6 +88,18 @@ export const useStore = create<AppState>()(
         notifications: DEMO_DATA.notifications,
         osCounter: 124,
       }),
+
+      syncFromSupabase: async () => {
+        if (!isSupabaseEnabled) return
+        set({ loading: true })
+        try {
+          const orders = await ordersAdapter.list()
+          set({ orders, loading: false })
+        } catch (err) {
+          console.warn('Falha ao sincronizar com Supabase:', err)
+          set({ loading: false })
+        }
+      },
     }),
     {
       name: 'amo-os-storage',

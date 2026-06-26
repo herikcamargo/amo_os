@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { Routes, Route, Navigate } from 'react-router-dom'
 import { useStore } from '@/store/useStore'
 import { AppShell } from '@/components/layout/AppShell'
@@ -10,9 +11,16 @@ import { Clients } from '@/pages/Clients'
 import { Settings } from '@/pages/Settings'
 import { Reports } from '@/pages/Reports'
 import { Login } from '@/pages/Login'
+import { CloudSetup } from '@/pages/CloudSetup'
 
 export default function App() {
-  const { user } = useStore()
+  const { user, isCloudConnected, syncFromSupabase } = useStore()
+
+  useEffect(() => {
+    if (user && isCloudConnected) {
+      syncFromSupabase()
+    }
+  }, [user, isCloudConnected, syncFromSupabase])
 
   if (!user) {
     return (
@@ -34,6 +42,7 @@ export default function App() {
         <Route path="/clientes" element={<Clients />} />
         <Route path="/ajustes" element={<Settings />} />
         <Route path="/relatorios" element={<Reports />} />
+        <Route path="/conectar-nuvem" element={<CloudSetup />} />
       </Route>
       <Route path="/login" element={<Navigate to="/" replace />} />
       <Route path="*" element={<Navigate to="/" replace />} />

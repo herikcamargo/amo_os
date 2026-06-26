@@ -10,6 +10,13 @@
   --color-surface-input: #1A1A1C;
   --color-surface-muted: #1F1F22;
   --font-family-sans: 'Inter', system-ui, sans-serif;
+
+  --animate-shimmer: shimmer 2s linear infinite;
+  --animate-glow: glow 2s ease-in-out infinite;
+  --animate-pulse-soft: pulse-soft 2s ease-in-out infinite;
+  --animate-float: float 3s ease-in-out infinite;
+  --animate-fade-in: fade-in 0.4s ease-out;
+  --animate-slide-up: slide-up 0.3s ease-out;
 }
 
 * {
@@ -30,12 +37,66 @@ input, textarea, select {
 }
 
 ::-webkit-scrollbar {
-  width: 4px;
+  width: 6px;
+  height: 6px;
 }
 ::-webkit-scrollbar-track {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: #333;
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 4px;
+  transition: background 0.2s;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(215, 25, 32, 0.5);
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(215, 25, 32, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(215, 25, 32, 0.6); }
+}
+
+@keyframes pulse-soft {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.9; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Page transitions */
+main {
+  animation: fade-in 0.3s ease-out;
+}
+
+/* Smooth focus ring */
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid rgba(215, 25, 32, 0.5);
+  outline-offset: 2px;
+}
+
+/* Card glow on hover */
+.card-glow:hover {
+  box-shadow: 0 8px 32px rgba(215, 25, 32, 0.15);
 }

@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm create *)",
+      "PowerShell(npm create vite@latest . -- --template react-ts 2>&1)",
+      "PowerShell(Get-Command node -ErrorAction SilentlyContinue; Get-Command npm -ErrorAction SilentlyContinue; Get-Command npx -ErrorAction SilentlyContinue; $env:PATH -split ';' | Where-Object { $_ -match 'node|npm|nvm' })",
+      "PowerShell(Test-Path \"C:\\\\Program Files\\\\nodejs\\\\npm.cmd\"; Test-Path \"$env:APPDATA\\\\nvm\"; Get-ChildItem \"C:\\\\Program Files\" -Directory | Where-Object { $_.Name -match 'node' } | Select-Object FullName; Get-ChildItem \"$env:LOCALAPPDATA\\\\Programs\" -Directory -ErrorAction SilentlyContinue | Where-Object { $_.Name -match 'node' } | Select-Object FullName)",
+      "PowerShell(winget install OpenJS.NodeJS.LTS --accept-package-agreements --accept-source-agreements 2>&1)",
+      "PowerShell($env:Path = [System.Environment]::GetEnvironmentVariable\\(\"Path\", \"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"Path\", \"User\"\\); node --version; npm --version)",
+      "PowerShell($env:Path = [System.Environment]::GetEnvironmentVariable\\(\"Path\", \"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"Path\", \"User\"\\); npm create vite@latest \"C:\\\\Users\\\\herik\\\\AMO OS\\\\amo-os\" -- --template react-ts 2>&1)",
+      "PowerShell($env:Path = [System.Environment]::GetEnvironmentVariable\\(\"Path\", \"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"Path\", \"User\"\\); Get-ChildItem \"C:\\\\Users\\\\herik\\\\AMO OS\" -Recurse -Depth 1 | Select-Object FullName)"
+    ]
+  }
+}

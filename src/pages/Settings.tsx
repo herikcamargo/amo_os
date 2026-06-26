@@ -1,12 +1,13 @@
 import { useNavigate } from 'react-router-dom'
 import {
   User, Bell, Shield, Database, Smartphone, Palette,
-  ChevronRight, LogOut, Info, MessageSquare,
+  ChevronRight, LogOut, MessageSquare, Cloud,
 } from 'lucide-react'
 import { useStore } from '@/store/useStore'
 
 export function Settings() {
-  const { user } = useStore()
+  const navigate = useNavigate()
+  const { user, isCloudConnected } = useStore()
 
   const sections = [
     {
@@ -19,9 +20,15 @@ export function Settings() {
     {
       title: 'Sistema',
       items: [
+        {
+          icon: Cloud,
+          label: 'Conectar à nuvem',
+          sub: isCloudConnected ? 'Conectado ao Supabase' : 'Modo local — clique para conectar',
+          action: () => navigate('/conectar-nuvem'),
+        },
         { icon: Bell, label: 'Notificações', sub: 'Lembretes e alertas', action: () => {} },
         { icon: MessageSquare, label: 'WhatsApp', sub: 'Relatórios automáticos', action: () => {} },
-        { icon: Database, label: 'Banco de dados', sub: 'Supabase', action: () => {} },
+        { icon: Database, label: 'Banco de dados', sub: isCloudConnected ? 'Supabase ativo' : 'Local (localStorage)', action: () => navigate('/conectar-nuvem') },
       ],
     },
     {

@@ -10,9 +10,9 @@ export function IconBtn({ children, onClick, className = '' }: Props) {
   return (
     <button
       onClick={onClick}
-      className={`w-11 h-11 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center text-gray-200 transition-colors active:scale-95 ${className}`}
+      className={`group w-11 h-11 rounded-full bg-white/5 hover:bg-white/10 hover:scale-110 active:scale-95 flex items-center justify-center text-gray-200 transition-all duration-200 ${className}`}
     >
-      {children}
+      <span className="group-hover:rotate-6 transition-transform duration-200">{children}</span>
     </button>
   )
 }

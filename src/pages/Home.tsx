@@ -2,7 +2,7 @@ import { useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
 import {
   Search, Bell, FileText, ClipboardCheck, Wrench, CheckCircle2,
-  Archive, BarChart3, Clock, ChevronRight,
+  Archive, BarChart3, Clock, ChevronRight, DollarSign,
 } from 'lucide-react'
 import { useStore } from '@/store/useStore'
 import { IconBtn } from '@/components/ui/IconBtn'
@@ -10,12 +10,12 @@ import { OrderRow } from '@/components/ui/OrderRow'
 import type { OsStatus } from '@/types/database'
 
 const QUICK = [
-  { key: 'abrir', title: 'ABRIR OS', sub: 'Criar nova ordem de serviço', icon: FileText, grad: 'from-[#D71920]/35', ic: '#FF4242', icbg: '#D71920', ring: '#D71920' },
-  { key: 'pend', title: 'VERIFICAR PENDÊNCIAS', sub: 'Itens aguardando atenção', icon: ClipboardCheck, grad: 'from-[#F59E0B]/30', ic: '#FBBF24', icbg: '#92610A', ring: '#F59E0B' },
-  { key: 'manut', title: 'EM MANUTENÇÃO', sub: 'Ordens em andamento', icon: Wrench, grad: 'from-[#3B82F6]/30', ic: '#60A5FA', icbg: '#1E3A8A', ring: '#3B82F6' },
-  { key: 'pronto', title: 'PRONTOS P/ RETIRADA', sub: 'Aguardando o cliente', icon: CheckCircle2, grad: 'from-[#22C55E]/30', ic: '#4ADE80', icbg: '#14532D', ring: '#22C55E' },
-  { key: 'hist', title: 'HISTÓRICO', sub: 'Ordens finalizadas', icon: Archive, grad: 'from-[#A855F7]/30', ic: '#C084FC', icbg: '#581C87', ring: '#A855F7' },
-  { key: 'rel', title: 'RELATÓRIOS', sub: 'Desempenho da loja', icon: BarChart3, grad: 'from-[#14B8A6]/30', ic: '#2DD4BF', icbg: '#134E4A', ring: '#14B8A6' },
+  { key: 'abrir', title: 'Abrir OS', sub: 'Nova ordem de serviço', icon: FileText, color: '#D71920', glow: 'rgba(215,25,32,0.4)' },
+  { key: 'pend', title: 'Pendências', sub: 'Aguardando atenção', icon: ClipboardCheck, color: '#F59E0B', glow: 'rgba(245,158,11,0.3)' },
+  { key: 'manut', title: 'Em manutenção', sub: 'Ordens em andamento', icon: Wrench, color: '#3B82F6', glow: 'rgba(59,130,246,0.3)' },
+  { key: 'pronto', title: 'Prontos', sub: 'Aguardando retirada', icon: CheckCircle2, color: '#22C55E', glow: 'rgba(34,197,94,0.3)' },
+  { key: 'hist', title: 'Histórico', sub: 'Ordens finalizadas', icon: Archive, color: '#A855F7', glow: 'rgba(168,85,247,0.3)' },
+  { key: 'rel', title: 'Relatórios', sub: 'Desempenho da loja', icon: BarChart3, color: '#14B8A6', glow: 'rgba(20,184,166,0.3)' },
 ]
 
 const CARD_FILTER: Record<string, OsStatus[]> = {
@@ -34,15 +34,20 @@ export function Home() {
     if (key === 'abrir') return navigate('/nova-os')
     if (key === 'rel') return navigate('/relatorios')
     const statuses = CARD_FILTER[key]
-    if (statuses) {
-      navigate(`/ordens?status=${statuses.join(',')}`)
-    }
+    if (statuses) navigate(`/ordens?status=${statuses.join(',')}`)
   }
 
+  const stats = useMemo(() => {
+    const abertas = orders.filter((o) => !['entregue', 'cancelado'].includes(o.status)).length
+    const prontas = orders.filter((o) => o.status === 'pronto').length
+    const faturamento = orders.filter((o) => o.status === 'entregue').reduce((s, o) => s + o.valor_servico, 0)
+    return { abertas, prontas, faturamento }
+  }, [orders])
+
   return (
-    <div className="px-5 pt-3">
-      {/* Header */}
-      <div className="flex items-center justify-between pt-2 mb-7">
+    <div className="px-5 md:px-0 pt-3 md:pt-8">
+      {/* Mobile Header */}
+      <div className="flex items-center justify-between pt-2 mb-7 md:hidden">
         <div className="leading-none">
           <div className="text-[26px] font-black tracking-tight">
             Amo<span className="text-brand">Celular</span>
@@ -55,7 +60,7 @@ export function Home() {
           <div className="relative">
             <IconBtn onClick={() => navigate('/notificacoes')}><Bell size={20} /></IconBtn>
             {unreadCount > 0 && (
-              <span className="absolute -top-0.5 -right-0.5 w-5 h-5 rounded-full bg-brand text-[10px] font-bold flex items-center justify-center border-2 border-surface">
+              <span className="absolute -top-0.5 -right-0.5 w-5 h-5 rounded-full bg-brand text-[10px] font-bold flex items-center justify-center border-2 border-surface animate-pulse">
                 {unreadCount}
               </span>
             )}
@@ -64,66 +69,145 @@ export function Home() {
       </div>
 
       {/* Greeting */}
-      <div className="mb-6">
-        <div className="text-gray-400 text-lg">Bom dia, 👋</div>
-        <h1 className="text-[34px] font-bold tracking-tight leading-tight mt-0.5">Vamos trabalhar?</h1>
+      <div className="mb-6 md:mb-8 md:flex md:items-end md:justify-between">
+        <div>
+          <div className="text-gray-400 text-lg">Bom dia, 👋</div>
+          <h1 className="text-[34px] md:text-[42px] font-bold tracking-tight leading-tight mt-0.5">
+            Vamos trabalhar?
+          </h1>
+        </div>
+        <div className="hidden md:flex items-center gap-3">
+          <button
+            onClick={() => navigate('/ordens')}
+            className="h-11 px-4 rounded-xl bg-surface-card border border-white/10 text-sm flex items-center gap-2 hover:border-brand/40 hover:bg-surface-elevated transition-all"
+          >
+            <Search size={16} /> Buscar
+          </button>
+          <button
+            onClick={() => navigate('/notificacoes')}
+            className="relative h-11 w-11 rounded-xl bg-surface-card border border-white/10 flex items-center justify-center hover:border-brand/40 hover:bg-surface-elevated transition-all"
+          >
+            <Bell size={18} />
+            {unreadCount > 0 && (
+              <span className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-brand text-[10px] font-bold flex items-center justify-center animate-pulse">
+                {unreadCount}
+              </span>
+            )}
+          </button>
+        </div>
       </div>
 
-      {/* Quick cards */}
-      <div className="grid grid-cols-2 gap-3.5 mb-7">
+      {/* Desktop KPIs */}
+      <div className="hidden md:grid grid-cols-3 gap-4 mb-6">
+        <KpiBox label="OS em aberto" value={stats.abertas} icon={Clock} color="#F59E0B" />
+        <KpiBox label="Prontas p/ retirada" value={stats.prontas} icon={CheckCircle2} color="#22C55E" />
+        <KpiBox label="Faturamento" value={`R$${stats.faturamento.toLocaleString('pt-BR')}`} icon={DollarSign} color="#D71920" />
+      </div>
+
+      {/* Quick cards — NEW DESIGN */}
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-3.5 mb-7 md:mb-8">
         {QUICK.map((c) => {
           const Icon = c.icon
           return (
             <button
               key={c.key}
               onClick={() => handleCard(c.key)}
-              className={`relative text-left rounded-[20px] p-4 h-[150px] flex flex-col justify-between bg-gradient-to-br ${c.grad} to-transparent border active:scale-[0.98] transition-transform`}
-              style={{ borderColor: c.ring + '33', backgroundColor: '#161618' }}
+              className="group relative text-left rounded-[20px] h-[160px] md:h-[180px] overflow-hidden border border-white/5 hover:border-white/15 transition-all hover:-translate-y-1 hover:shadow-xl"
+              style={{ backgroundColor: '#161618' }}
             >
-              <div className="w-12 h-12 rounded-2xl flex items-center justify-center" style={{ background: c.icbg }}>
-                <Icon size={24} style={{ color: c.ic }} />
+              {/* Background glow */}
+              <div
+                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                style={{ background: `radial-gradient(circle at 50% 50%, ${c.glow} 0%, transparent 70%)` }}
+              />
+
+              {/* Centered background icon */}
+              <Icon
+                size={120}
+                strokeWidth={1.2}
+                className="absolute right-0 bottom-0 translate-x-6 translate-y-6 opacity-[0.07] group-hover:opacity-[0.15] group-hover:scale-110 group-hover:rotate-6 transition-all duration-500"
+                style={{ color: c.color }}
+              />
+
+              {/* Foreground icon (top) */}
+              <div className="absolute top-4 left-4">
+                <div
+                  className="w-11 h-11 rounded-xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"
+                  style={{
+                    background: c.color + '22',
+                    boxShadow: `0 4px 20px ${c.glow}`,
+                  }}
+                >
+                  <Icon size={22} style={{ color: c.color }} strokeWidth={2.2} />
+                </div>
               </div>
-              <div>
-                <div className="font-bold text-[15px] leading-tight">{c.title}</div>
-                <div className="text-[12px] text-gray-400 mt-1 leading-snug">{c.sub}</div>
+
+              {/* Text */}
+              <div className="absolute bottom-4 left-4 right-4">
+                <div className="font-bold text-[17px] md:text-[19px] leading-tight">{c.title}</div>
+                <div className="text-[13px] text-gray-400 mt-1 leading-snug">{c.sub}</div>
               </div>
             </button>
           )
         })}
       </div>
 
-      {/* Recent orders */}
-      <div className="bg-surface-card rounded-[20px] border border-white/5 p-4 mb-4">
-        <div className="flex items-center justify-between mb-2">
-          <div className="flex items-center gap-2">
-            <Clock size={16} className="text-brand" />
-            <span className="text-[13px] font-bold tracking-wide uppercase text-gray-200">Últimas ordens</span>
+      {/* Recent + Stats Grid (Desktop) */}
+      <div className="md:grid md:grid-cols-3 md:gap-4 space-y-4 md:space-y-0">
+        {/* Recent orders */}
+        <div className="md:col-span-2 bg-surface-card rounded-[20px] border border-white/5 p-4">
+          <div className="flex items-center justify-between mb-2">
+            <div className="flex items-center gap-2">
+              <Clock size={16} className="text-brand" />
+              <span className="text-[13px] font-bold tracking-wide uppercase text-gray-200">Últimas ordens</span>
+            </div>
+            <button
+              onClick={() => navigate('/ordens')}
+              className="text-brand text-[13px] font-semibold flex items-center gap-0.5 hover:gap-1.5 transition-all"
+            >
+              Ver todas <ChevronRight size={14} />
+            </button>
           </div>
-          <button onClick={() => navigate('/ordens')} className="text-brand text-[13px] font-semibold flex items-center gap-0.5">
-            Ver todas <ChevronRight size={14} />
-          </button>
+          <div className="divide-y divide-white/5">
+            {orders.slice(0, 4).map((o) => (
+              <OrderRow key={o.id} order={o} onClick={() => navigate(`/os/${o.id}`)} />
+            ))}
+          </div>
         </div>
-        <div className="divide-y divide-white/5">
-          {orders.slice(0, 3).map((o) => (
-            <OrderRow key={o.id} order={o} onClick={() => navigate(`/os/${o.id}`)} />
-          ))}
-        </div>
-      </div>
 
-      {/* Daily summary */}
-      <div className="bg-surface-card rounded-[20px] border border-white/5 p-4 mb-4">
-        <div className="flex items-center gap-2 mb-3">
-          <BarChart3 size={16} className="text-brand" />
-          <span className="text-[13px] font-bold tracking-wide uppercase text-gray-200">Resumo do dia</span>
+        {/* Mobile summary */}
+        <div className="md:hidden bg-surface-card rounded-[20px] border border-white/5 p-4">
+          <div className="flex items-center gap-2 mb-3">
+            <BarChart3 size={16} className="text-brand" />
+            <span className="text-[13px] font-bold tracking-wide uppercase text-gray-200">Resumo do dia</span>
+          </div>
+          <div className="grid grid-cols-3 gap-3">
+            <MiniStat label="Abertas" value={stats.abertas} />
+            <MiniStat label="Prontas" value={stats.prontas} color="#22C55E" />
+            <MiniStat label="Faturamento" value={`R$${stats.faturamento}`} color="#F59E0B" />
+          </div>
         </div>
-        <div className="grid grid-cols-3 gap-3">
-          <MiniStat label="Abertas" value={orders.filter((o) => !['entregue', 'cancelado'].includes(o.status)).length} />
-          <MiniStat label="Prontas" value={orders.filter((o) => o.status === 'pronto').length} color="#22C55E" />
-          <MiniStat
-            label="Faturamento"
-            value={`R$${orders.filter((o) => o.status === 'entregue').reduce((s, o) => s + o.valor_servico, 0)}`}
-            color="#F59E0B"
-          />
+
+        {/* Desktop side panel */}
+        <div className="hidden md:block bg-surface-card rounded-[20px] border border-white/5 p-4">
+          <div className="flex items-center gap-2 mb-4">
+            <Bell size={16} className="text-brand" />
+            <span className="text-[13px] font-bold tracking-wide uppercase text-gray-200">Alertas</span>
+          </div>
+          <div className="space-y-2">
+            {notifications.slice(0, 3).map((n) => (
+              <button
+                key={n.id}
+                onClick={() => n.order_id && navigate(`/os/${n.order_id}`)}
+                className={`w-full text-left p-3 rounded-xl border transition-colors hover:bg-white/5 ${
+                  n.read ? 'border-white/5' : 'bg-brand/5 border-brand/20'
+                }`}
+              >
+                <div className="font-semibold text-xs">{n.title}</div>
+                <div className="text-[11px] text-gray-500 mt-0.5 line-clamp-2">{n.body}</div>
+              </button>
+            ))}
+          </div>
         </div>
       </div>
     </div>
@@ -135,6 +219,28 @@ function MiniStat({ label, value, color }: { label: string; value: number | stri
     <div className="text-center">
       <div className="text-2xl font-bold" style={{ color: color || '#fff' }}>{value}</div>
       <div className="text-[11px] text-gray-500 mt-0.5">{label}</div>
+    </div>
+  )
+}
+
+function KpiBox({ label, value, icon: Icon, color }: { label: string; value: number | string; icon: typeof Clock; color: string }) {
+  return (
+    <div
+      className="group bg-surface-card rounded-[18px] border border-white/5 p-4 hover:border-white/15 hover:-translate-y-0.5 transition-all cursor-default relative overflow-hidden"
+    >
+      <Icon
+        size={80}
+        strokeWidth={1.5}
+        className="absolute right-0 top-0 translate-x-4 -translate-y-2 opacity-[0.06] group-hover:opacity-[0.12] group-hover:scale-110 transition-all duration-500"
+        style={{ color }}
+      />
+      <div className="relative">
+        <div className="flex items-center gap-2 mb-2">
+          <Icon size={16} style={{ color }} />
+          <span className="text-[11px] font-bold uppercase tracking-wider text-gray-500">{label}</span>
+        </div>
+        <div className="text-3xl font-bold" style={{ color }}>{value}</div>
+      </div>
     </div>
   )
 }
