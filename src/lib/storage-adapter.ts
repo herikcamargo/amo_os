@@ -7,7 +7,8 @@
 // Permite ligar/desligar o backend sem mudar o resto do app.
 // ═══════════════════════════════════════════════════════════════
 
-import { supabase, isDemoMode } from './supabase'
+import { createClient } from '@supabase/supabase-js'
+import { supabase, isDemoMode, supabaseUrl, supabaseAnonKey } from './supabase'
 import type { ServiceOrder, Customer, Device, AppUser } from '@/types/database'
 
 export const isSupabaseEnabled = !isDemoMode
@@ -160,36 +161,77 @@ export const usersAdapter = {
   }): Promise<AppUser> {
     if (!isSupabaseEnabled) throw new Error('Supabase nao configurado')
 
-    const { data, error } = await supabase.functions.invoke('manage-user', {
-      body: { action: 'create', user: input },
+    const authClient = createClient(supabaseUrl, supabaseAnonKey, {
+      auth: {
+        persistSession: false,
+        autoRefreshToken: false,
+        detectSessionInUrl: false,
+      },
     })
 
+    const { data: authData, error: authError } = await authClient.auth.signUp({
+      email: input.email.trim().toLowerCase(),
+      password: input.password,
+      options: {
+        data: { nome: input.nome.trim() },
+      },
+    })
+
+    if (authError) {
+      if (authError.message.toLowerCase().includes('signup')) {
+        throw new Error('Cadastro público está desativado no Supabase. Ative Auth > Providers > Email > Enable signups.')
+      }
+      throw authError
+    }
+    if (!authData.user?.id) throw new Error('Supabase nao retornou o ID do usuario criado')
+
+    const profile = {
+      id: authData.user.id,
+      nome: input.nome.trim(),
+      email: input.email.trim().toLowerCase(),
+      role: input.role,
+      telefone: input.telefone?.trim() || null,
+      ativo: true,
+    }
+
+    const { data, error } = await supabase
+      .from('users')
+      .insert(profile)
+      .select('*')
+      .single()
+
     if (error) throw error
-    if (data?.error) throw new Error(data.error)
-    return data.user as AppUser
+    return data as AppUser
   },
 
   async update(id: string, updates: Partial<AppUser>): Promise<AppUser> {
     if (!isSupabaseEnabled) throw new Error('Supabase nao configurado')
 
-    const { data, error } = await supabase.functions.invoke('manage-user', {
-      body: { action: 'update', userId: id, updates },
-    })
+    const { data, error } = await supabase
+      .from('users')
+      .update({
+        nome: updates.nome,
+        email: updates.email,
+        role: updates.role,
+        telefone: updates.telefone,
+        ativo: updates.ativo,
+      })
+      .eq('id', id)
+      .select('*')
+      .single()
 
     if (error) throw error
-    if (data?.error) throw new Error(data.error)
-    return data.user as AppUser
+    return data as AppUser
   },
 
   async delete(id: string): Promise<void> {
     if (!isSupabaseEnabled) throw new Error('Supabase nao configurado')
 
-    const { data, error } = await supabase.functions.invoke('manage-user', {
-      body: { action: 'delete', userId: id },
-    })
-
+    const { error } = await supabase
+      .from('users')
+      .delete()
+      .eq('id', id)
     if (error) throw error
-    if (data?.error) throw new Error(data.error)
   },
 }
 
@@ -221,14 +263,8 @@ export const authAdapter = {
       return profile as unknown as AppUser
     }
 
-    return {
-      id: data.user.id,
-      nome: data.user.user_metadata?.nome || data.user.email?.split('@')[0] || 'Usuario',
-      email: data.user.email || email,
-      role: 'atendente',
-      ativo: true,
-      created_at: data.user.created_at || new Date().toISOString(),
-    }
+    await supabase.auth.signOut()
+    throw new Error('Usuario sem perfil de acesso. Peça para um administrador cadastrar este e-mail em Ajustes > Usuarios.')
   },
 
   async signOut(): Promise<void> {
@@ -255,14 +291,8 @@ export const authAdapter = {
       return profile as unknown as AppUser
     }
 
-    return {
-      id: data.session.user.id,
-      nome: data.session.user.user_metadata?.nome || data.session.user.email?.split('@')[0] || 'Usuario',
-      email: data.session.user.email || '',
-      role: 'atendente',
-      ativo: true,
-      created_at: data.session.user.created_at || new Date().toISOString(),
-    }
+    await supabase.auth.signOut()
+    return null
   },
 }
 
