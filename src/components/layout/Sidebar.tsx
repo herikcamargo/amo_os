@@ -4,14 +4,15 @@ import {
   Home, Files, Users, Settings, Plus, Bell, BarChart3, LogOut, Cloud, CloudOff,
 } from 'lucide-react'
 import { useStore } from '@/store/useStore'
+import { can, roleLabel } from '@/lib/permissions'
 
 const NAV_ITEMS = [
-  { key: '/', label: 'Início', icon: Home },
-  { key: '/ordens', label: 'Ordens', icon: Files },
-  { key: '/clientes', label: 'Clientes', icon: Users },
-  { key: '/relatorios', label: 'Relatórios', icon: BarChart3 },
-  { key: '/notificacoes', label: 'Notificações', icon: Bell },
-  { key: '/ajustes', label: 'Ajustes', icon: Settings },
+  { key: '/', label: 'Início', icon: Home, requires: null as null | 'view_reports' },
+  { key: '/ordens', label: 'Ordens', icon: Files, requires: null },
+  { key: '/clientes', label: 'Clientes', icon: Users, requires: null },
+  { key: '/relatorios', label: 'Relatórios', icon: BarChart3, requires: 'view_reports' as const },
+  { key: '/notificacoes', label: 'Notificações', icon: Bell, requires: null },
+  { key: '/ajustes', label: 'Ajustes', icon: Settings, requires: null },
 ]
 
 export function Sidebar() {
@@ -19,6 +20,7 @@ export function Sidebar() {
   const location = useLocation()
   const { user, notifications, isCloudConnected } = useStore()
   const unread = useMemo(() => notifications.filter((n) => !n.read).length, [notifications])
+  const visibleNav = NAV_ITEMS.filter((it) => !it.requires || can(user, it.requires))
 
   const isActive = (key: string) => {
     if (key === '/') return location.pathname === '/'
@@ -48,7 +50,7 @@ export function Sidebar() {
 
       {/* Nav */}
       <nav className="flex-1 space-y-1">
-        {NAV_ITEMS.map((it) => {
+        {visibleNav.map((it) => {
           const active = isActive(it.key)
           const Icon = it.icon
           return (
@@ -103,7 +105,9 @@ export function Sidebar() {
           </div>
           <div className="flex-1 min-w-0">
             <div className="text-sm font-semibold truncate">{user?.nome || 'Usuário'}</div>
-            <div className="text-[11px] text-gray-500 truncate">{user?.role}</div>
+            <div className="text-[11px] text-gray-500 truncate">
+              {user ? roleLabel(user.role) : ''}
+            </div>
           </div>
           <button className="text-gray-500 hover:text-red-400 transition-colors">
             <LogOut size={16} />

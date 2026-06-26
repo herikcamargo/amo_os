@@ -12,6 +12,7 @@ import { Settings } from '@/pages/Settings'
 import { Reports } from '@/pages/Reports'
 import { Login } from '@/pages/Login'
 import { CloudSetup } from '@/pages/CloudSetup'
+import { UserManagement } from '@/pages/UserManagement'
 
 export default function App() {
   const { user, isCloudConnected, syncFromSupabase } = useStore()
@@ -43,6 +44,7 @@ export default function App() {
         <Route path="/ajustes" element={<Settings />} />
         <Route path="/relatorios" element={<Reports />} />
         <Route path="/conectar-nuvem" element={<CloudSetup />} />
+        <Route path="/usuarios" element={<UserManagement />} />
       </Route>
       <Route path="/login" element={<Navigate to="/" replace />} />
       <Route path="*" element={<Navigate to="/" replace />} />

@@ -14,6 +14,7 @@ interface Notification {
 
 interface AppState {
   user: AppUser | null
+  users: AppUser[]
   orders: ServiceOrder[]
   notifications: Notification[]
   osCounter: number
@@ -24,6 +25,9 @@ interface AppState {
   addOrder: (order: ServiceOrder) => void
   updateOrder: (id: string, updates: Partial<ServiceOrder>) => void
   deleteOrder: (id: string) => void
+  addUser: (user: AppUser) => void
+  updateUser: (id: string, updates: Partial<AppUser>) => void
+  removeUser: (id: string) => void
   addNotification: (n: Notification) => void
   markNotificationRead: (id: string) => void
   markAllNotificationsRead: () => void
@@ -43,6 +47,11 @@ export const useStore = create<AppState>()(
         id: 'u1', nome: 'Herik', email: 'admin@amocelular.com',
         role: 'admin', ativo: true, created_at: '2026-01-01T00:00:00Z',
       },
+      users: [
+        { id: 'u1', nome: 'Herik', email: 'admin@amocelular.com', role: 'admin', ativo: true, created_at: '2026-01-01T00:00:00Z' },
+        { id: 'u2', nome: 'Bia Souza', email: 'bia@amocelular.com', role: 'atendente', ativo: true, telefone: '(16) 99000-0001', created_at: '2026-02-01T00:00:00Z' },
+        { id: 'u3', nome: 'Léo Martins', email: 'leo@amocelular.com', role: 'tecnico', ativo: true, telefone: '(16) 99000-0002', created_at: '2026-02-15T00:00:00Z' },
+      ],
       orders: DEMO_DATA.orders,
       notifications: DEMO_DATA.notifications,
       osCounter: 124,
@@ -60,6 +69,16 @@ export const useStore = create<AppState>()(
 
       deleteOrder: (id) => set((s) => ({
         orders: s.orders.filter((o) => o.id !== id),
+      })),
+
+      addUser: (user) => set((s) => ({ users: [...s.users, user] })),
+
+      updateUser: (id, updates) => set((s) => ({
+        users: s.users.map((u) => u.id === id ? { ...u, ...updates } : u),
+      })),
+
+      removeUser: (id) => set((s) => ({
+        users: s.users.filter((u) => u.id !== id),
       })),
 
       addNotification: (n) => set((s) => ({

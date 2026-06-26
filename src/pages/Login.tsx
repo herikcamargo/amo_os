@@ -1,12 +1,13 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Eye, EyeOff } from 'lucide-react'
+import { Eye, EyeOff, Shield } from 'lucide-react'
 import { useStore } from '@/store/useStore'
+import { roleColor, roleLabel } from '@/lib/permissions'
 import toast from 'react-hot-toast'
 
 export function Login() {
   const navigate = useNavigate()
-  const { setUser } = useStore()
+  const { setUser, users, isCloudConnected } = useStore()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [showPass, setShowPass] = useState(false)
@@ -16,24 +17,37 @@ export function Login() {
     e.preventDefault()
     setLoading(true)
 
-    // Demo mode — accept any credentials
     setTimeout(() => {
-      setUser({
-        id: 'u1',
-        nome: email.split('@')[0] || 'Usuário',
-        email,
-        role: 'admin',
-        ativo: true,
-        created_at: new Date().toISOString(),
-      })
-      toast.success('Bem-vindo ao AMO OS!')
+      const match = users.find((u) => u.email.toLowerCase() === email.toLowerCase() && u.ativo)
+      if (match) {
+        setUser(match)
+        toast.success(`Bem-vindo, ${match.nome}!`)
+      } else {
+        setUser({
+          id: 'u1',
+          nome: email.split('@')[0] || 'Usuário',
+          email,
+          role: 'admin',
+          ativo: true,
+          created_at: new Date().toISOString(),
+        })
+        toast.success('Bem-vindo ao AMO OS!')
+      }
       setLoading(false)
       navigate('/')
-    }, 800)
+    }, 500)
+  }
+
+  const quickLogin = (userId: string) => {
+    const u = users.find((x) => x.id === userId)
+    if (!u) return
+    setUser(u)
+    toast.success(`Entrou como ${u.nome}`)
+    navigate('/')
   }
 
   return (
-    <div className="min-h-screen bg-surface flex items-center justify-center px-6">
+    <div className="min-h-screen bg-surface flex items-center justify-center px-6 py-10">
       <div className="w-full max-w-[380px]">
         <div className="text-center mb-10">
           <div className="text-[32px] font-black tracking-tight">
@@ -73,7 +87,7 @@ export function Login() {
               <button
                 type="button"
                 onClick={() => setShowPass(!showPass)}
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500"
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-white transition-colors"
               >
                 {showPass ? <EyeOff size={18} /> : <Eye size={18} />}
               </button>
@@ -83,11 +97,50 @@ export function Login() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full h-12 rounded-xl bg-brand font-semibold text-sm active:scale-95 transition-transform disabled:opacity-60"
+            className="w-full h-12 rounded-xl bg-brand font-semibold text-sm hover:scale-[1.02] active:scale-95 transition-all disabled:opacity-60"
           >
             {loading ? 'Entrando...' : 'Entrar'}
           </button>
         </form>
+
+        {!isCloudConnected && (
+          <div className="mt-8">
+            <div className="text-center mb-3">
+              <div className="text-[10px] uppercase tracking-wider text-gray-500 font-bold">
+                Modo demonstração — entrar como:
+              </div>
+            </div>
+            <div className="space-y-2">
+              {users.filter((u) => u.ativo).map((u) => {
+                const color = roleColor(u.role)
+                return (
+                  <button
+                    key={u.id}
+                    onClick={() => quickLogin(u.id)}
+                    className="w-full flex items-center gap-3 p-3 rounded-xl bg-white/[0.03] border border-white/5 hover:bg-white/[0.06] hover:border-white/10 transition-all"
+                  >
+                    <div
+                      className="w-9 h-9 rounded-full flex items-center justify-center font-bold text-xs shrink-0"
+                      style={{ background: color + '22', color }}
+                    >
+                      {u.nome.charAt(0).toUpperCase()}
+                    </div>
+                    <div className="flex-1 text-left min-w-0">
+                      <div className="text-sm font-semibold truncate">{u.nome}</div>
+                      <div className="text-[10px] text-gray-500 truncate">{u.email}</div>
+                    </div>
+                    <div className="flex items-center gap-1 shrink-0">
+                      <Shield size={11} style={{ color }} />
+                      <span className="text-[10px] font-bold" style={{ color }}>
+                        {roleLabel(u.role)}
+                      </span>
+                    </div>
+                  </button>
+                )
+              })}
+            </div>
+          </div>
+        )}
 
         <div className="text-center mt-8 text-[11px] text-gray-600">
           AMO OS v1.0.0 · AmoCelular

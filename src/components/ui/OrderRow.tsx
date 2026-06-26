@@ -2,6 +2,8 @@ import { Smartphone, ChevronRight } from 'lucide-react'
 import type { ServiceOrder } from '@/types/database'
 import { STATUS_CONFIG, brl } from '@/lib/constants'
 import { formatTimeAgo } from '@/lib/utils'
+import { useStore } from '@/store/useStore'
+import { can } from '@/lib/permissions'
 
 interface Props {
   order: ServiceOrder
@@ -13,6 +15,9 @@ export function OrderRow({ order, onClick, showValue }: Props) {
   const st = STATUS_CONFIG[order.status]
   const modelo = order.device?.modelo || 'Aparelho'
   const cliente = order.customer?.nome || '—'
+  const { user } = useStore()
+  const canFinance = can(user, 'view_financial')
+  const displayValue = showValue && canFinance && order.valor_servico > 0
 
   return (
     <button
@@ -31,7 +36,7 @@ export function OrderRow({ order, onClick, showValue }: Props) {
         </div>
       </div>
       <div className="text-right shrink-0">
-        {showValue && order.valor_servico > 0
+        {displayValue
           ? <div className="text-sm font-bold">{brl(order.valor_servico)}</div>
           : <div className="text-[13px] text-gray-500">{formatTimeAgo(order.created_at)}</div>}
         <ChevronRight size={16} className="text-gray-600 inline-block mt-1 group-hover:text-brand group-hover:translate-x-1 transition-all" />

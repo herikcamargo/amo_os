@@ -1,36 +1,54 @@
 import { useNavigate } from 'react-router-dom'
 import {
   User, Bell, Shield, Database, Smartphone, Palette,
-  ChevronRight, LogOut, MessageSquare, Cloud,
+  ChevronRight, LogOut, MessageSquare, Cloud, UsersRound,
 } from 'lucide-react'
 import { useStore } from '@/store/useStore'
+import { can, roleLabel } from '@/lib/permissions'
 
 export function Settings() {
   const navigate = useNavigate()
   const { user, isCloudConnected } = useStore()
+  const canManageUsers = can(user, 'manage_users')
+  const canManageDb = can(user, 'manage_database')
+  const canManageIntegrations = can(user, 'manage_integrations')
+
+  const sistemaItems = [
+    { icon: Bell, label: 'Notificações', sub: 'Lembretes e alertas', action: () => {}, show: true },
+    {
+      icon: UsersRound, label: 'Gerenciar usuários',
+      sub: 'Criar e definir perfis',
+      action: () => navigate('/usuarios'),
+      show: canManageUsers,
+    },
+    {
+      icon: Cloud, label: 'Conectar à nuvem',
+      sub: isCloudConnected ? 'Conectado ao Supabase' : 'Modo local — clique para conectar',
+      action: () => navigate('/conectar-nuvem'),
+      show: canManageDb,
+    },
+    {
+      icon: MessageSquare, label: 'WhatsApp',
+      sub: 'Relatórios automáticos', action: () => {},
+      show: canManageIntegrations,
+    },
+    {
+      icon: Database, label: 'Banco de dados',
+      sub: isCloudConnected ? 'Supabase ativo' : 'Local (localStorage)',
+      action: () => navigate('/conectar-nuvem'),
+      show: canManageDb,
+    },
+  ].filter((i) => i.show)
 
   const sections = [
     {
       title: 'Conta',
       items: [
         { icon: User, label: 'Perfil', sub: user?.nome || 'Usuário', action: () => {} },
-        { icon: Shield, label: 'Permissões', sub: user?.role === 'admin' ? 'Administrador' : user?.role === 'tecnico' ? 'Técnico' : 'Atendente', action: () => {} },
+        { icon: Shield, label: 'Permissões', sub: user ? roleLabel(user.role) : '', action: () => {} },
       ],
     },
-    {
-      title: 'Sistema',
-      items: [
-        {
-          icon: Cloud,
-          label: 'Conectar à nuvem',
-          sub: isCloudConnected ? 'Conectado ao Supabase' : 'Modo local — clique para conectar',
-          action: () => navigate('/conectar-nuvem'),
-        },
-        { icon: Bell, label: 'Notificações', sub: 'Lembretes e alertas', action: () => {} },
-        { icon: MessageSquare, label: 'WhatsApp', sub: 'Relatórios automáticos', action: () => {} },
-        { icon: Database, label: 'Banco de dados', sub: isCloudConnected ? 'Supabase ativo' : 'Local (localStorage)', action: () => navigate('/conectar-nuvem') },
-      ],
-    },
+    { title: 'Sistema', items: sistemaItems },
     {
       title: 'Aparência',
       items: [

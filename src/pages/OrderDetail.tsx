@@ -12,6 +12,7 @@ import { StatusBadge } from '@/components/ui/StatusBadge'
 import { STATUS_CONFIG, CHECK_ENTRADA, brl, STATUS_FLOW } from '@/lib/constants'
 import { formatDateTime, daysSince } from '@/lib/utils'
 import { downloadOsPdf } from '@/lib/generate-pdf'
+import { can } from '@/lib/permissions'
 import type { OsStatus } from '@/types/database'
 import toast from 'react-hot-toast'
 
@@ -23,8 +24,11 @@ const DEMO_LOGS = [
 export function OrderDetail() {
   const { id } = useParams()
   const navigate = useNavigate()
-  const { orders, updateOrder } = useStore()
+  const { orders, updateOrder, user } = useStore()
   const [showStatusModal, setShowStatusModal] = useState(false)
+  const canFinance = can(user, 'view_financial')
+  const canExportPdf = can(user, 'export_pdf')
+  const canUpdateStatus = can(user, 'update_status')
 
   const order = useMemo(() => orders.find((o) => o.id === id), [orders, id])
   if (!order) {
@@ -71,18 +75,22 @@ export function OrderDetail() {
         )}
 
         <div className="flex gap-2.5 mt-4">
-          <button
-            onClick={() => { downloadOsPdf(order); toast.success('PDF gerado!') }}
-            className="flex-1 h-11 rounded-xl bg-brand font-semibold text-sm flex items-center justify-center gap-2 active:scale-95 transition-transform"
-          >
-            <Download size={16} /> Baixar PDF
-          </button>
-          <button
-            onClick={() => setShowStatusModal(true)}
-            className="flex-1 h-11 rounded-xl bg-white/8 border border-white/10 font-semibold text-sm flex items-center justify-center gap-2 active:scale-95 transition-transform"
-          >
-            <Wrench size={16} /> Atualizar status
-          </button>
+          {canExportPdf && (
+            <button
+              onClick={() => { downloadOsPdf(order); toast.success('PDF gerado!') }}
+              className="flex-1 h-11 rounded-xl bg-brand font-semibold text-sm flex items-center justify-center gap-2 active:scale-95 transition-transform"
+            >
+              <Download size={16} /> Baixar PDF
+            </button>
+          )}
+          {canUpdateStatus && (
+            <button
+              onClick={() => setShowStatusModal(true)}
+              className="flex-1 h-11 rounded-xl bg-white/8 border border-white/10 font-semibold text-sm flex items-center justify-center gap-2 active:scale-95 transition-transform"
+            >
+              <Wrench size={16} /> Atualizar status
+            </button>
+          )}
         </div>
 
         {order.customer?.telefone && (
@@ -158,10 +166,15 @@ export function OrderDetail() {
           </div>
         </CardBox>
 
-        {/* Serviço & Garantia */}
-        {(order.valor_servico > 0 || order.garantia_dias > 0) && (
+        {/* Serviço & Garantia (financeiro — admin) ou só garantia (atendente/técnico) */}
+        {canFinance && (order.valor_servico > 0 || order.garantia_dias > 0) && (
           <CardBox title="Serviço & garantia" icon={ShieldCheck}>
             <Row k="Valor do serviço" v={brl(order.valor_servico)} />
+            <Row k="Garantia" v={`${order.garantia_dias} dias`} />
+          </CardBox>
+        )}
+        {!canFinance && order.garantia_dias > 0 && (
+          <CardBox title="Garantia" icon={ShieldCheck}>
             <Row k="Garantia" v={`${order.garantia_dias} dias`} />
           </CardBox>
         )}

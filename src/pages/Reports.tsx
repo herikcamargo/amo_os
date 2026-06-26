@@ -1,15 +1,20 @@
 import { useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { ChevronLeft, BarChart3, TrendingUp, Clock, DollarSign, Wrench } from 'lucide-react'
+import { ChevronLeft, BarChart3, TrendingUp, Clock, DollarSign, Wrench, Lock } from 'lucide-react'
 import { useStore } from '@/store/useStore'
 import { IconBtn } from '@/components/ui/IconBtn'
 import { CardBox } from '@/components/ui/CardBox'
 import { STATUS_CONFIG, brl } from '@/lib/constants'
+import { can } from '@/lib/permissions'
 import type { OsStatus } from '@/types/database'
 
 export function Reports() {
   const navigate = useNavigate()
-  const { orders } = useStore()
+  const { orders, user } = useStore()
+
+  if (!can(user, 'view_reports')) {
+    return <AccessDenied onBack={() => navigate('/')} />
+  }
 
   const stats = useMemo(() => {
     const total = orders.length
@@ -102,6 +107,32 @@ function KpiCard({ icon: Icon, label, value, color }: {
       <Icon size={18} style={{ color }} className="mb-2" />
       <div className="text-2xl font-bold">{value}</div>
       <div className="text-[11px] text-gray-500 mt-0.5">{label}</div>
+    </div>
+  )
+}
+
+function AccessDenied({ onBack }: { onBack: () => void }) {
+  return (
+    <div className="px-5 md:px-0 pt-3 md:pt-8">
+      <div className="flex items-center gap-3 pt-2 mb-6">
+        <IconBtn onClick={onBack}><ChevronLeft size={22} /></IconBtn>
+        <h1 className="text-xl md:text-2xl font-bold tracking-tight flex-1">Acesso restrito</h1>
+      </div>
+      <div className="bg-surface-card rounded-[20px] border border-red-500/20 p-8 flex flex-col items-center text-center">
+        <div className="w-16 h-16 rounded-full bg-red-500/15 flex items-center justify-center mb-4">
+          <Lock size={28} className="text-red-400" />
+        </div>
+        <h2 className="text-lg font-bold mb-2">Você não tem acesso a esta área</h2>
+        <p className="text-sm text-gray-400 mb-4 max-w-md leading-relaxed">
+          Relatórios e dados financeiros são restritos aos administradores. Solicite acesso ao responsável da loja.
+        </p>
+        <button
+          onClick={onBack}
+          className="h-11 px-6 rounded-xl bg-brand font-semibold text-sm active:scale-95 transition-transform"
+        >
+          Voltar
+        </button>
+      </div>
     </div>
   )
 }

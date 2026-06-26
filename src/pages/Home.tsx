@@ -7,6 +7,7 @@ import {
 import { useStore } from '@/store/useStore'
 import { IconBtn } from '@/components/ui/IconBtn'
 import { OrderRow } from '@/components/ui/OrderRow'
+import { can } from '@/lib/permissions'
 import type { OsStatus } from '@/types/database'
 
 const QUICK = [
@@ -27,8 +28,16 @@ const CARD_FILTER: Record<string, OsStatus[]> = {
 
 export function Home() {
   const navigate = useNavigate()
-  const { orders, notifications } = useStore()
+  const { orders, notifications, user } = useStore()
   const unreadCount = useMemo(() => notifications.filter((n) => !n.read).length, [notifications])
+
+  const canFinance = can(user, 'view_financial')
+  const canReports = can(user, 'view_reports')
+
+  const visibleQuick = QUICK.filter((c) => {
+    if (c.key === 'rel' && !canReports) return false
+    return true
+  })
 
   const handleCard = (key: string) => {
     if (key === 'abrir') return navigate('/nova-os')
@@ -98,15 +107,17 @@ export function Home() {
       </div>
 
       {/* Desktop KPIs */}
-      <div className="hidden md:grid grid-cols-3 gap-4 mb-6">
+      <div className={`hidden md:grid gap-4 mb-6 ${canFinance ? 'grid-cols-3' : 'grid-cols-2'}`}>
         <KpiBox label="OS em aberto" value={stats.abertas} icon={Clock} color="#F59E0B" />
         <KpiBox label="Prontas p/ retirada" value={stats.prontas} icon={CheckCircle2} color="#22C55E" />
-        <KpiBox label="Faturamento" value={`R$${stats.faturamento.toLocaleString('pt-BR')}`} icon={DollarSign} color="#D71920" />
+        {canFinance && (
+          <KpiBox label="Faturamento" value={`R$${stats.faturamento.toLocaleString('pt-BR')}`} icon={DollarSign} color="#D71920" />
+        )}
       </div>
 
       {/* Quick cards — NEW DESIGN */}
       <div className="grid grid-cols-2 md:grid-cols-3 gap-3.5 mb-7 md:mb-8">
-        {QUICK.map((c) => {
+        {visibleQuick.map((c) => {
           const Icon = c.icon
           return (
             <button
@@ -181,10 +192,12 @@ export function Home() {
             <BarChart3 size={16} className="text-brand" />
             <span className="text-[13px] font-bold tracking-wide uppercase text-gray-200">Resumo do dia</span>
           </div>
-          <div className="grid grid-cols-3 gap-3">
+          <div className={`grid gap-3 ${canFinance ? 'grid-cols-3' : 'grid-cols-2'}`}>
             <MiniStat label="Abertas" value={stats.abertas} />
             <MiniStat label="Prontas" value={stats.prontas} color="#22C55E" />
-            <MiniStat label="Faturamento" value={`R$${stats.faturamento}`} color="#F59E0B" />
+            {canFinance && (
+              <MiniStat label="Faturamento" value={`R$${stats.faturamento}`} color="#F59E0B" />
+            )}
           </div>
         </div>
 
