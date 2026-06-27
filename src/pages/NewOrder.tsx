@@ -2,14 +2,15 @@ import { useState, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import {
   ChevronLeft, User, Smartphone, Wrench, CheckCircle2, Camera,
-  ClipboardCheck, Save, ChevronDown, X, ImageIcon,
+  ClipboardCheck, Save, ChevronDown, X, ImageIcon, ScanLine,
 } from 'lucide-react'
 import { useStore } from '@/store/useStore'
 import { IconBtn } from '@/components/ui/IconBtn'
 import { CHECK_ENTRADA, CONDICAO_ESTETICA_LABELS, ACESSORIOS_OPTIONS, MARCAS, MODELOS_POR_MARCA } from '@/lib/constants'
 import { generateId } from '@/lib/utils'
 import { compressImage, formatFileSize } from '@/lib/image-compressor'
-import { uploadToDrive } from '@/lib/google-drive'
+import { formatOsPhotoFileName, uploadToDrive } from '@/lib/google-drive'
+import { scanOsImage } from '@/lib/os-scanner'
 import { customersAdapter, devicesAdapter, isSupabaseEnabled, ordersAdapter } from '@/lib/storage-adapter'
 import type { ServiceOrder, Customer, Device, CondicaoEstetica } from '@/types/database'
 import toast from 'react-hot-toast'
@@ -39,11 +40,14 @@ export function NewOrder() {
   const { addOrder, nextOsNumber, user } = useStore()
   const [step, setStep] = useState<Step>('cliente')
   const [saving, setSaving] = useState(false)
+  const [scanning, setScanning] = useState(false)
 
   // Cliente
   const [nome, setNome] = useState('')
   const [telefone, setTelefone] = useState('')
   const [cpf, setCpf] = useState('')
+  const [endereco, setEndereco] = useState('')
+  const [dataHoraOrigem, setDataHoraOrigem] = useState('')
 
   // Aparelho
   const [marca, setMarca] = useState('')
@@ -60,6 +64,7 @@ export function NewOrder() {
 
   // Fotos
   const fileInputRef = useRef<HTMLInputElement>(null)
+  const scannerInputRef = useRef<HTMLInputElement>(null)
   const [activePhotoSlot, setActivePhotoSlot] = useState<number | null>(null)
   const [photos, setPhotos] = useState<PhotoSlot[]>([
     { label: 'Frente' }, { label: 'Traseira' }, { label: 'Lateral E' },
@@ -87,6 +92,45 @@ export function NewOrder() {
 
     e.target.value = ''
     setActivePhotoSlot(null)
+  }
+
+  const handleScannerCapture = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0]
+    if (!file) return
+
+    setScanning(true)
+    toast.loading('Lendo foto da OS antiga...', { id: 'scanner' })
+    try {
+      const scanned = await scanOsImage(file)
+      if (scanned.nome) setNome(scanned.nome)
+      if (scanned.telefone) setTelefone(scanned.telefone)
+      if (scanned.endereco) setEndereco(scanned.endereco)
+      if (scanned.marca) setMarca(scanned.marca)
+      if (scanned.modelo) setModelo(scanned.modelo)
+      if (scanned.problema) setProblema(scanned.problema)
+      if (scanned.dataHora) setDataHoraOrigem(scanned.dataHora)
+
+      const found = [
+        scanned.nome && 'nome',
+        scanned.telefone && 'telefone',
+        scanned.endereco && 'endereco',
+        scanned.modelo && 'modelo',
+        scanned.problema && 'problema',
+        scanned.dataHora && 'data/hora',
+      ].filter(Boolean)
+
+      toast.success(
+        found.length ? `Scanner preencheu: ${found.join(', ')}` : 'Li a imagem, mas nao encontrei campos claros',
+        { id: 'scanner' },
+      )
+      setStep('cliente')
+    } catch (err) {
+      const message = err instanceof Error ? err.message : 'Erro desconhecido'
+      toast.error(`Scanner falhou: ${message}`, { id: 'scanner' })
+    } finally {
+      setScanning(false)
+      e.target.value = ''
+    }
   }
 
   const removePhoto = (index: number) => {
@@ -133,6 +177,11 @@ export function NewOrder() {
     setSaving(true)
     try {
       const now = new Date().toISOString()
+      const dadosMigrados = [
+        endereco.trim() ? `Endereco: ${endereco.trim()}` : '',
+        dataHoraOrigem.trim() ? `Data/hora da OS antiga: ${dataHoraOrigem.trim()}` : '',
+      ].filter(Boolean).join('\n')
+      const problemaFinal = [problema.trim(), dadosMigrados].filter(Boolean).join('\n\n')
       const condicaoEstetica = { ...condicao, descricao: descCondicao || undefined }
       let savedOrder: ServiceOrder
 
@@ -159,7 +208,7 @@ export function NewOrder() {
           customer_id: customer.id,
           device_id: device.id,
           status: 'recebido',
-          problema_relatado: problema.trim(),
+          problema_relatado: problemaFinal,
           condicao_estetica: condicaoEstetica,
           valor_servico: 0,
           garantia_dias: 0,
@@ -201,7 +250,7 @@ export function NewOrder() {
           customer_id: customerId,
           device_id: deviceId,
           status: 'recebido',
-          problema_relatado: problema.trim(),
+          problema_relatado: problemaFinal,
           condicao_estetica: condicaoEstetica,
           valor_servico: 0,
           garantia_dias: 0,
@@ -218,9 +267,13 @@ export function NewOrder() {
       const photosWithBlob = photos.filter((p) => p.blob)
       if (photosWithBlob.length > 0) {
         toast.loading(`Enviando ${photosWithBlob.length} foto(s)...`, { id: 'upload' })
-        for (const photo of photosWithBlob) {
+        for (const [index, photo] of photosWithBlob.entries()) {
           try {
-            await uploadToDrive(photo.blob!, `${photo.label}.jpg`, savedOrder.numero)
+            await uploadToDrive(
+              photo.blob!,
+              formatOsPhotoFileName(savedOrder.numero, photo.label, index),
+              savedOrder.numero,
+            )
           } catch {
             console.warn(`Falha ao enviar foto ${photo.label}`)
           }
@@ -256,6 +309,23 @@ export function NewOrder() {
         <span className="text-xs text-gray-500">{stepIndex + 1}/{STEPS.length}</span>
       </div>
 
+      <input
+        ref={scannerInputRef}
+        type="file"
+        accept="image/*"
+        capture="environment"
+        className="hidden"
+        onChange={handleScannerCapture}
+      />
+
+      <button
+        onClick={() => scannerInputRef.current?.click()}
+        disabled={scanning}
+        className="w-full h-11 mb-4 rounded-xl bg-white/8 border border-white/10 font-semibold text-sm flex items-center justify-center gap-2 active:scale-95 transition-transform disabled:opacity-60"
+      >
+        <ScanLine size={16} /> {scanning ? 'Lendo foto...' : 'Scanner OS antiga'}
+      </button>
+
       {/* Step indicators */}
       <div className="flex gap-1.5 mb-6">
         {STEPS.map((s, i) => (
@@ -271,7 +341,14 @@ export function NewOrder() {
         <Section title="Dados do cliente" icon={User}>
           <Input label="Nome *" value={nome} onChange={setNome} placeholder="Nome completo do cliente" />
           <Input label="Telefone *" value={telefone} onChange={setTelefone} placeholder="(16) 99999-9999" />
+          <Input label="Endereco" value={endereco} onChange={setEndereco} placeholder="Endereco encontrado na OS antiga" />
           <Input label="CPF" value={cpf} onChange={setCpf} placeholder="000.000.000-00 (opcional)" />
+          {dataHoraOrigem && (
+            <div className="rounded-xl bg-white/5 border border-white/10 px-3 py-2">
+              <div className="text-[11px] text-gray-500">Data/hora encontrada</div>
+              <div className="text-sm text-gray-200">{dataHoraOrigem}</div>
+            </div>
+          )}
         </Section>
       )}
 
@@ -476,6 +553,7 @@ export function NewOrder() {
           <div className="space-y-2">
             <SummaryRow label="Cliente" value={nome} />
             <SummaryRow label="Telefone" value={telefone} />
+            {endereco && <SummaryRow label="Endereco" value={endereco} />}
             {cpf && <SummaryRow label="CPF" value={cpf} />}
             <div className="border-t border-white/5 my-2" />
             <SummaryRow label="Aparelho" value={`${marca} ${modelo}`} />
@@ -484,6 +562,7 @@ export function NewOrder() {
             {acessorios.length > 0 && <SummaryRow label="Acessórios" value={acessorios.join(', ')} />}
             <div className="border-t border-white/5 my-2" />
             <SummaryRow label="Problema" value={problema || '—'} />
+            {dataHoraOrigem && <SummaryRow label="Data/hora OS antiga" value={dataHoraOrigem} />}
             <SummaryRow
               label="Checklist"
               value={`${Object.values(checklist).filter(Boolean).length}/${CHECK_ENTRADA.length} OK`}

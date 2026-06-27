@@ -1,59 +1,15 @@
-// ═══════════════════════════════════════════════════════════════
-// Google Drive Upload Service
-//
-// Usa a API do Google Drive para salvar fotos em uma pasta
-// específica. Requer OAuth2 ou Service Account configurado.
-//
-// Configuração:
-// 1. Criar projeto no Google Cloud Console
-// 2. Ativar Google Drive API
-// 3. Criar credenciais OAuth2 (tipo "Web application")
-// 4. Adicionar redirect URI do seu app
-// 5. Criar uma pasta no Drive e pegar o ID dela
-// ═══════════════════════════════════════════════════════════════
-
-const GOOGLE_CLIENT_ID = import.meta.env.VITE_GOOGLE_CLIENT_ID || ''
-const GOOGLE_API_KEY = import.meta.env.VITE_GOOGLE_API_KEY || ''
-const DRIVE_FOLDER_ID = import.meta.env.VITE_DRIVE_FOLDER_ID || ''
+const ENV_GOOGLE_CLIENT_ID = import.meta.env.VITE_GOOGLE_CLIENT_ID || ''
+const ENV_GOOGLE_API_KEY = import.meta.env.VITE_GOOGLE_API_KEY || ''
+const ENV_DRIVE_FOLDER_ID = import.meta.env.VITE_DRIVE_FOLDER_ID || ''
+const DRIVE_CONFIG_KEY = 'amo-os-drive-config'
 
 let accessToken: string | null = null
 let tokenExpiry = 0
 
-export const isDriveConfigured = Boolean(GOOGLE_CLIENT_ID && GOOGLE_API_KEY && DRIVE_FOLDER_ID)
-
-export async function authenticateGoogleDrive(): Promise<string> {
-  if (accessToken && Date.now() < tokenExpiry) return accessToken
-
-  return new Promise((resolve, reject) => {
-    const redirectUri = window.location.origin
-    const scope = 'https://www.googleapis.com/auth/drive.file'
-    const authUrl = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${GOOGLE_CLIENT_ID}&redirect_uri=${redirectUri}&response_type=token&scope=${scope}`
-
-    const popup = window.open(authUrl, 'google-auth', 'width=500,height=600')
-    if (!popup) return reject(new Error('Popup bloqueado'))
-
-    const interval = setInterval(() => {
-      try {
-        if (popup.closed) {
-          clearInterval(interval)
-          reject(new Error('Autenticação cancelada'))
-          return
-        }
-        const hash = popup.location.hash
-        if (hash.includes('access_token')) {
-          clearInterval(interval)
-          popup.close()
-          const params = new URLSearchParams(hash.substring(1))
-          accessToken = params.get('access_token')!
-          const expiresIn = parseInt(params.get('expires_in') || '3600')
-          tokenExpiry = Date.now() + expiresIn * 1000
-          resolve(accessToken)
-        }
-      } catch {
-        // cross-origin — popup still on Google's domain
-      }
-    }, 500)
-  })
+export interface DriveConfig {
+  clientId: string
+  apiKey: string
+  folderId: string
 }
 
 export interface DriveUploadResult {
@@ -63,21 +19,111 @@ export interface DriveUploadResult {
   thumbnailLink: string
 }
 
+export function getDriveConfig(): DriveConfig {
+  const fallback = {
+    clientId: ENV_GOOGLE_CLIENT_ID,
+    apiKey: ENV_GOOGLE_API_KEY,
+    folderId: ENV_DRIVE_FOLDER_ID,
+  }
+
+  try {
+    const saved = JSON.parse(localStorage.getItem(DRIVE_CONFIG_KEY) || '{}') as Partial<DriveConfig>
+    return {
+      clientId: saved.clientId || fallback.clientId,
+      apiKey: saved.apiKey || fallback.apiKey,
+      folderId: saved.folderId || fallback.folderId,
+    }
+  } catch {
+    return fallback
+  }
+}
+
+export function saveDriveConfig(config: DriveConfig) {
+  localStorage.setItem(DRIVE_CONFIG_KEY, JSON.stringify(config))
+  accessToken = null
+  tokenExpiry = 0
+}
+
+export function clearDriveConfig() {
+  localStorage.removeItem(DRIVE_CONFIG_KEY)
+  accessToken = null
+  tokenExpiry = 0
+}
+
+export function isDriveConfigured() {
+  const config = getDriveConfig()
+  return Boolean(config.clientId && config.apiKey && config.folderId)
+}
+
+export function formatOsDriveFolderName(osNumero: string) {
+  const slug = osNumero
+    .trim()
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '_')
+    .replace(/^_+|_+$/g, '')
+  return `os_${slug || Date.now()}`
+}
+
+export function formatOsPhotoFileName(osNumero: string, label: string, index: number) {
+  const folder = formatOsDriveFolderName(osNumero)
+  const cleanLabel = label
+    .trim()
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '_')
+    .replace(/^_+|_+$/g, '')
+  return `${folder}_${String(index + 1).padStart(2, '0')}_${cleanLabel || 'foto'}.jpg`
+}
+
+export async function authenticateGoogleDrive(): Promise<string> {
+  if (accessToken && Date.now() < tokenExpiry) return accessToken
+
+  return new Promise((resolve, reject) => {
+    const config = getDriveConfig()
+    if (!config.clientId) return reject(new Error('Google Client ID nao configurado'))
+
+    const redirectUri = window.location.origin
+    const scope = 'https://www.googleapis.com/auth/drive.file'
+    const authUrl = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${config.clientId}&redirect_uri=${redirectUri}&response_type=token&scope=${scope}`
+
+    const popup = window.open(authUrl, 'google-auth', 'width=500,height=600')
+    if (!popup) return reject(new Error('Popup bloqueado'))
+
+    const interval = setInterval(() => {
+      try {
+        if (popup.closed) {
+          clearInterval(interval)
+          reject(new Error('Autenticacao cancelada'))
+          return
+        }
+        const hash = popup.location.hash
+        if (hash.includes('access_token')) {
+          clearInterval(interval)
+          popup.close()
+          const params = new URLSearchParams(hash.substring(1))
+          accessToken = params.get('access_token')
+          const expiresIn = parseInt(params.get('expires_in') || '3600', 10)
+          tokenExpiry = Date.now() + expiresIn * 1000
+          resolve(accessToken || '')
+        }
+      } catch {
+        // Popup is still on Google's domain.
+      }
+    }, 500)
+  })
+}
+
 export async function uploadToDrive(
   blob: Blob,
   fileName: string,
   osNumero: string,
 ): Promise<DriveUploadResult> {
-  if (!isDriveConfigured) {
+  if (!isDriveConfigured()) {
     return saveToDemoStorage(blob, fileName, osNumero)
   }
 
   const token = await authenticateGoogleDrive()
+  const folderId = await getOrCreateFolder(formatOsDriveFolderName(osNumero), token)
 
-  // Criar subpasta para a OS (se não existir)
-  const folderId = await getOrCreateFolder(osNumero, token)
-
-  // Upload com metadata
   const metadata = {
     name: fileName,
     parents: [folderId],
@@ -109,8 +155,8 @@ export async function uploadToDrive(
 }
 
 async function getOrCreateFolder(name: string, token: string): Promise<string> {
-  // Buscar pasta existente
-  const query = `name='${name}' and '${DRIVE_FOLDER_ID}' in parents and mimeType='application/vnd.google-apps.folder' and trashed=false`
+  const config = getDriveConfig()
+  const query = `name='${name}' and '${config.folderId}' in parents and mimeType='application/vnd.google-apps.folder' and trashed=false`
   const searchRes = await fetch(
     `https://www.googleapis.com/drive/v3/files?q=${encodeURIComponent(query)}&fields=files(id)`,
     { headers: { Authorization: `Bearer ${token}` } },
@@ -119,7 +165,6 @@ async function getOrCreateFolder(name: string, token: string): Promise<string> {
 
   if (searchData.files?.length > 0) return searchData.files[0].id
 
-  // Criar pasta
   const createRes = await fetch('https://www.googleapis.com/drive/v3/files', {
     method: 'POST',
     headers: {
@@ -129,14 +174,15 @@ async function getOrCreateFolder(name: string, token: string): Promise<string> {
     body: JSON.stringify({
       name,
       mimeType: 'application/vnd.google-apps.folder',
-      parents: [DRIVE_FOLDER_ID],
+      parents: [config.folderId],
     }),
   })
+
+  if (!createRes.ok) throw new Error(`Falha ao criar pasta: ${createRes.statusText}`)
   const createData = await createRes.json()
   return createData.id
 }
 
-// ─── Fallback: salva no localStorage como base64 (demo) ───
 function saveToDemoStorage(
   blob: Blob,
   fileName: string,
@@ -145,11 +191,11 @@ function saveToDemoStorage(
   return new Promise((resolve) => {
     const reader = new FileReader()
     reader.onloadend = () => {
-      const key = `amo-os-photo-${osNumero}-${fileName}`
+      const key = `amo-os-photo-${formatOsDriveFolderName(osNumero)}-${fileName}`
       try {
         localStorage.setItem(key, reader.result as string)
       } catch {
-        // localStorage full — silently skip
+        // localStorage can be full; the OS itself should still be saved.
       }
       resolve({
         fileId: key,
@@ -164,11 +210,12 @@ function saveToDemoStorage(
 
 export function getDemoPhotos(osNumero: string): DriveUploadResult[] {
   const photos: DriveUploadResult[] = []
+  const prefix = `amo-os-photo-${formatOsDriveFolderName(osNumero)}-`
   for (let i = 0; i < localStorage.length; i++) {
     const key = localStorage.key(i)
-    if (key?.startsWith(`amo-os-photo-${osNumero}-`)) {
+    if (key?.startsWith(prefix)) {
       const data = localStorage.getItem(key)!
-      const fileName = key.replace(`amo-os-photo-${osNumero}-`, '')
+      const fileName = key.replace(prefix, '')
       photos.push({ fileId: key, fileName, webViewLink: data, thumbnailLink: data })
     }
   }

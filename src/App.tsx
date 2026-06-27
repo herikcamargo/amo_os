@@ -13,6 +13,7 @@ import { Reports } from '@/pages/Reports'
 import { Login } from '@/pages/Login'
 import { CloudSetup } from '@/pages/CloudSetup'
 import { UserManagement } from '@/pages/UserManagement'
+import { GoogleDriveSetup } from '@/pages/GoogleDriveSetup'
 
 export default function App() {
   const { user, authReady, isCloudConnected, initializeAuth, syncFromSupabase } = useStore()
@@ -52,6 +53,7 @@ export default function App() {
         <Route path="/ajustes" element={<Settings />} />
         <Route path="/relatorios" element={<Reports />} />
         <Route path="/conectar-nuvem" element={<CloudSetup />} />
+        <Route path="/google-drive" element={<GoogleDriveSetup />} />
         <Route path="/usuarios" element={<UserManagement />} />
       </Route>
       <Route path="/login" element={<Navigate to="/" replace />} />

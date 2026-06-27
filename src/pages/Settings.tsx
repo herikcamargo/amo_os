@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import {
   User, Bell, Shield, Database, Smartphone, Palette,
-  ChevronRight, LogOut, MessageSquare, Cloud, UsersRound,
+  ChevronRight, LogOut, MessageSquare, Cloud, UsersRound, HardDrive,
 } from 'lucide-react'
 import { useStore } from '@/store/useStore'
 import { can, roleLabel } from '@/lib/permissions'
@@ -26,6 +26,12 @@ export function Settings() {
       sub: isCloudConnected ? 'Conectado ao Supabase' : 'Modo local — clique para conectar',
       action: () => navigate('/conectar-nuvem'),
       show: canManageDb,
+    },
+    {
+      icon: HardDrive, label: 'Google Drive',
+      sub: 'Upload de fotos das OS',
+      action: () => navigate('/google-drive'),
+      show: canManageIntegrations,
     },
     {
       icon: MessageSquare, label: 'WhatsApp',
