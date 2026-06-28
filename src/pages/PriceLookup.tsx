@@ -1,13 +1,16 @@
 import { useEffect, useState } from 'react'
-import { Search, ChevronLeft, SlidersHorizontal, Shield, Tag, CreditCard, Pencil, Save } from 'lucide-react'
+import {
+  Search, ChevronLeft, SlidersHorizontal, Shield, Tag, CreditCard,
+  Pencil, Save, Star, Wrench,
+} from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 import { IconBtn } from '@/components/ui/IconBtn'
 import { useStore } from '@/store/useStore'
 import { can } from '@/lib/permissions'
 import {
-  calculateInstallmentPrice,
   calculateInstallmentAmount,
+  calculateInstallmentPrice,
   calculateMaxDiscount,
   formatCurrency,
   getPricingConfig,
@@ -18,6 +21,14 @@ import {
 } from '@/lib/pricing'
 import type { PriceCatalogItem, PriceService } from '@/types/pricing'
 import toast from 'react-hot-toast'
+
+const SERVICE_ORDER = [
+  'Troca de Tela',
+  'Troca de Bateria',
+  'Troca de Tampa',
+  'Troca de Conector de Carga',
+  'Troca de Carcaça',
+]
 
 export function PriceLookup() {
   const navigate = useNavigate()
@@ -30,15 +41,15 @@ export function PriceLookup() {
   const [syncing, setSyncing] = useState(true)
   const results = searchPriceCatalog(query, 14)
   const active = selected || results[0] || null
+  const groups = active ? groupServices(active.services) : []
 
   useEffect(() => {
-    let active = true
+    let mounted = true
     syncPricingFromSupabase().then(() => {
-      if (!active) return
-      setSyncing(false)
+      if (mounted) setSyncing(false)
     })
     return () => {
-      active = false
+      mounted = false
     }
   }, [])
 
@@ -62,6 +73,7 @@ export function PriceLookup() {
           <button
             onClick={() => setConfigOpen(true)}
             className="h-10 w-10 rounded-xl bg-white/8 border border-white/10 flex items-center justify-center"
+            title="Configurar preços"
           >
             <SlidersHorizontal size={17} />
           </button>
@@ -72,7 +84,7 @@ export function PriceLookup() {
         <Search size={18} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500" />
         <input
           value={query}
-          onChange={(e) => { setQuery(e.target.value); setSelected(null) }}
+          onChange={(event) => { setQuery(event.target.value); setSelected(null) }}
           placeholder="Digite modelo: A52, iPhone 11, G84, Redmi..."
           className="w-full h-12 pl-10 pr-3 rounded-xl bg-surface-input border border-white/5 focus:border-brand outline-none text-sm placeholder:text-gray-600"
         />
@@ -105,14 +117,17 @@ export function PriceLookup() {
           <div className="bg-surface-card rounded-[18px] border border-white/5 p-4">
             <div className="text-xs text-gray-500">{active.brand}</div>
             <div className="text-xl font-bold">{active.model}</div>
-            <div className="text-xs text-gray-500 mt-1">Serviços principais para orçamento</div>
+            <div className="text-xs text-gray-500 mt-1">
+              {groups.length ? 'Valores reais encontrados na planilha' : 'Nenhum preço encontrado na planilha'}
+            </div>
           </div>
 
-          {active.services.map((service) => (
-            <ServiceCard
-              key={service.key}
+          {groups.map((group) => (
+            <ServiceGroup
+              key={group.label}
               item={active}
-              service={service}
+              label={group.label}
+              services={group.services}
               isAdmin={isAdmin}
               userId={user?.id}
             />
@@ -130,7 +145,43 @@ export function PriceLookup() {
   )
 }
 
-function ServiceCard({ item, service, isAdmin, userId }: {
+function ServiceGroup({ item, label, services, isAdmin, userId }: {
+  item: PriceCatalogItem
+  label: string
+  services: PriceService[]
+  isAdmin: boolean
+  userId?: string
+}) {
+  return (
+    <div className="bg-surface-card rounded-[18px] border border-white/5 p-4">
+      <div className="flex items-center gap-3 mb-3">
+        <div className="w-10 h-10 rounded-xl bg-brand/15 flex items-center justify-center text-brand shrink-0">
+          <Wrench size={18} />
+        </div>
+        <div>
+          <h2 className="font-bold text-base">{label}</h2>
+          <div className="text-[11px] text-gray-500">
+            {services.length} opção{services.length > 1 ? 'ões' : ''} disponível{services.length > 1 ? 'eis' : ''}
+          </div>
+        </div>
+      </div>
+
+      <div className="space-y-2">
+        {services.map((service) => (
+          <ServiceOption
+            key={service.key}
+            item={item}
+            service={service}
+            isAdmin={isAdmin}
+            userId={userId}
+          />
+        ))}
+      </div>
+    </div>
+  )
+}
+
+function ServiceOption({ item, service, isAdmin, userId }: {
   item: PriceCatalogItem
   service: PriceService
   isAdmin: boolean
@@ -140,17 +191,19 @@ function ServiceCard({ item, service, isAdmin, userId }: {
   const [cost, setCost] = useState(service.costPrice?.toString() || '')
   const [final, setFinal] = useState(service.finalPrice?.toString() || '')
   const config = getPricingConfig()
-  const finalPrice = Number(final || service.finalPrice || 0) || 0
-  const termPrice = service.installmentPrice || (finalPrice ? calculateInstallmentPrice(finalPrice, config.cardInstallmentFeePct) : null)
-  const installmentAmount = finalPrice ? calculateInstallmentAmount(finalPrice, config) : null
-  const minAllowed = finalPrice ? calculateMaxDiscount(finalPrice, config.attendantDiscountLimitPct) : null
+  const meta = getServiceMeta(service)
+  const costPrice = valueOrNull(cost, service.costPrice)
+  const cashPrice = valueOrNull(final, service.finalPrice)
+  const termPrice = cashPrice === null ? null : calculateInstallmentPrice(cashPrice, config.cardInstallmentFeePct)
+  const installmentAmount = cashPrice === null ? null : calculateInstallmentAmount(cashPrice, config)
+  const minAllowed = cashPrice === null ? null : calculateMaxDiscount(cashPrice, config.attendantDiscountLimitPct)
 
   const save = async () => {
     setEditing(false)
     try {
       await saveServicePrice(item.id, service.key, {
-        costPrice: cost ? Number(cost) : null,
-        finalPrice: final ? Number(final) : null,
+        costPrice,
+        finalPrice: cashPrice,
       }, userId)
       toast.success('Preço atualizado')
     } catch {
@@ -159,26 +212,26 @@ function ServiceCard({ item, service, isAdmin, userId }: {
   }
 
   return (
-    <div className="bg-surface-card rounded-[18px] border border-white/5 p-4">
+    <div className="rounded-2xl bg-white/[0.03] border border-white/6 p-3">
       <div className="flex items-start gap-3">
-        <div className="w-10 h-10 rounded-xl bg-brand/15 flex items-center justify-center text-brand shrink-0">
-          <Tag size={18} />
-        </div>
+        <div className={`w-2 self-stretch rounded-full ${meta.barClass}`} />
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 flex-wrap">
-            <h2 className="font-bold text-sm">{service.label}</h2>
-            {service.quality && (
-              <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-white/8 text-gray-300">
-                {service.quality}
-              </span>
+            <span className={`text-[10px] font-black px-2 py-1 rounded-full ${meta.pillClass}`}>
+              {meta.label}
+            </span>
+            {meta.stars > 0 && <StarRating count={meta.stars} className={meta.starClass} />}
+            {meta.warranty && (
+              <span className="text-[11px] text-gray-400">{meta.warranty}</span>
             )}
           </div>
-          <div className="text-[11px] text-gray-500 mt-0.5">{service.finalPrice ? 'Tabela importada' : 'Aguardando cadastro de preço'}</div>
+          <div className="text-[11px] text-gray-600 mt-1">Planilha: {service.sourceLabel}</div>
         </div>
         {isAdmin && (
           <button
             onClick={() => setEditing(!editing)}
             className="w-9 h-9 rounded-lg bg-white/5 hover:bg-white/10 flex items-center justify-center"
+            title="Editar preço"
           >
             <Pencil size={14} />
           </button>
@@ -197,13 +250,17 @@ function ServiceCard({ item, service, isAdmin, userId }: {
           </button>
         </div>
       ) : (
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 mt-4">
-          {isAdmin && <Metric icon={Shield} label="Custo" value={formatCurrency(cost ? Number(cost) : service.costPrice)} muted={!cost && !service.costPrice} />}
-          <Metric icon={Tag} label="À vista" value={formatCurrency(finalPrice)} muted={!finalPrice} />
-          <Metric icon={CreditCard} label="A prazo" value={formatCurrency(termPrice)} muted={!termPrice} />
-          <Metric icon={CreditCard} label={`Até ${config.maxInstallments}x`} value={installmentAmount ? `${config.maxInstallments}x de ${formatCurrency(installmentAmount)}` : 'Consultar'} muted={!installmentAmount} />
-          {!isAdmin && <Metric icon={Tag} label="Mín. permitido" value={formatCurrency(minAllowed)} muted={!minAllowed} />}
-          {service.note && <Metric icon={Search} label="Obs." value={service.note} />}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 mt-3">
+          {isAdmin && <Metric icon={Shield} label="Custo" value={formatCurrency(costPrice)} muted={costPrice === null} />}
+          <Metric icon={Tag} label="À vista" value={formatCurrency(cashPrice)} muted={cashPrice === null} />
+          <Metric icon={CreditCard} label="A prazo" value={formatCurrency(termPrice)} muted={termPrice === null} />
+          <Metric
+            icon={CreditCard}
+            label={`Até ${config.maxInstallments}x`}
+            value={installmentAmount === null ? 'Consultar' : `${config.maxInstallments}x de ${formatCurrency(installmentAmount)}`}
+            muted={installmentAmount === null}
+          />
+          {!isAdmin && <Metric icon={Tag} label="Mín. permitido" value={formatCurrency(minAllowed)} muted={minAllowed === null} />}
         </div>
       )}
     </div>
@@ -217,7 +274,7 @@ function Metric({ icon: Icon, label, value, muted = false }: {
   muted?: boolean
 }) {
   return (
-    <div className="rounded-xl bg-white/[0.03] border border-white/5 p-3">
+    <div className="rounded-xl bg-black/10 border border-white/5 p-3">
       <div className="flex items-center gap-1.5 text-[10px] text-gray-500 mb-1">
         <Icon size={12} /> {label}
       </div>
@@ -237,7 +294,7 @@ function Field({ label, value, onChange }: {
       <input
         type="number"
         value={value}
-        onChange={(e) => onChange(e.target.value)}
+        onChange={(event) => onChange(event.target.value)}
         className="w-full h-10 px-3 rounded-xl bg-surface-input border border-white/5 focus:border-brand outline-none text-sm"
       />
     </div>
@@ -271,7 +328,7 @@ function PricingConfigModal({ userId, onClose }: {
     <div className="fixed inset-0 z-50 bg-black/70 flex items-end md:items-center justify-center" onClick={onClose}>
       <div
         className="w-full max-w-[420px] bg-surface-elevated rounded-t-[24px] md:rounded-[24px] border border-white/10 p-5"
-        onClick={(e) => e.stopPropagation()}
+        onClick={(event) => event.stopPropagation()}
       >
         <h2 className="text-lg font-bold mb-4">Configurar preços</h2>
         <div className="space-y-3">
@@ -285,4 +342,98 @@ function PricingConfigModal({ userId, onClose }: {
       </div>
     </div>
   )
+}
+
+function groupServices(services: PriceService[]) {
+  const unique = new Map<string, PriceService>()
+  services.forEach((service) => {
+    const current = unique.get(service.key)
+    if (!current || service.finalPrice || service.costPrice) {
+      unique.set(service.key, service)
+    }
+  })
+
+  const map = new Map<string, PriceService[]>()
+  Array.from(unique.values()).forEach((service) => {
+    if (!service.finalPrice && !service.costPrice) return
+    const list = map.get(service.label) || []
+    list.push(service)
+    map.set(service.label, list)
+  })
+
+  return Array.from(map.entries())
+    .map(([label, grouped]) => ({
+      label,
+      services: grouped.sort((a, b) => serviceRank(a) - serviceRank(b)),
+    }))
+    .sort((a, b) => SERVICE_ORDER.indexOf(a.label) - SERVICE_ORDER.indexOf(b.label))
+}
+
+function serviceRank(service: PriceService) {
+  if (service.key.includes('paralela')) return 1
+  if (service.key.includes('premium')) return 2
+  if (service.key.includes('original')) return 3
+  return 4
+}
+
+function getServiceMeta(service: PriceService) {
+  const quality = service.quality || service.label
+
+  if (quality.includes('PARALELA')) {
+    return {
+      label: 'PARALELA',
+      stars: 3,
+      warranty: 'Garantia 3 meses',
+      barClass: 'bg-amber-400',
+      pillClass: 'bg-amber-400/15 text-amber-300',
+      starClass: 'text-amber-300',
+    }
+  }
+
+  if (quality.includes('PREMIUM')) {
+    return {
+      label: 'PREMIUM',
+      stars: 4,
+      warranty: 'Garantia 6 meses',
+      barClass: 'bg-sky-400',
+      pillClass: 'bg-sky-400/15 text-sky-300',
+      starClass: 'text-sky-300',
+    }
+  }
+
+  if (quality.includes('ORIGINAL')) {
+    return {
+      label: 'ORIGINAL',
+      stars: 5,
+      warranty: 'Garantia 3 meses',
+      barClass: 'bg-emerald-400',
+      pillClass: 'bg-emerald-400/15 text-emerald-300',
+      starClass: 'text-emerald-300',
+    }
+  }
+
+  return {
+    label: service.label.replace('Troca de ', '').toUpperCase(),
+    stars: 0,
+    warranty: '',
+    barClass: 'bg-brand',
+    pillClass: 'bg-brand/15 text-brand',
+    starClass: 'text-brand',
+  }
+}
+
+function StarRating({ count, className }: { count: number; className: string }) {
+  return (
+    <div className={`flex items-center gap-0.5 ${className}`}>
+      {Array.from({ length: count }).map((_, index) => (
+        <Star key={index} size={12} fill="currentColor" />
+      ))}
+    </div>
+  )
+}
+
+function valueOrNull(value: string, fallback?: number | null) {
+  if (value.trim() === '') return fallback ?? null
+  const parsed = Number(value)
+  return Number.isFinite(parsed) ? parsed : null
 }

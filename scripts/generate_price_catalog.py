@@ -88,6 +88,9 @@ def build_catalog(xlsx_path: Path):
             elif source and source in headers:
                 value = parse_money(ws.cell(row, headers[source]).value)
 
+            if value is None:
+                continue
+
             services.append({
                 "key": key,
                 "label": label,

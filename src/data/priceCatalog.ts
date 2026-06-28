@@ -9,16 +9,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto c plus",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
@@ -29,71 +19,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 120.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -107,16 +37,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto e1",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
@@ -127,71 +47,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 80.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -205,16 +65,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto e2",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
@@ -225,51 +75,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "bateria-original",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Orig",
         "quality": "BATERIA ORIGINAL",
         "finalPrice": 120.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -283,16 +93,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -302,16 +102,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "model": "Moto E4",
     "search": "motorola moto e4",
     "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
@@ -323,71 +113,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 100.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -401,16 +131,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto e4 plus",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
@@ -421,51 +141,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "bateria-original",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Orig",
         "quality": "BATERIA ORIGINAL",
         "finalPrice": 120.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -479,16 +159,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -499,91 +169,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto e5 plus",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 290.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -597,51 +187,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto e5 play",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 270.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -655,36 +205,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -695,51 +215,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "outros moot e5",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 280.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -753,36 +233,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -793,51 +243,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto e6 plus",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 240.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -851,36 +261,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -891,71 +271,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto e6s",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -969,16 +289,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -989,51 +299,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto e6i",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 300.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -1047,36 +317,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -1087,91 +327,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto e6 play",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 260.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -1185,91 +345,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto e7",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 260.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -1283,16 +363,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto e7 plus",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
@@ -1303,71 +373,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "bateria-original",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Orig",
         "quality": "BATERIA ORIGINAL",
         "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -1381,91 +391,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto e7 power",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 280.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -1479,51 +409,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto e13",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 280.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -1537,36 +427,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -1577,91 +437,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto e20",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 260.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -1675,91 +455,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto e22",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 280.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -1791,76 +491,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -1871,91 +501,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 350.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -1969,51 +519,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto g1",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -2029,31 +539,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 80.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -2067,51 +557,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto g2",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 230.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -2127,31 +577,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 80.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -2165,51 +595,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto g3",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 220.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -2225,31 +615,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 90.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -2263,51 +633,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto g4 play xt1603",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -2323,31 +653,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 120.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -2361,16 +671,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto g4",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
@@ -2381,71 +681,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 120.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -2459,16 +699,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto g4 plus",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
@@ -2479,71 +709,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 120.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -2575,76 +745,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -2655,91 +755,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto g04s",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 330.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -2753,51 +773,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto g5",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 260.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -2813,31 +793,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 120.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -2851,71 +811,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto g5 plus",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -2929,16 +829,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -2949,91 +839,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto g5s xt1792",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 100.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -3047,91 +857,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto g5s plus",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 120.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -3145,16 +875,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto g5 g",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
@@ -3165,71 +885,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "bateria-premium",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Prem",
         "quality": "BATERIA PREMIUM",
         "finalPrice": 280.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -3243,51 +903,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto g 5g plus/ g100",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 360.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -3301,36 +921,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -3341,91 +931,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto g05",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 280.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -3439,16 +949,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto g6",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
@@ -3459,71 +959,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 160.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -3537,51 +977,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto g6 play/e5",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 260.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -3597,31 +997,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 130.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -3635,61 +1015,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto g6 plus",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 320.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -3710,16 +1040,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 160.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -3733,16 +1053,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto g7 play",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
@@ -3753,71 +1063,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "bateria-original",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Orig",
         "quality": "BATERIA ORIGINAL",
         "finalPrice": 150.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -3831,41 +1081,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto g7",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 260.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -3881,41 +1101,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 150.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -3929,16 +1119,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto g7 plus",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
@@ -3949,51 +1129,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "bateria-premium",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Prem",
         "quality": "BATERIA PREMIUM",
         "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -4007,16 +1147,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -4027,41 +1157,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto g7 power",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 270.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -4077,41 +1177,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 150.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -4125,41 +1195,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto g8 plus",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 320.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -4185,31 +1225,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -4223,16 +1243,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto g8",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
@@ -4243,51 +1253,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "bateria-original",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Orig",
         "quality": "BATERIA ORIGINAL",
         "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -4301,16 +1271,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -4321,71 +1281,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto g8 play / moto one macro",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 260.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -4399,16 +1299,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -4419,51 +1309,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto g8 power",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 270.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -4479,31 +1329,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -4517,71 +1347,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto g8 power lite",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -4595,16 +1365,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -4615,51 +1375,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto g9 play / e7 plus",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -4675,31 +1395,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -4733,26 +1433,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "bateria-premium",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Prem",
@@ -4768,36 +1448,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "sourceLabel": "Bat Orig",
         "quality": "BATERIA ORIGINAL",
         "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -4811,71 +1461,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto g9 power",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 300.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -4889,16 +1479,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -4909,91 +1489,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto g10",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -5007,91 +1507,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto g10 power",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 280.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -5105,91 +1525,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto g14",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 320.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -5223,71 +1563,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "bateria-original",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Orig",
         "quality": "BATERIA ORIGINAL",
         "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -5301,91 +1581,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto g22",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -5399,16 +1599,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto g23",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
@@ -5419,71 +1609,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "bateria-original",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Orig",
         "quality": "BATERIA ORIGINAL",
         "finalPrice": 210.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -5515,76 +1645,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -5595,51 +1655,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto g30",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 260.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -5655,31 +1675,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 160.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -5713,71 +1713,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "bateria-original",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Orig",
         "quality": "BATERIA ORIGINAL",
         "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -5791,91 +1731,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto g32",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 330.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -5889,91 +1749,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto g34",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 290.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -6005,76 +1785,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -6084,16 +1794,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "model": "Moto G41",
     "search": "motorola moto g41",
     "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
@@ -6105,71 +1805,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -6203,71 +1843,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "bateria-original",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Orig",
         "quality": "BATERIA ORIGINAL",
         "finalPrice": 200.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -6281,91 +1861,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto g50",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 300.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -6379,91 +1879,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto g50 5g",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 390.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -6477,91 +1897,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto g51",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 390.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -6593,76 +1933,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -6691,76 +1961,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -6771,91 +1971,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto g54",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 350.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -6869,41 +1989,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto g60",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 280.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -6927,36 +2017,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -6967,91 +2027,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto g60s",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 290.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -7083,76 +2063,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -7162,16 +2072,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "model": "Moto G71",
     "search": "motorola moto g71",
     "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
@@ -7183,71 +2083,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "bateria-original",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Orig",
         "quality": "BATERIA ORIGINAL",
         "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -7261,91 +2101,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto g73 5g",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 450.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -7359,71 +2119,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto g75 5g",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 320.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -7437,16 +2137,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -7456,16 +2146,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "model": "Moto G82 5G",
     "search": "motorola moto g82 5g",
     "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
@@ -7477,71 +2157,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "bateria-original",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Orig",
         "quality": "BATERIA ORIGINAL",
         "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -7573,76 +2193,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -7653,91 +2203,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto g85",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 600.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -7751,16 +2221,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto g100",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
@@ -7771,71 +2231,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "bateria-original",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Orig",
         "quality": "BATERIA ORIGINAL",
         "finalPrice": 300.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -7849,56 +2249,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto g200",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "bateria-original",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Orig",
@@ -7909,31 +2259,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -7947,91 +2277,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto x1",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 400.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -8045,51 +2295,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto x2",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 280.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -8103,36 +2313,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -8142,16 +2322,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "model": "Moto X4",
     "search": "motorola moto x4",
     "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
@@ -8163,71 +2333,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "bateria-original",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Orig",
         "quality": "BATERIA ORIGINAL",
         "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -8241,51 +2351,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto x play",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -8299,36 +2369,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -8339,91 +2379,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto x style",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 360.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -8437,16 +2397,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto z2 play",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
@@ -8457,71 +2407,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 200.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -8535,71 +2425,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto z3 play",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 400.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -8613,16 +2443,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -8633,71 +2453,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto z play",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 380.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -8711,16 +2471,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -8731,91 +2481,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto one",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 270.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -8829,71 +2499,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto one vision/ action",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 400.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -8907,16 +2517,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -8927,41 +2527,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto one fusion",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 330.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -8985,36 +2555,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -9025,91 +2565,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto one fusion plus",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 350.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -9123,91 +2583,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto one zoom",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 380.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -9221,51 +2601,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto one macro",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 320.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -9279,36 +2619,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -9319,41 +2629,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto one hyper",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 320.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -9379,31 +2659,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 150.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -9417,91 +2677,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto edge  5g",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 980.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -9515,51 +2695,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto edge 20",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 600.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -9573,36 +2713,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -9613,91 +2723,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto edge 20 lite",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 550.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -9711,91 +2741,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto edge 30",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 650.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -9827,76 +2777,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -9906,16 +2786,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "model": "Moto Edge 40 neo",
     "search": "motorola moto edge 40 neo",
     "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
@@ -9927,71 +2797,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "bateria-original",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Orig",
         "quality": "BATERIA ORIGINAL",
         "finalPrice": 200.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -10005,16 +2815,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola moto edge 50 fusion",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
@@ -10025,71 +2825,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "bateria-original",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Orig",
         "quality": "BATERIA ORIGINAL",
         "finalPrice": 200.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -10103,91 +2843,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "apple iphone 4s",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 100.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -10201,51 +2861,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "apple iphone 5, 5c, 5s",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -10261,31 +2881,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 130.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -10299,51 +2899,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "apple iphone 6",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -10359,31 +2919,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 160.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -10397,51 +2937,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "apple iphone 6 s",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 260.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -10457,31 +2957,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 150.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -10495,16 +2975,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "apple iphone 6 s plus",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
@@ -10515,71 +2985,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "bateria-original",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Orig",
         "quality": "BATERIA ORIGINAL",
         "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -10593,16 +3003,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "apple iphone 6 plus..",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
@@ -10613,71 +3013,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "bateria-original",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Orig",
         "quality": "BATERIA ORIGINAL",
         "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -10691,41 +3031,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "apple iphone 7",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -10751,31 +3061,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -10789,41 +3079,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "apple iphone 7plus",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 300.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -10849,31 +3109,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 200.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -10887,41 +3127,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "apple iphone 8",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 290.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -10965,16 +3175,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -10985,51 +3185,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "apple iphone 8 plus",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 280.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -11063,16 +3223,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -11083,51 +3233,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "apple iphone se 2020",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 350.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -11148,26 +3258,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "sourceLabel": "Tampa",
         "quality": null,
         "finalPrice": 400.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -11201,41 +3291,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "bateria-premium",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Prem",
         "quality": "BATERIA PREMIUM",
         "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -11259,16 +3319,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -11278,16 +3328,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "model": "IPhone XS",
     "search": "apple iphone xs",
     "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
@@ -11299,71 +3339,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tampa",
         "label": "Troca de Tampa",
         "sourceLabel": "Tampa",
         "quality": null,
         "finalPrice": 450.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -11397,71 +3377,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tampa",
         "label": "Troca de Tampa",
         "sourceLabel": "Tampa",
         "quality": null,
         "finalPrice": 500.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -11500,36 +3420,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "sourceLabel": "Sams",
         "quality": "TELA ORIGINAL",
         "finalPrice": 850.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -11603,16 +3493,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "bateria-premium",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Prem",
@@ -11638,26 +3518,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "sourceLabel": "Tampa",
         "quality": null,
         "finalPrice": 380.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -11701,16 +3561,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "bateria-premium",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Prem",
@@ -11736,26 +3586,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "sourceLabel": "Tampa",
         "quality": null,
         "finalPrice": 400.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -11799,16 +3629,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "bateria-premium",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Prem",
@@ -11834,26 +3654,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "sourceLabel": "Tampa",
         "quality": null,
         "finalPrice": 400.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -11897,26 +3697,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "bateria-original",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Orig",
@@ -11932,26 +3712,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "sourceLabel": "Tampa",
         "quality": null,
         "finalPrice": 450.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -11995,61 +3755,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tampa",
         "label": "Troca de Tampa",
         "sourceLabel": "Tampa",
         "quality": null,
         "finalPrice": 500.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -12093,26 +3803,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "bateria-original",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Orig",
@@ -12131,26 +3821,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -12161,91 +3831,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "apple iphone 13 mini",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 550.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -12279,36 +3869,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "bateria-original",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Orig",
@@ -12324,26 +3884,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "sourceLabel": "Tampa",
         "quality": null,
         "finalPrice": 450.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -12377,71 +3917,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tampa",
         "label": "Troca de Tampa",
         "sourceLabel": "Tampa",
         "quality": null,
         "finalPrice": 500.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -12475,46 +3955,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tampa",
         "label": "Troca de Tampa",
         "sourceLabel": "Tampa",
@@ -12533,16 +3973,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -12553,61 +3983,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "apple iphone 14",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 799.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -12621,26 +4001,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -12651,41 +4011,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "apple iphone 14 pro",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 1299.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -12701,41 +4031,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tampa",
         "label": "Troca de Tampa",
         "sourceLabel": "Tampa",
         "quality": null,
         "finalPrice": 600.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -12769,41 +4069,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "bateria-premium",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Prem",
         "quality": "BATERIA PREMIUM",
         "finalPrice": 599.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -12817,26 +4087,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -12847,61 +4097,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "apple iphone 15",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 1299.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -12915,26 +4115,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -12945,61 +4125,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "apple iphone 15 pro max",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 1600.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -13013,26 +4143,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -13043,61 +4153,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "apple iphone 16 pro normal",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 1500.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -13111,26 +4171,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -13141,91 +4181,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "apple ipad 2",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tampa",
         "label": "Troca de Tampa",
         "sourceLabel": "Tampa",
         "quality": null,
         "finalPrice": 280.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -13239,61 +4199,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "apple ipad 3",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 260.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -13307,26 +4217,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -13337,61 +4227,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "apple ipad 4 a1458",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 280.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -13405,26 +4245,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -13435,91 +4255,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "apple ipad 7",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 450.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -13532,16 +4272,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "model": "Sams. A01 CORE",
     "search": "samsung sams. a01 core",
     "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
@@ -13561,66 +4291,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -13631,51 +4301,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung sams. a01",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 240.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -13691,31 +4321,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 100.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -13728,16 +4338,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "model": "Sams. A02",
     "search": "samsung sams. a02",
     "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
@@ -13757,66 +4357,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -13826,16 +4366,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "model": "Sams. A02s",
     "search": "samsung sams. a02s",
     "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
@@ -13857,61 +4387,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "bateria-original",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Orig",
         "quality": "BATERIA ORIGINAL",
         "finalPrice": 200.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -13924,16 +4404,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "model": "Sams. A03",
     "search": "samsung sams. a03",
     "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
@@ -13955,16 +4425,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "bateria-premium",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Prem",
@@ -13975,41 +4435,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 130.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -14051,66 +4481,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -14120,16 +4490,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "model": "sams. A03s",
     "search": "samsung sams. a03s",
     "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
@@ -14149,66 +4509,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -14219,91 +4519,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung sams. a04s",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 350.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -14317,91 +4537,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung sams. a04e",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 260.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -14433,76 +4573,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -14531,76 +4601,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -14611,91 +4611,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung sams. a06",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 260.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -14709,51 +4629,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung sams. a10",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 230.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -14769,31 +4649,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 130.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -14806,16 +4666,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "model": "Sams.A 10s",
     "search": "outros sams.a 10s",
     "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
@@ -14837,41 +4687,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "bateria-original",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Orig",
         "quality": "BATERIA ORIGINAL",
         "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -14885,16 +4705,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -14904,16 +4714,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "model": "Sams. A11",
     "search": "samsung sams. a11",
     "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
@@ -14935,61 +4735,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 160.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -15003,51 +4753,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung sams. a12/a02/m12 somente wefix",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 260.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -15063,31 +4773,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -15101,16 +4791,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung sams. a13 5g",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
@@ -15121,71 +4801,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -15217,76 +4837,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -15297,91 +4847,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung sams. a14 4g",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 260.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -15415,71 +4885,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -15513,71 +4923,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -15591,51 +4941,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung sams. a15 5g",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 400.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -15651,31 +4961,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -15704,76 +4994,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 450.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -15817,41 +5037,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "bateria-original",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Orig",
         "quality": "BATERIA ORIGINAL",
         "finalPrice": 200.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -15865,16 +5055,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -15884,16 +5064,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "model": "Sams. A20S",
     "search": "samsung sams. a20s",
     "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
@@ -15915,41 +5085,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "bateria-original",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Orig",
         "quality": "BATERIA ORIGINAL",
         "finalPrice": 200.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -15963,16 +5103,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -15982,16 +5112,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "model": "Sams. A21",
     "search": "samsung sams. a21",
     "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
@@ -16011,66 +5131,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -16080,16 +5140,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "model": "Sams. A21S",
     "search": "samsung sams. a21s",
     "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
@@ -16106,66 +5156,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "sourceLabel": "Sams",
         "quality": "TELA ORIGINAL",
         "finalPrice": 500.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -16209,61 +5199,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "bateria-original",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Orig",
         "quality": "BATERIA ORIGINAL",
         "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -16295,76 +5235,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -16393,76 +5263,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -16473,91 +5273,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung sams. a23 5g",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 330.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -16571,91 +5291,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung sams. a24 4g",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 530.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -16687,76 +5327,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -16766,16 +5336,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "model": "Sams. A30",
     "search": "samsung sams. a30",
     "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
@@ -16797,61 +5357,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 170.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -16864,16 +5374,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "model": "Sams. A30s",
     "search": "samsung sams. a30s",
     "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
@@ -16895,26 +5395,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "bateria-original",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Orig",
@@ -16925,31 +5405,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -16973,81 +5433,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -17071,16 +5461,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-original",
         "label": "Troca de Tela",
         "sourceLabel": "Sams",
@@ -17091,61 +5471,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "bateria-original",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Orig",
         "quality": "BATERIA ORIGINAL",
         "finalPrice": 200.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -17167,86 +5497,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -17257,91 +5507,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung sams. a33",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 520.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -17355,51 +5525,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung sams. a34 5g",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 450.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -17413,36 +5543,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -17453,91 +5553,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung sams. a35 5g",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 550.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -17550,16 +5570,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "model": "Sams. A36 5G",
     "search": "samsung sams. a36 5g",
     "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
@@ -17576,66 +5586,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "sourceLabel": "Sams",
         "quality": "TELA ORIGINAL",
         "finalPrice": 950.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -17679,26 +5629,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "bateria-original",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Orig",
@@ -17727,16 +5657,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -17746,16 +5666,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "model": "Sams. A51",
     "search": "samsung sams. a51",
     "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
@@ -17777,41 +5687,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "bateria-original",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Orig",
         "quality": "BATERIA ORIGINAL",
         "finalPrice": 200.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -17825,16 +5705,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -17845,41 +5715,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung sams. a52 4g",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 500.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -17905,31 +5745,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -17943,91 +5763,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung sams. a52 5g",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 450.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -18071,61 +5811,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "bateria-original",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Orig",
         "quality": "BATERIA ORIGINAL",
         "finalPrice": 200.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -18138,16 +5828,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "model": "Sams. A536b (A53 5G)",
     "search": "samsung sams. a536b (a53 5g)",
     "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
@@ -18167,66 +5847,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -18236,16 +5856,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "model": "Sams. A54",
     "search": "samsung sams. a54",
     "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
@@ -18265,66 +5875,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -18335,91 +5885,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung sams. a55",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 550.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -18432,16 +5902,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "model": "Sams. A70",
     "search": "samsung sams. a70",
     "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
@@ -18463,26 +5923,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "bateria-original",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Orig",
@@ -18493,31 +5933,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 200.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -18531,41 +5951,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung sams. a71",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-original",
         "label": "Troca de Tela",
         "sourceLabel": "Sams",
         "quality": "TELA ORIGINAL",
         "finalPrice": 980.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -18579,46 +5969,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -18628,16 +5978,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "model": "Sams. A72",
     "search": "samsung sams. a72",
     "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
@@ -18657,66 +5997,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -18726,16 +6006,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "model": "Sams. A80",
     "search": "outros sams. a80",
     "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
@@ -18757,61 +6027,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "bateria-premium",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Prem",
         "quality": "BATERIA PREMIUM",
         "finalPrice": 350.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -18835,81 +6055,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 130.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -18923,51 +6073,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung sams. a5 2016 (a510)",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 450.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -18983,31 +6093,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 150.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -19020,16 +6110,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "model": "Sams. A5 2017 (a520)",
     "search": "samsung sams. a5 2017 (a520)",
     "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
@@ -19051,61 +6131,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "bateria-original",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Orig",
         "quality": "BATERIA ORIGINAL",
         "finalPrice": 160.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -19118,16 +6148,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "model": "Sams. A6 +",
     "search": "outros sams. a6 +",
     "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
@@ -19149,61 +6169,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 160.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -19217,91 +6187,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung sams. a700",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-original",
         "label": "Troca de Tela",
         "sourceLabel": "Sams",
         "quality": "TELA ORIGINAL",
         "finalPrice": 815.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -19314,16 +6204,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "model": "Sams. A7 2016 (a710)",
     "search": "samsung sams. a7 2016 (a710)",
     "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
@@ -19343,66 +6223,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -19413,51 +6233,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung sams. a7 2017 (a720)",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 380.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -19471,36 +6251,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -19511,71 +6261,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung sams. a7 2018   a750",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 450.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -19589,16 +6279,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -19608,16 +6288,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "model": "Sams. A8",
     "search": "outros sams. a8",
     "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
@@ -19639,61 +6309,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -19707,16 +6327,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "outros sams. a8+",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
@@ -19732,66 +6342,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "sourceLabel": "Sams",
         "quality": "TELA ORIGINAL",
         "finalPrice": 450.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -19805,91 +6355,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "outros sams. a8 plus",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 450.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -19903,16 +6373,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "outros sams. j120 j1 2016",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
@@ -19923,71 +6383,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 100.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -20001,51 +6401,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "outros sams. j200",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 280.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -20059,36 +6419,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -20099,51 +6429,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "outros sams. j2 prime",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 230.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -20159,31 +6449,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 100.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -20197,91 +6467,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "outros sams. j2 core",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 260.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -20295,91 +6485,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "outros sams. j2 pro",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -20393,91 +6503,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "outros sams. j320",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 320.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -20490,16 +6520,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "model": "Sam J4",
     "search": "outros sam j4",
     "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
@@ -20521,41 +6541,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "bateria-original",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Orig",
         "quality": "BATERIA ORIGINAL",
         "finalPrice": 160.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -20569,16 +6559,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -20588,16 +6568,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "model": "Sams. J4 core",
     "search": "outros sams. j4 core",
     "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
@@ -20617,66 +6587,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -20687,51 +6597,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "outros j4 + j6+ j410 j415 j610 j615",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -20747,31 +6617,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 120.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -20805,51 +6655,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "bateria-original",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Orig",
         "quality": "BATERIA ORIGINAL",
         "finalPrice": 160.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -20863,16 +6673,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -20883,51 +6683,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "outros sams. j6 +",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 280.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -20943,31 +6703,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 150.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -21001,71 +6741,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 150.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -21099,71 +6779,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 120.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -21207,61 +6827,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "bateria-original",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Orig",
         "quality": "BATERIA ORIGINAL",
         "finalPrice": 120.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -21274,16 +6844,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "model": "J5 PRO (J530)",
     "search": "outros j5 pro (j530)",
     "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
@@ -21305,61 +6865,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 120.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -21403,41 +6913,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "bateria-original",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Orig",
         "quality": "BATERIA ORIGINAL",
         "finalPrice": 160.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -21451,16 +6931,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -21470,26 +6940,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "model": "Sams. J320",
     "search": "outros sams. j320",
     "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
       {
         "key": "tela-original",
         "label": "Troca de Tela",
@@ -21501,61 +6951,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tampa",
         "label": "Troca de Tampa",
         "sourceLabel": "Tampa",
         "quality": null,
         "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -21589,36 +6989,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "bateria-original",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Orig",
@@ -21647,16 +7017,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -21666,16 +7026,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "model": "Sams.J701 neo",
     "search": "outros sams.j701 neo",
     "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
@@ -21692,26 +7042,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "sourceLabel": "Sams",
         "quality": "TELA ORIGINAL",
         "finalPrice": 530.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -21742,16 +7072,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 120.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -21795,26 +7115,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "bateria-original",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Orig",
@@ -21840,16 +7140,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 120.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -21863,91 +7153,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "outros sams. j7 duo j720",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 450.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -21981,71 +7191,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "bateria-original",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Orig",
         "quality": "BATERIA ORIGINAL",
         "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -22058,16 +7208,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "model": "Sams. J7 Prime 2",
     "search": "outros sams. j7 prime 2",
     "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
@@ -22089,41 +7229,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "bateria-original",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Orig",
         "quality": "BATERIA ORIGINAL",
         "finalPrice": 170.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -22137,16 +7247,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -22157,51 +7257,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "outros sams. j7 prime",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 280.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -22217,31 +7277,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 140.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -22255,91 +7295,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung galaxy m10",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-original",
         "label": "Troca de Tela",
         "sourceLabel": "Sams",
         "quality": "TELA ORIGINAL",
         "finalPrice": 570.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -22352,16 +7312,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "model": "Galaxy M12",
     "search": "samsung galaxy m12",
     "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
@@ -22381,66 +7331,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -22451,91 +7341,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung galaxy m13",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 350.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -22549,91 +7359,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung galaxy m14 5g",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 350.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -22647,91 +7377,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung galaxy m20",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 300.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -22745,91 +7395,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung galaxy m21s",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 360.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -22843,91 +7413,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung galaxy m23",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 330.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -22940,16 +7430,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "model": "Galaxy M30",
     "search": "samsung galaxy m30",
     "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
@@ -22969,66 +7449,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -23038,16 +7458,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "model": "Galaxy M31",
     "search": "samsung galaxy m31",
     "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
@@ -23067,66 +7477,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -23137,91 +7487,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung galaxy m34",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 750.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -23234,16 +7504,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "model": "Galaxy M51",
     "search": "samsung galaxy m51",
     "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
@@ -23263,66 +7523,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -23332,16 +7532,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "model": "Galaxy M52",
     "search": "samsung galaxy m52",
     "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
@@ -23353,71 +7543,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -23431,91 +7561,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung galaxy m53 5g",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 500.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -23529,91 +7579,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung galaxy m54 5g",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 550.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -23627,91 +7597,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung galaxy m55",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 490.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -23725,91 +7615,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung galaxy m62",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 750.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -23823,91 +7633,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung galaxy note 10 lite",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 950.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -23921,71 +7651,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung galaxy note 20",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "bateria-premium",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Prem",
         "quality": "BATERIA PREMIUM",
         "finalPrice": 400.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -23999,16 +7669,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -24019,91 +7679,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung s7 edge",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -24117,91 +7697,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung s8",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -24215,41 +7715,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung s9",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-original",
         "label": "Troca de Tela",
         "sourceLabel": "Sams",
         "quality": "TELA ORIGINAL",
         "finalPrice": 1400.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -24265,41 +7735,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -24313,91 +7753,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung s9 plus",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tampa",
         "label": "Troca de Tampa",
         "sourceLabel": "Tampa 2",
         "quality": null,
         "finalPrice": 200.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -24411,61 +7771,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "outros s10e",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "bateria-premium",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Prem",
         "quality": "BATERIA PREMIUM",
         "finalPrice": 400.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -24489,16 +7799,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -24509,91 +7809,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "outros s10 lite sm-g770f",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-original",
         "label": "Troca de Tela",
         "sourceLabel": "Sams",
         "quality": "TELA ORIGINAL",
         "finalPrice": 880.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -24607,71 +7827,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "outros s10",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-original",
         "label": "Troca de Tela",
         "sourceLabel": "Sams",
         "quality": "TELA ORIGINAL",
         "finalPrice": 1700.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -24685,16 +7845,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -24705,61 +7855,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "outros s10 plus",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "bateria-premium",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Prem",
         "quality": "BATERIA PREMIUM",
         "finalPrice": 350.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -24783,16 +7883,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -24802,16 +7892,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "model": "S20 FE",
     "search": "samsung s20 fe",
     "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
@@ -24823,71 +7903,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "bateria-premium",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Prem",
         "quality": "BATERIA PREMIUM",
         "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -24901,91 +7921,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung s21",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "bateria-premium",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Prem",
         "quality": "BATERIA PREMIUM",
         "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -24999,91 +7939,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung s21 fe",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 599.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -25097,91 +7957,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung s21 5g",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tampa",
         "label": "Troca de Tampa",
         "sourceLabel": "Tampa",
         "quality": null,
         "finalPrice": 350.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -25194,46 +7974,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "model": "S22",
     "search": "samsung s22",
     "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
       {
         "key": "bateria-premium",
         "label": "Troca de Bateria",
@@ -25253,36 +7993,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -25293,91 +8003,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung s23",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "bateria-original",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Orig",
         "quality": "BATERIA ORIGINAL",
         "finalPrice": 490.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -25391,91 +8021,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung sams. i8552(galaxy win)",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "bateria-original",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Orig",
         "quality": "BATERIA ORIGINAL",
         "finalPrice": 80.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -25489,91 +8039,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "outros sams. i9082",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 200.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -25587,91 +8057,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "outros sams. g530 (prime)",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 90.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -25685,91 +8075,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "outros sams. g531",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 90.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -25783,91 +8093,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "outros sams. gran duos",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 90.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -25881,91 +8111,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "outros galax ace 3",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 90.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -25979,91 +8129,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung galax s3 mini",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 90.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -26077,91 +8147,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung galax s3 duos",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 90.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -26175,91 +8165,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "outros galax ace 4",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 90.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -26273,91 +8183,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "outros galax e5",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 90.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -26371,91 +8201,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "outros galax core 2",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 90.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -26469,91 +8219,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "outros galax core plus g350",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 90.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -26567,91 +8237,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung galax young gt s6313",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 90.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -26665,91 +8255,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "outros galax win",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 90.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -26763,91 +8273,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "outros lcd g530",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 100.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -26871,81 +8301,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 100.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -26959,91 +8319,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola lg g3 d690",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 100.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -27057,91 +8337,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola lg g8s thinq",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 950.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -27155,91 +8355,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola lg 4",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 100.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -27253,91 +8373,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola lg k2",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 100.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -27351,51 +8391,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola lg k10 2016 k430",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 260.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -27411,31 +8411,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 100.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -27449,16 +8429,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola lg k10 2017",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
@@ -27469,51 +8439,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "bateria-original",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Orig",
         "quality": "BATERIA ORIGINAL",
         "finalPrice": 110.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -27527,16 +8457,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -27547,91 +8467,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola lg k10 pro",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 350.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -27645,16 +8485,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola lg k10 power",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
@@ -27665,71 +8495,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "bateria-original",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Orig",
         "quality": "BATERIA ORIGINAL",
         "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -27743,16 +8513,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola lg k11 +",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
@@ -27763,51 +8523,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "bateria-original",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Orig",
         "quality": "BATERIA ORIGINAL",
         "finalPrice": 160.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -27821,16 +8541,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -27841,51 +8551,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola lg k11",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -27901,31 +8571,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 120.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -27939,91 +8589,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola lg k12",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 340.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -28037,51 +8607,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola lg k12 prime",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 300.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -28095,36 +8625,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -28135,71 +8635,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola lg k12+",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 280.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -28213,16 +8653,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -28233,91 +8663,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola lg k4 2015 k130",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 100.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -28331,16 +8681,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola lg k4 x230ds",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
@@ -28351,71 +8691,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 100.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -28429,91 +8709,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola lg k6 plus",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 100.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -28527,91 +8727,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola lg k6 k33a48",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 110.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -28625,71 +8745,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola lg k8",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 240.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -28703,16 +8763,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -28723,91 +8773,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola lg k8+ x120",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 360.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -28821,51 +8791,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola lg k9",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -28881,31 +8811,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 120.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -28919,91 +8829,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola lg p 716",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 350.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -29017,91 +8847,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola lg k22",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -29115,91 +8865,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola lg k22+",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 320.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -29213,91 +8883,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola lg k40s",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 260.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -29311,71 +8901,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola lg k41s",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 290.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -29389,16 +8919,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -29409,91 +8929,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola lg k42",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -29507,91 +8947,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola lg k50s",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 380.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -29605,91 +8965,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "outros lh k51",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 280.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -29703,91 +8983,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola lg k51s",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 320.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -29801,41 +9001,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola lg k52",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 300.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -29859,36 +9029,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -29899,91 +9039,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola lg k61",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 310.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -29997,91 +9057,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola lg k62",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 320.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -30095,91 +9075,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola lg x style (k200)",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 260.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -30193,91 +9093,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola lg x screem (k500)",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 450.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -30291,91 +9111,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "motorola lg k40s",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 390.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -30409,71 +9149,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "bateria-original",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Orig",
         "quality": "BATERIA ORIGINAL",
         "finalPrice": 120.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -30487,91 +9167,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung lenovo vibe b a1010a20",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 230.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -30585,91 +9185,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "outros lenovo vibe c2",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 120.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -30683,91 +9203,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung mi a1",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 280.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -30781,91 +9221,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung mi a2",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 280.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -30897,76 +9257,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -30977,91 +9267,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung note 5",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 320.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -31075,91 +9285,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung redmi note 6 pro",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 360.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -31173,91 +9303,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "xiaomi redmi mi 7a",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 260.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -31271,71 +9321,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung redmi note 7",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 300.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -31349,16 +9339,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -31369,91 +9349,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "xiaomi mi 8 lite",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 280.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -31467,91 +9367,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "xiaomi mi 8",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 550.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -31565,91 +9385,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "xiaomi mi 8 pro",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 380.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -31663,91 +9403,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "xiaomi mi 8 lite",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 290.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -31761,91 +9421,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "xiaomi redmi 9",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 240.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -31859,71 +9439,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "xiaomi redmi 9a",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 280.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -31937,16 +9457,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -31957,71 +9467,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "xiaomi redmi 9c",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 280.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -32035,16 +9485,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -32055,91 +9495,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "xiaomi redmi 9t",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 330.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -32153,91 +9513,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "xiaomi redmi 10 2021  prime",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 350.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -32251,91 +9531,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "xiaomi redmi 10c",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -32349,91 +9549,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "xiaomi redmi 12",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 350.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -32447,91 +9567,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "xiaomi redmi 12c",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 320.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -32563,76 +9603,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -32643,61 +9613,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "xiaomi mi 9",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 500.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -32711,26 +9631,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -32741,91 +9641,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "xiaomi mi 9a",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 300.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -32839,91 +9659,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "xiaomi mi 9t",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 550.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -32937,91 +9677,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "xiaomi mi 9t pro",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 650.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -33035,91 +9695,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "xiaomi mi 9 lite",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 600.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -33133,51 +9713,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung mi note 10",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 390.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -33191,36 +9731,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -33231,91 +9741,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "xiaomi mi 11 lite",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 660.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -33329,91 +9759,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung redmi note 7",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 280.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -33427,51 +9777,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung redmi note 8",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 260.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -33485,36 +9795,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -33524,16 +9804,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "model": "REDMI NOTE 8 PRO",
     "search": "samsung redmi note 8 pro",
     "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
@@ -33545,71 +9815,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tampa",
         "label": "Troca de Tampa",
         "sourceLabel": "Tampa 2",
         "quality": null,
         "finalPrice": 150.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -33643,71 +9853,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "bateria-original",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Orig",
         "quality": "BATERIA ORIGINAL",
         "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -33721,91 +9871,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung redmi note 9 pro",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 360.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -33819,16 +9889,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung redmi note 9s",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
@@ -33839,71 +9899,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "bateria-original",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Orig",
         "quality": "BATERIA ORIGINAL",
         "finalPrice": 200.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -33917,16 +9917,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung redmi note 10",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
@@ -33937,71 +9927,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "bateria-original",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Orig",
         "quality": "BATERIA ORIGINAL",
         "finalPrice": 200.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -34015,91 +9945,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung redmi note 10 5g",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 380.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -34113,71 +9963,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung redmi note 10s",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 420.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -34191,16 +9981,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -34211,91 +9991,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung redmi note 10 pro",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 400.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -34309,51 +10009,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung redmi note 11  4g",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 450.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -34367,36 +10027,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -34407,91 +10037,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung redmi note 11s",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 530.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -34505,91 +10055,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung redmi note 11 pro",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 700.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -34603,91 +10073,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung redmi note 12 4g",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 460.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -34701,91 +10091,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung redmi note 12s",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 450.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -34799,91 +10109,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung redmi note 13 4g",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 700.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -34897,91 +10127,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung redmi note 13 5g",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 520.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -34995,16 +10145,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung redmi note 13 pro 4g",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
@@ -35015,71 +10155,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "bateria-premium",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Prem",
         "quality": "BATERIA PREMIUM",
         "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -35093,41 +10173,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung redmi note 13 pro 5g",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 580.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -35141,46 +10191,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -35191,91 +10201,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "xiaomi poco f1",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 360.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -35289,91 +10219,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "xiaomi poco f2 pro",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 950.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -35387,91 +10237,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "xiaomi poco f3",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 550.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -35485,91 +10255,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "xiaomi poco f5",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 600.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -35583,91 +10273,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "xiaomi poco x3 pro",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "bateria-original",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Orig",
         "quality": "BATERIA ORIGINAL",
         "finalPrice": 230.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -35681,91 +10291,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "xiaomi poco x4 gt",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 380.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -35779,91 +10309,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "xiaomi poco x4 pro 5g",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 800.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -35877,91 +10327,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "xiaomi poco x5",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 450.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -35975,91 +10345,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "xiaomi poco x5 pro",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 580.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -36073,91 +10363,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "xiaomi poco x6 pro 5g",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 850.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -36171,91 +10381,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "xiaomi poco m3",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 330.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -36269,91 +10399,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "xiaomi poco m3 pro 5g",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 350.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -36367,91 +10417,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "xiaomi poco m4",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 300.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -36465,91 +10435,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "xiaomi poco m4 pro 4g",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 450.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -36563,91 +10453,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "xiaomi poco m4 pro 5g",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 360.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -36661,91 +10471,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "xiaomi poco m5s",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 500.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -36759,91 +10489,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "xiaomi poco c40",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 280.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -36857,91 +10507,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "xiaomi poco c75",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 300.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -36955,91 +10525,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "outros tablet t295",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 450.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -37053,91 +10543,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung tab s6 lite (sm-p619)",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 1000.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -37150,16 +10560,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "model": "TAB S6 LITE (SM-P615)",
     "search": "samsung tab s6 lite (sm-p615)",
     "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
@@ -37179,66 +10579,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -37249,91 +10589,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung tab a7 lite (sm-t220)",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 550.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -37347,91 +10607,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung tab a7 lite (sm-t225)",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 380.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -37445,91 +10625,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "outros tab a (sm-t280)",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-original",
         "label": "Troca de Tela",
         "sourceLabel": "Sams",
         "quality": "TELA ORIGINAL",
         "finalPrice": 670.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -37543,91 +10643,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "outros tab a (sm-t285)",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-original",
         "label": "Troca de Tela",
         "sourceLabel": "Sams",
         "quality": "TELA ORIGINAL",
         "finalPrice": 735.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -37641,91 +10661,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "outros tab a (sm-t290) 8\"",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 500.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -37739,91 +10679,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "outros tab a (sm-t510)",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 550.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -37837,91 +10697,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "outros tab a8 x200",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 600.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -37935,91 +10715,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "outros tab t510",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 900.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -38033,91 +10733,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung s9 fe plus",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-original",
         "label": "Troca de Tela",
         "sourceLabel": "Sams",
         "quality": "TELA ORIGINAL",
         "finalPrice": 2200.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -38131,91 +10751,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "outros tab a9 plus",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 600.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -38228,16 +10768,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "model": "TAB T505",
     "search": "outros tab t505",
     "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
@@ -38257,66 +10787,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
@@ -38327,91 +10797,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "outros max pro m2",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 320.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -38425,91 +10815,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "outros max shot zb634kl",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 270.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -38523,91 +10833,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "outros zenfone 6",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 550.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -38621,91 +10851,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "realme realme 11 5g",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -38719,91 +10869,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "realme realme c75",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
         "key": "tela-premium",
         "label": "Troca de Tela",
         "sourceLabel": "Tela Prem.",
         "quality": "TELA PREMIUM",
         "finalPrice": 280.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-paralela",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Cadastro manual",
-        "quality": "BATERIA PARALELA",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": null,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": null,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
