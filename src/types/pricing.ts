@@ -20,6 +20,7 @@ export interface PriceCatalogItem {
 export interface PricingConfig {
   attendantDiscountLimitPct: number
   cardInstallmentFeePct: number
+  maxInstallments: number
 }
 
 export interface PriceSyncResult {

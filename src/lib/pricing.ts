@@ -8,7 +8,8 @@ const PRICING_CONFIG_KEY = 'amo-os-pricing-config'
 
 const DEFAULT_CONFIG: PricingConfig = {
   attendantDiscountLimitPct: 5,
-  cardInstallmentFeePct: 12,
+  cardInstallmentFeePct: 11,
+  maxInstallments: 10,
 }
 
 type ServiceOverrides = Record<string, Partial<PriceService>>
@@ -39,7 +40,7 @@ export async function syncPricingFromSupabase(): Promise<PriceSyncResult> {
       supabase.from('price_overrides').select('item_id, service_key, cost_price, final_price'),
       supabase
         .from('pricing_settings')
-        .select('attendant_discount_limit_pct, card_installment_fee_pct')
+        .select('attendant_discount_limit_pct, card_installment_fee_pct, max_installments')
         .eq('id', 'default')
         .maybeSingle(),
     ])
@@ -56,6 +57,7 @@ export async function syncPricingFromSupabase(): Promise<PriceSyncResult> {
       localStorage.setItem(PRICING_CONFIG_KEY, JSON.stringify({
         attendantDiscountLimitPct: Number(settings.attendant_discount_limit_pct ?? DEFAULT_CONFIG.attendantDiscountLimitPct),
         cardInstallmentFeePct: Number(settings.card_installment_fee_pct ?? DEFAULT_CONFIG.cardInstallmentFeePct),
+        maxInstallments: Number(settings.max_installments ?? DEFAULT_CONFIG.maxInstallments),
       }))
     }
 
@@ -130,6 +132,7 @@ export async function savePricingConfigToSupabase(config: PricingConfig, userId?
       id: 'default',
       attendant_discount_limit_pct: config.attendantDiscountLimitPct,
       card_installment_fee_pct: config.cardInstallmentFeePct,
+      max_installments: config.maxInstallments,
       updated_by: userId || null,
       updated_at: new Date().toISOString(),
     }, { onConflict: 'id' })
@@ -139,6 +142,11 @@ export async function savePricingConfigToSupabase(config: PricingConfig, userId?
 
 export function calculateInstallmentPrice(finalPrice: number, feePct = getPricingConfig().cardInstallmentFeePct) {
   return Math.ceil(finalPrice * (1 + feePct / 100))
+}
+
+export function calculateInstallmentAmount(finalPrice: number, config = getPricingConfig()) {
+  const maxInstallments = Math.max(1, Math.floor(config.maxInstallments || DEFAULT_CONFIG.maxInstallments))
+  return Math.ceil(calculateInstallmentPrice(finalPrice, config.cardInstallmentFeePct) / maxInstallments)
 }
 
 export function calculateMaxDiscount(finalPrice: number, limitPct = getPricingConfig().attendantDiscountLimitPct) {

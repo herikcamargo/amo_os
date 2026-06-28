@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import {
   User, Bell, Shield, Database, Smartphone, Palette,
-  ChevronRight, LogOut, MessageSquare, Cloud, UsersRound, HardDrive,
+  ChevronRight, LogOut, MessageSquare, Cloud, UsersRound, HardDrive, Tags,
 } from 'lucide-react'
 import { useStore } from '@/store/useStore'
 import { can, roleLabel } from '@/lib/permissions'
@@ -32,6 +32,12 @@ export function Settings() {
       sub: 'Upload de fotos das OS',
       action: () => navigate('/google-drive'),
       show: canManageIntegrations,
+    },
+    {
+      icon: Tags, label: 'Preços e orçamento',
+      sub: 'Desconto, prazo e parcelas',
+      action: () => navigate('/precos?config=1'),
+      show: can(user, 'manage_settings'),
     },
     {
       icon: MessageSquare, label: 'WhatsApp',

@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react'
 import { Search, ChevronLeft, SlidersHorizontal, Shield, Tag, CreditCard, Pencil, Save } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useSearchParams } from 'react-router-dom'
 import { IconBtn } from '@/components/ui/IconBtn'
 import { useStore } from '@/store/useStore'
 import { can } from '@/lib/permissions'
 import {
   calculateInstallmentPrice,
+  calculateInstallmentAmount,
   calculateMaxDiscount,
   formatCurrency,
   getPricingConfig,
@@ -20,6 +21,7 @@ import toast from 'react-hot-toast'
 
 export function PriceLookup() {
   const navigate = useNavigate()
+  const [searchParams] = useSearchParams()
   const { user } = useStore()
   const isAdmin = can(user, 'manage_settings')
   const [query, setQuery] = useState('')
@@ -39,6 +41,12 @@ export function PriceLookup() {
       active = false
     }
   }, [])
+
+  useEffect(() => {
+    if (isAdmin && searchParams.get('config') === '1') {
+      setConfigOpen(true)
+    }
+  }, [isAdmin, searchParams])
 
   return (
     <div className="px-5 md:px-0 pt-3 md:pt-8 pb-8">
@@ -97,7 +105,7 @@ export function PriceLookup() {
           <div className="bg-surface-card rounded-[18px] border border-white/5 p-4">
             <div className="text-xs text-gray-500">{active.brand}</div>
             <div className="text-xl font-bold">{active.model}</div>
-            <div className="text-xs text-gray-500 mt-1">{active.services.length} serviço(s) encontrado(s)</div>
+            <div className="text-xs text-gray-500 mt-1">Serviços principais para orçamento</div>
           </div>
 
           {active.services.map((service) => (
@@ -133,7 +141,8 @@ function ServiceCard({ item, service, isAdmin, userId }: {
   const [final, setFinal] = useState(service.finalPrice?.toString() || '')
   const config = getPricingConfig()
   const finalPrice = Number(final || service.finalPrice || 0) || 0
-  const installment = service.installmentPrice || (finalPrice ? calculateInstallmentPrice(finalPrice, config.cardInstallmentFeePct) : null)
+  const termPrice = service.installmentPrice || (finalPrice ? calculateInstallmentPrice(finalPrice, config.cardInstallmentFeePct) : null)
+  const installmentAmount = finalPrice ? calculateInstallmentAmount(finalPrice, config) : null
   const minAllowed = finalPrice ? calculateMaxDiscount(finalPrice, config.attendantDiscountLimitPct) : null
 
   const save = async () => {
@@ -164,7 +173,7 @@ function ServiceCard({ item, service, isAdmin, userId }: {
               </span>
             )}
           </div>
-          <div className="text-[11px] text-gray-500 mt-0.5">Origem: {service.sourceLabel}</div>
+          <div className="text-[11px] text-gray-500 mt-0.5">{service.finalPrice ? 'Tabela importada' : 'Aguardando cadastro de preço'}</div>
         </div>
         {isAdmin && (
           <button
@@ -179,7 +188,7 @@ function ServiceCard({ item, service, isAdmin, userId }: {
       {editing ? (
         <div className="grid grid-cols-2 gap-3 mt-4">
           <Field label="Custo" value={cost} onChange={setCost} />
-          <Field label="Preço final" value={final} onChange={setFinal} />
+          <Field label="Valor à vista" value={final} onChange={setFinal} />
           <button
             onClick={save}
             className="col-span-2 h-10 rounded-xl bg-brand font-semibold text-sm flex items-center justify-center gap-2"
@@ -190,9 +199,10 @@ function ServiceCard({ item, service, isAdmin, userId }: {
       ) : (
         <div className="grid grid-cols-2 md:grid-cols-4 gap-2 mt-4">
           {isAdmin && <Metric icon={Shield} label="Custo" value={formatCurrency(cost ? Number(cost) : service.costPrice)} muted={!cost && !service.costPrice} />}
-          <Metric icon={Tag} label="Preço final" value={formatCurrency(finalPrice)} />
-          <Metric icon={CreditCard} label="Parcelado" value={formatCurrency(installment)} />
-          {!isAdmin && <Metric icon={Tag} label="Mín. permitido" value={formatCurrency(minAllowed)} />}
+          <Metric icon={Tag} label="À vista" value={formatCurrency(finalPrice)} muted={!finalPrice} />
+          <Metric icon={CreditCard} label="A prazo" value={formatCurrency(termPrice)} muted={!termPrice} />
+          <Metric icon={CreditCard} label={`Até ${config.maxInstallments}x`} value={installmentAmount ? `${config.maxInstallments}x de ${formatCurrency(installmentAmount)}` : 'Consultar'} muted={!installmentAmount} />
+          {!isAdmin && <Metric icon={Tag} label="Mín. permitido" value={formatCurrency(minAllowed)} muted={!minAllowed} />}
           {service.note && <Metric icon={Search} label="Obs." value={service.note} />}
         </div>
       )}
@@ -241,12 +251,14 @@ function PricingConfigModal({ userId, onClose }: {
   const current = getPricingConfig()
   const [discount, setDiscount] = useState(String(current.attendantDiscountLimitPct))
   const [fee, setFee] = useState(String(current.cardInstallmentFeePct))
+  const [maxInstallments, setMaxInstallments] = useState(String(current.maxInstallments))
 
   const save = async () => {
     try {
       await savePricingConfigToSupabase({
         attendantDiscountLimitPct: Number(discount) || 0,
         cardInstallmentFeePct: Number(fee) || 0,
+        maxInstallments: Number(maxInstallments) || 10,
       }, userId)
       toast.success('Configuração salva')
     } catch {
@@ -264,7 +276,8 @@ function PricingConfigModal({ userId, onClose }: {
         <h2 className="text-lg font-bold mb-4">Configurar preços</h2>
         <div className="space-y-3">
           <Field label="Limite de desconto do atendente (%)" value={discount} onChange={setDiscount} />
-          <Field label="Taxa para parcelado (%)" value={fee} onChange={setFee} />
+          <Field label="Acréscimo do valor a prazo (%)" value={fee} onChange={setFee} />
+          <Field label="Máximo de parcelas no cartão" value={maxInstallments} onChange={setMaxInstallments} />
           <button onClick={save} className="w-full h-11 rounded-xl bg-brand font-semibold text-sm">
             Salvar configurações
           </button>

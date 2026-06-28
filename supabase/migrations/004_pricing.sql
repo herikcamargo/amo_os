@@ -11,10 +11,23 @@ create table if not exists public.price_overrides (
 create table if not exists public.pricing_settings (
   id text primary key default 'default',
   attendant_discount_limit_pct numeric not null default 5,
-  card_installment_fee_pct numeric not null default 12,
+  card_installment_fee_pct numeric not null default 11,
+  max_installments integer not null default 10,
   updated_by uuid references public.users(id),
   updated_at timestamptz default now()
 );
+
+alter table public.pricing_settings
+add column if not exists max_installments integer not null default 10;
+
+alter table public.pricing_settings
+alter column card_installment_fee_pct set default 11;
+
+update public.pricing_settings
+set card_installment_fee_pct = 11,
+    max_installments = 10
+where id = 'default'
+  and card_installment_fee_pct = 12;
 
 insert into public.pricing_settings (id)
 values ('default')
