@@ -3,3384 +3,16 @@ import type { PriceCatalogItem } from '@/types/pricing'
 
 export const PRICE_CATALOG: PriceCatalogItem[] = [
   {
-    "id": "motorola-moto-c-plus",
-    "brand": "Motorola",
-    "model": "Moto C Plus",
-    "search": "motorola moto c plus",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 120.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-e1",
-    "brand": "Motorola",
-    "model": "Moto E1",
-    "search": "motorola moto e1",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 150.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 80.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-e2",
-    "brand": "Motorola",
-    "model": "Moto E2",
-    "search": "motorola moto e2",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 150.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 120.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 80.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-e4",
-    "brand": "Motorola",
-    "model": "Moto E4",
-    "search": "motorola moto e4",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 100.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-e4-plus",
-    "brand": "Motorola",
-    "model": "Moto E4 Plus",
-    "search": "motorola moto e4 plus",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 120.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 100.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-e5-plus",
-    "brand": "Motorola",
-    "model": "Moto E5 Plus",
-    "search": "motorola moto e5 plus",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 290.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-e5-play",
-    "brand": "Motorola",
-    "model": "Moto E5 Play",
-    "search": "motorola moto e5 play",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 270.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 150.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "outros-moot-e5",
-    "brand": "Outros",
-    "model": "Moot E5",
-    "search": "outros moot e5",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 280.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 160.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-e6-plus",
-    "brand": "Motorola",
-    "model": "Moto E6 Plus",
-    "search": "motorola moto e6 plus",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 240.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 120.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-e6s",
-    "brand": "Motorola",
-    "model": "Moto E6S",
-    "search": "motorola moto e6s",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 130.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-e6i",
-    "brand": "Motorola",
-    "model": "Moto E6i",
-    "search": "motorola moto e6i",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 300.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 200.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-e6-play",
-    "brand": "Motorola",
-    "model": "Moto E6 Play",
-    "search": "motorola moto e6 play",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 260.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-e7",
-    "brand": "Motorola",
-    "model": "Moto E7",
-    "search": "motorola moto e7",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 260.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-e7-plus",
-    "brand": "Motorola",
-    "model": "Moto E7 Plus",
-    "search": "motorola moto e7 plus",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 260.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-e7-power",
-    "brand": "Motorola",
-    "model": "Moto E7 Power",
-    "search": "motorola moto e7 power",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 280.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-e13",
-    "brand": "Motorola",
-    "model": "Moto E13",
-    "search": "motorola moto e13",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 280.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-e20",
-    "brand": "Motorola",
-    "model": "Moto E20",
-    "search": "motorola moto e20",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 260.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-e22",
-    "brand": "Motorola",
-    "model": "Moto E22",
-    "search": "motorola moto e22",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 280.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-e40",
-    "brand": "Motorola",
-    "model": "Moto E40",
-    "search": "motorola moto e40",
-    "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 320.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto",
-    "brand": "Motorola",
-    "model": "Moto",
-    "search": "motorola moto",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 350.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-g1",
-    "brand": "Motorola",
-    "model": "MOTO G1",
-    "search": "motorola moto g1",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 140.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 80.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-g2",
-    "brand": "Motorola",
-    "model": "MOTO G2",
-    "search": "motorola moto g2",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 230.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 140.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 80.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-g3",
-    "brand": "Motorola",
-    "model": "Moto G3",
-    "search": "motorola moto g3",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 220.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 150.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 90.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-g4-play-xt1603",
-    "brand": "Motorola",
-    "model": "Moto G4 Play XT1603",
-    "search": "motorola moto g4 play xt1603",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 120.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 120.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-g4",
-    "brand": "Motorola",
-    "model": "Moto G4",
-    "search": "motorola moto g4",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 240.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 120.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-g4-plus",
-    "brand": "Motorola",
-    "model": "Moto G4 Plus",
-    "search": "motorola moto g4 plus",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 120.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-g04",
-    "brand": "Motorola",
-    "model": "MOTO G04",
-    "search": "motorola moto g04",
-    "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 300.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-g04s",
-    "brand": "Motorola",
-    "model": "Moto g04s",
-    "search": "motorola moto g04s",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 330.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-g5",
-    "brand": "Motorola",
-    "model": "Moto G5",
-    "search": "motorola moto g5",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 260.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 130.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 120.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-g5-plus",
-    "brand": "Motorola",
-    "model": "Moto G5 Plus",
-    "search": "motorola moto g5 plus",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 110.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-g5s-xt1792",
-    "brand": "Motorola",
-    "model": "Moto G5s xt1792",
-    "search": "motorola moto g5s xt1792",
-    "services": [
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 100.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-g5s-plus",
-    "brand": "Motorola",
-    "model": "Moto G5S plus",
-    "search": "motorola moto g5s plus",
-    "services": [
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 120.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-g5-g",
-    "brand": "Motorola",
-    "model": "MOTO G5 G",
-    "search": "motorola moto g5 g",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 330.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": 280.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-g-5g-plus-g100",
-    "brand": "Motorola",
-    "model": "MOTO G 5G PLUS/ G100",
-    "search": "motorola moto g 5g plus/ g100",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 360.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 200.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-g05",
-    "brand": "Motorola",
-    "model": "MOTO G05",
-    "search": "motorola moto g05",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 280.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-g6",
-    "brand": "Motorola",
-    "model": "Moto G6",
-    "search": "motorola moto g6",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 270.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 160.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-g6-play-e5",
-    "brand": "Motorola",
-    "model": "Moto G6 Play/E5",
-    "search": "motorola moto g6 play/e5",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 260.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 130.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-g6-plus",
-    "brand": "Motorola",
-    "model": "Moto G6 Plus",
-    "search": "motorola moto g6 plus",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 320.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": 150.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 160.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-g7-play",
-    "brand": "Motorola",
-    "model": "Moto G7 Play",
-    "search": "motorola moto g7 play",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 270.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 150.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-g7",
-    "brand": "Motorola",
-    "model": "Moto G7",
-    "search": "motorola moto g7",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 260.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 150.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-g7-plus",
-    "brand": "Motorola",
-    "model": "Moto G7 plus",
-    "search": "motorola moto g7 plus",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 130.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-g7-power",
-    "brand": "Motorola",
-    "model": "Moto G7 power",
-    "search": "motorola moto g7 power",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 270.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 150.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-g8-plus",
-    "brand": "Motorola",
-    "model": "Moto G8 plus",
-    "search": "motorola moto g8 plus",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 320.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-g8",
-    "brand": "Motorola",
-    "model": "Moto G8",
-    "search": "motorola moto g8",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 280.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 150.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-g8-play-moto-one-macro",
-    "brand": "Motorola",
-    "model": "Moto G8 play / Moto One Macro",
-    "search": "motorola moto g8 play / moto one macro",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 260.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 140.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-g8-power",
-    "brand": "Motorola",
-    "model": "Moto g8 power",
-    "search": "motorola moto g8 power",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 270.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-g8-power-lite",
-    "brand": "Motorola",
-    "model": "Moto G8 POWER LITE",
-    "search": "motorola moto g8 power lite",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 160.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-g9-play-e7-plus",
-    "brand": "Motorola",
-    "model": "Moto G9 Play / E7 PLUS",
-    "search": "motorola moto g9 play / e7 plus",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-g9-plus",
-    "brand": "Motorola",
-    "model": "Moto G9 Plus",
-    "search": "motorola moto g9 plus",
-    "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": 260.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 300.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-g9-power",
-    "brand": "Motorola",
-    "model": "MOTO G9 POWER",
-    "search": "motorola moto g9 power",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 300.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-g10",
-    "brand": "Motorola",
-    "model": "MOTO G10",
-    "search": "motorola moto g10",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-g10-power",
-    "brand": "Motorola",
-    "model": "MOTO G10 POWER",
-    "search": "motorola moto g10 power",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 280.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-g14",
-    "brand": "Motorola",
-    "model": "MOTO G14",
-    "search": "motorola moto g14",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 320.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-g20",
-    "brand": "Motorola",
-    "model": "Moto G20",
-    "search": "motorola moto g20",
-    "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": 220.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 260.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-g22",
-    "brand": "Motorola",
-    "model": "Moto G22",
-    "search": "motorola moto g22",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-g23",
-    "brand": "Motorola",
-    "model": "Moto g23",
-    "search": "motorola moto g23",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 400.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 210.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-g24",
-    "brand": "Motorola",
-    "model": "Moto G24",
-    "search": "motorola moto g24",
-    "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 320.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-g30",
-    "brand": "Motorola",
-    "model": "MOTO G30",
-    "search": "motorola moto g30",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 260.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 220.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 160.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-g31",
-    "brand": "Motorola",
-    "model": "Moto G31",
-    "search": "motorola moto g31",
-    "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": 260.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 370.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-g32",
-    "brand": "Motorola",
-    "model": "Moto g32",
-    "search": "motorola moto g32",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 330.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-g34",
-    "brand": "Motorola",
-    "model": "Moto G34",
-    "search": "motorola moto g34",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 290.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-g35",
-    "brand": "Motorola",
-    "model": "Moto G35",
-    "search": "motorola moto g35",
-    "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 350.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-g41",
-    "brand": "Motorola",
-    "model": "Moto G41",
-    "search": "motorola moto g41",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 390.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-g42",
-    "brand": "Motorola",
-    "model": "Moto G42",
-    "search": "motorola moto g42",
-    "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": 260.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 360.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 200.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-g50",
-    "brand": "Motorola",
-    "model": "Moto G50",
-    "search": "motorola moto g50",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 300.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-g50-5g",
-    "brand": "Motorola",
-    "model": "Moto G50 5G",
-    "search": "motorola moto g50 5g",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 390.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-g51",
-    "brand": "Motorola",
-    "model": "Moto G51",
-    "search": "motorola moto g51",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 390.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-g52",
-    "brand": "Motorola",
-    "model": "Moto g52",
-    "search": "motorola moto g52",
-    "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": 260.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 390.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-g53",
-    "brand": "Motorola",
-    "model": "Moto G53",
-    "search": "motorola moto g53",
-    "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": 280.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 360.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-g54",
-    "brand": "Motorola",
-    "model": "Moto G54",
-    "search": "motorola moto g54",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 350.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-g60",
-    "brand": "Motorola",
-    "model": "Moto G60",
-    "search": "motorola moto g60",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 280.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 200.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-g60s",
-    "brand": "Motorola",
-    "model": "Moto G60s",
-    "search": "motorola moto g60s",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 290.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-g62",
-    "brand": "Motorola",
-    "model": "Moto G62",
-    "search": "motorola moto g62",
-    "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": 280.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 350.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-g71",
-    "brand": "Motorola",
-    "model": "Moto G71",
-    "search": "motorola moto g71",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 400.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-g73-5g",
-    "brand": "Motorola",
-    "model": "Moto G73 5G",
-    "search": "motorola moto g73 5g",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 450.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-g75-5g",
-    "brand": "Motorola",
-    "model": "Moto G75 5g",
-    "search": "motorola moto g75 5g",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 320.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-g82-5g",
-    "brand": "Motorola",
-    "model": "Moto G82 5G",
-    "search": "motorola moto g82 5g",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 800.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-g84",
-    "brand": "Motorola",
-    "model": "Moto G84",
-    "search": "motorola moto g84",
-    "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": 350.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 600.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-g85",
-    "brand": "Motorola",
-    "model": "Moto G85",
-    "search": "motorola moto g85",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 600.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-g100",
-    "brand": "Motorola",
-    "model": "Moto G100",
-    "search": "motorola moto g100",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 450.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 300.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-g200",
-    "brand": "Motorola",
-    "model": "Moto G200",
-    "search": "motorola moto g200",
-    "services": [
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 280.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-x1",
-    "brand": "Motorola",
-    "model": "Moto X1",
-    "search": "motorola moto x1",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 400.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-x2",
-    "brand": "Motorola",
-    "model": "Moto X2",
-    "search": "motorola moto x2",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 280.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 130.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-x4",
-    "brand": "Motorola",
-    "model": "Moto X4",
-    "search": "motorola moto x4",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 300.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-x-play",
-    "brand": "Motorola",
-    "model": "Moto X Play",
-    "search": "motorola moto x play",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 160.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-x-style",
-    "brand": "Motorola",
-    "model": "Moto X style",
-    "search": "motorola moto x style",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 360.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-z2-play",
-    "brand": "Motorola",
-    "model": "Moto Z2 Play",
-    "search": "motorola moto z2 play",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 380.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 200.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-z3-play",
-    "brand": "Motorola",
-    "model": "Moto Z3 play",
-    "search": "motorola moto z3 play",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 400.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 200.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-z-play",
-    "brand": "Motorola",
-    "model": "Moto Z Play",
-    "search": "motorola moto z play",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 380.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 190.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-one",
-    "brand": "Motorola",
-    "model": "MOTO ONE",
-    "search": "motorola moto one",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 270.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-one-vision-action",
-    "brand": "Motorola",
-    "model": "Moto one vision/ action",
-    "search": "motorola moto one vision/ action",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 400.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-one-fusion",
-    "brand": "Motorola",
-    "model": "Moto One Fusion",
-    "search": "motorola moto one fusion",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 330.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 220.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-one-fusion-plus",
-    "brand": "Motorola",
-    "model": "Moto One Fusion Plus",
-    "search": "motorola moto one fusion plus",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 350.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-one-zoom",
-    "brand": "Motorola",
-    "model": "Moto One ZOOM",
-    "search": "motorola moto one zoom",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 380.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-one-macro",
-    "brand": "Motorola",
-    "model": "Moto One macro",
-    "search": "motorola moto one macro",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 320.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-one-hyper",
-    "brand": "Motorola",
-    "model": "Moto One Hyper",
-    "search": "motorola moto one hyper",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 320.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 150.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-edge-5g",
-    "brand": "Motorola",
-    "model": "Moto Edge  5G",
-    "search": "motorola moto edge  5g",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 980.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-edge-20",
-    "brand": "Motorola",
-    "model": "Moto Edge 20",
-    "search": "motorola moto edge 20",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 600.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 230.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-edge-20-lite",
-    "brand": "Motorola",
-    "model": "Moto EDGE 20 LITE",
-    "search": "motorola moto edge 20 lite",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 550.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-edge-30",
-    "brand": "Motorola",
-    "model": "Moto Edge 30",
-    "search": "motorola moto edge 30",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 650.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-edge-30-neo",
-    "brand": "Motorola",
-    "model": "Moto Edge 30 Neo",
-    "search": "motorola moto edge 30 neo",
-    "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": 0.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 800.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-edge-40-neo",
-    "brand": "Motorola",
-    "model": "Moto Edge 40 neo",
-    "search": "motorola moto edge 40 neo",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 800.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 200.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-moto-edge-50-fusion",
-    "brand": "Motorola",
-    "model": "Moto Edge 50 fusion",
-    "search": "motorola moto edge 50 fusion",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 550.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 200.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "apple-iphone-4s",
+    "id": "apple-apple-watch-series-3-42mm",
     "brand": "Apple",
-    "model": "Iphone 4S",
-    "search": "apple iphone 4s",
-    "services": [
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 100.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "apple-iphone-5-5c-5s",
-    "brand": "Apple",
-    "model": "Iphone 5, 5C, 5s",
-    "search": "apple iphone 5, 5c, 5s",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 200.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 130.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "apple-iphone-6",
-    "brand": "Apple",
-    "model": "Iphone 6",
-    "search": "apple iphone 6",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 160.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 160.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "apple-iphone-6-s",
-    "brand": "Apple",
-    "model": "Iphone 6 S",
-    "search": "apple iphone 6 s",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 260.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 170.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 150.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "apple-iphone-6-s-plus",
-    "brand": "Apple",
-    "model": "Iphone 6 S plus",
-    "search": "apple iphone 6 s plus",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 280.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "apple-iphone-6-plus",
-    "brand": "Apple",
-    "model": "Iphone 6 Plus..",
-    "search": "apple iphone 6 plus..",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 280.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "apple-iphone-7",
-    "brand": "Apple",
-    "model": "Iphone 7",
-    "search": "apple iphone 7",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "apple-iphone-7plus",
-    "brand": "Apple",
-    "model": "Iphone 7Plus",
-    "search": "apple iphone 7plus",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 300.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": 280.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 200.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 200.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "apple-iphone-8",
-    "brand": "Apple",
-    "model": "Iphone 8",
-    "search": "apple iphone 8",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 290.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": 490.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": 300.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 230.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "apple-iphone-8-plus",
-    "brand": "Apple",
-    "model": "Iphone 8 Plus",
-    "search": "apple iphone 8 plus",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 280.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": 300.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 350.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "apple-iphone-se-2020",
-    "brand": "Apple",
-    "model": "Iphone SE 2020",
-    "search": "apple iphone se 2020",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 350.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": 400.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "apple-iphone-x",
-    "brand": "Apple",
-    "model": "IPhone X",
-    "search": "apple iphone x",
+    "model": "Apple watch series 3 42mm",
+    "search": "apple apple watch series 3 42mm",
     "services": [
       {
         "key": "tela-paralela",
         "label": "Troca de Tela",
         "sourceLabel": "1ª Linha",
         "quality": "TELA PARALELA",
-        "finalPrice": 300.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 400.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": 350.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 260.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "apple-iphone-xs",
-    "brand": "Apple",
-    "model": "IPhone XS",
-    "search": "apple iphone xs",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 400.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": 450.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "apple-iphone-xs-max",
-    "brand": "Apple",
-    "model": "IPHONE XS MAX",
-    "search": "apple iphone xs max",
-    "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": 390.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 600.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
         "finalPrice": 500.0,
         "installmentPrice": null,
         "costPrice": null,
@@ -3389,37 +21,35 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     ]
   },
   {
-    "id": "apple-iphone-xr",
+    "id": "apple-ipad-2",
     "brand": "Apple",
-    "model": "IPhone XR",
-    "search": "apple iphone xr",
+    "model": "IPad 2",
+    "search": "apple ipad 2",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": 320.0,
+        "key": "tampa",
+        "label": "Troca de Tampa",
+        "sourceLabel": "Tampa",
+        "quality": null,
+        "finalPrice": 280.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
+      }
+    ]
+  },
+  {
+    "id": "apple-ipad-3",
+    "brand": "Apple",
+    "model": "IPad 3",
+    "search": "apple ipad 3",
+    "services": [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
-        "finalPrice": 380.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": 850.0,
+        "finalPrice": 260.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -3429,27 +59,71 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "label": "Troca de Tampa",
         "sourceLabel": "Tampa",
         "quality": null,
-        "finalPrice": 350.0,
+        "finalPrice": 300.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "apple-ipad-4-a1458",
+    "brand": "Apple",
+    "model": "IPad 4 a1458",
+    "search": "apple ipad 4 a1458",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 280.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
       },
       {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
+        "key": "tampa",
+        "label": "Troca de Tampa",
+        "sourceLabel": "Tampa",
         "quality": null,
-        "finalPrice": 350.0,
+        "finalPrice": 320.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
+      }
+    ]
+  },
+  {
+    "id": "apple-ipad-7",
+    "brand": "Apple",
+    "model": "Ipad 7",
+    "search": "apple ipad 7",
+    "services": [
       {
-        "key": "carcaca",
-        "label": "Troca de Carcaça",
-        "sourceLabel": "Carcaça",
-        "quality": null,
-        "finalPrice": 500.0,
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 450.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "apple-ipad-a1475",
+    "brand": "Apple",
+    "model": "Ipad a1475",
+    "search": "apple ipad a1475",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 350.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -3475,7 +149,7 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
         "finalPrice": 399.0,
         "installmentPrice": null,
@@ -3543,7 +217,7 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
         "finalPrice": 500.0,
         "installmentPrice": null,
@@ -3611,7 +285,7 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
         "finalPrice": 600.0,
         "installmentPrice": null,
@@ -3679,7 +353,7 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
         "finalPrice": 500.0,
         "installmentPrice": null,
@@ -3737,7 +411,7 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
         "finalPrice": 550.0,
         "installmentPrice": null,
@@ -3785,7 +459,7 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
         "finalPrice": 600.0,
         "installmentPrice": null,
@@ -3825,24 +499,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     ]
   },
   {
-    "id": "apple-iphone-13-mini",
-    "brand": "Apple",
-    "model": "Iphone 13 mini",
-    "search": "apple iphone 13 mini",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 550.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
     "id": "apple-iphone-13",
     "brand": "Apple",
     "model": "iPhone 13",
@@ -3861,7 +517,7 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
         "finalPrice": 599.0,
         "installmentPrice": null,
@@ -3891,6 +547,24 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     ]
   },
   {
+    "id": "apple-iphone-13-mini",
+    "brand": "Apple",
+    "model": "Iphone 13 mini",
+    "search": "apple iphone 13 mini",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 550.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
     "id": "apple-iphone-13-pro",
     "brand": "Apple",
     "model": "Iphone 13 Pro",
@@ -3909,7 +583,7 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
         "finalPrice": 799.0,
         "installmentPrice": null,
@@ -3947,7 +621,7 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
         "finalPrice": 999.0,
         "installmentPrice": null,
@@ -3983,9 +657,19 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "apple iphone 14",
     "services": [
       {
+        "key": "tela-paralela",
+        "label": "Troca de Tela",
+        "sourceLabel": "1ª Linha",
+        "quality": "TELA PARALELA",
+        "finalPrice": 600.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
         "finalPrice": 799.0,
         "installmentPrice": null,
@@ -4013,7 +697,7 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
         "finalPrice": 1299.0,
         "installmentPrice": null,
@@ -4061,7 +745,7 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
         "finalPrice": 1299.0,
         "installmentPrice": null,
@@ -4097,9 +781,19 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "apple iphone 15",
     "services": [
       {
+        "key": "tela-paralela",
+        "label": "Troca de Tela",
+        "sourceLabel": "1ª Linha",
+        "quality": "TELA PARALELA",
+        "finalPrice": 770.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
         "finalPrice": 1299.0,
         "installmentPrice": null,
@@ -4127,7 +821,7 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
         "finalPrice": 1600.0,
         "installmentPrice": null,
@@ -4155,7 +849,7 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
         "finalPrice": 1500.0,
         "installmentPrice": null,
@@ -4175,151 +869,11 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     ]
   },
   {
-    "id": "apple-ipad-2",
+    "id": "apple-iphone-4s",
     "brand": "Apple",
-    "model": "IPad 2",
-    "search": "apple ipad 2",
+    "model": "Iphone 4S",
+    "search": "apple iphone 4s",
     "services": [
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": 280.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "apple-ipad-3",
-    "brand": "Apple",
-    "model": "IPad 3",
-    "search": "apple ipad 3",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 260.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": 300.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "apple-ipad-4-a1458",
-    "brand": "Apple",
-    "model": "IPad 4 a1458",
-    "search": "apple ipad 4 a1458",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 280.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": 320.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "apple-ipad-7",
-    "brand": "Apple",
-    "model": "Ipad 7",
-    "search": "apple ipad 7",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 450.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-sams-a01-core",
-    "brand": "Samsung",
-    "model": "Sams. A01 CORE",
-    "search": "samsung sams. a01 core",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 230.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": 480.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-sams-a01",
-    "brand": "Samsung",
-    "model": "Sams. A01",
-    "search": "samsung sams. a01",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 240.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
       {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
@@ -4333,55 +887,17 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     ]
   },
   {
-    "id": "samsung-sams-a02",
-    "brand": "Samsung",
-    "model": "Sams. A02",
-    "search": "samsung sams. a02",
+    "id": "apple-iphone-5-5c-5s",
+    "brand": "Apple",
+    "model": "Iphone 5, 5C, 5s",
+    "search": "apple iphone 5, 5c, 5s",
     "services": [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 230.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": 525.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-sams-a02s",
-    "brand": "Samsung",
-    "model": "Sams. A02s",
-    "search": "samsung sams. a02s",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
         "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": 450.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -4395,19 +911,95 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "installmentPrice": null,
         "costPrice": null,
         "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 130.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
       }
     ]
   },
   {
-    "id": "samsung-sams-a03",
-    "brand": "Samsung",
-    "model": "Sams. A03",
-    "search": "samsung sams. a03",
+    "id": "apple-iphone-6",
+    "brand": "Apple",
+    "model": "Iphone 6",
+    "search": "apple iphone 6",
     "services": [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 250.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 160.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 160.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "apple-iphone-6-plus",
+    "brand": "Apple",
+    "model": "Iphone 6 Plus..",
+    "search": "apple iphone 6 plus..",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 280.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 180.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "apple-iphone-6-s",
+    "brand": "Apple",
+    "model": "Iphone 6 S",
+    "search": "apple iphone 6 s",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
         "finalPrice": 260.0,
         "installmentPrice": null,
@@ -4415,11 +1007,67 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "tela-original",
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 170.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 150.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "apple-iphone-6-s-plus",
+    "brand": "Apple",
+    "model": "Iphone 6 S plus",
+    "search": "apple iphone 6 s plus",
+    "services": [
+      {
+        "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": 550.0,
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 280.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 180.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "apple-iphone-7",
+    "brand": "Apple",
+    "model": "Iphone 7",
+    "search": "apple iphone 7",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 250.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -4429,6 +1077,16 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Prem",
         "quality": "BATERIA PREMIUM",
+        "finalPrice": 250.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
         "finalPrice": 180.0,
         "installmentPrice": null,
         "costPrice": null,
@@ -4439,7 +1097,7 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
-        "finalPrice": 130.0,
+        "finalPrice": 180.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -4447,82 +1105,152 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     ]
   },
   {
-    "id": "samsung-sams-a03-core",
-    "brand": "Samsung",
-    "model": "Sams. A03 Core",
-    "search": "samsung sams. a03 core",
+    "id": "apple-iphone-7plus",
+    "brand": "Apple",
+    "model": "Iphone 7Plus",
+    "search": "apple iphone 7plus",
     "services": [
       {
-        "key": "tela-paralela",
+        "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 300.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-premium",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Prem",
+        "quality": "BATERIA PREMIUM",
+        "finalPrice": 280.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 200.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 200.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "apple-iphone-8",
+    "brand": "Apple",
+    "model": "Iphone 8",
+    "search": "apple iphone 8",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 290.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-premium",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Prem",
+        "quality": "BATERIA PREMIUM",
+        "finalPrice": 490.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 250.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tampa",
+        "label": "Troca de Tampa",
+        "sourceLabel": "Tampa",
+        "quality": null,
+        "finalPrice": 300.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
         "finalPrice": 230.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 270.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": 600.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
   {
-    "id": "samsung-sams-a03s",
-    "brand": "Samsung",
-    "model": "sams. A03s",
-    "search": "samsung sams. a03s",
+    "id": "apple-iphone-8-plus",
+    "brand": "Apple",
+    "model": "Iphone 8 Plus",
+    "search": "apple iphone 8 plus",
     "services": [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
-        "finalPrice": 260.0,
+        "finalPrice": 280.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
       },
       {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": 480.0,
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 250.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-sams-a04s",
-    "brand": "Samsung",
-    "model": "Sams. A04s",
-    "search": "samsung sams. a04s",
-    "services": [
+      },
       {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
+        "key": "tampa",
+        "label": "Troca de Tampa",
+        "sourceLabel": "Tampa",
+        "quality": null,
+        "finalPrice": 300.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
         "finalPrice": 350.0,
         "installmentPrice": null,
         "costPrice": null,
@@ -4531,17 +1259,37 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     ]
   },
   {
-    "id": "samsung-sams-a04e",
-    "brand": "Samsung",
-    "model": "Sams. A04E",
-    "search": "samsung sams. a04e",
+    "id": "apple-iphone-se-2020",
+    "brand": "Apple",
+    "model": "Iphone SE 2020",
+    "search": "apple iphone se 2020",
     "services": [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
-        "finalPrice": 260.0,
+        "finalPrice": 350.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 250.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tampa",
+        "label": "Troca de Tampa",
+        "sourceLabel": "Tampa",
+        "quality": null,
+        "finalPrice": 400.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -4549,401 +1297,25 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     ]
   },
   {
-    "id": "samsung-sams-a05",
-    "brand": "Samsung",
-    "model": "Sams. A05",
-    "search": "samsung sams. a05",
+    "id": "apple-iphone-x",
+    "brand": "Apple",
+    "model": "IPhone X",
+    "search": "apple iphone x",
     "services": [
       {
         "key": "tela-paralela",
         "label": "Troca de Tela",
         "sourceLabel": "1ª Linha",
         "quality": "TELA PARALELA",
-        "finalPrice": 260.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
         "finalPrice": 300.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-sams-a05s",
-    "brand": "Samsung",
-    "model": "Sams. A05S",
-    "search": "samsung sams. a05s",
-    "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": 280.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       },
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 340.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-sams-a06",
-    "brand": "Samsung",
-    "model": "Sams. A06",
-    "search": "samsung sams. a06",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 260.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-sams-a10",
-    "brand": "Samsung",
-    "model": "Sams. A10",
-    "search": "samsung sams. a10",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 230.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 130.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "outros-sams-a-10s",
-    "brand": "Outros",
-    "model": "Sams.A 10s",
-    "search": "outros sams.a 10s",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": 590.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 120.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-sams-a11",
-    "brand": "Samsung",
-    "model": "Sams. A11",
-    "search": "samsung sams. a11",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 290.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": 550.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 160.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-sams-a12-a02-m12-somente-wefix",
-    "brand": "Samsung",
-    "model": "Sams. A12/A02/M12 SOMENTE WEFIX",
-    "search": "samsung sams. a12/a02/m12 somente wefix",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 260.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-sams-a13-5g",
-    "brand": "Samsung",
-    "model": "Sams. A13 5G",
-    "search": "samsung sams. a13 5g",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 290.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-sams-a13-4g",
-    "brand": "Samsung",
-    "model": "Sams. A13 4G",
-    "search": "samsung sams. a13 4g",
-    "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 280.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-sams-a14-4g",
-    "brand": "Samsung",
-    "model": "Sams. A14 4G",
-    "search": "samsung sams. a14 4g",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 260.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-sams-a14-5g",
-    "brand": "Samsung",
-    "model": "Sams. A14 5G",
-    "search": "samsung sams. a14 5g",
-    "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 320.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-sams-a15-4g",
-    "brand": "Samsung",
-    "model": "Sams. A15 4G",
-    "search": "samsung sams. a15 4g",
-    "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": 280.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 380.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-sams-a15-5g",
-    "brand": "Samsung",
-    "model": "SAMS. A15 5G",
-    "search": "samsung sams. a15 5g",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
         "finalPrice": 400.0,
         "installmentPrice": null,
@@ -4951,11 +1323,21 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "note": null
       },
       {
-        "key": "bateria-original",
+        "key": "bateria-premium",
         "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 220.0,
+        "sourceLabel": "Bat Prem",
+        "quality": "BATERIA PREMIUM",
+        "finalPrice": 250.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tampa",
+        "label": "Troca de Tampa",
+        "sourceLabel": "Tampa",
+        "quality": null,
+        "finalPrice": 350.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -4965,7 +1347,17 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
-        "finalPrice": 180.0,
+        "finalPrice": 260.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "carcaca",
+        "label": "Troca de Carcaça",
+        "sourceLabel": "Carcaça",
+        "quality": null,
+        "finalPrice": 500.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -4973,17 +1365,17 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     ]
   },
   {
-    "id": "samsung-sams-a16-5g",
-    "brand": "Samsung",
-    "model": "SAMS  A16 5g",
-    "search": "samsung sams  a16 5g",
+    "id": "apple-iphone-xr",
+    "brand": "Apple",
+    "model": "IPhone XR",
+    "search": "apple iphone xr",
     "services": [
       {
         "key": "tela-paralela",
         "label": "Troca de Tela",
         "sourceLabel": "1ª Linha",
         "quality": "TELA PARALELA",
-        "finalPrice": 280.0,
+        "finalPrice": 320.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -4991,8 +1383,96 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
+        "finalPrice": 380.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-original",
+        "label": "Troca de Tela",
+        "sourceLabel": "Sams",
+        "quality": "TELA ORIGINAL",
+        "finalPrice": 850.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 250.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tampa",
+        "label": "Troca de Tampa",
+        "sourceLabel": "Tampa",
+        "quality": null,
+        "finalPrice": 350.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 350.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "carcaca",
+        "label": "Troca de Carcaça",
+        "sourceLabel": "Carcaça",
+        "quality": null,
+        "finalPrice": 500.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "apple-iphone-xs",
+    "brand": "Apple",
+    "model": "IPhone XS",
+    "search": "apple iphone xs",
+    "services": [
+      {
+        "key": "tela-paralela",
+        "label": "Troca de Tela",
+        "sourceLabel": "1ª Linha",
+        "quality": "TELA PARALELA",
+        "finalPrice": 350.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 400.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tampa",
+        "label": "Troca de Tampa",
+        "sourceLabel": "Tampa",
+        "quality": null,
         "finalPrice": 450.0,
         "installmentPrice": null,
         "costPrice": null,
@@ -5001,639 +1481,27 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     ]
   },
   {
-    "id": "samsung-sams-a20",
-    "brand": "Samsung",
-    "model": "Sams. A20",
-    "search": "samsung sams. a20",
+    "id": "apple-iphone-xs-max",
+    "brand": "Apple",
+    "model": "IPHONE XS MAX",
+    "search": "apple iphone xs max",
     "services": [
       {
         "key": "tela-paralela",
         "label": "Troca de Tela",
         "sourceLabel": "1ª Linha",
         "quality": "TELA PARALELA",
-        "finalPrice": 280.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 320.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": 650.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 200.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 160.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-sams-a20s",
-    "brand": "Samsung",
-    "model": "Sams. A20S",
-    "search": "samsung sams. a20s",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 270.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": 660.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 200.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 160.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-sams-a21",
-    "brand": "Samsung",
-    "model": "Sams. A21",
-    "search": "samsung sams. a21",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 300.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": 500.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-sams-a21s",
-    "brand": "Samsung",
-    "model": "Sams. A21S",
-    "search": "samsung sams. a21s",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 260.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": 500.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-sams-a22-4g",
-    "brand": "Samsung",
-    "model": "Sams. A22 4G",
-    "search": "samsung sams. a22 4g",
-    "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": 240.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 380.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": 650.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-sams-a22-5g",
-    "brand": "Samsung",
-    "model": "Sams. A22 5G",
-    "search": "samsung sams. a22 5g",
-    "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": 260.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 360.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-sams-a23-4g",
-    "brand": "Samsung",
-    "model": "Sams A23 4g",
-    "search": "samsung sams a23 4g",
-    "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": 260.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 300.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-sams-a23-5g",
-    "brand": "Samsung",
-    "model": "Sams. A23 5G",
-    "search": "samsung sams. a23 5g",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 330.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-sams-a24-4g",
-    "brand": "Samsung",
-    "model": "Sams. A24 4G",
-    "search": "samsung sams. a24 4g",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 530.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-sams-a25-5g",
-    "brand": "Samsung",
-    "model": "Sams. A25 5g",
-    "search": "samsung sams. a25 5g",
-    "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": 280.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
         "finalPrice": 390.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-sams-a30",
-    "brand": "Samsung",
-    "model": "Sams. A30",
-    "search": "samsung sams. a30",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 380.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": 725.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 170.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-sams-a30s",
-    "brand": "Samsung",
-    "model": "Sams. A30s",
-    "search": "samsung sams. a30s",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 360.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": 680.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-sams-a31",
-    "brand": "Samsung",
-    "model": "Sams. A31",
-    "search": "samsung sams. a31",
-    "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": 260.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-sams-a32-4g",
-    "brand": "Samsung",
-    "model": "Sams. A32 4g",
-    "search": "samsung sams. a32 4g",
-    "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": 370.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": 650.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 200.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-sams-a32-5g",
-    "brand": "Samsung",
-    "model": "Sams. A32 5g",
-    "search": "samsung sams. a32 5g",
-    "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": 400.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-sams-a33",
-    "brand": "Samsung",
-    "model": "Sams. A33",
-    "search": "samsung sams. a33",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 520.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-sams-a34-5g",
-    "brand": "Samsung",
-    "model": "Sams. A34 5G",
-    "search": "samsung sams. a34 5g",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 450.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 220.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-sams-a35-5g",
-    "brand": "Samsung",
-    "model": "Sams. A35 5G",
-    "search": "samsung sams. a35 5g",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 550.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-sams-a36-5g",
-    "brand": "Samsung",
-    "model": "Sams. A36 5G",
-    "search": "samsung sams. a36 5g",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 700.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": 950.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-sams-a50",
-    "brand": "Samsung",
-    "model": "Sams. A50",
-    "search": "samsung sams. a50",
-    "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": 260.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       },
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
-        "finalPrice": 360.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": 550.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 200.0,
+        "finalPrice": 600.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -5641,133 +1509,27 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
       {
         "key": "tampa",
         "label": "Troca de Tampa",
-        "sourceLabel": "Tampa 2",
+        "sourceLabel": "Tampa",
         "quality": null,
-        "finalPrice": 150.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-sams-a51",
-    "brand": "Samsung",
-    "model": "Sams. A51",
-    "search": "samsung sams. a51",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 400.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": 800.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 200.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-sams-a52-4g",
-    "brand": "Samsung",
-    "model": "Sams. A52 4G",
-    "search": "samsung sams. a52 4g",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
         "finalPrice": 500.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": 300.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 200.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
   {
-    "id": "samsung-sams-a52-5g",
+    "id": "samsung-galax-ace-3",
     "brand": "Samsung",
-    "model": "Sams. A52 5G",
-    "search": "samsung sams. a52 5g",
+    "model": "Galax Ace 3",
+    "search": "samsung galax ace 3",
     "services": [
       {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 450.0,
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 90.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -5775,47 +1537,17 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     ]
   },
   {
-    "id": "samsung-sams-a52s",
+    "id": "samsung-galax-ace-4",
     "brand": "Samsung",
-    "model": "Sams. A52s",
-    "search": "samsung sams. a52s",
+    "model": "Galax Ace 4",
+    "search": "samsung galax ace 4",
     "services": [
       {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": 280.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 600.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": 950.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 200.0,
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 90.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -5823,27 +1555,17 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     ]
   },
   {
-    "id": "samsung-sams-a536b-a53-5g",
+    "id": "samsung-galax-core-2",
     "brand": "Samsung",
-    "model": "Sams. A536b (A53 5G)",
-    "search": "samsung sams. a536b (a53 5g)",
+    "model": "Galax Core 2",
+    "search": "samsung galax core 2",
     "services": [
       {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 500.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": 980.0,
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 90.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -5851,27 +1573,17 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     ]
   },
   {
-    "id": "samsung-sams-a54",
+    "id": "samsung-galax-core-plus-g350",
     "brand": "Samsung",
-    "model": "Sams. A54",
-    "search": "samsung sams. a54",
+    "model": "Galax Core plus G350",
+    "search": "samsung galax core plus g350",
     "services": [
       {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 600.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": 1050.0,
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 90.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -5879,17 +1591,17 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     ]
   },
   {
-    "id": "samsung-sams-a55",
+    "id": "samsung-galax-e5",
     "brand": "Samsung",
-    "model": "Sams. A55",
-    "search": "samsung sams. a55",
+    "model": "Galax E5",
+    "search": "samsung galax e5",
     "services": [
       {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 550.0,
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 90.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -5897,47 +1609,17 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     ]
   },
   {
-    "id": "samsung-sams-a70",
+    "id": "samsung-galax-s3-duos",
     "brand": "Samsung",
-    "model": "Sams. A70",
-    "search": "samsung sams. a70",
+    "model": "Galax S3 Duos",
+    "search": "samsung galax s3 duos",
     "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 450.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": 800.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 200.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
       {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
-        "finalPrice": 200.0,
+        "finalPrice": 90.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -5945,27 +1627,17 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     ]
   },
   {
-    "id": "samsung-sams-a71",
+    "id": "samsung-galax-s3-mini",
     "brand": "Samsung",
-    "model": "Sams. A71",
-    "search": "samsung sams. a71",
+    "model": "Galax S3 mini",
+    "search": "samsung galax s3 mini",
     "services": [
       {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": 980.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": 180.0,
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 90.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -5973,27 +1645,17 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     ]
   },
   {
-    "id": "samsung-sams-a72",
+    "id": "samsung-galax-win",
     "brand": "Samsung",
-    "model": "Sams. A72",
-    "search": "samsung sams. a72",
+    "model": "Galax Win",
+    "search": "samsung galax win",
     "services": [
       {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 600.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": 950.0,
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 90.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -6001,1287 +1663,17 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     ]
   },
   {
-    "id": "outros-sams-a80",
-    "brand": "Outros",
-    "model": "Sams. A80",
-    "search": "outros sams. a80",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 950.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": 1200.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": 350.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-sams-a5-a500",
+    "id": "samsung-galax-young-gt-s6313",
     "brand": "Samsung",
-    "model": "Sams. A5 (a500)",
-    "search": "samsung sams. a5 (a500)",
+    "model": "Galax Young GT S6313",
+    "search": "samsung galax young gt s6313",
     "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": 280.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
       {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
-        "finalPrice": 130.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-sams-a5-2016-a510",
-    "brand": "Samsung",
-    "model": "Sams. A5 2016 (a510)",
-    "search": "samsung sams. a5 2016 (a510)",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 450.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 140.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 150.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-sams-a5-2017-a520",
-    "brand": "Samsung",
-    "model": "Sams. A5 2017 (a520)",
-    "search": "samsung sams. a5 2017 (a520)",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 380.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": 780.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 160.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "outros-sams-a6",
-    "brand": "Outros",
-    "model": "Sams. A6 +",
-    "search": "outros sams. a6 +",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 550.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": 800.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 160.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-sams-a700",
-    "brand": "Samsung",
-    "model": "Sams. A700",
-    "search": "samsung sams. a700",
-    "services": [
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": 815.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-sams-a7-2016-a710",
-    "brand": "Samsung",
-    "model": "Sams. A7 2016 (a710)",
-    "search": "samsung sams. a7 2016 (a710)",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 400.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": 700.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-sams-a7-2017-a720",
-    "brand": "Samsung",
-    "model": "Sams. A7 2017 (a720)",
-    "search": "samsung sams. a7 2017 (a720)",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 380.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 150.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-sams-a7-2018-a750",
-    "brand": "Samsung",
-    "model": "Sams. A7 2018   A750",
-    "search": "samsung sams. a7 2018   a750",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 450.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 140.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "outros-sams-a8",
-    "brand": "Outros",
-    "model": "Sams. A8",
-    "search": "outros sams. a8",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 450.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": 785.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "outros-sams-a8-2",
-    "brand": "Outros",
-    "model": "Sams. A8+",
-    "search": "outros sams. a8+",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 450.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": 450.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "outros-sams-a8-plus",
-    "brand": "Outros",
-    "model": "Sams. A8 Plus",
-    "search": "outros sams. a8 plus",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 450.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "outros-sams-j120-j1-2016",
-    "brand": "Outros",
-    "model": "Sams. J120 j1 2016",
-    "search": "outros sams. j120 j1 2016",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 100.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "outros-sams-j200",
-    "brand": "Outros",
-    "model": "Sams. J200",
-    "search": "outros sams. j200",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 280.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 100.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "outros-sams-j2-prime",
-    "brand": "Outros",
-    "model": "Sams. J2 prime",
-    "search": "outros sams. j2 prime",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 230.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 120.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 100.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "outros-sams-j2-core",
-    "brand": "Outros",
-    "model": "Sams. J2 core",
-    "search": "outros sams. j2 core",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 260.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "outros-sams-j2-pro",
-    "brand": "Outros",
-    "model": "Sams. J2 Pro",
-    "search": "outros sams. j2 pro",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "outros-sams-j320",
-    "brand": "Outros",
-    "model": "Sams. J320",
-    "search": "outros sams. j320",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 320.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "outros-sam-j4",
-    "brand": "Outros",
-    "model": "Sam J4",
-    "search": "outros sam j4",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 300.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": 550.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 160.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 120.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "outros-sams-j4-core",
-    "brand": "Outros",
-    "model": "Sams. J4 core",
-    "search": "outros sams. j4 core",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 260.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": 550.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "outros-j4-j6-j410-j415-j610-j615",
-    "brand": "Outros",
-    "model": "J4 + J6+ j410 j415 j610 j615",
-    "search": "outros j4 + j6+ j410 j415 j610 j615",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 120.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "outros-sams-j6",
-    "brand": "Outros",
-    "model": "Sams. J6\\",
-    "search": "outros sams. j6\\",
-    "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": 200.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 160.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 120.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "outros-sams-j6-2",
-    "brand": "Outros",
-    "model": "Sams. J6 +",
-    "search": "outros sams. j6 +",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 280.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 150.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "outros-sams-j8",
-    "brand": "Outros",
-    "model": "Sams. J8",
-    "search": "outros sams. j8",
-    "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": 260.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 360.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 150.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "outros-sams-j5-j500",
-    "brand": "Outros",
-    "model": "Sams. J5 (J500)",
-    "search": "outros sams. j5 (j500)",
-    "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 350.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 120.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "outros-sams-j510-metal",
-    "brand": "Outros",
-    "model": "Sams. J510 Metal",
-    "search": "outros sams. j510 metal",
-    "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": 270.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 360.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": 570.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 120.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "outros-j5-pro-j530",
-    "brand": "Outros",
-    "model": "J5 PRO (J530)",
-    "search": "outros j5 pro (j530)",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 320.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": 600.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 120.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "outros-sams-j5-prime-g570",
-    "brand": "Outros",
-    "model": "Sams. J5 Prime (G570)",
-    "search": "outros sams. j5 prime (g570)",
-    "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": 220.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": 500.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 160.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 120.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "outros-sams-j320-2",
-    "brand": "Outros",
-    "model": "Sams. J320",
-    "search": "outros sams. j320",
-    "services": [
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": 550.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "outros-sams-j700",
-    "brand": "Outros",
-    "model": "Sams. J700",
-    "search": "outros sams. j700",
-    "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": 270.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 320.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 160.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": 410.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 100.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "outros-sams-j701-neo",
-    "brand": "Outros",
-    "model": "Sams.J701 neo",
-    "search": "outros sams.j701 neo",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 320.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": 530.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 160.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": 0.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 120.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "outros-sams-j7-metal-j710",
-    "brand": "Outros",
-    "model": "Sams. J7 METAL J710",
-    "search": "outros sams. j7 metal j710",
-    "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": 260.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 320.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": 620.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 120.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
-        "finalPrice": 450.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 120.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "outros-sams-j7-duo-j720",
-    "brand": "Outros",
-    "model": "Sams. J7 Duo J720",
-    "search": "outros sams. j7 duo j720",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 450.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "outros-sams-j7-pro-j730",
-    "brand": "Outros",
-    "model": "Sams. J7 Pro (j730)",
-    "search": "outros sams. j7 pro (j730)",
-    "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 320.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "outros-sams-j7-prime-2",
-    "brand": "Outros",
-    "model": "Sams. J7 Prime 2",
-    "search": "outros sams. j7 prime 2",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 270.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": 590.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 170.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 140.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "outros-sams-j7-prime",
-    "brand": "Outros",
-    "model": "Sams. J7 Prime",
-    "search": "outros sams. j7 prime",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 280.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 150.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 140.0,
+        "finalPrice": 90.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -7315,7 +1707,7 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
         "finalPrice": 270.0,
         "installmentPrice": null,
@@ -7343,7 +1735,7 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
         "finalPrice": 350.0,
         "installmentPrice": null,
@@ -7361,7 +1753,7 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
         "finalPrice": 350.0,
         "installmentPrice": null,
@@ -7379,7 +1771,7 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
         "finalPrice": 300.0,
         "installmentPrice": null,
@@ -7397,7 +1789,7 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
         "finalPrice": 360.0,
         "installmentPrice": null,
@@ -7415,7 +1807,7 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
         "finalPrice": 330.0,
         "installmentPrice": null,
@@ -7433,7 +1825,7 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
         "finalPrice": 500.0,
         "installmentPrice": null,
@@ -7461,7 +1853,7 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
         "finalPrice": 330.0,
         "installmentPrice": null,
@@ -7487,9 +1879,19 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung galaxy m34",
     "services": [
       {
+        "key": "tela-paralela",
+        "label": "Troca de Tela",
+        "sourceLabel": "1ª Linha",
+        "quality": "TELA PARALELA",
+        "finalPrice": 450.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
         "finalPrice": 750.0,
         "installmentPrice": null,
@@ -7507,7 +1909,7 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
         "finalPrice": 800.0,
         "installmentPrice": null,
@@ -7535,7 +1937,7 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
         "finalPrice": 600.0,
         "installmentPrice": null,
@@ -7563,7 +1965,7 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
         "finalPrice": 500.0,
         "installmentPrice": null,
@@ -7579,9 +1981,19 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung galaxy m54 5g",
     "services": [
       {
+        "key": "tela-paralela",
+        "label": "Troca de Tela",
+        "sourceLabel": "1ª Linha",
+        "quality": "TELA PARALELA",
+        "finalPrice": 390.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
         "finalPrice": 550.0,
         "installmentPrice": null,
@@ -7599,7 +2011,7 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
         "finalPrice": 490.0,
         "installmentPrice": null,
@@ -7615,9 +2027,19 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "samsung galaxy m62",
     "services": [
       {
+        "key": "tela-paralela",
+        "label": "Troca de Tela",
+        "sourceLabel": "1ª Linha",
+        "quality": "TELA PARALELA",
+        "finalPrice": 400.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
         "finalPrice": 750.0,
         "installmentPrice": null,
@@ -7635,9 +2057,19 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
         "finalPrice": 950.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-original",
+        "label": "Troca de Tela",
+        "sourceLabel": "Sams",
+        "quality": "TELA ORIGINAL",
+        "finalPrice": 1650.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -7666,6 +2098,360 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "sourceLabel": "Con. Carga",
         "quality": null,
         "finalPrice": 350.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-j4-j6-j410-j415-j610-j615",
+    "brand": "Samsung",
+    "model": "J4 + J6+ j410 j415 j610 j615",
+    "search": "samsung j4 + j6+ j410 j415 j610 j615",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 250.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 180.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 120.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-j5-pro-j530",
+    "brand": "Samsung",
+    "model": "J5 PRO (J530)",
+    "search": "samsung j5 pro (j530)",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 320.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-original",
+        "label": "Troca de Tela",
+        "sourceLabel": "Sams",
+        "quality": "TELA ORIGINAL",
+        "finalPrice": 600.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 120.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-lcd-g530",
+    "brand": "Samsung",
+    "model": "LCD G530",
+    "search": "samsung lcd g530",
+    "services": [
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 100.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-s10",
+    "brand": "Samsung",
+    "model": "S10",
+    "search": "samsung s10",
+    "services": [
+      {
+        "key": "tela-original",
+        "label": "Troca de Tela",
+        "sourceLabel": "Sams",
+        "quality": "TELA ORIGINAL",
+        "finalPrice": 1700.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 250.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-s10-lite-sm-g770f",
+    "brand": "Samsung",
+    "model": "S10 Lite SM-G770F",
+    "search": "samsung s10 lite sm-g770f",
+    "services": [
+      {
+        "key": "tela-original",
+        "label": "Troca de Tela",
+        "sourceLabel": "Sams",
+        "quality": "TELA ORIGINAL",
+        "finalPrice": 880.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-s10-plus",
+    "brand": "Samsung",
+    "model": "S10 Plus",
+    "search": "samsung s10 plus",
+    "services": [
+      {
+        "key": "bateria-premium",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Prem",
+        "quality": "BATERIA PREMIUM",
+        "finalPrice": 350.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tampa",
+        "label": "Troca de Tampa",
+        "sourceLabel": "Tampa 2",
+        "quality": null,
+        "finalPrice": 180.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 250.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-s10e",
+    "brand": "Samsung",
+    "model": "S10e",
+    "search": "samsung s10e",
+    "services": [
+      {
+        "key": "bateria-premium",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Prem",
+        "quality": "BATERIA PREMIUM",
+        "finalPrice": 400.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tampa",
+        "label": "Troca de Tampa",
+        "sourceLabel": "Tampa 2",
+        "quality": null,
+        "finalPrice": 250.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 200.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-s20-fe",
+    "brand": "Samsung",
+    "model": "S20 FE",
+    "search": "samsung s20 fe",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 460.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-premium",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Prem",
+        "quality": "BATERIA PREMIUM",
+        "finalPrice": 250.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-s21",
+    "brand": "Samsung",
+    "model": "S21",
+    "search": "samsung s21",
+    "services": [
+      {
+        "key": "bateria-premium",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Prem",
+        "quality": "BATERIA PREMIUM",
+        "finalPrice": 250.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-s21-5g",
+    "brand": "Samsung",
+    "model": "S21 5G",
+    "search": "samsung s21 5g",
+    "services": [
+      {
+        "key": "tampa",
+        "label": "Troca de Tampa",
+        "sourceLabel": "Tampa",
+        "quality": null,
+        "finalPrice": 350.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-s21-fe",
+    "brand": "Samsung",
+    "model": "S21 FE",
+    "search": "samsung s21 fe",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 599.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-s22",
+    "brand": "Samsung",
+    "model": "S22",
+    "search": "samsung s22",
+    "services": [
+      {
+        "key": "bateria-premium",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Prem",
+        "quality": "BATERIA PREMIUM",
+        "finalPrice": 320.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 500.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-s23",
+    "brand": "Samsung",
+    "model": "S23",
+    "search": "samsung s23",
+    "services": [
+      {
+        "key": "tela-original",
+        "label": "Troca de Tela",
+        "sourceLabel": "Sams",
+        "quality": "TELA ORIGINAL",
+        "finalPrice": 1550.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 490.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -7765,17 +2551,1547 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     ]
   },
   {
-    "id": "outros-s10e",
-    "brand": "Outros",
-    "model": "S10e",
-    "search": "outros s10e",
+    "id": "samsung-sam-j4",
+    "brand": "Samsung",
+    "model": "Sam J4",
+    "search": "samsung sam j4",
     "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 300.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-original",
+        "label": "Troca de Tela",
+        "sourceLabel": "Sams",
+        "quality": "TELA ORIGINAL",
+        "finalPrice": 550.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 160.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 120.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-a16-5g",
+    "brand": "Samsung",
+    "model": "SAMS  A16 5g",
+    "search": "samsung sams  a16 5g",
+    "services": [
+      {
+        "key": "tela-paralela",
+        "label": "Troca de Tela",
+        "sourceLabel": "1ª Linha",
+        "quality": "TELA PARALELA",
+        "finalPrice": 280.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 450.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-a23-4g",
+    "brand": "Samsung",
+    "model": "Sams A23 4g",
+    "search": "samsung sams a23 4g",
+    "services": [
+      {
+        "key": "tela-paralela",
+        "label": "Troca de Tela",
+        "sourceLabel": "1ª Linha",
+        "quality": "TELA PARALELA",
+        "finalPrice": 260.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 300.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-a01",
+    "brand": "Samsung",
+    "model": "Sams. A01",
+    "search": "samsung sams. a01",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 240.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 180.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 100.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-a01-core",
+    "brand": "Samsung",
+    "model": "Sams. A01 CORE",
+    "search": "samsung sams. a01 core",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 230.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-original",
+        "label": "Troca de Tela",
+        "sourceLabel": "Sams",
+        "quality": "TELA ORIGINAL",
+        "finalPrice": 480.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-a02",
+    "brand": "Samsung",
+    "model": "Sams. A02",
+    "search": "samsung sams. a02",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 230.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-original",
+        "label": "Troca de Tela",
+        "sourceLabel": "Sams",
+        "quality": "TELA ORIGINAL",
+        "finalPrice": 525.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-a02s",
+    "brand": "Samsung",
+    "model": "Sams. A02s",
+    "search": "samsung sams. a02s",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 250.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-original",
+        "label": "Troca de Tela",
+        "sourceLabel": "Sams",
+        "quality": "TELA ORIGINAL",
+        "finalPrice": 450.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 200.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-a03",
+    "brand": "Samsung",
+    "model": "Sams. A03",
+    "search": "samsung sams. a03",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 260.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-original",
+        "label": "Troca de Tela",
+        "sourceLabel": "Sams",
+        "quality": "TELA ORIGINAL",
+        "finalPrice": 550.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
       {
         "key": "bateria-premium",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Prem",
         "quality": "BATERIA PREMIUM",
+        "finalPrice": 180.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 130.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-a03-core",
+    "brand": "Samsung",
+    "model": "Sams. A03 Core",
+    "search": "samsung sams. a03 core",
+    "services": [
+      {
+        "key": "tela-paralela",
+        "label": "Troca de Tela",
+        "sourceLabel": "1ª Linha",
+        "quality": "TELA PARALELA",
+        "finalPrice": 230.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 270.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-original",
+        "label": "Troca de Tela",
+        "sourceLabel": "Sams",
+        "quality": "TELA ORIGINAL",
+        "finalPrice": 600.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-a03s",
+    "brand": "Samsung",
+    "model": "sams. A03s",
+    "search": "samsung sams. a03s",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 260.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-original",
+        "label": "Troca de Tela",
+        "sourceLabel": "Sams",
+        "quality": "TELA ORIGINAL",
+        "finalPrice": 480.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-a04e",
+    "brand": "Samsung",
+    "model": "Sams. A04E",
+    "search": "samsung sams. a04e",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 260.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-a04s",
+    "brand": "Samsung",
+    "model": "Sams. A04s",
+    "search": "samsung sams. a04s",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 350.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-a05",
+    "brand": "Samsung",
+    "model": "Sams. A05",
+    "search": "samsung sams. a05",
+    "services": [
+      {
+        "key": "tela-paralela",
+        "label": "Troca de Tela",
+        "sourceLabel": "1ª Linha",
+        "quality": "TELA PARALELA",
+        "finalPrice": 260.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 300.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-a05s",
+    "brand": "Samsung",
+    "model": "Sams. A05S",
+    "search": "samsung sams. a05s",
+    "services": [
+      {
+        "key": "tela-paralela",
+        "label": "Troca de Tela",
+        "sourceLabel": "1ª Linha",
+        "quality": "TELA PARALELA",
+        "finalPrice": 280.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 340.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-a06",
+    "brand": "Samsung",
+    "model": "Sams. A06",
+    "search": "samsung sams. a06",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 260.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-a10",
+    "brand": "Samsung",
+    "model": "Sams. A10",
+    "search": "samsung sams. a10",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 230.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 180.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 130.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-a11",
+    "brand": "Samsung",
+    "model": "Sams. A11",
+    "search": "samsung sams. a11",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 290.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-original",
+        "label": "Troca de Tela",
+        "sourceLabel": "Sams",
+        "quality": "TELA ORIGINAL",
+        "finalPrice": 550.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 160.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-a12-a02-m12-somente-wefix",
+    "brand": "Samsung",
+    "model": "Sams. A12/A02/M12 SOMENTE WEFIX",
+    "search": "samsung sams. a12/a02/m12 somente wefix",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 260.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 180.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 180.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-a13-4g",
+    "brand": "Samsung",
+    "model": "Sams. A13 4G",
+    "search": "samsung sams. a13 4g",
+    "services": [
+      {
+        "key": "tela-paralela",
+        "label": "Troca de Tela",
+        "sourceLabel": "1ª Linha",
+        "quality": "TELA PARALELA",
+        "finalPrice": 250.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 280.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-a13-5g",
+    "brand": "Samsung",
+    "model": "Sams. A13 5G",
+    "search": "samsung sams. a13 5g",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 290.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 180.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-a14-4g",
+    "brand": "Samsung",
+    "model": "Sams. A14 4G",
+    "search": "samsung sams. a14 4g",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 260.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-a14-5g",
+    "brand": "Samsung",
+    "model": "Sams. A14 5G",
+    "search": "samsung sams. a14 5g",
+    "services": [
+      {
+        "key": "tela-paralela",
+        "label": "Troca de Tela",
+        "sourceLabel": "1ª Linha",
+        "quality": "TELA PARALELA",
+        "finalPrice": 250.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 320.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 180.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-a15-4g",
+    "brand": "Samsung",
+    "model": "Sams. A15 4G",
+    "search": "samsung sams. a15 4g",
+    "services": [
+      {
+        "key": "tela-paralela",
+        "label": "Troca de Tela",
+        "sourceLabel": "1ª Linha",
+        "quality": "TELA PARALELA",
+        "finalPrice": 280.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 380.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 180.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-a15-5g",
+    "brand": "Samsung",
+    "model": "SAMS. A15 5G",
+    "search": "samsung sams. a15 5g",
+    "services": [
+      {
+        "key": "tela-paralela",
+        "label": "Troca de Tela",
+        "sourceLabel": "1ª Linha",
+        "quality": "TELA PARALELA",
+        "finalPrice": 350.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
         "finalPrice": 400.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-original",
+        "label": "Troca de Tela",
+        "sourceLabel": "Sams",
+        "quality": "TELA ORIGINAL",
+        "finalPrice": 800.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 220.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 180.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-a20",
+    "brand": "Samsung",
+    "model": "Sams. A20",
+    "search": "samsung sams. a20",
+    "services": [
+      {
+        "key": "tela-paralela",
+        "label": "Troca de Tela",
+        "sourceLabel": "1ª Linha",
+        "quality": "TELA PARALELA",
+        "finalPrice": 280.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 320.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-original",
+        "label": "Troca de Tela",
+        "sourceLabel": "Sams",
+        "quality": "TELA ORIGINAL",
+        "finalPrice": 650.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 200.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 160.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-a20s",
+    "brand": "Samsung",
+    "model": "Sams. A20S",
+    "search": "samsung sams. a20s",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 270.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-original",
+        "label": "Troca de Tela",
+        "sourceLabel": "Sams",
+        "quality": "TELA ORIGINAL",
+        "finalPrice": 660.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 200.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 160.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-a21",
+    "brand": "Samsung",
+    "model": "Sams. A21",
+    "search": "samsung sams. a21",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 300.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-original",
+        "label": "Troca de Tela",
+        "sourceLabel": "Sams",
+        "quality": "TELA ORIGINAL",
+        "finalPrice": 500.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-a21s",
+    "brand": "Samsung",
+    "model": "Sams. A21S",
+    "search": "samsung sams. a21s",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 260.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-original",
+        "label": "Troca de Tela",
+        "sourceLabel": "Sams",
+        "quality": "TELA ORIGINAL",
+        "finalPrice": 500.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-a22-4g",
+    "brand": "Samsung",
+    "model": "Sams. A22 4G",
+    "search": "samsung sams. a22 4g",
+    "services": [
+      {
+        "key": "tela-paralela",
+        "label": "Troca de Tela",
+        "sourceLabel": "1ª Linha",
+        "quality": "TELA PARALELA",
+        "finalPrice": 240.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 380.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-original",
+        "label": "Troca de Tela",
+        "sourceLabel": "Sams",
+        "quality": "TELA ORIGINAL",
+        "finalPrice": 650.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 250.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-a22-5g",
+    "brand": "Samsung",
+    "model": "Sams. A22 5G",
+    "search": "samsung sams. a22 5g",
+    "services": [
+      {
+        "key": "tela-paralela",
+        "label": "Troca de Tela",
+        "sourceLabel": "1ª Linha",
+        "quality": "TELA PARALELA",
+        "finalPrice": 260.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 360.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-a23-5g",
+    "brand": "Samsung",
+    "model": "Sams. A23 5G",
+    "search": "samsung sams. a23 5g",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 330.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-original",
+        "label": "Troca de Tela",
+        "sourceLabel": "Sams",
+        "quality": "TELA ORIGINAL",
+        "finalPrice": 600.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-a24-4g",
+    "brand": "Samsung",
+    "model": "Sams. A24 4G",
+    "search": "samsung sams. a24 4g",
+    "services": [
+      {
+        "key": "tela-paralela",
+        "label": "Troca de Tela",
+        "sourceLabel": "1ª Linha",
+        "quality": "TELA PARALELA",
+        "finalPrice": 370.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 530.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-a25-5g",
+    "brand": "Samsung",
+    "model": "Sams. A25 5g",
+    "search": "samsung sams. a25 5g",
+    "services": [
+      {
+        "key": "tela-paralela",
+        "label": "Troca de Tela",
+        "sourceLabel": "1ª Linha",
+        "quality": "TELA PARALELA",
+        "finalPrice": 280.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 390.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-a30",
+    "brand": "Samsung",
+    "model": "Sams. A30",
+    "search": "samsung sams. a30",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 380.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-original",
+        "label": "Troca de Tela",
+        "sourceLabel": "Sams",
+        "quality": "TELA ORIGINAL",
+        "finalPrice": 725.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 170.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-a30s",
+    "brand": "Samsung",
+    "model": "Sams. A30s",
+    "search": "samsung sams. a30s",
+    "services": [
+      {
+        "key": "tela-paralela",
+        "label": "Troca de Tela",
+        "sourceLabel": "1ª Linha",
+        "quality": "TELA PARALELA",
+        "finalPrice": 270.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 360.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-original",
+        "label": "Troca de Tela",
+        "sourceLabel": "Sams",
+        "quality": "TELA ORIGINAL",
+        "finalPrice": 680.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 250.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 180.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-a31",
+    "brand": "Samsung",
+    "model": "Sams. A31",
+    "search": "samsung sams. a31",
+    "services": [
+      {
+        "key": "tela-paralela",
+        "label": "Troca de Tela",
+        "sourceLabel": "1ª Linha",
+        "quality": "TELA PARALELA",
+        "finalPrice": 260.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 180.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-a32-4g",
+    "brand": "Samsung",
+    "model": "Sams. A32 4g",
+    "search": "samsung sams. a32 4g",
+    "services": [
+      {
+        "key": "tela-paralela",
+        "label": "Troca de Tela",
+        "sourceLabel": "1ª Linha",
+        "quality": "TELA PARALELA",
+        "finalPrice": 370.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-original",
+        "label": "Troca de Tela",
+        "sourceLabel": "Sams",
+        "quality": "TELA ORIGINAL",
+        "finalPrice": 650.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-premium",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Prem",
+        "quality": "BATERIA PREMIUM",
+        "finalPrice": 300.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 200.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-a32-5g",
+    "brand": "Samsung",
+    "model": "Sams. A32 5g",
+    "search": "samsung sams. a32 5g",
+    "services": [
+      {
+        "key": "tela-paralela",
+        "label": "Troca de Tela",
+        "sourceLabel": "1ª Linha",
+        "quality": "TELA PARALELA",
+        "finalPrice": 400.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-a33",
+    "brand": "Samsung",
+    "model": "Sams. A33",
+    "search": "samsung sams. a33",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 520.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-a34-5g",
+    "brand": "Samsung",
+    "model": "Sams. A34 5G",
+    "search": "samsung sams. a34 5g",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 450.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 220.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-a35-5g",
+    "brand": "Samsung",
+    "model": "Sams. A35 5G",
+    "search": "samsung sams. a35 5g",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 550.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-a36-5g",
+    "brand": "Samsung",
+    "model": "Sams. A36 5G",
+    "search": "samsung sams. a36 5g",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 700.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-original",
+        "label": "Troca de Tela",
+        "sourceLabel": "Sams",
+        "quality": "TELA ORIGINAL",
+        "finalPrice": 950.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-a5-a500",
+    "brand": "Samsung",
+    "model": "Sams. A5 (a500)",
+    "search": "samsung sams. a5 (a500)",
+    "services": [
+      {
+        "key": "tela-paralela",
+        "label": "Troca de Tela",
+        "sourceLabel": "1ª Linha",
+        "quality": "TELA PARALELA",
+        "finalPrice": 280.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 320.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 130.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-a5-2016-a510",
+    "brand": "Samsung",
+    "model": "Sams. A5 2016 (a510)",
+    "search": "samsung sams. a5 2016 (a510)",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 450.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 140.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 150.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-a5-2017-a520",
+    "brand": "Samsung",
+    "model": "Sams. A5 2017 (a520)",
+    "search": "samsung sams. a5 2017 (a520)",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 380.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-original",
+        "label": "Troca de Tela",
+        "sourceLabel": "Sams",
+        "quality": "TELA ORIGINAL",
+        "finalPrice": 780.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 160.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-a50",
+    "brand": "Samsung",
+    "model": "Sams. A50",
+    "search": "samsung sams. a50",
+    "services": [
+      {
+        "key": "tela-paralela",
+        "label": "Troca de Tela",
+        "sourceLabel": "1ª Linha",
+        "quality": "TELA PARALELA",
+        "finalPrice": 260.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 360.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-original",
+        "label": "Troca de Tela",
+        "sourceLabel": "Sams",
+        "quality": "TELA ORIGINAL",
+        "finalPrice": 550.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 200.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -7785,7 +4101,443 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "label": "Troca de Tampa",
         "sourceLabel": "Tampa 2",
         "quality": null,
+        "finalPrice": 150.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 180.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-a51",
+    "brand": "Samsung",
+    "model": "Sams. A51",
+    "search": "samsung sams. a51",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 400.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-original",
+        "label": "Troca de Tela",
+        "sourceLabel": "Sams",
+        "quality": "TELA ORIGINAL",
+        "finalPrice": 800.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 200.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tampa",
+        "label": "Troca de Tampa",
+        "sourceLabel": "Tampa",
+        "quality": null,
+        "finalPrice": 300.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 180.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-a52-4g",
+    "brand": "Samsung",
+    "model": "Sams. A52 4G",
+    "search": "samsung sams. a52 4g",
+    "services": [
+      {
+        "key": "tela-paralela",
+        "label": "Troca de Tela",
+        "sourceLabel": "1ª Linha",
+        "quality": "TELA PARALELA",
+        "finalPrice": 570.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 500.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-premium",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Prem",
+        "quality": "BATERIA PREMIUM",
+        "finalPrice": 300.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 200.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
         "finalPrice": 250.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-a52-5g",
+    "brand": "Samsung",
+    "model": "Sams. A52 5G",
+    "search": "samsung sams. a52 5g",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 450.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-a52s",
+    "brand": "Samsung",
+    "model": "Sams. A52s",
+    "search": "samsung sams. a52s",
+    "services": [
+      {
+        "key": "tela-paralela",
+        "label": "Troca de Tela",
+        "sourceLabel": "1ª Linha",
+        "quality": "TELA PARALELA",
+        "finalPrice": 280.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 600.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-original",
+        "label": "Troca de Tela",
+        "sourceLabel": "Sams",
+        "quality": "TELA ORIGINAL",
+        "finalPrice": 950.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 200.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-a536b-a53-5g",
+    "brand": "Samsung",
+    "model": "Sams. A536b (A53 5G)",
+    "search": "samsung sams. a536b (a53 5g)",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 500.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-original",
+        "label": "Troca de Tela",
+        "sourceLabel": "Sams",
+        "quality": "TELA ORIGINAL",
+        "finalPrice": 980.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-a54",
+    "brand": "Samsung",
+    "model": "Sams. A54",
+    "search": "samsung sams. a54",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 600.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-original",
+        "label": "Troca de Tela",
+        "sourceLabel": "Sams",
+        "quality": "TELA ORIGINAL",
+        "finalPrice": 1050.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-a55",
+    "brand": "Samsung",
+    "model": "Sams. A55",
+    "search": "samsung sams. a55",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 550.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-a6",
+    "brand": "Samsung",
+    "model": "Sams. A6 +",
+    "search": "samsung sams. a6 +",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 550.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-original",
+        "label": "Troca de Tela",
+        "sourceLabel": "Sams",
+        "quality": "TELA ORIGINAL",
+        "finalPrice": 800.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 160.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-a7-2016-a710",
+    "brand": "Samsung",
+    "model": "Sams. A7 2016 (a710)",
+    "search": "samsung sams. a7 2016 (a710)",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 400.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-original",
+        "label": "Troca de Tela",
+        "sourceLabel": "Sams",
+        "quality": "TELA ORIGINAL",
+        "finalPrice": 700.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-a7-2017-a720",
+    "brand": "Samsung",
+    "model": "Sams. A7 2017 (a720)",
+    "search": "samsung sams. a7 2017 (a720)",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 380.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 150.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-a7-2018-a750",
+    "brand": "Samsung",
+    "model": "Sams. A7 2018   A750",
+    "search": "samsung sams. a7 2018   a750",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 450.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 140.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-a70",
+    "brand": "Samsung",
+    "model": "Sams. A70",
+    "search": "samsung sams. a70",
+    "services": [
+      {
+        "key": "tela-paralela",
+        "label": "Troca de Tela",
+        "sourceLabel": "1ª Linha",
+        "quality": "TELA PARALELA",
+        "finalPrice": 490.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 450.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-original",
+        "label": "Troca de Tela",
+        "sourceLabel": "Sams",
+        "quality": "TELA ORIGINAL",
+        "finalPrice": 800.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 200.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -7803,17 +4555,17 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     ]
   },
   {
-    "id": "outros-s10-lite-sm-g770f",
-    "brand": "Outros",
-    "model": "S10 Lite SM-G770F",
-    "search": "outros s10 lite sm-g770f",
+    "id": "samsung-sams-a700",
+    "brand": "Samsung",
+    "model": "Sams. A700",
+    "search": "samsung sams. a700",
     "services": [
       {
         "key": "tela-original",
         "label": "Troca de Tela",
         "sourceLabel": "Sams",
         "quality": "TELA ORIGINAL",
-        "finalPrice": 880.0,
+        "finalPrice": 815.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -7821,65 +4573,47 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     ]
   },
   {
-    "id": "outros-s10",
-    "brand": "Outros",
-    "model": "S10",
-    "search": "outros s10",
+    "id": "samsung-sams-a71",
+    "brand": "Samsung",
+    "model": "Sams. A71",
+    "search": "samsung sams. a71",
     "services": [
       {
-        "key": "tela-original",
+        "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": 1700.0,
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 560.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
       },
       {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 250.0,
+        "key": "tela-original",
+        "label": "Troca de Tela",
+        "sourceLabel": "Sams",
+        "quality": "TELA ORIGINAL",
+        "finalPrice": 980.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      }
-    ]
-  },
-  {
-    "id": "outros-s10-plus",
-    "brand": "Outros",
-    "model": "S10 Plus",
-    "search": "outros s10 plus",
-    "services": [
+      },
       {
         "key": "bateria-premium",
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Prem",
         "quality": "BATERIA PREMIUM",
-        "finalPrice": 350.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa 2",
-        "quality": null,
         "finalPrice": 180.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
       },
       {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 250.0,
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 200.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -7887,17 +4621,139 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     ]
   },
   {
-    "id": "samsung-s20-fe",
+    "id": "samsung-sams-a72",
     "brand": "Samsung",
-    "model": "S20 FE",
-    "search": "samsung s20 fe",
+    "model": "Sams. A72",
+    "search": "samsung sams. a72",
     "services": [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
-        "finalPrice": 460.0,
+        "finalPrice": 600.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-original",
+        "label": "Troca de Tela",
+        "sourceLabel": "Sams",
+        "quality": "TELA ORIGINAL",
+        "finalPrice": 950.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-a8",
+    "brand": "Samsung",
+    "model": "Sams. A8",
+    "search": "samsung sams. a8",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 450.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-original",
+        "label": "Troca de Tela",
+        "sourceLabel": "Sams",
+        "quality": "TELA ORIGINAL",
+        "finalPrice": 785.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 180.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-a8-plus",
+    "brand": "Samsung",
+    "model": "Sams. A8 Plus",
+    "search": "samsung sams. a8 plus",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 450.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-a8-2",
+    "brand": "Samsung",
+    "model": "Sams. A8+",
+    "search": "samsung sams. a8+",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 450.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-original",
+        "label": "Troca de Tela",
+        "sourceLabel": "Sams",
+        "quality": "TELA ORIGINAL",
+        "finalPrice": 450.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-a80",
+    "brand": "Samsung",
+    "model": "Sams. A80",
+    "search": "samsung sams. a80",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 950.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-original",
+        "label": "Troca de Tela",
+        "sourceLabel": "Sams",
+        "quality": "TELA ORIGINAL",
+        "finalPrice": 1200.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -7907,60 +4763,6 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "label": "Troca de Bateria",
         "sourceLabel": "Bat Prem",
         "quality": "BATERIA PREMIUM",
-        "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-s21",
-    "brand": "Samsung",
-    "model": "S21",
-    "search": "samsung s21",
-    "services": [
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-s21-fe",
-    "brand": "Samsung",
-    "model": "S21 FE",
-    "search": "samsung s21 fe",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 599.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-s21-5g",
-    "brand": "Samsung",
-    "model": "S21 5G",
-    "search": "samsung s21 5g",
-    "services": [
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa",
-        "quality": null,
         "finalPrice": 350.0,
         "installmentPrice": null,
         "costPrice": null,
@@ -7969,27 +4771,17 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     ]
   },
   {
-    "id": "samsung-s22",
+    "id": "samsung-sams-g530-prime",
     "brand": "Samsung",
-    "model": "S22",
-    "search": "samsung s22",
+    "model": "Sams. G530 (Prime)",
+    "search": "samsung sams. g530 (prime)",
     "services": [
       {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": 320.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 500.0,
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 90.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -7997,17 +4789,35 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     ]
   },
   {
-    "id": "samsung-s23",
+    "id": "samsung-sams-g531",
     "brand": "Samsung",
-    "model": "S23",
-    "search": "samsung s23",
+    "model": "Sams. G531",
+    "search": "samsung sams. g531",
     "services": [
       {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 490.0,
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 90.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-gran-duos",
+    "brand": "Samsung",
+    "model": "Sams. Gran Duos",
+    "search": "samsung sams. gran duos",
+    "services": [
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 90.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -8033,15 +4843,15 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     ]
   },
   {
-    "id": "outros-sams-i9082",
-    "brand": "Outros",
+    "id": "samsung-sams-i9082",
+    "brand": "Samsung",
     "model": "Sams. I9082",
-    "search": "outros sams. i9082",
+    "search": "samsung sams. i9082",
     "services": [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
         "finalPrice": 200.0,
         "installmentPrice": null,
@@ -8051,89 +4861,27 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     ]
   },
   {
-    "id": "outros-sams-g530-prime",
-    "brand": "Outros",
-    "model": "Sams. G530 (Prime)",
-    "search": "outros sams. g530 (prime)",
-    "services": [
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 90.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "outros-sams-g531",
-    "brand": "Outros",
-    "model": "Sams. G531",
-    "search": "outros sams. g531",
-    "services": [
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 90.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "outros-sams-gran-duos",
-    "brand": "Outros",
-    "model": "Sams. Gran Duos",
-    "search": "outros sams. gran duos",
-    "services": [
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 90.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "outros-galax-ace-3",
-    "brand": "Outros",
-    "model": "Galax Ace 3",
-    "search": "outros galax ace 3",
-    "services": [
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 90.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-galax-s3-mini",
+    "id": "samsung-sams-j120-j1-2016",
     "brand": "Samsung",
-    "model": "Galax S3 mini",
-    "search": "samsung galax s3 mini",
+    "model": "Sams. J120 j1 2016",
+    "search": "samsung sams. j120 j1 2016",
     "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 250.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
       {
         "key": "conector-carga",
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
-        "finalPrice": 90.0,
+        "finalPrice": 100.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -8141,751 +4889,15 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     ]
   },
   {
-    "id": "samsung-galax-s3-duos",
+    "id": "samsung-sams-j2-core",
     "brand": "Samsung",
-    "model": "Galax S3 Duos",
-    "search": "samsung galax s3 duos",
-    "services": [
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 90.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "outros-galax-ace-4",
-    "brand": "Outros",
-    "model": "Galax Ace 4",
-    "search": "outros galax ace 4",
-    "services": [
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 90.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "outros-galax-e5",
-    "brand": "Outros",
-    "model": "Galax E5",
-    "search": "outros galax e5",
-    "services": [
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 90.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "outros-galax-core-2",
-    "brand": "Outros",
-    "model": "Galax Core 2",
-    "search": "outros galax core 2",
-    "services": [
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 90.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "outros-galax-core-plus-g350",
-    "brand": "Outros",
-    "model": "Galax Core plus G350",
-    "search": "outros galax core plus g350",
-    "services": [
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 90.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-galax-young-gt-s6313",
-    "brand": "Samsung",
-    "model": "Galax Young GT S6313",
-    "search": "samsung galax young gt s6313",
-    "services": [
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 90.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "outros-galax-win",
-    "brand": "Outros",
-    "model": "Galax Win",
-    "search": "outros galax win",
-    "services": [
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 90.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "outros-lcd-g530",
-    "brand": "Outros",
-    "model": "LCD G530",
-    "search": "outros lcd g530",
-    "services": [
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 100.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-lg-g2-d295",
-    "brand": "Motorola",
-    "model": "LG G2 D295",
-    "search": "motorola lg g2 d295",
-    "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": 300.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 100.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-lg-g3-d690",
-    "brand": "Motorola",
-    "model": "LG G3 D690",
-    "search": "motorola lg g3 d690",
-    "services": [
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 100.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-lg-g8s-thinq",
-    "brand": "Motorola",
-    "model": "LG G8s Thinq",
-    "search": "motorola lg g8s thinq",
+    "model": "Sams. J2 core",
+    "search": "samsung sams. j2 core",
     "services": [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 950.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-lg-4",
-    "brand": "Motorola",
-    "model": "LG 4",
-    "search": "motorola lg 4",
-    "services": [
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 100.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-lg-k2",
-    "brand": "Motorola",
-    "model": "LG K2",
-    "search": "motorola lg k2",
-    "services": [
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 100.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-lg-k10-2016-k430",
-    "brand": "Motorola",
-    "model": "LG K10 2016 k430",
-    "search": "motorola lg k10 2016 k430",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 260.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 100.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 100.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-lg-k10-2017",
-    "brand": "Motorola",
-    "model": "LG K10 2017",
-    "search": "motorola lg k10 2017",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 200.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 110.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 90.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-lg-k10-pro",
-    "brand": "Motorola",
-    "model": "LG K10 Pro",
-    "search": "motorola lg k10 pro",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 350.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-lg-k10-power",
-    "brand": "Motorola",
-    "model": "LG K10 Power",
-    "search": "motorola lg k10 power",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 300.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-lg-k11",
-    "brand": "Motorola",
-    "model": "LG K11 +",
-    "search": "motorola lg k11 +",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 300.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 160.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 140.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-lg-k11-2",
-    "brand": "Motorola",
-    "model": "LG K11",
-    "search": "motorola lg k11",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 160.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 120.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-lg-k12",
-    "brand": "Motorola",
-    "model": "LG K12",
-    "search": "motorola lg k12",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 340.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-lg-k12-prime",
-    "brand": "Motorola",
-    "model": "LG K12 PRIME",
-    "search": "motorola lg k12 prime",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 300.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 180.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-lg-k12-2",
-    "brand": "Motorola",
-    "model": "LG K12+",
-    "search": "motorola lg k12+",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 280.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 120.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-lg-k4-2015-k130",
-    "brand": "Motorola",
-    "model": "LG K4 2015 k130",
-    "search": "motorola lg k4 2015 k130",
-    "services": [
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 100.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-lg-k4-x230ds",
-    "brand": "Motorola",
-    "model": "LG K4 X230DS",
-    "search": "motorola lg k4 x230ds",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 100.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-lg-k6-plus",
-    "brand": "Motorola",
-    "model": "LG K6 Plus",
-    "search": "motorola lg k6 plus",
-    "services": [
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 100.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-lg-k6-k33a48",
-    "brand": "Motorola",
-    "model": "LG K6 k33a48",
-    "search": "motorola lg k6 k33a48",
-    "services": [
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 110.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-lg-k8",
-    "brand": "Motorola",
-    "model": "LG K8",
-    "search": "motorola lg k8",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 240.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 100.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-lg-k8-x120",
-    "brand": "Motorola",
-    "model": "LG K8+ x120",
-    "search": "motorola lg k8+ x120",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 360.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-lg-k9",
-    "brand": "Motorola",
-    "model": "LG K9",
-    "search": "motorola lg k9",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 130.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 120.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-lg-p-716",
-    "brand": "Motorola",
-    "model": "LG P 716",
-    "search": "motorola lg p 716",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 350.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-lg-k22",
-    "brand": "Motorola",
-    "model": "LG K22",
-    "search": "motorola lg k22",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-lg-k22-2",
-    "brand": "Motorola",
-    "model": "LG K22+",
-    "search": "motorola lg k22+",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 320.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-lg-k40s",
-    "brand": "Motorola",
-    "model": "LG K40S",
-    "search": "motorola lg k40s",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
         "finalPrice": 260.0,
         "installmentPrice": null,
@@ -8895,365 +4907,37 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     ]
   },
   {
-    "id": "motorola-lg-k41s",
-    "brand": "Motorola",
-    "model": "LG K41S",
-    "search": "motorola lg k41s",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 290.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 160.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-lg-k42",
-    "brand": "Motorola",
-    "model": "LG K42",
-    "search": "motorola lg k42",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-lg-k50s",
-    "brand": "Motorola",
-    "model": "LG K50s",
-    "search": "motorola lg k50s",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 380.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "outros-lh-k51",
-    "brand": "Outros",
-    "model": "LH K51",
-    "search": "outros lh k51",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 280.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-lg-k51s",
-    "brand": "Motorola",
-    "model": "LG K51S",
-    "search": "motorola lg k51s",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 320.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-lg-k52",
-    "brand": "Motorola",
-    "model": "LG K52",
-    "search": "motorola lg k52",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 300.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": 220.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 200.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-lg-k61",
-    "brand": "Motorola",
-    "model": "LG K61",
-    "search": "motorola lg k61",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 310.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-lg-k62",
-    "brand": "Motorola",
-    "model": "LG K62",
-    "search": "motorola lg k62",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 320.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-lg-x-style-k200",
-    "brand": "Motorola",
-    "model": "LG X STYLE (K200)",
-    "search": "motorola lg x style (k200)",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 260.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-lg-x-screem-k500",
-    "brand": "Motorola",
-    "model": "LG X SCREEM (K500)",
-    "search": "motorola lg x screem (k500)",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 450.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "motorola-lg-k40s-2",
-    "brand": "Motorola",
-    "model": "LG K40S",
-    "search": "motorola lg k40s",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 390.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "outros-lenovo-k5",
-    "brand": "Outros",
-    "model": "Lenovo K5",
-    "search": "outros lenovo k5",
-    "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": 200.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 220.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 120.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-lenovo-vibe-b-a1010a20",
+    "id": "samsung-sams-j2-prime",
     "brand": "Samsung",
-    "model": "Lenovo Vibe B A1010a20",
-    "search": "samsung lenovo vibe b a1010a20",
+    "model": "Sams. J2 prime",
+    "search": "samsung sams. j2 prime",
     "services": [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
         "finalPrice": 230.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      }
-    ]
-  },
-  {
-    "id": "outros-lenovo-vibe-c2",
-    "brand": "Outros",
-    "model": "Lenovo Vibe C2",
-    "search": "outros lenovo vibe c2",
-    "services": [
+      },
       {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
         "finalPrice": 120.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-mi-a1",
-    "brand": "Samsung",
-    "model": "MI A1",
-    "search": "samsung mi a1",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 280.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-mi-a2",
-    "brand": "Samsung",
-    "model": "MI A2",
-    "search": "samsung mi a2",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 280.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-mi-a3",
-    "brand": "Samsung",
-    "model": "MI A3",
-    "search": "samsung mi a3",
-    "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": 350.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
       },
       {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 780.0,
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 100.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -9261,15 +4945,61 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     ]
   },
   {
-    "id": "samsung-note-5",
+    "id": "samsung-sams-j2-pro",
     "brand": "Samsung",
-    "model": "NOTE 5",
-    "search": "samsung note 5",
+    "model": "Sams. J2 Pro",
+    "search": "samsung sams. j2 pro",
     "services": [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 250.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-j200",
+    "brand": "Samsung",
+    "model": "Sams. J200",
+    "search": "samsung sams. j200",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 280.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 100.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-j320",
+    "brand": "Samsung",
+    "model": "Sams. J320",
+    "search": "samsung sams. j320",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
         "finalPrice": 320.0,
         "installmentPrice": null,
@@ -9279,63 +5009,27 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     ]
   },
   {
-    "id": "samsung-redmi-note-6-pro",
+    "id": "samsung-sams-j320-2",
     "brand": "Samsung",
-    "model": "REDMI NOTE 6 PRO",
-    "search": "samsung redmi note 6 pro",
+    "model": "Sams. J320",
+    "search": "samsung sams. j320",
     "services": [
       {
-        "key": "tela-premium",
+        "key": "tela-original",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 360.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "xiaomi-redmi-mi-7a",
-    "brand": "Xiaomi",
-    "model": "REDMI MI 7A",
-    "search": "xiaomi redmi mi 7a",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 260.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-redmi-note-7",
-    "brand": "Samsung",
-    "model": "REDMI NOTE 7",
-    "search": "samsung redmi note 7",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 300.0,
+        "sourceLabel": "Sams",
+        "quality": "TELA ORIGINAL",
+        "finalPrice": 550.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
       },
       {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
+        "key": "tampa",
+        "label": "Troca de Tampa",
+        "sourceLabel": "Tampa",
         "quality": null,
-        "finalPrice": 180.0,
+        "finalPrice": 250.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -9343,34 +5037,26 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     ]
   },
   {
-    "id": "xiaomi-mi-8-lite",
-    "brand": "Xiaomi",
-    "model": "MI 8 LITE",
-    "search": "xiaomi mi 8 lite",
+    "id": "samsung-sams-j4-core",
+    "brand": "Samsung",
+    "model": "Sams. J4 core",
+    "search": "samsung sams. j4 core",
     "services": [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
-        "finalPrice": 280.0,
+        "finalPrice": 260.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      }
-    ]
-  },
-  {
-    "id": "xiaomi-mi-8",
-    "brand": "Xiaomi",
-    "model": "MI 8",
-    "search": "xiaomi mi 8",
-    "services": [
+      },
       {
-        "key": "tela-premium",
+        "key": "tela-original",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
+        "sourceLabel": "Sams",
+        "quality": "TELA ORIGINAL",
         "finalPrice": 550.0,
         "installmentPrice": null,
         "costPrice": null,
@@ -9379,71 +5065,27 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     ]
   },
   {
-    "id": "xiaomi-mi-8-pro",
-    "brand": "Xiaomi",
-    "model": "MI 8 PRO",
-    "search": "xiaomi mi 8 pro",
+    "id": "samsung-sams-j5-j500",
+    "brand": "Samsung",
+    "model": "Sams. J5 (J500)",
+    "search": "samsung sams. j5 (j500)",
     "services": [
       {
-        "key": "tela-premium",
+        "key": "tela-paralela",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 380.0,
+        "sourceLabel": "1ª Linha",
+        "quality": "TELA PARALELA",
+        "finalPrice": 250.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      }
-    ]
-  },
-  {
-    "id": "xiaomi-mi-8-lite-2",
-    "brand": "Xiaomi",
-    "model": "MI 8 LITE",
-    "search": "xiaomi mi 8 lite",
-    "services": [
+      },
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
-        "finalPrice": 290.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "xiaomi-redmi-9",
-    "brand": "Xiaomi",
-    "model": "REDMI 9",
-    "search": "xiaomi redmi 9",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 240.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "xiaomi-redmi-9a",
-    "brand": "Xiaomi",
-    "model": "REDMI 9A",
-    "search": "xiaomi redmi 9a",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 280.0,
+        "finalPrice": 350.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -9453,7 +5095,7 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
         "label": "Troca de Conector de Carga",
         "sourceLabel": "Con. Carga",
         "quality": null,
-        "finalPrice": 130.0,
+        "finalPrice": 120.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -9461,17 +5103,133 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     ]
   },
   {
-    "id": "xiaomi-redmi-9c",
-    "brand": "Xiaomi",
-    "model": "REDMI 9C",
-    "search": "xiaomi redmi 9c",
+    "id": "samsung-sams-j5-prime-g570",
+    "brand": "Samsung",
+    "model": "Sams. J5 Prime (G570)",
+    "search": "samsung sams. j5 prime (g570)",
+    "services": [
+      {
+        "key": "tela-paralela",
+        "label": "Troca de Tela",
+        "sourceLabel": "1ª Linha",
+        "quality": "TELA PARALELA",
+        "finalPrice": 220.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 250.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-original",
+        "label": "Troca de Tela",
+        "sourceLabel": "Sams",
+        "quality": "TELA ORIGINAL",
+        "finalPrice": 500.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 160.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 120.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-j510-metal",
+    "brand": "Samsung",
+    "model": "Sams. J510 Metal",
+    "search": "samsung sams. j510 metal",
+    "services": [
+      {
+        "key": "tela-paralela",
+        "label": "Troca de Tela",
+        "sourceLabel": "1ª Linha",
+        "quality": "TELA PARALELA",
+        "finalPrice": 270.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 360.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-original",
+        "label": "Troca de Tela",
+        "sourceLabel": "Sams",
+        "quality": "TELA ORIGINAL",
+        "finalPrice": 570.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 120.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-j6",
+    "brand": "Samsung",
+    "model": "Sams. J6 +",
+    "search": "samsung sams. j6 +",
     "services": [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
         "finalPrice": 280.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 180.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -9489,71 +5247,47 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     ]
   },
   {
-    "id": "xiaomi-redmi-9t",
-    "brand": "Xiaomi",
-    "model": "REDMI 9T",
-    "search": "xiaomi redmi 9t",
+    "id": "samsung-sams-j6-2",
+    "brand": "Samsung",
+    "model": "Sams. J6\\",
+    "search": "samsung sams. j6\\",
     "services": [
       {
-        "key": "tela-premium",
+        "key": "tela-paralela",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 330.0,
+        "sourceLabel": "1ª Linha",
+        "quality": "TELA PARALELA",
+        "finalPrice": 200.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      }
-    ]
-  },
-  {
-    "id": "xiaomi-redmi-10-2021-prime",
-    "brand": "Xiaomi",
-    "model": "REDMI 10 2021  PRIME",
-    "search": "xiaomi redmi 10 2021  prime",
-    "services": [
+      },
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 350.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "xiaomi-redmi-10c",
-    "brand": "Xiaomi",
-    "model": "REDMI 10C",
-    "search": "xiaomi redmi 10c",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
         "finalPrice": 250.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      }
-    ]
-  },
-  {
-    "id": "xiaomi-redmi-12",
-    "brand": "Xiaomi",
-    "model": "REDMI 12",
-    "search": "xiaomi redmi 12",
-    "services": [
+      },
       {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 350.0,
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 160.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 120.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -9561,28 +5295,182 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     ]
   },
   {
-    "id": "xiaomi-redmi-12c",
-    "brand": "Xiaomi",
-    "model": "REDMI 12C",
-    "search": "xiaomi redmi 12c",
+    "id": "samsung-sams-j7-duo-j720",
+    "brand": "Samsung",
+    "model": "Sams. J7 Duo J720",
+    "search": "samsung sams. j7 duo j720",
     "services": [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 450.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-j7-metal-j710",
+    "brand": "Samsung",
+    "model": "Sams. J7 METAL J710",
+    "search": "samsung sams. j7 metal j710",
+    "services": [
+      {
+        "key": "tela-paralela",
+        "label": "Troca de Tela",
+        "sourceLabel": "1ª Linha",
+        "quality": "TELA PARALELA",
+        "finalPrice": 260.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
         "finalPrice": 320.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
+      },
+      {
+        "key": "tela-original",
+        "label": "Troca de Tela",
+        "sourceLabel": "Sams",
+        "quality": "TELA ORIGINAL",
+        "finalPrice": 620.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 120.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tampa",
+        "label": "Troca de Tampa",
+        "sourceLabel": "Tampa",
+        "quality": null,
+        "finalPrice": 450.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 120.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
       }
     ]
   },
   {
-    "id": "xiaomi-redmi-13c",
-    "brand": "Xiaomi",
-    "model": "REDMI 13C",
-    "search": "xiaomi redmi 13c",
+    "id": "samsung-sams-j7-prime",
+    "brand": "Samsung",
+    "model": "Sams. J7 Prime",
+    "search": "samsung sams. j7 prime",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 280.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 150.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 140.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-j7-prime-2",
+    "brand": "Samsung",
+    "model": "Sams. J7 Prime 2",
+    "search": "samsung sams. j7 prime 2",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 270.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-original",
+        "label": "Troca de Tela",
+        "sourceLabel": "Sams",
+        "quality": "TELA ORIGINAL",
+        "finalPrice": 590.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 170.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 140.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-j7-pro-j730",
+    "brand": "Samsung",
+    "model": "Sams. J7 Pro (j730)",
+    "search": "samsung sams. j7 pro (j730)",
     "services": [
       {
         "key": "tela-paralela",
@@ -9597,9 +5485,3155 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 320.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 180.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-j700",
+    "brand": "Samsung",
+    "model": "Sams. J700",
+    "search": "samsung sams. j700",
+    "services": [
+      {
+        "key": "tela-paralela",
+        "label": "Troca de Tela",
+        "sourceLabel": "1ª Linha",
+        "quality": "TELA PARALELA",
+        "finalPrice": 270.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 320.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 160.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tampa",
+        "label": "Troca de Tampa",
+        "sourceLabel": "Tampa",
+        "quality": null,
+        "finalPrice": 410.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 100.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-j8",
+    "brand": "Samsung",
+    "model": "Sams. J8",
+    "search": "samsung sams. j8",
+    "services": [
+      {
+        "key": "tela-paralela",
+        "label": "Troca de Tela",
+        "sourceLabel": "1ª Linha",
+        "quality": "TELA PARALELA",
+        "finalPrice": 260.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 360.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 150.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-a-10s",
+    "brand": "Samsung",
+    "model": "Sams.A 10s",
+    "search": "samsung sams.a 10s",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 250.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-original",
+        "label": "Troca de Tela",
+        "sourceLabel": "Sams",
+        "quality": "TELA ORIGINAL",
+        "finalPrice": 590.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 180.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 120.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "samsung-sams-j701-neo",
+    "brand": "Samsung",
+    "model": "Sams.J701 neo",
+    "search": "samsung sams.j701 neo",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 320.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-original",
+        "label": "Troca de Tela",
+        "sourceLabel": "Sams",
+        "quality": "TELA ORIGINAL",
+        "finalPrice": 530.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 160.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tampa",
+        "label": "Troca de Tampa",
+        "sourceLabel": "Tampa",
+        "quality": null,
+        "finalPrice": 0.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 120.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moot-e5",
+    "brand": "Motorola",
+    "model": "Moot E5",
+    "search": "motorola moot e5",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 280.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 160.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto",
+    "brand": "Motorola",
+    "model": "Moto",
+    "search": "motorola moto",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 350.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-c-plus",
+    "brand": "Motorola",
+    "model": "Moto C Plus",
+    "search": "motorola moto c plus",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 250.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 120.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-e1",
+    "brand": "Motorola",
+    "model": "Moto E1",
+    "search": "motorola moto e1",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 150.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 80.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-e13",
+    "brand": "Motorola",
+    "model": "Moto E13",
+    "search": "motorola moto e13",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 280.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 180.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-e2",
+    "brand": "Motorola",
+    "model": "Moto E2",
+    "search": "motorola moto e2",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 150.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 120.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 80.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-e20",
+    "brand": "Motorola",
+    "model": "Moto E20",
+    "search": "motorola moto e20",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
         "finalPrice": 260.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-e22",
+    "brand": "Motorola",
+    "model": "Moto E22",
+    "search": "motorola moto e22",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 280.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-e4",
+    "brand": "Motorola",
+    "model": "Moto E4",
+    "search": "motorola moto e4",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 250.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 100.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-e4-plus",
+    "brand": "Motorola",
+    "model": "Moto E4 Plus",
+    "search": "motorola moto e4 plus",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 250.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 120.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 100.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-e40",
+    "brand": "Motorola",
+    "model": "Moto E40",
+    "search": "motorola moto e40",
+    "services": [
+      {
+        "key": "tela-paralela",
+        "label": "Troca de Tela",
+        "sourceLabel": "1ª Linha",
+        "quality": "TELA PARALELA",
+        "finalPrice": 250.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 320.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-e5-play",
+    "brand": "Motorola",
+    "model": "Moto E5 Play",
+    "search": "motorola moto e5 play",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 270.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 150.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-e5-plus",
+    "brand": "Motorola",
+    "model": "Moto E5 Plus",
+    "search": "motorola moto e5 plus",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 290.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-e6-play",
+    "brand": "Motorola",
+    "model": "Moto E6 Play",
+    "search": "motorola moto e6 play",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 260.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-e6-plus",
+    "brand": "Motorola",
+    "model": "Moto E6 Plus",
+    "search": "motorola moto e6 plus",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 240.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 120.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-e6i",
+    "brand": "Motorola",
+    "model": "Moto E6i",
+    "search": "motorola moto e6i",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 300.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 200.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-e6s",
+    "brand": "Motorola",
+    "model": "Moto E6S",
+    "search": "motorola moto e6s",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 250.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 130.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-e7",
+    "brand": "Motorola",
+    "model": "Moto E7",
+    "search": "motorola moto e7",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 260.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-e7-plus",
+    "brand": "Motorola",
+    "model": "Moto E7 Plus",
+    "search": "motorola moto e7 plus",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 260.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 180.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-e7-power",
+    "brand": "Motorola",
+    "model": "Moto E7 Power",
+    "search": "motorola moto e7 power",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 280.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-edge-5g",
+    "brand": "Motorola",
+    "model": "Moto Edge  5G",
+    "search": "motorola moto edge  5g",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 980.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-edge-20",
+    "brand": "Motorola",
+    "model": "Moto Edge 20",
+    "search": "motorola moto edge 20",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 600.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 230.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-edge-20-lite",
+    "brand": "Motorola",
+    "model": "Moto EDGE 20 LITE",
+    "search": "motorola moto edge 20 lite",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 550.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-edge-30",
+    "brand": "Motorola",
+    "model": "Moto Edge 30",
+    "search": "motorola moto edge 30",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 650.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-edge-30-neo",
+    "brand": "Motorola",
+    "model": "Moto Edge 30 Neo",
+    "search": "motorola moto edge 30 neo",
+    "services": [
+      {
+        "key": "tela-paralela",
+        "label": "Troca de Tela",
+        "sourceLabel": "1ª Linha",
+        "quality": "TELA PARALELA",
+        "finalPrice": 0.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 800.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-edge-40-neo",
+    "brand": "Motorola",
+    "model": "Moto Edge 40 neo",
+    "search": "motorola moto edge 40 neo",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 800.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 200.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-edge-50-fusion",
+    "brand": "Motorola",
+    "model": "Moto Edge 50 fusion",
+    "search": "motorola moto edge 50 fusion",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 550.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 200.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-g-5g-plus-g100",
+    "brand": "Motorola",
+    "model": "MOTO G 5G PLUS/ G100",
+    "search": "motorola moto g 5g plus/ g100",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 360.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 200.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-g04",
+    "brand": "Motorola",
+    "model": "MOTO G04",
+    "search": "motorola moto g04",
+    "services": [
+      {
+        "key": "tela-paralela",
+        "label": "Troca de Tela",
+        "sourceLabel": "1ª Linha",
+        "quality": "TELA PARALELA",
+        "finalPrice": 250.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 300.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-g04s",
+    "brand": "Motorola",
+    "model": "Moto g04s",
+    "search": "motorola moto g04s",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 330.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-g05",
+    "brand": "Motorola",
+    "model": "MOTO G05",
+    "search": "motorola moto g05",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 280.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-g1",
+    "brand": "Motorola",
+    "model": "MOTO G1",
+    "search": "motorola moto g1",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 180.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 140.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 80.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-g10",
+    "brand": "Motorola",
+    "model": "MOTO G10",
+    "search": "motorola moto g10",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 250.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-g10-power",
+    "brand": "Motorola",
+    "model": "MOTO G10 POWER",
+    "search": "motorola moto g10 power",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 280.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-g100",
+    "brand": "Motorola",
+    "model": "Moto G100",
+    "search": "motorola moto g100",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 450.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 300.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-g14",
+    "brand": "Motorola",
+    "model": "MOTO G14",
+    "search": "motorola moto g14",
+    "services": [
+      {
+        "key": "tela-paralela",
+        "label": "Troca de Tela",
+        "sourceLabel": "1ª Linha",
+        "quality": "TELA PARALELA",
+        "finalPrice": 315.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 320.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-g2",
+    "brand": "Motorola",
+    "model": "MOTO G2",
+    "search": "motorola moto g2",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 230.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 140.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 80.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-g20",
+    "brand": "Motorola",
+    "model": "Moto G20",
+    "search": "motorola moto g20",
+    "services": [
+      {
+        "key": "tela-paralela",
+        "label": "Troca de Tela",
+        "sourceLabel": "1ª Linha",
+        "quality": "TELA PARALELA",
+        "finalPrice": 220.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 260.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 250.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-g200",
+    "brand": "Motorola",
+    "model": "Moto G200",
+    "search": "motorola moto g200",
+    "services": [
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 280.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 180.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-g22",
+    "brand": "Motorola",
+    "model": "Moto G22",
+    "search": "motorola moto g22",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 250.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-g23",
+    "brand": "Motorola",
+    "model": "Moto g23",
+    "search": "motorola moto g23",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 400.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 210.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-g24",
+    "brand": "Motorola",
+    "model": "Moto G24",
+    "search": "motorola moto g24",
+    "services": [
+      {
+        "key": "tela-paralela",
+        "label": "Troca de Tela",
+        "sourceLabel": "1ª Linha",
+        "quality": "TELA PARALELA",
+        "finalPrice": 250.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 320.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-g3",
+    "brand": "Motorola",
+    "model": "Moto G3",
+    "search": "motorola moto g3",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 220.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 150.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 90.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-g30",
+    "brand": "Motorola",
+    "model": "MOTO G30",
+    "search": "motorola moto g30",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 260.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 220.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 160.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-g31",
+    "brand": "Motorola",
+    "model": "Moto G31",
+    "search": "motorola moto g31",
+    "services": [
+      {
+        "key": "tela-paralela",
+        "label": "Troca de Tela",
+        "sourceLabel": "1ª Linha",
+        "quality": "TELA PARALELA",
+        "finalPrice": 260.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 370.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 180.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-g32",
+    "brand": "Motorola",
+    "model": "Moto g32",
+    "search": "motorola moto g32",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 330.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-g34",
+    "brand": "Motorola",
+    "model": "Moto G34",
+    "search": "motorola moto g34",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 290.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-g35",
+    "brand": "Motorola",
+    "model": "Moto G35",
+    "search": "motorola moto g35",
+    "services": [
+      {
+        "key": "tela-paralela",
+        "label": "Troca de Tela",
+        "sourceLabel": "1ª Linha",
+        "quality": "TELA PARALELA",
+        "finalPrice": 250.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 350.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-g4",
+    "brand": "Motorola",
+    "model": "Moto G4",
+    "search": "motorola moto g4",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 240.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 120.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-g4-play-xt1603",
+    "brand": "Motorola",
+    "model": "Moto G4 Play XT1603",
+    "search": "motorola moto g4 play xt1603",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 250.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 120.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 120.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-g4-plus",
+    "brand": "Motorola",
+    "model": "Moto G4 Plus",
+    "search": "motorola moto g4 plus",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 250.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 120.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-g41",
+    "brand": "Motorola",
+    "model": "Moto G41",
+    "search": "motorola moto g41",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 390.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 180.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-g42",
+    "brand": "Motorola",
+    "model": "Moto G42",
+    "search": "motorola moto g42",
+    "services": [
+      {
+        "key": "tela-paralela",
+        "label": "Troca de Tela",
+        "sourceLabel": "1ª Linha",
+        "quality": "TELA PARALELA",
+        "finalPrice": 260.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 360.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 200.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-g5",
+    "brand": "Motorola",
+    "model": "Moto G5",
+    "search": "motorola moto g5",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 260.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 130.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 120.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-g5-g",
+    "brand": "Motorola",
+    "model": "MOTO G5 G",
+    "search": "motorola moto g5 g",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 330.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-premium",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Prem",
+        "quality": "BATERIA PREMIUM",
+        "finalPrice": 280.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-g5-plus",
+    "brand": "Motorola",
+    "model": "Moto G5 Plus",
+    "search": "motorola moto g5 plus",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 250.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 110.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-g50",
+    "brand": "Motorola",
+    "model": "Moto G50",
+    "search": "motorola moto g50",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 300.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-g50-5g",
+    "brand": "Motorola",
+    "model": "Moto G50 5G",
+    "search": "motorola moto g50 5g",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 390.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-g51",
+    "brand": "Motorola",
+    "model": "Moto G51",
+    "search": "motorola moto g51",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 390.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-g52",
+    "brand": "Motorola",
+    "model": "Moto g52",
+    "search": "motorola moto g52",
+    "services": [
+      {
+        "key": "tela-paralela",
+        "label": "Troca de Tela",
+        "sourceLabel": "1ª Linha",
+        "quality": "TELA PARALELA",
+        "finalPrice": 260.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 390.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-g53",
+    "brand": "Motorola",
+    "model": "Moto G53",
+    "search": "motorola moto g53",
+    "services": [
+      {
+        "key": "tela-paralela",
+        "label": "Troca de Tela",
+        "sourceLabel": "1ª Linha",
+        "quality": "TELA PARALELA",
+        "finalPrice": 280.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 360.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-g54",
+    "brand": "Motorola",
+    "model": "Moto G54",
+    "search": "motorola moto g54",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 350.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-g5s-plus",
+    "brand": "Motorola",
+    "model": "Moto G5S plus",
+    "search": "motorola moto g5s plus",
+    "services": [
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 120.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-g5s-xt1792",
+    "brand": "Motorola",
+    "model": "Moto G5s xt1792",
+    "search": "motorola moto g5s xt1792",
+    "services": [
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 100.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-g6",
+    "brand": "Motorola",
+    "model": "Moto G6",
+    "search": "motorola moto g6",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 270.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 160.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-g6-play-e5",
+    "brand": "Motorola",
+    "model": "Moto G6 Play/E5",
+    "search": "motorola moto g6 play/e5",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 260.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 180.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 130.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-g6-plus",
+    "brand": "Motorola",
+    "model": "Moto G6 Plus",
+    "search": "motorola moto g6 plus",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 320.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tampa",
+        "label": "Troca de Tampa",
+        "sourceLabel": "Tampa",
+        "quality": null,
+        "finalPrice": 150.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 160.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-g60",
+    "brand": "Motorola",
+    "model": "Moto G60",
+    "search": "motorola moto g60",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 280.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-premium",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Prem",
+        "quality": "BATERIA PREMIUM",
+        "finalPrice": 250.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 200.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-g60s",
+    "brand": "Motorola",
+    "model": "Moto G60s",
+    "search": "motorola moto g60s",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 290.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-g62",
+    "brand": "Motorola",
+    "model": "Moto G62",
+    "search": "motorola moto g62",
+    "services": [
+      {
+        "key": "tela-paralela",
+        "label": "Troca de Tela",
+        "sourceLabel": "1ª Linha",
+        "quality": "TELA PARALELA",
+        "finalPrice": 280.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 350.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-g7",
+    "brand": "Motorola",
+    "model": "Moto G7",
+    "search": "motorola moto g7",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 260.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-premium",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Prem",
+        "quality": "BATERIA PREMIUM",
+        "finalPrice": 250.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 150.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-g7-play",
+    "brand": "Motorola",
+    "model": "Moto G7 Play",
+    "search": "motorola moto g7 play",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 270.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 150.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-g7-plus",
+    "brand": "Motorola",
+    "model": "Moto G7 plus",
+    "search": "motorola moto g7 plus",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 250.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-premium",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Prem",
+        "quality": "BATERIA PREMIUM",
+        "finalPrice": 250.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 130.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-g7-power",
+    "brand": "Motorola",
+    "model": "Moto G7 power",
+    "search": "motorola moto g7 power",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 270.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-premium",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Prem",
+        "quality": "BATERIA PREMIUM",
+        "finalPrice": 250.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 150.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-g71",
+    "brand": "Motorola",
+    "model": "Moto G71",
+    "search": "motorola moto g71",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 400.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 250.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-g73-5g",
+    "brand": "Motorola",
+    "model": "Moto G73 5G",
+    "search": "motorola moto g73 5g",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 450.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-g75-5g",
+    "brand": "Motorola",
+    "model": "Moto G75 5g",
+    "search": "motorola moto g75 5g",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 320.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 180.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-g8",
+    "brand": "Motorola",
+    "model": "Moto G8",
+    "search": "motorola moto g8",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 280.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 180.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 150.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-g8-play-moto-one-macro",
+    "brand": "Motorola",
+    "model": "Moto G8 play / Moto One Macro",
+    "search": "motorola moto g8 play / moto one macro",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 260.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 140.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-g8-plus",
+    "brand": "Motorola",
+    "model": "Moto G8 plus",
+    "search": "motorola moto g8 plus",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 320.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-premium",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Prem",
+        "quality": "BATERIA PREMIUM",
+        "finalPrice": 250.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 180.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 180.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-g8-power",
+    "brand": "Motorola",
+    "model": "Moto g8 power",
+    "search": "motorola moto g8 power",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 270.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 180.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 180.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-g8-power-lite",
+    "brand": "Motorola",
+    "model": "Moto G8 POWER LITE",
+    "search": "motorola moto g8 power lite",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 250.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 160.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-g82-5g",
+    "brand": "Motorola",
+    "model": "Moto G82 5G",
+    "search": "motorola moto g82 5g",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 800.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 250.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-g84",
+    "brand": "Motorola",
+    "model": "Moto G84",
+    "search": "motorola moto g84",
+    "services": [
+      {
+        "key": "tela-paralela",
+        "label": "Troca de Tela",
+        "sourceLabel": "1ª Linha",
+        "quality": "TELA PARALELA",
+        "finalPrice": 350.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 600.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-g85",
+    "brand": "Motorola",
+    "model": "Moto G85",
+    "search": "motorola moto g85",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 600.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-g9-play-e7-plus",
+    "brand": "Motorola",
+    "model": "Moto G9 Play / E7 PLUS",
+    "search": "motorola moto g9 play / e7 plus",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 250.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 180.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 180.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-g9-plus",
+    "brand": "Motorola",
+    "model": "Moto G9 Plus",
+    "search": "motorola moto g9 plus",
+    "services": [
+      {
+        "key": "tela-paralela",
+        "label": "Troca de Tela",
+        "sourceLabel": "1ª Linha",
+        "quality": "TELA PARALELA",
+        "finalPrice": 260.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 300.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-premium",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Prem",
+        "quality": "BATERIA PREMIUM",
+        "finalPrice": 250.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 180.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-g9-power",
+    "brand": "Motorola",
+    "model": "MOTO G9 POWER",
+    "search": "motorola moto g9 power",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 300.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 180.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-one",
+    "brand": "Motorola",
+    "model": "MOTO ONE",
+    "search": "motorola moto one",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 270.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-one-fusion",
+    "brand": "Motorola",
+    "model": "Moto One Fusion",
+    "search": "motorola moto one fusion",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 330.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-premium",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Prem",
+        "quality": "BATERIA PREMIUM",
+        "finalPrice": 250.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 220.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-one-fusion-plus",
+    "brand": "Motorola",
+    "model": "Moto One Fusion Plus",
+    "search": "motorola moto one fusion plus",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 350.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-one-hyper",
+    "brand": "Motorola",
+    "model": "Moto One Hyper",
+    "search": "motorola moto one hyper",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 320.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-premium",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Prem",
+        "quality": "BATERIA PREMIUM",
+        "finalPrice": 250.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 180.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 150.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-one-macro",
+    "brand": "Motorola",
+    "model": "Moto One macro",
+    "search": "motorola moto one macro",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 320.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 180.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-one-vision-action",
+    "brand": "Motorola",
+    "model": "Moto one vision/ action",
+    "search": "motorola moto one vision/ action",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 400.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 180.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-one-zoom",
+    "brand": "Motorola",
+    "model": "Moto One ZOOM",
+    "search": "motorola moto one zoom",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 380.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-x-play",
+    "brand": "Motorola",
+    "model": "Moto X Play",
+    "search": "motorola moto x play",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 250.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 160.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-x-style",
+    "brand": "Motorola",
+    "model": "Moto X style",
+    "search": "motorola moto x style",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 360.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-x1",
+    "brand": "Motorola",
+    "model": "Moto X1",
+    "search": "motorola moto x1",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 400.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-x2",
+    "brand": "Motorola",
+    "model": "Moto X2",
+    "search": "motorola moto x2",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 280.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 130.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-x4",
+    "brand": "Motorola",
+    "model": "Moto X4",
+    "search": "motorola moto x4",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 300.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 180.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-z-play",
+    "brand": "Motorola",
+    "model": "Moto Z Play",
+    "search": "motorola moto z play",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 380.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 190.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-z2-play",
+    "brand": "Motorola",
+    "model": "Moto Z2 Play",
+    "search": "motorola moto z2 play",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 380.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 200.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "motorola-moto-z3-play",
+    "brand": "Motorola",
+    "model": "Moto Z3 play",
+    "search": "motorola moto z3 play",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 400.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 200.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "xiaomi-mi-11-lite",
+    "brand": "Xiaomi",
+    "model": "MI 11 LIte",
+    "search": "xiaomi mi 11 lite",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 660.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "xiaomi-mi-8",
+    "brand": "Xiaomi",
+    "model": "MI 8",
+    "search": "xiaomi mi 8",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 550.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "xiaomi-mi-8-lite",
+    "brand": "Xiaomi",
+    "model": "MI 8 LITE",
+    "search": "xiaomi mi 8 lite",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 280.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "xiaomi-mi-8-lite-2",
+    "brand": "Xiaomi",
+    "model": "MI 8 LITE",
+    "search": "xiaomi mi 8 lite",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 290.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "xiaomi-mi-8-pro",
+    "brand": "Xiaomi",
+    "model": "MI 8 PRO",
+    "search": "xiaomi mi 8 pro",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 380.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -9615,7 +8649,7 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
         "finalPrice": 500.0,
         "installmentPrice": null,
@@ -9635,6 +8669,24 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     ]
   },
   {
+    "id": "xiaomi-mi-9-lite",
+    "brand": "Xiaomi",
+    "model": "MI 9 LITE",
+    "search": "xiaomi mi 9 lite",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 600.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
     "id": "xiaomi-mi-9a",
     "brand": "Xiaomi",
     "model": "MI 9A",
@@ -9643,9 +8695,27 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
         "finalPrice": 300.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "xiaomi-mi-9se",
+    "brand": "Xiaomi",
+    "model": "MI 9SE",
+    "search": "xiaomi mi 9se",
+    "services": [
+      {
+        "key": "tela-paralela",
+        "label": "Troca de Tela",
+        "sourceLabel": "1ª Linha",
+        "quality": "TELA PARALELA",
+        "finalPrice": 350.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -9661,7 +8731,7 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
         "finalPrice": 550.0,
         "installmentPrice": null,
@@ -9679,7 +8749,7 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
         "finalPrice": 650.0,
         "installmentPrice": null,
@@ -9689,17 +8759,17 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     ]
   },
   {
-    "id": "xiaomi-mi-9-lite",
+    "id": "xiaomi-mi-a1",
     "brand": "Xiaomi",
-    "model": "MI 9 LITE",
-    "search": "xiaomi mi 9 lite",
+    "model": "MI A1",
+    "search": "xiaomi mi a1",
     "services": [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
-        "finalPrice": 600.0,
+        "finalPrice": 280.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -9707,15 +8777,61 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     ]
   },
   {
-    "id": "samsung-mi-note-10",
-    "brand": "Samsung",
-    "model": "MI NOTE 10",
-    "search": "samsung mi note 10",
+    "id": "xiaomi-mi-a2",
+    "brand": "Xiaomi",
+    "model": "MI A2",
+    "search": "xiaomi mi a2",
     "services": [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 280.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "xiaomi-mi-a3",
+    "brand": "Xiaomi",
+    "model": "MI A3",
+    "search": "xiaomi mi a3",
+    "services": [
+      {
+        "key": "tela-paralela",
+        "label": "Troca de Tela",
+        "sourceLabel": "1ª Linha",
+        "quality": "TELA PARALELA",
+        "finalPrice": 350.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 780.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "xiaomi-mi-note-10",
+    "brand": "Xiaomi",
+    "model": "MI NOTE 10",
+    "search": "xiaomi mi note 10",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
         "finalPrice": 390.0,
         "installmentPrice": null,
@@ -9735,17 +8851,17 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     ]
   },
   {
-    "id": "xiaomi-mi-11-lite",
+    "id": "xiaomi-note-5",
     "brand": "Xiaomi",
-    "model": "MI 11 LIte",
-    "search": "xiaomi mi 11 lite",
+    "model": "NOTE 5",
+    "search": "xiaomi note 5",
     "services": [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
-        "finalPrice": 660.0,
+        "finalPrice": 320.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -9753,441 +8869,35 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     ]
   },
   {
-    "id": "samsung-redmi-note-7-2",
-    "brand": "Samsung",
-    "model": "REDMI NOTE 7",
-    "search": "samsung redmi note 7",
+    "id": "xiaomi-poco-c40",
+    "brand": "Xiaomi",
+    "model": "POCO C40",
+    "search": "xiaomi poco c40",
     "services": [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 280.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-redmi-note-8",
-    "brand": "Samsung",
-    "model": "REDMI NOTE 8",
-    "search": "samsung redmi note 8",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 260.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 220.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-redmi-note-8-pro",
-    "brand": "Samsung",
-    "model": "REDMI NOTE 8 PRO",
-    "search": "samsung redmi note 8 pro",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 460.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tampa",
-        "label": "Troca de Tampa",
-        "sourceLabel": "Tampa 2",
-        "quality": null,
-        "finalPrice": 150.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-redmi-note-9",
-    "brand": "Samsung",
-    "model": "REDMI NOTE 9",
-    "search": "samsung redmi note 9",
-    "services": [
-      {
-        "key": "tela-paralela",
-        "label": "Troca de Tela",
-        "sourceLabel": "1ª Linha",
-        "quality": "TELA PARALELA",
-        "finalPrice": 240.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
         "finalPrice": 280.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
       }
     ]
   },
   {
-    "id": "samsung-redmi-note-9-pro",
-    "brand": "Samsung",
-    "model": "REDMI NOTE 9 PRO",
-    "search": "samsung redmi note 9 pro",
+    "id": "xiaomi-poco-c75",
+    "brand": "Xiaomi",
+    "model": "POCO C75",
+    "search": "xiaomi poco c75",
     "services": [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 360.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-redmi-note-9s",
-    "brand": "Samsung",
-    "model": "REDMI NOTE 9S",
-    "search": "samsung redmi note 9s",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
         "finalPrice": 300.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 200.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-redmi-note-10",
-    "brand": "Samsung",
-    "model": "REDMI NOTE 10",
-    "search": "samsung redmi note 10",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 400.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 200.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-redmi-note-10-5g",
-    "brand": "Samsung",
-    "model": "REDMI NOTE 10 5G",
-    "search": "samsung redmi note 10 5g",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 380.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-redmi-note-10s",
-    "brand": "Samsung",
-    "model": "REDMI NOTE 10s",
-    "search": "samsung redmi note 10s",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 420.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "conector-carga",
-        "label": "Troca de Conector de Carga",
-        "sourceLabel": "Con. Carga",
-        "quality": null,
-        "finalPrice": 220.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-redmi-note-10-pro",
-    "brand": "Samsung",
-    "model": "REDMI NOTE 10 PRO",
-    "search": "samsung redmi note 10 pro",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 400.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-redmi-note-11-4g",
-    "brand": "Samsung",
-    "model": "REDMI NOTE 11  4G",
-    "search": "samsung redmi note 11  4g",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 450.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-original",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Orig",
-        "quality": "BATERIA ORIGINAL",
-        "finalPrice": 200.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-redmi-note-11s",
-    "brand": "Samsung",
-    "model": "REDMI NOTE 11S",
-    "search": "samsung redmi note 11s",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 530.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-redmi-note-11-pro",
-    "brand": "Samsung",
-    "model": "REDMI NOTE 11 PRO",
-    "search": "samsung redmi note 11 pro",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 700.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-redmi-note-12-4g",
-    "brand": "Samsung",
-    "model": "REDMI NOTE 12 4G",
-    "search": "samsung redmi note 12 4g",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 460.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-redmi-note-12s",
-    "brand": "Samsung",
-    "model": "REDMI NOTE 12S",
-    "search": "samsung redmi note 12s",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 450.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-redmi-note-13-4g",
-    "brand": "Samsung",
-    "model": "REDMI NOTE 13 4G",
-    "search": "samsung redmi note 13 4g",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 700.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-redmi-note-13-5g",
-    "brand": "Samsung",
-    "model": "REDMI NOTE 13 5G",
-    "search": "samsung redmi note 13 5g",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 520.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-redmi-note-13-pro-4g",
-    "brand": "Samsung",
-    "model": "REDMI NOTE 13 PRO 4G",
-    "search": "samsung redmi note 13 pro 4g",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 700.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-redmi-note-13-pro-5g",
-    "brand": "Samsung",
-    "model": "REDMI NOTE 13 PRO 5G",
-    "search": "samsung redmi note 13 pro 5g",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 580.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      },
-      {
-        "key": "bateria-premium",
-        "label": "Troca de Bateria",
-        "sourceLabel": "Bat Prem",
-        "quality": "BATERIA PREMIUM",
-        "finalPrice": 250.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -10203,7 +8913,7 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
         "finalPrice": 360.0,
         "installmentPrice": null,
@@ -10221,7 +8931,7 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
         "finalPrice": 950.0,
         "installmentPrice": null,
@@ -10239,7 +8949,7 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
         "finalPrice": 550.0,
         "installmentPrice": null,
@@ -10257,9 +8967,117 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
         "finalPrice": 600.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "xiaomi-poco-m3",
+    "brand": "Xiaomi",
+    "model": "POCO M3",
+    "search": "xiaomi poco m3",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 330.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "xiaomi-poco-m3-pro-5g",
+    "brand": "Xiaomi",
+    "model": "POCO M3 PRO 5G",
+    "search": "xiaomi poco m3 pro 5g",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 350.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "xiaomi-poco-m4",
+    "brand": "Xiaomi",
+    "model": "POCO M4",
+    "search": "xiaomi poco m4",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 300.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "xiaomi-poco-m4-pro-4g",
+    "brand": "Xiaomi",
+    "model": "POCO M4 PRO 4G",
+    "search": "xiaomi poco m4 pro 4g",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 450.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "xiaomi-poco-m4-pro-5g",
+    "brand": "Xiaomi",
+    "model": "POCO M4 PRO 5G",
+    "search": "xiaomi poco m4 pro 5g",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 360.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "xiaomi-poco-m5s",
+    "brand": "Xiaomi",
+    "model": "POCO M5S",
+    "search": "xiaomi poco m5s",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 500.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -10293,7 +9111,7 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
         "finalPrice": 380.0,
         "installmentPrice": null,
@@ -10311,7 +9129,7 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
         "finalPrice": 800.0,
         "installmentPrice": null,
@@ -10327,9 +9145,19 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "xiaomi poco x5",
     "services": [
       {
+        "key": "tela-paralela",
+        "label": "Troca de Tela",
+        "sourceLabel": "1ª Linha",
+        "quality": "TELA PARALELA",
+        "finalPrice": 380.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
         "finalPrice": 450.0,
         "installmentPrice": null,
@@ -10345,9 +9173,19 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     "search": "xiaomi poco x5 pro",
     "services": [
       {
+        "key": "tela-paralela",
+        "label": "Troca de Tela",
+        "sourceLabel": "1ª Linha",
+        "quality": "TELA PARALELA",
+        "finalPrice": 350.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
         "finalPrice": 580.0,
         "installmentPrice": null,
@@ -10365,7 +9203,7 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
         "finalPrice": 850.0,
         "installmentPrice": null,
@@ -10375,33 +9213,15 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     ]
   },
   {
-    "id": "xiaomi-poco-m3",
+    "id": "xiaomi-redmi-10-2021-prime",
     "brand": "Xiaomi",
-    "model": "POCO M3",
-    "search": "xiaomi poco m3",
+    "model": "REDMI 10 2021  PRIME",
+    "search": "xiaomi redmi 10 2021  prime",
     "services": [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 330.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "xiaomi-poco-m3-pro-5g",
-    "brand": "Xiaomi",
-    "model": "POCO M3 PRO 5G",
-    "search": "xiaomi poco m3 pro 5g",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
         "finalPrice": 350.0,
         "installmentPrice": null,
@@ -10411,17 +9231,17 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     ]
   },
   {
-    "id": "xiaomi-poco-m4",
+    "id": "xiaomi-redmi-10c",
     "brand": "Xiaomi",
-    "model": "POCO M4",
-    "search": "xiaomi poco m4",
+    "model": "REDMI 10C",
+    "search": "xiaomi redmi 10c",
     "services": [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
-        "finalPrice": 300.0,
+        "finalPrice": 250.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -10429,15 +9249,411 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     ]
   },
   {
-    "id": "xiaomi-poco-m4-pro-4g",
+    "id": "xiaomi-redmi-12",
     "brand": "Xiaomi",
-    "model": "POCO M4 PRO 4G",
-    "search": "xiaomi poco m4 pro 4g",
+    "model": "REDMI 12",
+    "search": "xiaomi redmi 12",
     "services": [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 350.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "xiaomi-redmi-12c",
+    "brand": "Xiaomi",
+    "model": "REDMI 12C",
+    "search": "xiaomi redmi 12c",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 320.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "xiaomi-redmi-13c",
+    "brand": "Xiaomi",
+    "model": "REDMI 13C",
+    "search": "xiaomi redmi 13c",
+    "services": [
+      {
+        "key": "tela-paralela",
+        "label": "Troca de Tela",
+        "sourceLabel": "1ª Linha",
+        "quality": "TELA PARALELA",
+        "finalPrice": 250.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 260.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "xiaomi-redmi-9",
+    "brand": "Xiaomi",
+    "model": "REDMI 9",
+    "search": "xiaomi redmi 9",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 240.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "xiaomi-redmi-9a",
+    "brand": "Xiaomi",
+    "model": "REDMI 9A",
+    "search": "xiaomi redmi 9a",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 280.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 130.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "xiaomi-redmi-9c",
+    "brand": "Xiaomi",
+    "model": "REDMI 9C",
+    "search": "xiaomi redmi 9c",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 280.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 150.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "xiaomi-redmi-9t",
+    "brand": "Xiaomi",
+    "model": "REDMI 9T",
+    "search": "xiaomi redmi 9t",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 330.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "xiaomi-redmi-mi-7a",
+    "brand": "Xiaomi",
+    "model": "REDMI MI 7A",
+    "search": "xiaomi redmi mi 7a",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 260.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "xiaomi-redmi-note-10",
+    "brand": "Xiaomi",
+    "model": "REDMI NOTE 10",
+    "search": "xiaomi redmi note 10",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 400.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 200.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "xiaomi-redmi-note-10-5g",
+    "brand": "Xiaomi",
+    "model": "REDMI NOTE 10 5G",
+    "search": "xiaomi redmi note 10 5g",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 380.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "xiaomi-redmi-note-10-pro",
+    "brand": "Xiaomi",
+    "model": "REDMI NOTE 10 PRO",
+    "search": "xiaomi redmi note 10 pro",
+    "services": [
+      {
+        "key": "tela-paralela",
+        "label": "Troca de Tela",
+        "sourceLabel": "1ª Linha",
+        "quality": "TELA PARALELA",
+        "finalPrice": 3.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 400.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "xiaomi-redmi-note-10s",
+    "brand": "Xiaomi",
+    "model": "REDMI NOTE 10s",
+    "search": "xiaomi redmi note 10s",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 420.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 220.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "xiaomi-redmi-note-11-4g",
+    "brand": "Xiaomi",
+    "model": "REDMI NOTE 11  4G",
+    "search": "xiaomi redmi note 11  4g",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 450.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 200.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "xiaomi-redmi-note-11-pro",
+    "brand": "Xiaomi",
+    "model": "REDMI NOTE 11 PRO",
+    "search": "xiaomi redmi note 11 pro",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 700.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "xiaomi-redmi-note-11s",
+    "brand": "Xiaomi",
+    "model": "REDMI NOTE 11S",
+    "search": "xiaomi redmi note 11s",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 530.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "xiaomi-redmi-note-12-4g",
+    "brand": "Xiaomi",
+    "model": "REDMI NOTE 12 4G",
+    "search": "xiaomi redmi note 12 4g",
+    "services": [
+      {
+        "key": "tela-paralela",
+        "label": "Troca de Tela",
+        "sourceLabel": "1ª Linha",
+        "quality": "TELA PARALELA",
+        "finalPrice": 320.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 460.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "xiaomi-redmi-note-12-5g",
+    "brand": "Xiaomi",
+    "model": "REDMI NOTE 12 5G",
+    "search": "xiaomi redmi note 12 5g",
+    "services": [
+      {
+        "key": "tela-paralela",
+        "label": "Troca de Tela",
+        "sourceLabel": "1ª Linha",
+        "quality": "TELA PARALELA",
+        "finalPrice": 320.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 540.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "xiaomi-redmi-note-12s",
+    "brand": "Xiaomi",
+    "model": "REDMI NOTE 12S",
+    "search": "xiaomi redmi note 12s",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
         "finalPrice": 450.0,
         "installmentPrice": null,
@@ -10447,15 +9663,117 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     ]
   },
   {
-    "id": "xiaomi-poco-m4-pro-5g",
+    "id": "xiaomi-redmi-note-13-4g",
     "brand": "Xiaomi",
-    "model": "POCO M4 PRO 5G",
-    "search": "xiaomi poco m4 pro 5g",
+    "model": "REDMI NOTE 13 4G",
+    "search": "xiaomi redmi note 13 4g",
+    "services": [
+      {
+        "key": "tela-paralela",
+        "label": "Troca de Tela",
+        "sourceLabel": "1ª Linha",
+        "quality": "TELA PARALELA",
+        "finalPrice": 450.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 700.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "xiaomi-redmi-note-13-5g",
+    "brand": "Xiaomi",
+    "model": "REDMI NOTE 13 5G",
+    "search": "xiaomi redmi note 13 5g",
     "services": [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 520.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "xiaomi-redmi-note-13-pro-4g",
+    "brand": "Xiaomi",
+    "model": "REDMI NOTE 13 PRO 4G",
+    "search": "xiaomi redmi note 13 pro 4g",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 700.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-premium",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Prem",
+        "quality": "BATERIA PREMIUM",
+        "finalPrice": 250.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "xiaomi-redmi-note-13-pro-5g",
+    "brand": "Xiaomi",
+    "model": "REDMI NOTE 13 PRO 5G",
+    "search": "xiaomi redmi note 13 pro 5g",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 580.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-premium",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Prem",
+        "quality": "BATERIA PREMIUM",
+        "finalPrice": 250.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "xiaomi-redmi-note-6-pro",
+    "brand": "Xiaomi",
+    "model": "REDMI NOTE 6 PRO",
+    "search": "xiaomi redmi note 6 pro",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
         "finalPrice": 360.0,
         "installmentPrice": null,
@@ -10465,17 +9783,27 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     ]
   },
   {
-    "id": "xiaomi-poco-m5s",
+    "id": "xiaomi-redmi-note-7",
     "brand": "Xiaomi",
-    "model": "POCO M5S",
-    "search": "xiaomi poco m5s",
+    "model": "REDMI NOTE 7",
+    "search": "xiaomi redmi note 7",
     "services": [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
-        "finalPrice": 500.0,
+        "finalPrice": 300.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 180.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -10483,15 +9811,15 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     ]
   },
   {
-    "id": "xiaomi-poco-c40",
+    "id": "xiaomi-redmi-note-7-2",
     "brand": "Xiaomi",
-    "model": "POCO C40",
-    "search": "xiaomi poco c40",
+    "model": "REDMI NOTE 7",
+    "search": "xiaomi redmi note 7",
     "services": [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
         "finalPrice": 280.0,
         "installmentPrice": null,
@@ -10501,17 +9829,27 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     ]
   },
   {
-    "id": "xiaomi-poco-c75",
+    "id": "xiaomi-redmi-note-8",
     "brand": "Xiaomi",
-    "model": "POCO C75",
-    "search": "xiaomi poco c75",
+    "model": "REDMI NOTE 8",
+    "search": "xiaomi redmi note 8",
     "services": [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
-        "finalPrice": 300.0,
+        "finalPrice": 260.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 220.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -10519,15 +9857,947 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     ]
   },
   {
-    "id": "outros-tablet-t295",
-    "brand": "Outros",
-    "model": "TABLET T295",
-    "search": "outros tablet t295",
+    "id": "xiaomi-redmi-note-8-pro",
+    "brand": "Xiaomi",
+    "model": "REDMI NOTE 8 PRO",
+    "search": "xiaomi redmi note 8 pro",
     "services": [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 460.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tampa",
+        "label": "Troca de Tampa",
+        "sourceLabel": "Tampa 2",
+        "quality": null,
+        "finalPrice": 150.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "xiaomi-redmi-note-9",
+    "brand": "Xiaomi",
+    "model": "REDMI NOTE 9",
+    "search": "xiaomi redmi note 9",
+    "services": [
+      {
+        "key": "tela-paralela",
+        "label": "Troca de Tela",
+        "sourceLabel": "1ª Linha",
+        "quality": "TELA PARALELA",
+        "finalPrice": 240.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 280.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 250.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "xiaomi-redmi-note-9-pro",
+    "brand": "Xiaomi",
+    "model": "REDMI NOTE 9 PRO",
+    "search": "xiaomi redmi note 9 pro",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 360.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "xiaomi-redmi-note-9s",
+    "brand": "Xiaomi",
+    "model": "REDMI NOTE 9S",
+    "search": "xiaomi redmi note 9s",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 300.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 200.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "realme-realme-11-5g",
+    "brand": "Realme",
+    "model": "REALME 11 5G",
+    "search": "realme realme 11 5g",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 250.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "realme-realme-c75",
+    "brand": "Realme",
+    "model": "REALME C75",
+    "search": "realme realme c75",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 280.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "lg-lg-4",
+    "brand": "LG",
+    "model": "LG 4",
+    "search": "lg lg 4",
+    "services": [
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 100.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "lg-lg-g2-d295",
+    "brand": "LG",
+    "model": "LG G2 D295",
+    "search": "lg lg g2 d295",
+    "services": [
+      {
+        "key": "tela-paralela",
+        "label": "Troca de Tela",
+        "sourceLabel": "1ª Linha",
+        "quality": "TELA PARALELA",
+        "finalPrice": 300.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 100.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "lg-lg-g3-d690",
+    "brand": "LG",
+    "model": "LG G3 D690",
+    "search": "lg lg g3 d690",
+    "services": [
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 100.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "lg-lg-g8s-thinq",
+    "brand": "LG",
+    "model": "LG G8s Thinq",
+    "search": "lg lg g8s thinq",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 950.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "lg-lg-k10-2016-k430",
+    "brand": "LG",
+    "model": "LG K10 2016 k430",
+    "search": "lg lg k10 2016 k430",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 260.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 100.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 100.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "lg-lg-k10-2017",
+    "brand": "LG",
+    "model": "LG K10 2017",
+    "search": "lg lg k10 2017",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 200.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 110.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 90.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "lg-lg-k10-power",
+    "brand": "LG",
+    "model": "LG K10 Power",
+    "search": "lg lg k10 power",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 300.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 180.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "lg-lg-k10-pro",
+    "brand": "LG",
+    "model": "LG K10 Pro",
+    "search": "lg lg k10 pro",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 350.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "lg-lg-k11",
+    "brand": "LG",
+    "model": "LG K11",
+    "search": "lg lg k11",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 250.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 160.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 120.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "lg-lg-k11-2",
+    "brand": "LG",
+    "model": "LG K11 +",
+    "search": "lg lg k11 +",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 300.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 160.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 140.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "lg-lg-k12",
+    "brand": "LG",
+    "model": "LG K12",
+    "search": "lg lg k12",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 340.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "lg-lg-k12-prime",
+    "brand": "LG",
+    "model": "LG K12 PRIME",
+    "search": "lg lg k12 prime",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 300.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 180.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "lg-lg-k12-2",
+    "brand": "LG",
+    "model": "LG K12+",
+    "search": "lg lg k12+",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 280.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 120.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "lg-lg-k2",
+    "brand": "LG",
+    "model": "LG K2",
+    "search": "lg lg k2",
+    "services": [
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 100.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "lg-lg-k22",
+    "brand": "LG",
+    "model": "LG K22",
+    "search": "lg lg k22",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 250.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "lg-lg-k22-2",
+    "brand": "LG",
+    "model": "LG K22+",
+    "search": "lg lg k22+",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 320.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "lg-lg-k4-2015-k130",
+    "brand": "LG",
+    "model": "LG K4 2015 k130",
+    "search": "lg lg k4 2015 k130",
+    "services": [
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 100.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "lg-lg-k4-x230ds",
+    "brand": "LG",
+    "model": "LG K4 X230DS",
+    "search": "lg lg k4 x230ds",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 250.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 100.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "lg-lg-k40s",
+    "brand": "LG",
+    "model": "LG K40S",
+    "search": "lg lg k40s",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 260.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "lg-lg-k40s-2",
+    "brand": "LG",
+    "model": "LG K40S",
+    "search": "lg lg k40s",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 390.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "lg-lg-k41s",
+    "brand": "LG",
+    "model": "LG K41S",
+    "search": "lg lg k41s",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 290.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 160.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "lg-lg-k42",
+    "brand": "LG",
+    "model": "LG K42",
+    "search": "lg lg k42",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 250.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "lg-lg-k50s",
+    "brand": "LG",
+    "model": "LG K50s",
+    "search": "lg lg k50s",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 380.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "lg-lg-k51s",
+    "brand": "LG",
+    "model": "LG K51S",
+    "search": "lg lg k51s",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 320.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "lg-lg-k52",
+    "brand": "LG",
+    "model": "LG K52",
+    "search": "lg lg k52",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 300.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-premium",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Prem",
+        "quality": "BATERIA PREMIUM",
+        "finalPrice": 220.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 200.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "lg-lg-k6-k33a48",
+    "brand": "LG",
+    "model": "LG K6 k33a48",
+    "search": "lg lg k6 k33a48",
+    "services": [
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 110.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "lg-lg-k6-plus",
+    "brand": "LG",
+    "model": "LG K6 Plus",
+    "search": "lg lg k6 plus",
+    "services": [
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 100.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "lg-lg-k61",
+    "brand": "LG",
+    "model": "LG K61",
+    "search": "lg lg k61",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 310.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "lg-lg-k62",
+    "brand": "LG",
+    "model": "LG K62",
+    "search": "lg lg k62",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 320.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "lg-lg-k8",
+    "brand": "LG",
+    "model": "LG K8",
+    "search": "lg lg k8",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 240.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 100.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "lg-lg-k8-x120",
+    "brand": "LG",
+    "model": "LG K8+ x120",
+    "search": "lg lg k8+ x120",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 360.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "lg-lg-k9",
+    "brand": "LG",
+    "model": "LG K9",
+    "search": "lg lg k9",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 250.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 130.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 120.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "lg-lg-p-716",
+    "brand": "LG",
+    "model": "LG P 716",
+    "search": "lg lg p 716",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 350.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "lg-lg-x-screem-k500",
+    "brand": "LG",
+    "model": "LG X SCREEM (K500)",
+    "search": "lg lg x screem (k500)",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
         "finalPrice": 450.0,
         "installmentPrice": null,
@@ -10537,17 +10807,17 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     ]
   },
   {
-    "id": "samsung-tab-s6-lite-sm-p619",
-    "brand": "Samsung",
-    "model": "TAB S6 LITE (SM-P619)",
-    "search": "samsung tab s6 lite (sm-p619)",
+    "id": "lg-lg-x-style-k200",
+    "brand": "LG",
+    "model": "LG X STYLE (K200)",
+    "search": "lg lg x style (k200)",
     "services": [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
-        "finalPrice": 1000.0,
+        "finalPrice": 260.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -10555,15 +10825,323 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     ]
   },
   {
-    "id": "samsung-tab-s6-lite-sm-p615",
-    "brand": "Samsung",
-    "model": "TAB S6 LITE (SM-P615)",
-    "search": "samsung tab s6 lite (sm-p615)",
+    "id": "lg-lh-k51",
+    "brand": "LG",
+    "model": "LH K51",
+    "search": "lg lh k51",
     "services": [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 280.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "lenovo-lenovo-k5",
+    "brand": "Lenovo",
+    "model": "Lenovo K5",
+    "search": "lenovo lenovo k5",
+    "services": [
+      {
+        "key": "tela-paralela",
+        "label": "Troca de Tela",
+        "sourceLabel": "1ª Linha",
+        "quality": "TELA PARALELA",
+        "finalPrice": 200.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 220.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      },
+      {
+        "key": "bateria-original",
+        "label": "Troca de Bateria",
+        "sourceLabel": "Bat Orig",
+        "quality": "BATERIA ORIGINAL",
+        "finalPrice": 120.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "lenovo-lenovo-vibe-b-a1010a20",
+    "brand": "Lenovo",
+    "model": "Lenovo Vibe B A1010a20",
+    "search": "lenovo lenovo vibe b a1010a20",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 230.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "lenovo-lenovo-vibe-c2",
+    "brand": "Lenovo",
+    "model": "Lenovo Vibe C2",
+    "search": "lenovo lenovo vibe c2",
+    "services": [
+      {
+        "key": "conector-carga",
+        "label": "Troca de Conector de Carga",
+        "sourceLabel": "Con. Carga",
+        "quality": null,
+        "finalPrice": 120.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "asus-max-pro-m2",
+    "brand": "Asus",
+    "model": "Max pro m2",
+    "search": "asus max pro m2",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 320.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "asus-max-shot-zb634kl",
+    "brand": "Asus",
+    "model": "max shot zb634kl",
+    "search": "asus max shot zb634kl",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 270.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "asus-zenfone-6",
+    "brand": "Asus",
+    "model": "zenfone 6",
+    "search": "asus zenfone 6",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 550.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "tablet-s9-fe-plus",
+    "brand": "Tablet",
+    "model": "S9 FE PLUS",
+    "search": "tablet s9 fe plus",
+    "services": [
+      {
+        "key": "tela-original",
+        "label": "Troca de Tela",
+        "sourceLabel": "Sams",
+        "quality": "TELA ORIGINAL",
+        "finalPrice": 2200.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "tablet-tab-a-sm-t280",
+    "brand": "Tablet",
+    "model": "TAB A (SM-T280)",
+    "search": "tablet tab a (sm-t280)",
+    "services": [
+      {
+        "key": "tela-original",
+        "label": "Troca de Tela",
+        "sourceLabel": "Sams",
+        "quality": "TELA ORIGINAL",
+        "finalPrice": 670.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "tablet-tab-a-sm-t285",
+    "brand": "Tablet",
+    "model": "TAB A (SM-T285)",
+    "search": "tablet tab a (sm-t285)",
+    "services": [
+      {
+        "key": "tela-original",
+        "label": "Troca de Tela",
+        "sourceLabel": "Sams",
+        "quality": "TELA ORIGINAL",
+        "finalPrice": 735.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "tablet-tab-a-sm-t290-8",
+    "brand": "Tablet",
+    "model": "TAB A (SM-T290) 8\"",
+    "search": "tablet tab a (sm-t290) 8\"",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 500.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "tablet-tab-a-sm-t510",
+    "brand": "Tablet",
+    "model": "TAB A (SM-T510)",
+    "search": "tablet tab a (sm-t510)",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 550.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "tablet-tab-a7-lite-sm-t220",
+    "brand": "Tablet",
+    "model": "TAB A7 LITE (SM-T220)",
+    "search": "tablet tab a7 lite (sm-t220)",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 550.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "tablet-tab-a7-lite-sm-t225",
+    "brand": "Tablet",
+    "model": "TAB A7 LITE (SM-T225)",
+    "search": "tablet tab a7 lite (sm-t225)",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 380.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "tablet-tab-a8-x200",
+    "brand": "Tablet",
+    "model": "TAB A8 x200",
+    "search": "tablet tab a8 x200",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 600.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "tablet-tab-a9-plus",
+    "brand": "Tablet",
+    "model": "TAB A9 PLUS",
+    "search": "tablet tab a9 plus",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
+        "quality": "TELA PREMIUM",
+        "finalPrice": 600.0,
+        "installmentPrice": null,
+        "costPrice": null,
+        "note": null
+      }
+    ]
+  },
+  {
+    "id": "tablet-tab-s6-lite-sm-p615",
+    "brand": "Tablet",
+    "model": "TAB S6 LITE (SM-P615)",
+    "search": "tablet tab s6 lite (sm-p615)",
+    "services": [
+      {
+        "key": "tela-premium",
+        "label": "Troca de Tela",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
         "finalPrice": 650.0,
         "installmentPrice": null,
@@ -10583,17 +11161,17 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     ]
   },
   {
-    "id": "samsung-tab-a7-lite-sm-t220",
-    "brand": "Samsung",
-    "model": "TAB A7 LITE (SM-T220)",
-    "search": "samsung tab a7 lite (sm-t220)",
+    "id": "tablet-tab-s6-lite-sm-p619",
+    "brand": "Tablet",
+    "model": "TAB S6 LITE (SM-P619)",
+    "search": "tablet tab s6 lite (sm-p619)",
     "services": [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
-        "finalPrice": 550.0,
+        "finalPrice": 1000.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -10601,177 +11179,15 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     ]
   },
   {
-    "id": "samsung-tab-a7-lite-sm-t225",
-    "brand": "Samsung",
-    "model": "TAB A7 LITE (SM-T225)",
-    "search": "samsung tab a7 lite (sm-t225)",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 380.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "outros-tab-a-sm-t280",
-    "brand": "Outros",
-    "model": "TAB A (SM-T280)",
-    "search": "outros tab a (sm-t280)",
-    "services": [
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": 670.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "outros-tab-a-sm-t285",
-    "brand": "Outros",
-    "model": "TAB A (SM-T285)",
-    "search": "outros tab a (sm-t285)",
-    "services": [
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": 735.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "outros-tab-a-sm-t290-8",
-    "brand": "Outros",
-    "model": "TAB A (SM-T290) 8\"",
-    "search": "outros tab a (sm-t290) 8\"",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 500.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "outros-tab-a-sm-t510",
-    "brand": "Outros",
-    "model": "TAB A (SM-T510)",
-    "search": "outros tab a (sm-t510)",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 550.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "outros-tab-a8-x200",
-    "brand": "Outros",
-    "model": "TAB A8 x200",
-    "search": "outros tab a8 x200",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 600.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "outros-tab-t510",
-    "brand": "Outros",
-    "model": "TAB T510",
-    "search": "outros tab t510",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 900.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "samsung-s9-fe-plus",
-    "brand": "Samsung",
-    "model": "S9 FE PLUS",
-    "search": "samsung s9 fe plus",
-    "services": [
-      {
-        "key": "tela-original",
-        "label": "Troca de Tela",
-        "sourceLabel": "Sams",
-        "quality": "TELA ORIGINAL",
-        "finalPrice": 2200.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "outros-tab-a9-plus",
-    "brand": "Outros",
-    "model": "TAB A9 PLUS",
-    "search": "outros tab a9 plus",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 600.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "outros-tab-t505",
-    "brand": "Outros",
+    "id": "tablet-tab-t505",
+    "brand": "Tablet",
     "model": "TAB T505",
-    "search": "outros tab t505",
+    "search": "tablet tab t505",
     "services": [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
         "finalPrice": 700.0,
         "installmentPrice": null,
@@ -10791,17 +11207,17 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     ]
   },
   {
-    "id": "outros-max-pro-m2",
-    "brand": "Outros",
-    "model": "Max pro m2",
-    "search": "outros max pro m2",
+    "id": "tablet-tab-t510",
+    "brand": "Tablet",
+    "model": "TAB T510",
+    "search": "tablet tab t510",
     "services": [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
-        "finalPrice": 320.0,
+        "finalPrice": 900.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null
@@ -10809,71 +11225,17 @@ export const PRICE_CATALOG: PriceCatalogItem[] = [
     ]
   },
   {
-    "id": "outros-max-shot-zb634kl",
-    "brand": "Outros",
-    "model": "max shot zb634kl",
-    "search": "outros max shot zb634kl",
+    "id": "tablet-tablet-t295",
+    "brand": "Tablet",
+    "model": "TABLET T295",
+    "search": "tablet tablet t295",
     "services": [
       {
         "key": "tela-premium",
         "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
+        "sourceLabel": "Tela Premium",
         "quality": "TELA PREMIUM",
-        "finalPrice": 270.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "outros-zenfone-6",
-    "brand": "Outros",
-    "model": "zenfone 6",
-    "search": "outros zenfone 6",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 550.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "realme-realme-11-5g",
-    "brand": "Realme",
-    "model": "REALME 11 5G",
-    "search": "realme realme 11 5g",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 250.0,
-        "installmentPrice": null,
-        "costPrice": null,
-        "note": null
-      }
-    ]
-  },
-  {
-    "id": "realme-realme-c75",
-    "brand": "Realme",
-    "model": "REALME C75",
-    "search": "realme realme c75",
-    "services": [
-      {
-        "key": "tela-premium",
-        "label": "Troca de Tela",
-        "sourceLabel": "Tela Prem.",
-        "quality": "TELA PREMIUM",
-        "finalPrice": 280.0,
+        "finalPrice": 450.0,
         "installmentPrice": null,
         "costPrice": null,
         "note": null

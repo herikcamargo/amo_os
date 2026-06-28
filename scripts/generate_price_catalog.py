@@ -7,12 +7,24 @@ import openpyxl
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_XLSX = Path(r"C:\Users\herik\Downloads\PRECOS CELULAR v2 2026.xlsx")
+DEFAULT_XLSX = Path(r"C:\Users\herik\Downloads\PRECOS_CELULAR_v3_2026.xlsx")
+
+KNOWN_BRANDS = {
+    "APPLE": "Apple",
+    "SAMSUNG": "Samsung",
+    "MOTOROLA": "Motorola",
+    "XIAOMI": "Xiaomi",
+    "REALME": "Realme",
+    "LG": "LG",
+    "LENOVO": "Lenovo",
+    "ASUS": "Asus",
+    "TABLET": "Tablet",
+}
 
 
 SERVICE_MAP = [
     ("tela-paralela", "Troca de Tela", "TELA PARALELA", "1ª Linha"),
-    ("tela-premium", "Troca de Tela", "TELA PREMIUM", "Tela Prem."),
+    ("tela-premium", "Troca de Tela", "TELA PREMIUM", "Tela Premium"),
     ("tela-original", "Troca de Tela", "TELA ORIGINAL", "Sams"),
     ("bateria-paralela", "Troca de Bateria", "BATERIA PARALELA", None),
     ("bateria-premium", "Troca de Bateria", "BATERIA PREMIUM", "Bat Prem"),
@@ -29,47 +41,48 @@ def normalize(value: str) -> str:
     return value.strip("-")
 
 
-def infer_brand(model: str) -> str:
-    low = model.lower()
-    if any(token in low for token in ("iphone", "ipad", "apple")):
-        return "Apple"
-    if any(token in low for token in ("samsung", "galaxy", "a0", "a1", "a2", "a3", "a5", "a7", "s2", "s3", "s4", "s5", "s6", "s7", "s8", "s9", "note")):
-        return "Samsung"
-    if any(token in low for token in ("xiaomi", "redmi", "poco", "mi ")):
-        return "Xiaomi"
-    if any(token in low for token in ("moto", "motorola", "edge", "razr", "g ")):
-        return "Motorola"
-    if "realme" in low:
-        return "Realme"
-    return "Outros"
-
-
 def parse_money(value):
     if value is None or value == "":
         return None
     if isinstance(value, (int, float)):
         return float(value)
-    text = str(value).replace("R$", "").replace(".", "").replace(",", ".").strip()
-    try:
-        return float(text)
-    except ValueError:
+    text = str(value).replace("R$", "").strip()
+    matches = re.findall(r"\d+(?:[.,]\d+)?", text)
+    if not matches:
         return None
+
+    values = []
+    for match in matches:
+        try:
+            values.append(float(match.replace(",", ".")))
+        except ValueError:
+            continue
+
+    return max(values) if values else None
 
 
 def build_catalog(xlsx_path: Path):
     wb = openpyxl.load_workbook(xlsx_path, data_only=True)
-    ws = wb["Preços"]
+    ws = next((sheet for sheet in wb.worksheets if "Tabela Completa" in sheet.title), wb.active)
     headers = {str(ws.cell(3, col).value).strip(): col for col in range(1, ws.max_column + 1) if ws.cell(3, col).value}
+    if "Modelo" not in headers:
+        headers = {str(ws.cell(1, col).value).strip(): col for col in range(1, ws.max_column + 1) if ws.cell(1, col).value}
     catalog = []
     seen = {}
+    current_brand = "Outros"
 
-    for row in range(4, ws.max_row + 1):
+    for row in range(2, ws.max_row + 1):
         model = ws.cell(row, headers["Modelo"]).value
         if not model:
             continue
 
         model = str(model).strip()
-        brand = infer_brand(model)
+        brand_name = KNOWN_BRANDS.get(model.upper())
+        if brand_name:
+            current_brand = brand_name
+            continue
+
+        brand = current_brand
         base_id = normalize(f"{brand}-{model}")
         seen[base_id] = seen.get(base_id, 0) + 1
         item_id = base_id if seen[base_id] == 1 else f"{base_id}-{seen[base_id]}"
