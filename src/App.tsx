@@ -14,6 +14,7 @@ import { Login } from '@/pages/Login'
 import { CloudSetup } from '@/pages/CloudSetup'
 import { UserManagement } from '@/pages/UserManagement'
 import { GoogleDriveSetup } from '@/pages/GoogleDriveSetup'
+import { PriceLookup } from '@/pages/PriceLookup'
 
 export default function App() {
   const { user, authReady, isCloudConnected, initializeAuth, syncFromSupabase } = useStore()
@@ -50,6 +51,7 @@ export default function App() {
         <Route path="/nova-os" element={<NewOrder />} />
         <Route path="/notificacoes" element={<Notifications />} />
         <Route path="/clientes" element={<Clients />} />
+        <Route path="/precos" element={<PriceLookup />} />
         <Route path="/ajustes" element={<Settings />} />
         <Route path="/relatorios" element={<Reports />} />
         <Route path="/conectar-nuvem" element={<CloudSetup />} />

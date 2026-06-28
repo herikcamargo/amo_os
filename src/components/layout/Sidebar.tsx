@@ -1,7 +1,7 @@
 import { useMemo } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
 import {
-  Home, Files, Users, Settings, Plus, Bell, BarChart3, LogOut, Cloud, CloudOff,
+  Home, Files, Users, Settings, Plus, Bell, BarChart3, LogOut, Cloud, CloudOff, Search,
 } from 'lucide-react'
 import { useStore } from '@/store/useStore'
 import { can, roleLabel } from '@/lib/permissions'
@@ -9,6 +9,7 @@ import { can, roleLabel } from '@/lib/permissions'
 const NAV_ITEMS = [
   { key: '/', label: 'Início', icon: Home, requires: null as null | 'view_reports' },
   { key: '/ordens', label: 'Ordens', icon: Files, requires: null },
+  { key: '/precos', label: 'Preços', icon: Search, requires: null },
   { key: '/clientes', label: 'Clientes', icon: Users, requires: null },
   { key: '/relatorios', label: 'Relatórios', icon: BarChart3, requires: 'view_reports' as const },
   { key: '/notificacoes', label: 'Notificações', icon: Bell, requires: null },
