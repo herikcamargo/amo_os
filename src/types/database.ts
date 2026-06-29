@@ -224,6 +224,8 @@ export interface DeviceSale {
 export interface AppSettings {
   warranty_terms: string
   sale_terms: string
+  os_entry_terms?: string
+  os_exit_terms?: string
 }
 
 export interface Warranty {

@@ -57,10 +57,10 @@ export function DeviceSales() {
   const [selectedCustomerId, setSelectedCustomerId] = useState('')
   const [payment, setPayment] = useState<'Pix' | 'Cartao' | 'Parcelado'>('Pix')
   const [quantity, setQuantity] = useState('1')
-  const [discount, setDiscount] = useState('0')
-  const [increase, setIncrease] = useState('0')
+  const [discount, setDiscount] = useState('')
+  const [increase, setIncrease] = useState('')
   const [installments, setInstallments] = useState('1')
-  const [entryValue, setEntryValue] = useState('0')
+  const [entryValue, setEntryValue] = useState('')
   const [financePartner, setFinancePartner] = useState('')
   const [notes, setNotes] = useState('')
   const [productForm, setProductForm] = useState(initialProduct)
@@ -106,10 +106,10 @@ export function DeviceSales() {
     setSelectedCustomerId('')
     setPayment('Pix')
     setQuantity('1')
-    setDiscount('0')
-    setIncrease('0')
+    setDiscount('')
+    setIncrease('')
     setInstallments('1')
-    setEntryValue('0')
+    setEntryValue('')
     setFinancePartner('')
     setNotes('')
   }
@@ -350,14 +350,14 @@ export function DeviceSales() {
                 ))}
               </div>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-2 mt-3">
-                <Field value={quantity} onChange={setQuantity} placeholder="Qtd" />
-                <Field value={discount} onChange={setDiscount} placeholder="Desconto" />
-                <Field value={increase} onChange={setIncrease} placeholder="Acrescimo" />
-                <Field value={installments} onChange={setInstallments} placeholder="Parcelas" />
+                <LabeledField label="Quantidade" value={quantity} onChange={setQuantity} placeholder="1" />
+                <LabeledField label="Desconto" value={discount} onChange={setDiscount} placeholder="R$ 0,00" />
+                <LabeledField label="Acrescimo" value={increase} onChange={setIncrease} placeholder="R$ 0,00" />
+                <LabeledField label="Parcelas" value={installments} onChange={setInstallments} placeholder="1" />
               </div>
               <div className="grid grid-cols-2 gap-2 mt-2">
-                <Field value={entryValue} onChange={setEntryValue} placeholder="Entrada" />
-                <Field value={financePartner} onChange={setFinancePartner} placeholder="Financeira/parceira" />
+                <LabeledField label="Entrada" value={entryValue} onChange={setEntryValue} placeholder="R$ 0,00" />
+                <LabeledField label="Financeira/parceira" value={financePartner} onChange={setFinancePartner} placeholder="Opcional" />
               </div>
               <Field value={notes} onChange={setNotes} placeholder="Observacoes" className="mt-2" />
               <div className="rounded-2xl bg-white/5 border border-white/8 p-4 mt-4 flex items-center justify-between">
@@ -575,6 +575,20 @@ function SearchBox({ value, onChange, placeholder }: { value: string; onChange: 
 function Field({ value, onChange, placeholder, className = '' }: { value: string; onChange: (value: string) => void; placeholder: string; className?: string }) {
   return (
     <input value={value} onChange={(e) => onChange(e.target.value)} placeholder={placeholder} className={`h-11 px-3 rounded-xl bg-surface-input border border-white/5 text-sm placeholder:text-gray-600 ${className}`} />
+  )
+}
+
+function LabeledField({ label, value, onChange, placeholder }: { label: string; value: string; onChange: (value: string) => void; placeholder: string }) {
+  return (
+    <label className="block">
+      <span className="block text-[11px] font-semibold text-gray-500 mb-1">{label}</span>
+      <input
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+        placeholder={placeholder}
+        className="h-11 w-full px-3 rounded-xl bg-surface-input border border-white/5 text-sm placeholder:text-gray-600"
+      />
+    </label>
   )
 }
 

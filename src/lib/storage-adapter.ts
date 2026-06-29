@@ -264,7 +264,7 @@ export const appSettingsAdapter = {
     if (!isSupabaseEnabled) return null
     const { data, error } = await supabase
       .from('app_settings')
-      .select('warranty_terms, sale_terms')
+      .select('*')
       .eq('id', 'default')
       .maybeSingle()
     if (error) throw error
@@ -276,7 +276,7 @@ export const appSettingsAdapter = {
     const { data, error } = await supabase
       .from('app_settings')
       .upsert({ id: 'default', ...settings, updated_at: new Date().toISOString() })
-      .select('warranty_terms, sale_terms')
+      .select('*')
       .single()
     if (error) throw error
     return data

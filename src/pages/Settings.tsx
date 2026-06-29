@@ -161,11 +161,19 @@ export function Settings() {
 
       {can(user, 'manage_settings') && (
         <div className="mb-5">
-          <div className="text-xs font-semibold text-gray-500 mb-2 px-1">Termos e documentos</div>
+          <div className="text-xs font-semibold text-gray-500 mb-2 px-1">Configuracao OS</div>
           <div className="bg-surface-card rounded-[18px] border border-white/5 p-4 space-y-3">
             <label className="block">
+              <span className="block text-sm text-gray-400 mb-1">Termos de servico da OS de entrada</span>
+              <textarea value={terms.os_entry_terms || ''} onChange={(e) => setTerms((current) => ({ ...current, os_entry_terms: e.target.value }))} rows={3} className="w-full px-3 py-2 rounded-xl bg-surface-input border border-white/5 text-sm resize-none" />
+            </label>
+            <label className="block">
+              <span className="block text-sm text-gray-400 mb-1">Termos de servico da OS de saida</span>
+              <textarea value={terms.os_exit_terms || ''} onChange={(e) => setTerms((current) => ({ ...current, os_exit_terms: e.target.value }))} rows={3} className="w-full px-3 py-2 rounded-xl bg-surface-input border border-white/5 text-sm resize-none" />
+            </label>
+            <label className="block">
               <span className="block text-sm text-gray-400 mb-1">Termos de garantia da OS de saida</span>
-              <textarea value={terms.warranty_terms} onChange={(e) => setTerms((current) => ({ ...current, warranty_terms: e.target.value }))} rows={4} className="w-full px-3 py-2 rounded-xl bg-surface-input border border-white/5 text-sm resize-none" />
+              <textarea value={terms.warranty_terms} onChange={(e) => setTerms((current) => ({ ...current, warranty_terms: e.target.value }))} rows={3} className="w-full px-3 py-2 rounded-xl bg-surface-input border border-white/5 text-sm resize-none" />
             </label>
             <label className="block">
               <span className="block text-sm text-gray-400 mb-1">Termos de venda de aparelho</span>

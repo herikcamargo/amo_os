@@ -91,6 +91,8 @@ export const useStore = create<AppState>()(
       settings: {
         warranty_terms: 'A garantia cobre exclusivamente o servico realizado e as pecas substituidas, respeitando mau uso, queda, oxidacao e violacao do aparelho.',
         sale_terms: 'Declaro estar ciente das condicoes do aparelho, garantia informada e forma de pagamento registrada neste recibo.',
+        os_entry_terms: 'Cliente autoriza a abertura, analise tecnica e orcamento do aparelho. A AmoCelular nao se responsabiliza por dados sem backup previo.',
+        os_exit_terms: 'Cliente declara que conferiu o aparelho, recebeu orientacoes e esta de acordo com os servicos realizados e condicoes de garantia.',
       },
       notifications: DEMO_DATA.notifications,
       osCounter: 124,
@@ -408,6 +410,8 @@ export const useStore = create<AppState>()(
           settings: {
             warranty_terms: 'A garantia cobre exclusivamente o servico realizado e as pecas substituidas, respeitando mau uso, queda, oxidacao e violacao do aparelho.',
             sale_terms: 'Declaro estar ciente das condicoes do aparelho, garantia informada e forma de pagamento registrada neste recibo.',
+            os_entry_terms: 'Cliente autoriza a abertura, analise tecnica e orcamento do aparelho. A AmoCelular nao se responsabiliza por dados sem backup previo.',
+            os_exit_terms: 'Cliente declara que conferiu o aparelho, recebeu orientacoes e esta de acordo com os servicos realizados e condicoes de garantia.',
           },
           saleCounter: 0,
           ...(persisted as object),

@@ -3,229 +3,210 @@ import {
   Document, Page, Text, View, StyleSheet, pdf,
 } from '@react-pdf/renderer'
 import type { AppSettings, DeviceSale, ServiceOrder } from '@/types/database'
-import { STATUS_CONFIG, CHECK_ENTRADA, CHECK_SAIDA, brl } from '@/lib/constants'
+import { CHECK_ENTRADA, CHECK_SAIDA, brl } from '@/lib/constants'
 
 export type OsPrintKind = 'entrada' | 'saida'
 
+const red = '#D71920'
+const black = '#090909'
+const line = '#D7D7D7'
+
 const styles = StyleSheet.create({
-  page: { padding: 30, fontSize: 10, fontFamily: 'Helvetica', color: '#222' },
-  header: { flexDirection: 'row', justifyContent: 'space-between', marginBottom: 20, borderBottomWidth: 1, borderBottomColor: '#D71920', paddingBottom: 12 },
-  logo: { fontSize: 20, fontFamily: 'Helvetica-Bold' },
-  logoRed: { color: '#D71920' },
-  subtitle: { fontSize: 7, color: '#888', letterSpacing: 2, marginTop: 2 },
-  osNumber: { fontSize: 14, fontFamily: 'Helvetica-Bold', textAlign: 'right' },
-  osDate: { fontSize: 9, color: '#666', textAlign: 'right', marginTop: 2 },
-
-  section: { marginBottom: 14 },
-  sectionTitle: { fontSize: 11, fontFamily: 'Helvetica-Bold', color: '#D71920', marginBottom: 6, textTransform: 'uppercase', letterSpacing: 1 },
-  row: { flexDirection: 'row', paddingVertical: 3, borderBottomWidth: 0.5, borderBottomColor: '#eee' },
-  label: { width: '35%', color: '#666' },
-  value: { width: '65%', fontFamily: 'Helvetica-Bold' },
-
-  checkGrid: { flexDirection: 'row', flexWrap: 'wrap' },
-  checkItem: { width: '50%', flexDirection: 'row', alignItems: 'center', paddingVertical: 2 },
-  checkMark: { width: 12, height: 12, borderWidth: 1, borderColor: '#ccc', borderRadius: 2, marginRight: 6, textAlign: 'center', fontSize: 8, lineHeight: 1.4 },
-  checkOk: { backgroundColor: '#E8F5E9', borderColor: '#4CAF50', color: '#2E7D32' },
-  checkFail: { backgroundColor: '#FFEBEE', borderColor: '#F44336', color: '#C62828' },
-
-  problema: { padding: 8, backgroundColor: '#F5F5F5', borderRadius: 4, lineHeight: 1.5 },
-
-  footer: { position: 'absolute', bottom: 30, left: 30, right: 30, borderTopWidth: 1, borderTopColor: '#eee', paddingTop: 8, flexDirection: 'row', justifyContent: 'space-between' },
-  footerText: { fontSize: 7, color: '#999' },
-
-  signatureSection: { marginTop: 30, flexDirection: 'row', justifyContent: 'space-between' },
-  signatureBox: { width: '45%', borderTopWidth: 1, borderTopColor: '#333', paddingTop: 6 },
-  signatureLabel: { fontSize: 9, color: '#666', textAlign: 'center' },
-
-  statusBadge: { paddingHorizontal: 8, paddingVertical: 3, borderRadius: 10, fontSize: 8, fontFamily: 'Helvetica-Bold' },
-
-  garantia: { padding: 10, backgroundColor: '#FFF8E1', borderRadius: 4, borderWidth: 1, borderColor: '#FFD54F', marginTop: 4 },
+  page: { padding: 18, fontSize: 8.4, fontFamily: 'Helvetica', color: '#111' },
+  top: { backgroundColor: black, color: '#fff', padding: 12, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
+  logo: { fontSize: 22, fontFamily: 'Helvetica-Bold' },
+  logoRed: { color: red },
+  sub: { fontSize: 7.5, marginTop: 3, color: '#ddd' },
+  contact: { fontSize: 7.5, lineHeight: 1.35, textAlign: 'right' },
+  redLine: { height: 3, backgroundColor: red, marginBottom: 10 },
+  titleRow: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 8 },
+  title: { fontSize: 18, fontFamily: 'Helvetica-Bold' },
+  badge: { backgroundColor: red, color: '#fff', paddingHorizontal: 8, paddingVertical: 4, marginTop: 3, alignSelf: 'flex-start', fontFamily: 'Helvetica-Bold', fontSize: 12 },
+  osBox: { borderWidth: 1, borderColor: line, borderRadius: 4, padding: 7, minWidth: 135 },
+  osNumber: { fontSize: 10, fontFamily: 'Helvetica-Bold', textAlign: 'center' },
+  osRed: { color: red },
+  osDate: { fontSize: 7.5, marginTop: 5, textAlign: 'center' },
+  section: { marginBottom: 7 },
+  sectionTitle: { fontSize: 10.5, fontFamily: 'Helvetica-Bold', marginBottom: 4, paddingBottom: 2, borderBottomWidth: 1, borderBottomColor: line },
+  grid2: { flexDirection: 'row', gap: 8 },
+  col: { flex: 1 },
+  row: { flexDirection: 'row', borderBottomWidth: 0.5, borderBottomColor: '#eee', paddingVertical: 2.4 },
+  label: { width: '34%', color: '#555', fontSize: 7.4 },
+  value: { width: '66%', fontFamily: 'Helvetica-Bold', fontSize: 8 },
+  box: { borderWidth: 1, borderColor: line, borderRadius: 4, padding: 6, minHeight: 30 },
+  boxText: { lineHeight: 1.32 },
+  checkGrid: { flexDirection: 'row', flexWrap: 'wrap', borderWidth: 1, borderColor: line },
+  checkItem: { width: '50%', flexDirection: 'row', alignItems: 'center', paddingVertical: 2.2, paddingHorizontal: 4, borderBottomWidth: 0.4, borderBottomColor: '#eee' },
+  check: { width: 9, height: 9, borderWidth: 1, borderColor: '#999', marginRight: 4, textAlign: 'center', fontSize: 6 },
+  ok: { color: '#16823A', borderColor: '#16823A' },
+  fail: { color: red, borderColor: red },
+  terms: { borderWidth: 1, borderColor: line, borderRadius: 4, padding: 6, lineHeight: 1.24, fontSize: 7.2 },
+  declaration: { backgroundColor: '#F6F6F6', borderRadius: 4, padding: 6, lineHeight: 1.25, fontSize: 7.4 },
+  signatures: { flexDirection: 'row', gap: 12, marginTop: 10 },
+  sign: { flex: 1, borderWidth: 1, borderColor: line, borderRadius: 4, paddingTop: 22, paddingBottom: 5 },
+  signLine: { borderTopWidth: 1, borderTopColor: '#333', marginHorizontal: 12, paddingTop: 4, textAlign: 'center', fontSize: 7 },
+  footer: { position: 'absolute', left: 18, right: 18, bottom: 12, backgroundColor: black, color: '#fff', padding: 7, flexDirection: 'row', justifyContent: 'space-between' },
+  footerText: { fontSize: 7 },
 })
 
-interface Props {
-  order: ServiceOrder
-  kind?: OsPrintKind
-  settings?: AppSettings
+function address(order: ServiceOrder) {
+  return [
+    order.customer?.logradouro,
+    order.customer?.numero,
+    order.customer?.bairro,
+    order.customer?.cidade && order.customer?.uf ? `${order.customer.cidade}/${order.customer.uf}` : order.customer?.cidade,
+  ].filter(Boolean).join(', ') || '--'
 }
 
-function OsPdfDocument({ order, kind = 'entrada', settings }: Props) {
-  const st = STATUS_CONFIG[order.status]
-  const data = new Date(order.created_at).toLocaleDateString('pt-BR')
-  const isSaida = kind === 'saida'
-  const warrantyEnd = order.garantia_dias > 0
-    ? new Date(Date.now() + order.garantia_dias * 86400000).toLocaleDateString('pt-BR')
-    : '—'
+function serviceWarrantyEnd(order: ServiceOrder) {
+  if (!order.garantia_dias) return '--'
+  const d = new Date()
+  d.setDate(d.getDate() + order.garantia_dias)
+  return d.toLocaleDateString('pt-BR')
+}
 
+function TermsText({ text }: { text?: string }) {
+  const items = (text || '').split('\n').map((lineItem) => lineItem.trim()).filter(Boolean)
+  return (
+    <View style={styles.terms}>
+      {items.length ? items.slice(0, 5).map((item) => <Text key={item}>- {item}</Text>) : <Text>Termos nao configurados.</Text>}
+    </View>
+  )
+}
+
+function Checklist({ kind }: { kind: OsPrintKind }) {
+  const items = (kind === 'saida' ? CHECK_SAIDA : CHECK_ENTRADA).slice(0, 12)
+  return (
+    <View style={styles.checkGrid}>
+      {items.map((item, index) => {
+        const ok = kind === 'saida' || index % 5 !== 0
+        return (
+          <View key={item} style={styles.checkItem}>
+            <Text style={[styles.check, ok ? styles.ok : styles.fail]}>{ok ? '✓' : '×'}</Text>
+            <Text>{item}: {ok ? 'Funcionando' : 'Com defeito'}</Text>
+          </View>
+        )
+      })}
+    </View>
+  )
+}
+
+function Header({ order, kind }: { order: ServiceOrder; kind: OsPrintKind }) {
+  return (
+    <>
+      <View style={styles.top}>
+        <View>
+          <Text style={styles.logo}>Amo<Text style={styles.logoRed}>Celular</Text>♥</Text>
+          <Text style={styles.sub}>Assistencia tecnica especializada</Text>
+        </View>
+        <Text style={styles.contact}>
+          (16) 3333-4444{'\n'}(16) 99999-8888{'\n'}@amo_celular{'\n'}amocelular.com.br
+        </Text>
+      </View>
+      <View style={styles.redLine} />
+      <View style={styles.titleRow}>
+        <View>
+          <Text style={styles.title}>ORDEM DE SERVICO</Text>
+          <Text style={styles.badge}>{kind === 'entrada' ? 'OS DE ENTRADA' : 'OS DE SAIDA'}</Text>
+        </View>
+        <View style={styles.osBox}>
+          <Text style={styles.osNumber}>N OS: <Text style={styles.osRed}>{order.numero}</Text></Text>
+          <Text style={styles.osDate}>{kind === 'entrada' ? 'Data' : 'Conclusao'}: {new Date().toLocaleString('pt-BR')}</Text>
+        </View>
+      </View>
+    </>
+  )
+}
+
+function ClientAndDevice({ order }: { order: ServiceOrder }) {
+  return (
+    <View style={styles.grid2}>
+      <View style={styles.col}>
+        <Text style={styles.sectionTitle}>DADOS DO CLIENTE</Text>
+        <View style={styles.row}><Text style={styles.label}>Nome</Text><Text style={styles.value}>{order.customer?.nome || '--'}</Text></View>
+        <View style={styles.row}><Text style={styles.label}>Telefone</Text><Text style={styles.value}>{order.customer?.telefone || '--'}</Text></View>
+        <View style={styles.row}><Text style={styles.label}>CPF</Text><Text style={styles.value}>{order.customer?.cpf || '--'}</Text></View>
+        <View style={styles.row}><Text style={styles.label}>Endereco</Text><Text style={styles.value}>{address(order)}</Text></View>
+      </View>
+      <View style={styles.col}>
+        <Text style={styles.sectionTitle}>DADOS DO APARELHO</Text>
+        <View style={styles.row}><Text style={styles.label}>Modelo</Text><Text style={styles.value}>{order.device?.marca} {order.device?.modelo}</Text></View>
+        <View style={styles.row}><Text style={styles.label}>Cor</Text><Text style={styles.value}>{order.device?.cor || '--'}</Text></View>
+        <View style={styles.row}><Text style={styles.label}>IMEI</Text><Text style={styles.value}>{order.device?.imei || '--'}</Text></View>
+        <View style={styles.row}><Text style={styles.label}>Acessorios</Text><Text style={styles.value}>{order.device?.acessorios?.join(', ') || 'Nenhum'}</Text></View>
+      </View>
+    </View>
+  )
+}
+
+function OsPdfDocument({ order, kind = 'entrada', settings }: { order: ServiceOrder; kind?: OsPrintKind; settings?: AppSettings }) {
+  const isSaida = kind === 'saida'
+  const entryTerms = settings?.os_entry_terms || 'Cliente autoriza analise tecnica e orcamento do aparelho.'
+  const exitTerms = settings?.os_exit_terms || 'Cliente conferiu o aparelho e esta de acordo com a entrega.'
   return (
     <Document>
       <Page size="A4" style={styles.page}>
-        {/* Header */}
-        <View style={styles.header}>
-          <View>
-            <Text style={styles.logo}>
-              Amo<Text style={styles.logoRed}>Celular</Text>
-            </Text>
-            <Text style={styles.subtitle}>ASSISTÊNCIA TÉCNICA</Text>
-            <Text style={{ fontSize: 8, color: '#888', marginTop: 4 }}>Araraquara/SP</Text>
-          </View>
-          <View>
-            <Text style={styles.osNumber}>{isSaida ? 'OS_SAIDA' : 'OS_ENTRADA'} · {order.numero}</Text>
-            <Text style={styles.osDate}>Data: {data}</Text>
-            <View style={[styles.statusBadge, { backgroundColor: st.dot + '22', marginTop: 4 }]}>
-              <Text style={{ color: st.dot }}>{st.label}</Text>
-            </View>
-          </View>
-        </View>
+        <Header order={order} kind={kind} />
+        <View style={styles.section}><ClientAndDevice order={order} /></View>
 
-        {/* Cliente */}
         <View style={styles.section}>
-          <Text style={styles.sectionTitle}>Cliente</Text>
-          <View style={styles.row}>
-            <Text style={styles.label}>Nome</Text>
-            <Text style={styles.value}>{order.customer?.nome || '—'}</Text>
-          </View>
-          <View style={styles.row}>
-            <Text style={styles.label}>Telefone</Text>
-            <Text style={styles.value}>{order.customer?.telefone || '—'}</Text>
-          </View>
-          {order.customer?.cpf && (
-            <View style={styles.row}>
-              <Text style={styles.label}>CPF</Text>
-              <Text style={styles.value}>{order.customer.cpf}</Text>
-            </View>
-          )}
-        </View>
-
-        {/* Aparelho */}
-        <View style={styles.section}>
-          <Text style={styles.sectionTitle}>Aparelho</Text>
-          <View style={styles.row}>
-            <Text style={styles.label}>Marca / Modelo</Text>
-            <Text style={styles.value}>{order.device?.marca} {order.device?.modelo}</Text>
-          </View>
-          <View style={styles.row}>
-            <Text style={styles.label}>Cor</Text>
-            <Text style={styles.value}>{order.device?.cor || '—'}</Text>
-          </View>
-          <View style={styles.row}>
-            <Text style={styles.label}>IMEI</Text>
-            <Text style={[styles.value, { fontFamily: 'Courier' }]}>{order.device?.imei || '—'}</Text>
-          </View>
-          <View style={styles.row}>
-            <Text style={styles.label}>Acessórios</Text>
-            <Text style={styles.value}>
-              {order.device?.acessorios?.length ? order.device.acessorios.join(', ') : 'Nenhum'}
-            </Text>
+          <Text style={styles.sectionTitle}>{isSaida ? 'INFORMACOES DO SERVICO' : 'PROBLEMA INFORMADO PELO CLIENTE'}</Text>
+          <View style={styles.box}>
+            <Text style={styles.boxText}>{order.problema_relatado || '--'}</Text>
+            {isSaida && <Text style={styles.boxText}>Servico realizado: {order.servico_executado || order.diagnostico || '--'}</Text>}
+            {isSaida && <Text style={styles.boxText}>Pecas: {order.part_warranty?.description || order.pecas_utilizadas || '--'}</Text>}
           </View>
         </View>
-
-        {/* Problema */}
-        <View style={styles.section}>
-          <Text style={styles.sectionTitle}>Problema Relatado</Text>
-          <View style={styles.problema}>
-            <Text>{order.problema_relatado || '—'}</Text>
-          </View>
-        </View>
-
-        {/* Checklist de entrada */}
-        <View style={styles.section}>
-          <Text style={styles.sectionTitle}>{isSaida ? 'Testes realizados antes da entrega' : 'Checklist de Entrada'}</Text>
-          <View style={styles.checkGrid}>
-            {(isSaida ? CHECK_SAIDA : CHECK_ENTRADA).map((item, i) => {
-              const ok = i % 4 !== 0
-              return (
-                <View key={item} style={styles.checkItem}>
-                  <View style={[styles.checkMark, ok ? styles.checkOk : styles.checkFail]}>
-                    <Text>{ok ? '✓' : '✕'}</Text>
-                  </View>
-                  <Text>{item}</Text>
-                </View>
-              )
-            })}
-          </View>
-        </View>
-
-        {/* Serviço & Garantia */}
-        {(order.valor_servico > 0 || order.garantia_dias > 0) && (
-          <View style={styles.section}>
-            <Text style={styles.sectionTitle}>Serviço & Garantia</Text>
-            {order.diagnostico && (
-              <View style={styles.row}>
-                <Text style={styles.label}>Diagnóstico</Text>
-                <Text style={styles.value}>{order.diagnostico}</Text>
-              </View>
-            )}
-            {order.servico_executado && (
-              <View style={styles.row}>
-                <Text style={styles.label}>Serviço executado</Text>
-                <Text style={styles.value}>{order.servico_executado}</Text>
-              </View>
-            )}
-            <View style={styles.row}>
-              <Text style={styles.label}>Valor</Text>
-              <Text style={styles.value}>{brl(order.valor_servico)}</Text>
-            </View>
-            {order.garantia_dias > 0 && (
-              <View style={styles.garantia}>
-                <Text style={{ fontFamily: 'Helvetica-Bold', fontSize: 9 }}>
-                  Garantia: {order.garantia_dias} dias a partir da entrega
-                </Text>
-                <Text style={{ fontSize: 8, color: '#666', marginTop: 2 }}>
-                  A garantia cobre exclusivamente o serviço realizado e as peças substituídas.
-                </Text>
-              </View>
-            )}
-          </View>
-        )}
 
         {isSaida && (
-          <View style={styles.section}>
-            <Text style={styles.sectionTitle}>Saida e retirada</Text>
-            <View style={styles.row}>
-              <Text style={styles.label}>Data/hora retirada</Text>
-              <Text style={styles.value}>{new Date().toLocaleString('pt-BR')}</Text>
+          <View style={styles.grid2}>
+            <View style={styles.col}>
+              <Text style={styles.sectionTitle}>PAGAMENTO</Text>
+              <View style={styles.row}><Text style={styles.label}>Valor</Text><Text style={styles.value}>{brl(order.valor_servico || 0)}</Text></View>
+              <View style={styles.row}><Text style={styles.label}>Forma</Text><Text style={styles.value}>{order.payment_method || 'A preencher'}</Text></View>
+              <View style={styles.row}><Text style={styles.label}>Situacao</Text><Text style={styles.value}>{order.payment_status || 'A preencher'}</Text></View>
             </View>
-            <View style={styles.row}>
-              <Text style={styles.label}>Servico realizado</Text>
-              <Text style={styles.value}>{order.servico_executado || order.diagnostico || '—'}</Text>
-            </View>
-            <View style={styles.row}>
-              <Text style={styles.label}>Pecas substituidas</Text>
-              <Text style={styles.value}>{order.part_warranty?.description || order.pecas_utilizadas || '—'}</Text>
-            </View>
-            <View style={styles.row}>
-              <Text style={styles.label}>Pagamento</Text>
-              <Text style={styles.value}>{order.payment_method || 'A preencher'} · {order.payment_status || 'A preencher'}</Text>
-            </View>
-            <View style={styles.row}>
-              <Text style={styles.label}>Garantia ate</Text>
-              <Text style={styles.value}>{warrantyEnd}</Text>
-            </View>
-            <View style={styles.problema}>
-              <Text>{settings?.warranty_terms || order.delivery_terms || 'Termos de garantia nao configurados.'}</Text>
-            </View>
-            <View style={[styles.problema, { marginTop: 8 }]}>
-              <Text>
-                Declaro que recebi o aparelho acima identificado, tive a oportunidade de conferir seu funcionamento e estou de acordo com os servicos realizados, condicoes de entrega e termos de garantia apresentados neste documento.
-              </Text>
+            <View style={styles.col}>
+              <Text style={styles.sectionTitle}>GARANTIA</Text>
+              <View style={styles.row}><Text style={styles.label}>Prazo</Text><Text style={styles.value}>{order.garantia_dias || 0} dias</Text></View>
+              <View style={styles.row}><Text style={styles.label}>Final</Text><Text style={styles.value}>{serviceWarrantyEnd(order)}</Text></View>
+              <View style={styles.row}><Text style={styles.label}>Tecnico</Text><Text style={styles.value}>{order.delivery_responsible || '--'}</Text></View>
             </View>
           </View>
         )}
 
-        {/* Assinaturas */}
-        <View style={styles.signatureSection}>
-          <View style={styles.signatureBox}>
-            <Text style={styles.signatureLabel}>Assinatura do cliente</Text>
+        <View style={styles.section}>
+          <Text style={styles.sectionTitle}>{isSaida ? 'CHECKLIST DE SAIDA' : 'CHECKLIST DE RECEBIMENTO'}</Text>
+          <Checklist kind={kind} />
+        </View>
+
+        <View style={styles.grid2}>
+          <View style={styles.col}>
+            <Text style={styles.sectionTitle}>{isSaida ? 'TERMOS DE SERVICO' : 'TERMOS DA ENTRADA'}</Text>
+            <TermsText text={isSaida ? exitTerms : entryTerms} />
           </View>
-          <View style={styles.signatureBox}>
-            <Text style={styles.signatureLabel}>Assinatura da loja</Text>
+          <View style={styles.col}>
+            <Text style={styles.sectionTitle}>{isSaida ? 'TERMOS DE GARANTIA' : 'OBSERVACOES'}</Text>
+            <TermsText text={isSaida ? settings?.warranty_terms : order.delivery_notes || order.condicao_estetica?.descricao || 'Aparelho recebido para analise e orcamento.'} />
           </View>
         </View>
 
-        {/* Footer */}
+        {isSaida && (
+          <View style={[styles.section, { marginTop: 7 }]}>
+            <Text style={styles.declaration}>
+              Declaro que recebi o aparelho acima identificado, tive a oportunidade de conferir seu funcionamento e estou de acordo com os servicos realizados, condicoes de entrega e termos de garantia apresentados neste documento.
+            </Text>
+          </View>
+        )}
+
+        <View style={styles.signatures}>
+          <View style={styles.sign}><Text style={styles.signLine}>Cliente</Text></View>
+          <View style={styles.sign}><Text style={styles.signLine}>{isSaida ? 'Entregue por' : 'Recebido por'}</Text></View>
+        </View>
+
         <View style={styles.footer} fixed>
-          <Text style={styles.footerText}>AmoCelular — Assistência Técnica · Araraquara/SP</Text>
-          <Text style={styles.footerText}>{order.numero} · Gerado em {new Date().toLocaleDateString('pt-BR')}</Text>
+          <Text style={styles.footerText}>Rua Sao Bento, 1548 - Centro - Araraquara/SP</Text>
+          <Text style={styles.footerText}>Pensou em arrumar, pensou AmoCelular.</Text>
         </View>
       </Page>
     </Document>
@@ -233,8 +214,7 @@ function OsPdfDocument({ order, kind = 'entrada', settings }: Props) {
 }
 
 export async function generateOsPdf(order: ServiceOrder, kind: OsPrintKind = 'entrada', settings?: AppSettings): Promise<Blob> {
-  const blob = await pdf(<OsPdfDocument order={order} kind={kind} settings={settings} />).toBlob()
-  return blob
+  return pdf(<OsPdfDocument order={order} kind={kind} settings={settings} />).toBlob()
 }
 
 export function downloadOsPdf(order: ServiceOrder, kind: OsPrintKind = 'entrada', settings?: AppSettings) {
@@ -254,40 +234,32 @@ function SaleReceiptDocument({ sale }: { sale: DeviceSale }) {
   return (
     <Document>
       <Page size="A4" style={styles.page}>
-        <View style={styles.header}>
-          <View>
-            <Text style={styles.logo}>Amo<Text style={styles.logoRed}>Celular</Text></Text>
-            <Text style={styles.subtitle}>RECIBO DE VENDA</Text>
-          </View>
-          <View>
-            <Text style={styles.osNumber}>{sale.numero}</Text>
-            <Text style={styles.osDate}>{new Date(sale.sold_at).toLocaleString('pt-BR')}</Text>
-          </View>
-        </View>
+        <Header order={{
+          id: sale.id,
+          numero: sale.numero,
+          customer_id: sale.customer_id,
+          device_id: sale.device_id,
+          status: 'entregue',
+          problema_relatado: 'Venda de produto',
+          condicao_estetica: {},
+          valor_servico: sale.valor_final,
+          garantia_dias: 0,
+          created_by: sale.seller_id,
+          created_at: sale.sold_at,
+          updated_at: sale.sold_at,
+          customer: sale.customer,
+        }} kind="saida" />
         <View style={styles.section}>
-          <Text style={styles.sectionTitle}>Cliente</Text>
-          <View style={styles.row}><Text style={styles.label}>Nome</Text><Text style={styles.value}>{sale.customer?.nome || '—'}</Text></View>
-          <View style={styles.row}><Text style={styles.label}>Telefone</Text><Text style={styles.value}>{sale.customer?.telefone || '—'}</Text></View>
-        </View>
-        <View style={styles.section}>
-          <Text style={styles.sectionTitle}>Aparelho</Text>
+          <Text style={styles.sectionTitle}>RECIBO DE VENDA</Text>
           <View style={styles.row}><Text style={styles.label}>Produto</Text><Text style={styles.value}>{sale.device?.marca} {sale.device?.modelo}</Text></View>
-          <View style={styles.row}><Text style={styles.label}>IMEI/Serie</Text><Text style={styles.value}>{sale.device?.imei1 || sale.device?.serial || '—'}</Text></View>
+          <View style={styles.row}><Text style={styles.label}>IMEI/Serie</Text><Text style={styles.value}>{sale.device?.imei1 || sale.device?.serial || sale.device?.sku || '--'}</Text></View>
           <View style={styles.row}><Text style={styles.label}>Quantidade</Text><Text style={styles.value}>{sale.quantity || 1}</Text></View>
-          <View style={styles.row}><Text style={styles.label}>Garantia</Text><Text style={styles.value}>{sale.device?.garantia || '—'}</Text></View>
+          <View style={styles.row}><Text style={styles.label}>Valor</Text><Text style={styles.value}>{brl(sale.valor_final)}</Text></View>
+          <View style={styles.row}><Text style={styles.label}>Pagamento</Text><Text style={styles.value}>{sale.forma_pagamento} - {sale.parcelas}x</Text></View>
         </View>
-        <View style={styles.section}>
-          <Text style={styles.sectionTitle}>Pagamento</Text>
-          <View style={styles.row}><Text style={styles.label}>Valor venda</Text><Text style={styles.value}>{brl(sale.valor_final)}</Text></View>
-          <View style={styles.row}><Text style={styles.label}>Forma</Text><Text style={styles.value}>{sale.forma_pagamento}</Text></View>
-          <View style={styles.row}><Text style={styles.label}>Entrada/parcelas</Text><Text style={styles.value}>{brl(sale.valor_entrada)} · {sale.parcelas}x</Text></View>
-        </View>
-        <View style={styles.problema}>
-          <Text>Recibo preparado para impressao A4/PDF e impressora nao fiscal. Venda sem emissao fiscal automatica neste momento.</Text>
-        </View>
-        <View style={styles.signatureSection}>
-          <View style={styles.signatureBox}><Text style={styles.signatureLabel}>Assinatura do cliente</Text></View>
-          <View style={styles.signatureBox}><Text style={styles.signatureLabel}>Assinatura da loja</Text></View>
+        <View style={styles.signatures}>
+          <View style={styles.sign}><Text style={styles.signLine}>Cliente</Text></View>
+          <View style={styles.sign}><Text style={styles.signLine}>Responsavel pela loja</Text></View>
         </View>
       </Page>
     </Document>
