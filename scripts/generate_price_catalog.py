@@ -8,6 +8,7 @@ import openpyxl
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_XLSX = Path(r"C:\Users\herik\Downloads\PRECOS_CELULAR_v3_2026.xlsx")
+CATALOG_VERSION = "precos-celular-v3-2026"
 
 KNOWN_BRANDS = {
     "APPLE": "Apple",
@@ -131,8 +132,9 @@ def main():
     xlsx_path = Path(sys.argv[1]) if len(sys.argv) > 1 else DEFAULT_XLSX
     output = ROOT / "src" / "data" / "priceCatalog.ts"
     catalog = build_catalog(xlsx_path)
-    content = "/* Auto-generated from PRECOS CELULAR v2 2026.xlsx. */\n"
+    content = "/* Auto-generated from PRECOS_CELULAR_v3_2026.xlsx. */\n"
     content += "import type { PriceCatalogItem } from '@/types/pricing'\n\n"
+    content += f"export const PRICE_CATALOG_VERSION = {json.dumps(CATALOG_VERSION)}\n\n"
     content += "export const PRICE_CATALOG: PriceCatalogItem[] = "
     content += json.dumps(catalog, ensure_ascii=False, indent=2)
     content += "\n"

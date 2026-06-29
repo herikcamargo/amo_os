@@ -3,6 +3,7 @@ create table if not exists public.price_overrides (
   service_key text not null,
   cost_price numeric,
   final_price numeric,
+  catalog_version text,
   updated_by uuid references public.users(id),
   updated_at timestamptz default now(),
   primary key (item_id, service_key)
@@ -19,6 +20,9 @@ create table if not exists public.pricing_settings (
 
 alter table public.pricing_settings
 add column if not exists max_installments integer not null default 10;
+
+alter table public.price_overrides
+add column if not exists catalog_version text;
 
 alter table public.pricing_settings
 alter column card_installment_fee_pct set default 11;

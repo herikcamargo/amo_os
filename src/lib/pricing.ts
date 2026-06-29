@@ -1,4 +1,4 @@
-import { PRICE_CATALOG } from '@/data/priceCatalog'
+import { PRICE_CATALOG, PRICE_CATALOG_VERSION } from '@/data/priceCatalog'
 import { isSupabaseEnabled } from '@/lib/storage-adapter'
 import { supabase } from '@/lib/supabase'
 import type { PriceCatalogItem, PriceService, PricingConfig, PriceSyncResult } from '@/types/pricing'
@@ -12,12 +12,14 @@ const DEFAULT_CONFIG: PricingConfig = {
   maxInstallments: 10,
 }
 
-type ServiceOverrides = Record<string, Partial<PriceService>>
+type ServiceOverride = Partial<PriceService> & { catalogVersion?: string }
+type ServiceOverrides = Record<string, ServiceOverride>
 type PriceOverrideRow = {
   item_id: string
   service_key: string
   cost_price: number | null
   final_price: number | null
+  catalog_version?: string | null
 }
 
 export function getPricingConfig(): PricingConfig {
@@ -37,7 +39,7 @@ export async function syncPricingFromSupabase(): Promise<PriceSyncResult> {
 
   try {
     const [{ data: overrides, error: overridesError }, { data: settings, error: settingsError }] = await Promise.all([
-      supabase.from('price_overrides').select('item_id, service_key, cost_price, final_price'),
+      supabase.from('price_overrides').select('item_id, service_key, cost_price, final_price, catalog_version'),
       supabase
         .from('pricing_settings')
         .select('attendant_discount_limit_pct, card_installment_fee_pct, max_installments')
@@ -51,7 +53,11 @@ export async function syncPricingFromSupabase(): Promise<PriceSyncResult> {
     }
 
     const merged = rowsToOverrides((overrides || []) as PriceOverrideRow[])
-    localStorage.setItem(PRICE_OVERRIDES_KEY, JSON.stringify(merged))
+    if (Object.keys(merged).length > 0) {
+      localStorage.setItem(PRICE_OVERRIDES_KEY, JSON.stringify(merged))
+    } else {
+      localStorage.removeItem(PRICE_OVERRIDES_KEY)
+    }
 
     if (settings) {
       localStorage.setItem(PRICING_CONFIG_KEY, JSON.stringify({
@@ -102,6 +108,7 @@ export async function saveServicePrice(itemId: string, serviceKey: string, updat
   overrides[serviceOverrideKey(itemId, serviceKey)] = {
     ...(overrides[serviceOverrideKey(itemId, serviceKey)] || {}),
     ...updates,
+    catalogVersion: PRICE_CATALOG_VERSION,
   }
   localStorage.setItem(PRICE_OVERRIDES_KEY, JSON.stringify(overrides))
 
@@ -114,6 +121,7 @@ export async function saveServicePrice(itemId: string, serviceKey: string, updat
       service_key: serviceKey,
       cost_price: updates.costPrice ?? null,
       final_price: updates.finalPrice ?? null,
+      catalog_version: PRICE_CATALOG_VERSION,
       updated_by: userId || null,
       updated_at: new Date().toISOString(),
     }, { onConflict: 'item_id,service_key' })
@@ -160,7 +168,23 @@ export function formatCurrency(value?: number | null) {
 
 function getOverrides(): ServiceOverrides {
   try {
-    return JSON.parse(localStorage.getItem(PRICE_OVERRIDES_KEY) || '{}')
+    const parsed = JSON.parse(localStorage.getItem(PRICE_OVERRIDES_KEY) || '{}') as ServiceOverrides
+    const current = Object.entries(parsed).reduce<ServiceOverrides>((acc, [key, override]) => {
+      if (override.catalogVersion === PRICE_CATALOG_VERSION) {
+        acc[key] = override
+      }
+      return acc
+    }, {})
+
+    if (Object.keys(current).length !== Object.keys(parsed).length) {
+      if (Object.keys(current).length > 0) {
+        localStorage.setItem(PRICE_OVERRIDES_KEY, JSON.stringify(current))
+      } else {
+        localStorage.removeItem(PRICE_OVERRIDES_KEY)
+      }
+    }
+
+    return current
   } catch {
     return {}
   }
@@ -168,9 +192,11 @@ function getOverrides(): ServiceOverrides {
 
 function rowsToOverrides(rows: PriceOverrideRow[]): ServiceOverrides {
   return rows.reduce<ServiceOverrides>((acc, row) => {
+    if (row.catalog_version !== PRICE_CATALOG_VERSION) return acc
     acc[serviceOverrideKey(row.item_id, row.service_key)] = {
       costPrice: row.cost_price,
       finalPrice: row.final_price,
+      catalogVersion: row.catalog_version,
     }
     return acc
   }, {})

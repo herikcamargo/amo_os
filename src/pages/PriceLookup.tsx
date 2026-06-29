@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import {
   Search, ChevronLeft, SlidersHorizontal, Shield, Tag, CreditCard,
-  Pencil, Save, Star, Wrench,
+  Pencil, Save, Star, Wrench, Copy,
 } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
@@ -171,6 +171,7 @@ function ServiceGroup({ item, label, services, isAdmin, userId }: {
           <ServiceOption
             key={service.key}
             item={item}
+            groupLabel={label}
             service={service}
             isAdmin={isAdmin}
             userId={userId}
@@ -181,8 +182,9 @@ function ServiceGroup({ item, label, services, isAdmin, userId }: {
   )
 }
 
-function ServiceOption({ item, service, isAdmin, userId }: {
+function ServiceOption({ item, groupLabel, service, isAdmin, userId }: {
   item: PriceCatalogItem
+  groupLabel: string
   service: PriceService
   isAdmin: boolean
   userId?: string
@@ -197,6 +199,30 @@ function ServiceOption({ item, service, isAdmin, userId }: {
   const termPrice = cashPrice === null ? null : calculateInstallmentPrice(cashPrice, config.cardInstallmentFeePct)
   const installmentAmount = cashPrice === null ? null : calculateInstallmentAmount(cashPrice, config)
   const minAllowed = cashPrice === null ? null : calculateMaxDiscount(cashPrice, config.attendantDiscountLimitPct)
+
+  const copyBudget = async () => {
+    if (cashPrice === null || termPrice === null || installmentAmount === null) {
+      toast.error('Este serviço ainda não tem valor para copiar')
+      return
+    }
+
+    const text = [
+      `Orçamento - ${groupLabel}${service.quality ? ` (${meta.label})` : ''}`,
+      `Modelo: ${item.model}`,
+      `Valor à vista: ${formatCurrency(cashPrice)}`,
+      `Valor a prazo: ${formatCurrency(termPrice)} em até ${config.maxInstallments}x de ${formatCurrency(installmentAmount)}`,
+      'Prazo do serviço: a confirmar',
+      '',
+      `Essa é uma ótima opção para deixar seu ${item.model} pronto com garantia. Se quiser, já posso separar a peça e agilizar seu atendimento.`,
+    ].join('\n')
+
+    try {
+      await navigator.clipboard.writeText(text)
+      toast.success('Orçamento copiado')
+    } catch {
+      toast.error('Não foi possível copiar automaticamente')
+    }
+  }
 
   const save = async () => {
     setEditing(false)
@@ -227,6 +253,13 @@ function ServiceOption({ item, service, isAdmin, userId }: {
           </div>
           <div className="text-[11px] text-gray-600 mt-1">Planilha: {service.sourceLabel}</div>
         </div>
+        <button
+          onClick={copyBudget}
+          className="w-9 h-9 rounded-lg bg-white/5 hover:bg-white/10 flex items-center justify-center"
+          title="Copiar orçamento"
+        >
+          <Copy size={14} />
+        </button>
         {isAdmin && (
           <button
             onClick={() => setEditing(!editing)}

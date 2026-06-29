@@ -1,5 +1,7 @@
-/* Auto-generated from PRECOS CELULAR v2 2026.xlsx. */
+/* Auto-generated from PRECOS_CELULAR_v3_2026.xlsx. */
 import type { PriceCatalogItem } from '@/types/pricing'
+
+export const PRICE_CATALOG_VERSION = "precos-celular-v3-2026"
 
 export const PRICE_CATALOG: PriceCatalogItem[] = [
   {
