@@ -271,8 +271,9 @@ function SaleReceiptDocument({ sale }: { sale: DeviceSale }) {
         </View>
         <View style={styles.section}>
           <Text style={styles.sectionTitle}>Aparelho</Text>
-          <View style={styles.row}><Text style={styles.label}>Modelo</Text><Text style={styles.value}>{sale.device?.marca} {sale.device?.modelo}</Text></View>
+          <View style={styles.row}><Text style={styles.label}>Produto</Text><Text style={styles.value}>{sale.device?.marca} {sale.device?.modelo}</Text></View>
           <View style={styles.row}><Text style={styles.label}>IMEI/Serie</Text><Text style={styles.value}>{sale.device?.imei1 || sale.device?.serial || '—'}</Text></View>
+          <View style={styles.row}><Text style={styles.label}>Quantidade</Text><Text style={styles.value}>{sale.quantity || 1}</Text></View>
           <View style={styles.row}><Text style={styles.label}>Garantia</Text><Text style={styles.value}>{sale.device?.garantia || '—'}</Text></View>
         </View>
         <View style={styles.section}>

@@ -38,12 +38,6 @@ if (!process.env.DATABASE_URL && (!PROJECT_REF || !DB_PASSWORD)) {
 const DB_URL = process.env.DATABASE_URL || `postgresql://postgres:${DB_PASSWORD}@db.${PROJECT_REF}.supabase.co:5432/postgres`
 
 async function execSQL(sql, label) {
-  // Use the Supabase pooler endpoint for direct SQL execution
-  const url = `https://${PROJECT_REF}.supabase.co/pg/query`
-
-  // Try Management API first
-  const mgmtUrl = `https://api.supabase.com/v1/projects/${PROJECT_REF}/database/query`
-
   // Fallback: use the direct pg connection via fetch to the REST SQL endpoint
   // Supabase exposes SQL execution via the service role + pg endpoint
   const serviceKey = process.env.SUPABASE_SERVICE_KEY || ''

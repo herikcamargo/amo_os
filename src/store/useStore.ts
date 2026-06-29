@@ -209,13 +209,29 @@ export const useStore = create<AppState>()(
       addDeviceSale: (sale) => {
         set((s) => ({
           deviceSales: [sale, ...s.deviceSales],
-          saleDevices: s.saleDevices.map((device) => (
-            device.id === sale.device_id ? { ...device, status: 'vendido', updated_at: sale.sold_at } : device
-          )),
+          saleDevices: s.saleDevices.map((device) => {
+            if (device.id !== sale.device_id) return device
+            const nextStock = Math.max(0, (device.stock_quantity ?? 1) - (sale.quantity ?? 1))
+            return {
+              ...device,
+              stock_quantity: nextStock,
+              status: nextStock <= 0 ? 'vendido' : device.status,
+              updated_at: sale.sold_at,
+            }
+          }),
         }))
         if (isSupabaseEnabled) {
           void deviceSalesAdapter.create(sale)
-            .then(() => saleDevicesAdapter.update(sale.device_id, { status: 'vendido', updated_at: sale.sold_at }))
+            .then(() => {
+              const current = get().saleDevices.find((device) => device.id === sale.device_id)
+              return current
+                ? saleDevicesAdapter.update(sale.device_id, {
+                  status: current.status,
+                  stock_quantity: current.stock_quantity,
+                  updated_at: current.updated_at,
+                })
+                : undefined
+            })
             .catch((err) => {
               console.warn('Falha ao criar venda no Supabase:', err)
             })
@@ -241,7 +257,14 @@ export const useStore = create<AppState>()(
           )),
           saleDevices: returnToStock && sale
             ? s.saleDevices.map((device) => (
-              device.id === sale.device_id ? { ...device, status: 'disponivel', updated_at: cancelledAt } : device
+              device.id === sale.device_id
+                ? {
+                  ...device,
+                  stock_quantity: (device.stock_quantity ?? 0) + (sale.quantity ?? 1),
+                  status: 'disponivel',
+                  updated_at: cancelledAt,
+                }
+                : device
             ))
             : s.saleDevices,
         }

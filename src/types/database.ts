@@ -31,6 +31,7 @@ export type WarrantyUnit = 'dias' | 'meses'
 export type SupplierStatus = 'ativo' | 'inativo'
 export type DeviceSaleStatus = 'disponivel' | 'reservado' | 'vendido' | 'cancelado'
 export type DeviceSaleType = 'novo' | 'seminovo' | 'usado'
+export type ProductCategory = 'celular' | 'carregador' | 'pelicula' | 'capa' | 'acessorio' | 'outro'
 export type FiscalStatus = 'nao_solicitado' | 'pendente' | 'emitido' | 'cancelado' | 'erro'
 
 export interface Supplier {
@@ -159,6 +160,9 @@ export interface AuditLog {
 export interface SaleDevice {
   id: string
   photo_url?: string | null
+  product_category?: ProductCategory
+  sku?: string | null
+  barcode?: string | null
   tipo: DeviceSaleType
   marca: string
   modelo: string
@@ -170,6 +174,7 @@ export interface SaleDevice {
   serial?: string | null
   custo_compra: number
   preco_venda: number
+  stock_quantity?: number
   supplier_id?: string | null
   data_compra?: string | null
   condicao?: string | null
@@ -200,6 +205,7 @@ export interface DeviceSale {
   seller_id: string
   sold_at: string
   preco_original: number
+  quantity?: number
   desconto: number
   acrescimo: number
   valor_final: number
