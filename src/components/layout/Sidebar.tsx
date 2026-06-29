@@ -4,6 +4,7 @@ import {
   Home, Files, Users, Settings, Plus, Bell, BarChart3, LogOut, Cloud, CloudOff, Search,
 } from 'lucide-react'
 import { useStore } from '@/store/useStore'
+import { filterNotificationsForUser } from '@/lib/notifications'
 import { can, roleLabel } from '@/lib/permissions'
 
 const NAV_ITEMS = [
@@ -20,7 +21,10 @@ export function Sidebar() {
   const navigate = useNavigate()
   const location = useLocation()
   const { user, notifications, isCloudConnected, signOut } = useStore()
-  const unread = useMemo(() => notifications.filter((n) => !n.read).length, [notifications])
+  const unread = useMemo(
+    () => filterNotificationsForUser(notifications, user).filter((n) => !n.read).length,
+    [notifications, user],
+  )
   const visibleNav = NAV_ITEMS.filter((it) => !it.requires || can(user, it.requires))
 
   const isActive = (key: string) => {

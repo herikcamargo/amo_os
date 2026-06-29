@@ -7,10 +7,12 @@ import {
 import { useStore } from '@/store/useStore'
 import { IconBtn } from '@/components/ui/IconBtn'
 import { OrderRow } from '@/components/ui/OrderRow'
+import { filterNotificationsForUser } from '@/lib/notifications'
 import { can } from '@/lib/permissions'
 import type { OsStatus } from '@/types/database'
 
 const QUICK = [
+  { key: 'precos', title: 'Consultar precos', sub: 'Orcamentos rapidos', icon: Search, color: '#14B8A6', glow: 'rgba(20,184,166,0.3)' },
   { key: 'abrir', title: 'Abrir OS', sub: 'Nova ordem de serviço', icon: FileText, color: '#D71920', glow: 'rgba(215,25,32,0.4)' },
   { key: 'pend', title: 'Pendências', sub: 'Aguardando atenção', icon: ClipboardCheck, color: '#F59E0B', glow: 'rgba(245,158,11,0.3)' },
   { key: 'manut', title: 'Em manutenção', sub: 'Ordens em andamento', icon: Wrench, color: '#3B82F6', glow: 'rgba(59,130,246,0.3)' },
@@ -29,7 +31,8 @@ const CARD_FILTER: Record<string, OsStatus[]> = {
 export function Home() {
   const navigate = useNavigate()
   const { orders, notifications, user } = useStore()
-  const unreadCount = useMemo(() => notifications.filter((n) => !n.read).length, [notifications])
+  const visibleNotifications = useMemo(() => filterNotificationsForUser(notifications, user), [notifications, user])
+  const unreadCount = useMemo(() => visibleNotifications.filter((n) => !n.read).length, [visibleNotifications])
 
   const canFinance = can(user, 'view_financial')
   const canReports = can(user, 'view_reports')
@@ -41,6 +44,7 @@ export function Home() {
 
   const handleCard = (key: string) => {
     if (key === 'abrir') return navigate('/nova-os')
+    if (key === 'precos') return navigate('/precos')
     if (key === 'rel') return navigate('/relatorios')
     const statuses = CARD_FILTER[key]
     if (statuses) navigate(`/ordens?status=${statuses.join(',')}`)
@@ -208,7 +212,7 @@ export function Home() {
             <span className="text-[13px] font-bold tracking-wide uppercase text-gray-200">Alertas</span>
           </div>
           <div className="space-y-2">
-            {notifications.slice(0, 3).map((n) => (
+            {visibleNotifications.slice(0, 3).map((n) => (
               <button
                 key={n.id}
                 onClick={() => n.order_id && navigate(`/os/${n.order_id}`)}

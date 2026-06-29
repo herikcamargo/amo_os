@@ -2,11 +2,13 @@ import { useNavigate } from 'react-router-dom'
 import { ChevronLeft, Bell, CheckCheck } from 'lucide-react'
 import { useStore } from '@/store/useStore'
 import { IconBtn } from '@/components/ui/IconBtn'
+import { filterNotificationsForUser } from '@/lib/notifications'
 
 export function Notifications() {
   const navigate = useNavigate()
-  const { notifications, markNotificationRead, markAllNotificationsRead } = useStore()
-  const unread = notifications.filter((n) => !n.read).length
+  const { user, notifications, markNotificationRead } = useStore()
+  const visibleNotifications = filterNotificationsForUser(notifications, user)
+  const unread = visibleNotifications.filter((n) => !n.read).length
 
   return (
     <div className="px-5 pt-3">
@@ -15,7 +17,7 @@ export function Notifications() {
         <h1 className="text-xl font-bold tracking-tight flex-1">Notificações</h1>
         {unread > 0 && (
           <button
-            onClick={markAllNotificationsRead}
+            onClick={() => visibleNotifications.forEach((n) => markNotificationRead(n.id))}
             className="text-brand text-xs font-semibold flex items-center gap-1"
           >
             <CheckCheck size={14} /> Marcar todas
@@ -24,13 +26,13 @@ export function Notifications() {
       </div>
 
       <div className="space-y-2">
-        {notifications.length === 0 && (
+        {visibleNotifications.length === 0 && (
           <div className="text-center py-16 text-gray-500">
             <Bell size={40} className="mx-auto mb-3 text-gray-600" />
             <p className="text-sm">Nenhuma notificação</p>
           </div>
         )}
-        {notifications.map((n) => (
+        {visibleNotifications.map((n) => (
           <button
             key={n.id}
             onClick={() => {

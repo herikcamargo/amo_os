@@ -37,7 +37,7 @@ const STEPS: { key: Step; label: string; icon: typeof User }[] = [
 
 export function NewOrder() {
   const navigate = useNavigate()
-  const { addOrder, nextOsNumber, user } = useStore()
+  const { addOrder, nextOsNumber, user, addNotification } = useStore()
   const [step, setStep] = useState<Step>('cliente')
   const [saving, setSaving] = useState(false)
   const [scanning, setScanning] = useState(false)
@@ -263,6 +263,15 @@ export function NewOrder() {
       }
 
       addOrder(savedOrder)
+      addNotification({
+        id: generateId(),
+        title: 'Nova OS aberta',
+        body: `${savedOrder.numero} - ${savedOrder.customer?.nome || nome.trim()} (${[savedOrder.device?.marca || marca.trim(), savedOrder.device?.modelo || modelo.trim()].filter(Boolean).join(' ') || 'aparelho'}). Verificar necessidade de pedir peca.`,
+        read: false,
+        created_at: new Date().toISOString(),
+        order_id: savedOrder.id,
+        target_role: 'admin',
+      })
 
       const photosWithBlob = photos.filter((p) => p.blob)
       if (photosWithBlob.length > 0) {

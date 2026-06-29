@@ -1,22 +1,14 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 import type { ServiceOrder, AppUser } from '@/types/database'
+import type { AppNotification } from '@/types/notifications'
 import { authAdapter, ordersAdapter, isSupabaseEnabled } from '@/lib/storage-adapter'
-
-interface Notification {
-  id: string
-  title: string
-  body: string
-  read: boolean
-  created_at: string
-  order_id?: string
-}
 
 interface AppState {
   user: AppUser | null
   users: AppUser[]
   orders: ServiceOrder[]
-  notifications: Notification[]
+  notifications: AppNotification[]
   osCounter: number
   loading: boolean
   authReady: boolean
@@ -30,7 +22,7 @@ interface AppState {
   addUser: (user: AppUser) => void
   updateUser: (id: string, updates: Partial<AppUser>) => void
   removeUser: (id: string) => void
-  addNotification: (n: Notification) => void
+  addNotification: (n: AppNotification) => void
   markNotificationRead: (id: string) => void
   markAllNotificationsRead: () => void
   nextOsNumber: () => string
@@ -210,7 +202,7 @@ function buildDemoData() {
     { id: 'o6', numero: 'AMO-2026-000118', customer_id: 'c6', device_id: 'd6', status: 'entregue', problema_relatado: 'Troca de película + limpeza.', condicao_estetica: {}, valor_servico: 80, garantia_dias: 30, created_by: 'u1', created_at: '2026-06-23T11:00:00Z', updated_at: '2026-06-23T17:30:00Z', customer: customers[5], device: devices[5] },
   ]
 
-  const notifications: Notification[] = [
+  const notifications: AppNotification[] = [
     { id: 'n1', title: 'OS pronta há 2 dias', body: 'Pedro Lima — Moto G60 está pronto desde 25/06. Avisar cliente.', read: false, created_at: '2026-06-26T08:00:00Z', order_id: 'o3' },
     { id: 'n2', title: 'Orçamento pendente', body: 'João Silva aguarda aprovação do orçamento R$480.', read: false, created_at: '2026-06-26T10:40:00Z', order_id: 'o1' },
     { id: 'n3', title: 'Peça chegou', body: 'Display Redmi Note 12 disponível para retirada no fornecedor.', read: false, created_at: '2026-06-26T07:00:00Z', order_id: 'o4' },
