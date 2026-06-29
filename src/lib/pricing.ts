@@ -5,6 +5,7 @@ import type { PriceCatalogItem, PriceService, PricingConfig, PriceSyncResult } f
 
 const PRICE_OVERRIDES_KEY = 'amo-os-price-overrides'
 const PRICING_CONFIG_KEY = 'amo-os-pricing-config'
+const REMOTE_PRICE_CATALOG_KEY = 'amo-os-remote-price-catalog'
 
 const DEFAULT_CONFIG: PricingConfig = {
   attendantDiscountLimitPct: 5,
@@ -20,6 +21,28 @@ type PriceOverrideRow = {
   cost_price: number | null
   final_price: number | null
   catalog_version?: string | null
+}
+type PriceCatalogRow = {
+  id: string
+  brand: string
+  model: string
+  search?: string | null
+}
+type PriceServiceRow = {
+  catalog_id: string
+  key: string
+  label: string
+  source_label?: string | null
+  quality?: string | null
+  final_price?: number | string | null
+  installment_price?: number | string | null
+  cost_price?: number | string | null
+  note?: string | null
+}
+type PricingConfigRow = {
+  attendant_discount_limit_pct?: number | string | null
+  card_installment_fee_pct?: number | string | null
+  max_installments?: number | string | null
 }
 
 export function getPricingConfig(): PricingConfig {
@@ -38,6 +61,38 @@ export async function syncPricingFromSupabase(): Promise<PriceSyncResult> {
   if (!isSupabaseEnabled) return { remoteReady: false, loaded: false }
 
   try {
+    const [
+      { data: catalogRows, error: catalogError },
+      { data: serviceRows, error: servicesError },
+      { data: config, error: configError },
+    ] = await Promise.all([
+      supabase.from('price_catalog').select('id, brand, model, search').order('brand').order('model'),
+      supabase.from('price_services').select('catalog_id, key, label, source_label, quality, final_price, installment_price, cost_price, note'),
+      supabase
+        .from('pricing_config')
+        .select('attendant_discount_limit_pct, card_installment_fee_pct, max_installments')
+        .eq('id', 'default')
+        .maybeSingle(),
+    ])
+
+    if (!catalogError && !servicesError) {
+      const remoteCatalog = rowsToCatalog(
+        (catalogRows || []) as PriceCatalogRow[],
+        (serviceRows || []) as PriceServiceRow[],
+      )
+
+      if (remoteCatalog.length > 0) {
+        localStorage.setItem(REMOTE_PRICE_CATALOG_KEY, JSON.stringify(remoteCatalog))
+        localStorage.removeItem(PRICE_OVERRIDES_KEY)
+      }
+
+      if (!configError && config) {
+        localStorage.setItem(PRICING_CONFIG_KEY, JSON.stringify(configRowToSettings(config as PricingConfigRow)))
+      }
+
+      return { remoteReady: true, loaded: remoteCatalog.length > 0 }
+    }
+
     const [{ data: overrides, error: overridesError }, { data: settings, error: settingsError }] = await Promise.all([
       supabase.from('price_overrides').select('item_id, service_key, cost_price, final_price, catalog_version'),
       supabase
@@ -48,7 +103,7 @@ export async function syncPricingFromSupabase(): Promise<PriceSyncResult> {
     ])
 
     if (overridesError || settingsError) {
-      console.warn('Tabela de precos ainda nao esta pronta no Supabase:', overridesError || settingsError)
+      console.warn('Tabelas de precos ainda nao estao prontas no Supabase:', catalogError || servicesError || overridesError || settingsError)
       return { remoteReady: false, loaded: false }
     }
 
@@ -60,11 +115,7 @@ export async function syncPricingFromSupabase(): Promise<PriceSyncResult> {
     }
 
     if (settings) {
-      localStorage.setItem(PRICING_CONFIG_KEY, JSON.stringify({
-        attendantDiscountLimitPct: Number(settings.attendant_discount_limit_pct ?? DEFAULT_CONFIG.attendantDiscountLimitPct),
-        cardInstallmentFeePct: Number(settings.card_installment_fee_pct ?? DEFAULT_CONFIG.cardInstallmentFeePct),
-        maxInstallments: Number(settings.max_installments ?? DEFAULT_CONFIG.maxInstallments),
-      }))
+      localStorage.setItem(PRICING_CONFIG_KEY, JSON.stringify(configRowToSettings(settings as PricingConfigRow)))
     }
 
     return { remoteReady: true, loaded: true }
@@ -75,8 +126,9 @@ export async function syncPricingFromSupabase(): Promise<PriceSyncResult> {
 }
 
 export function getPriceCatalog(): PriceCatalogItem[] {
+  const baseCatalog = getRemoteCatalog() || PRICE_CATALOG
   const overrides = getOverrides()
-  return PRICE_CATALOG.map((item) => ({
+  return baseCatalog.map((item) => ({
     ...item,
     services: item.services.map((service) => ({
       ...service,
@@ -114,13 +166,42 @@ export async function saveServicePrice(itemId: string, serviceKey: string, updat
 
   if (!isSupabaseEnabled) return
 
+  const existing = getPriceCatalog()
+    .find((item) => item.id === itemId)
+    ?.services.find((service) => service.key === serviceKey)
+  const finalPrice = updates.finalPrice ?? existing?.finalPrice ?? null
+  const costPrice = updates.costPrice ?? existing?.costPrice ?? null
+  const installmentPrice = finalPrice === null ? null : calculateInstallmentPrice(finalPrice)
+
+  const servicePayload = {
+    catalog_id: itemId,
+    key: serviceKey,
+    label: updates.label || existing?.label || serviceKey,
+    source_label: updates.sourceLabel || existing?.sourceLabel || null,
+    quality: updates.quality ?? existing?.quality ?? null,
+    cost_price: costPrice,
+    final_price: finalPrice,
+    installment_price: installmentPrice,
+    note: updates.note ?? existing?.note ?? null,
+  }
+
+  const { error: serviceError } = await supabase
+    .from('price_services')
+    .upsert(servicePayload, { onConflict: 'catalog_id,key' })
+
+  if (!serviceError) {
+    localStorage.removeItem(PRICE_OVERRIDES_KEY)
+    await syncPricingFromSupabase()
+    return
+  }
+
   const { error } = await supabase
     .from('price_overrides')
     .upsert({
       item_id: itemId,
       service_key: serviceKey,
-      cost_price: updates.costPrice ?? null,
-      final_price: updates.finalPrice ?? null,
+      cost_price: costPrice,
+      final_price: finalPrice,
       catalog_version: PRICE_CATALOG_VERSION,
       updated_by: userId || null,
       updated_at: new Date().toISOString(),
@@ -134,15 +215,25 @@ export async function savePricingConfigToSupabase(config: PricingConfig, userId?
 
   if (!isSupabaseEnabled) return
 
+  const configPayload = {
+    id: 'default',
+    attendant_discount_limit_pct: config.attendantDiscountLimitPct,
+    card_installment_fee_pct: config.cardInstallmentFeePct,
+    max_installments: config.maxInstallments,
+    updated_at: new Date().toISOString(),
+  }
+
+  const { error: configError } = await supabase
+    .from('pricing_config')
+    .upsert(configPayload, { onConflict: 'id' })
+
+  if (!configError) return
+
   const { error } = await supabase
     .from('pricing_settings')
     .upsert({
-      id: 'default',
-      attendant_discount_limit_pct: config.attendantDiscountLimitPct,
-      card_installment_fee_pct: config.cardInstallmentFeePct,
-      max_installments: config.maxInstallments,
+      ...configPayload,
       updated_by: userId || null,
-      updated_at: new Date().toISOString(),
     }, { onConflict: 'id' })
 
   if (error) throw error
@@ -190,6 +281,45 @@ function getOverrides(): ServiceOverrides {
   }
 }
 
+function getRemoteCatalog(): PriceCatalogItem[] | null {
+  try {
+    const parsed = JSON.parse(localStorage.getItem(REMOTE_PRICE_CATALOG_KEY) || 'null') as PriceCatalogItem[] | null
+    if (!Array.isArray(parsed) || parsed.length === 0) return null
+    return parsed
+  } catch {
+    return null
+  }
+}
+
+function rowsToCatalog(catalogRows: PriceCatalogRow[], serviceRows: PriceServiceRow[]): PriceCatalogItem[] {
+  const servicesByCatalog = serviceRows.reduce<Record<string, PriceService[]>>((acc, row) => {
+    if (!row.catalog_id || !row.key || !row.label) return acc
+    const list = acc[row.catalog_id] || []
+    list.push({
+      key: row.key,
+      label: row.label,
+      sourceLabel: row.source_label || row.label,
+      quality: row.quality || null,
+      finalPrice: toNumberOrNull(row.final_price),
+      installmentPrice: toNumberOrNull(row.installment_price),
+      costPrice: toNumberOrNull(row.cost_price),
+      note: row.note || null,
+    })
+    acc[row.catalog_id] = list
+    return acc
+  }, {})
+
+  return catalogRows
+    .filter((row) => row.id && row.brand && row.model)
+    .map((row) => ({
+      id: row.id,
+      brand: row.brand,
+      model: row.model,
+      search: row.search || `${row.brand} ${row.model}`.toLowerCase(),
+      services: servicesByCatalog[row.id] || [],
+    }))
+}
+
 function rowsToOverrides(rows: PriceOverrideRow[]): ServiceOverrides {
   return rows.reduce<ServiceOverrides>((acc, row) => {
     if (row.catalog_version !== PRICE_CATALOG_VERSION) return acc
@@ -200,6 +330,25 @@ function rowsToOverrides(rows: PriceOverrideRow[]): ServiceOverrides {
     }
     return acc
   }, {})
+}
+
+function configRowToSettings(row: PricingConfigRow): PricingConfig {
+  return {
+    attendantDiscountLimitPct: toNumberOrDefault(row.attendant_discount_limit_pct, DEFAULT_CONFIG.attendantDiscountLimitPct),
+    cardInstallmentFeePct: toNumberOrDefault(row.card_installment_fee_pct, DEFAULT_CONFIG.cardInstallmentFeePct),
+    maxInstallments: toNumberOrDefault(row.max_installments, DEFAULT_CONFIG.maxInstallments),
+  }
+}
+
+function toNumberOrNull(value?: number | string | null) {
+  if (value === null || value === undefined || value === '') return null
+  const parsed = Number(value)
+  return Number.isFinite(parsed) ? parsed : null
+}
+
+function toNumberOrDefault(value: number | string | null | undefined, fallback: number) {
+  const parsed = toNumberOrNull(value)
+  return parsed === null ? fallback : parsed
 }
 
 function serviceOverrideKey(itemId: string, serviceKey: string) {

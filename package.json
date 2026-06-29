@@ -9,7 +9,9 @@
     "lint": "oxlint",
     "preview": "vite preview",
     "migrate": "node scripts/migrate.mjs",
-    "migrate:pricing": "node scripts/migrate.mjs 006",
+    "migrate:pricing": "node scripts/migrate.mjs 004_pricing.sql 006_pricing.sql",
+    "migrate:operations": "node scripts/migrate.mjs 005_operations_sales_audit.sql 006_sales_products_stock.sql 007_os_terms_settings.sql 008_supabase_operational_alignment.sql",
+    "migrate:latest": "node scripts/migrate.mjs 004_pricing.sql 005_operations_sales_audit.sql 006_pricing.sql 006_sales_products_stock.sql 007_os_terms_settings.sql 008_supabase_operational_alignment.sql",
     "seed:prices": "node scripts/seed-prices.mjs"
   },
   "dependencies": {

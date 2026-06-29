@@ -15,6 +15,19 @@ import path from 'path'
 import { fileURLToPath } from 'url'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
+const ENV_FILE = path.join(__dirname, '..', '.env')
+
+if (fs.existsSync(ENV_FILE)) {
+  const envText = fs.readFileSync(ENV_FILE, 'utf-8')
+  for (const line of envText.split(/\r?\n/)) {
+    const trimmed = line.trim()
+    if (!trimmed || trimmed.startsWith('#') || !trimmed.includes('=')) continue
+    const index = trimmed.indexOf('=')
+    const key = trimmed.slice(0, index).trim()
+    const value = trimmed.slice(index + 1).trim()
+    if (!process.env[key]) process.env[key] = value
+  }
+}
 
 const PROJECT_REF = process.env.SUPABASE_PROJECT_REF || ''
 const DB_PASSWORD = process.env.SUPABASE_DB_PASSWORD || ''
