@@ -12,6 +12,7 @@ import { compressImage, formatFileSize } from '@/lib/image-compressor'
 import { formatOsPhotoFileName, uploadToDrive } from '@/lib/google-drive'
 import { scanOsImage } from '@/lib/os-scanner'
 import { customersAdapter, devicesAdapter, isSupabaseEnabled, ordersAdapter } from '@/lib/storage-adapter'
+import { isValidCep, lookupCep, maskCep } from '@/lib/cep'
 import type { ServiceOrder, Customer, Device, CondicaoEstetica } from '@/types/database'
 import toast from 'react-hot-toast'
 
@@ -46,8 +47,15 @@ export function NewOrder() {
   const [nome, setNome] = useState('')
   const [telefone, setTelefone] = useState('')
   const [cpf, setCpf] = useState('')
+  const [cep, setCep] = useState('')
   const [endereco, setEndereco] = useState('')
+  const [numeroEndereco, setNumeroEndereco] = useState('')
+  const [complemento, setComplemento] = useState('')
+  const [bairro, setBairro] = useState('')
+  const [cidade, setCidade] = useState('')
+  const [uf, setUf] = useState('')
   const [dataHoraOrigem, setDataHoraOrigem] = useState('')
+  const [loadingCep, setLoadingCep] = useState(false)
 
   // Aparelho
   const [marca, setMarca] = useState('')
@@ -192,6 +200,13 @@ export function NewOrder() {
           nome: nome.trim(),
           telefone: telefone.trim(),
           cpf: cpf.trim() || null,
+          cep: cep.trim() || null,
+          logradouro: endereco.trim() || null,
+          numero: numeroEndereco.trim() || null,
+          complemento: complemento.trim() || null,
+          bairro: bairro.trim() || null,
+          cidade: cidade.trim() || null,
+          uf: uf.trim() || null,
         })
 
         const device = await devicesAdapter.create({
@@ -230,6 +245,13 @@ export function NewOrder() {
           nome: nome.trim(),
           telefone: telefone.trim(),
           cpf: cpf.trim() || null,
+          cep: cep.trim() || null,
+          logradouro: endereco.trim() || null,
+          numero: numeroEndereco.trim() || null,
+          complemento: complemento.trim() || null,
+          bairro: bairro.trim() || null,
+          cidade: cidade.trim() || null,
+          uf: uf.trim() || null,
           created_at: now,
         }
         const device: Device = {
@@ -309,6 +331,25 @@ export function NewOrder() {
     setCondicao((prev) => ({ ...prev, [key]: !prev[key as keyof CondicaoEstetica] }))
   }
 
+  const handleCepLookup = async () => {
+    if (!cep || !isValidCep(cep)) return
+    setLoadingCep(true)
+    try {
+      const address = await lookupCep(cep)
+      setCep(address.cep)
+      setEndereco(address.logradouro)
+      setBairro(address.bairro)
+      setCidade(address.cidade)
+      setUf(address.uf)
+      toast.success('Endereco preenchido pelo CEP')
+    } catch (err) {
+      const message = err instanceof Error ? err.message : 'Nao foi possivel consultar o CEP'
+      toast.error(message)
+    } finally {
+      setLoadingCep(false)
+    }
+  }
+
   return (
     <div className="px-5 pt-3 pb-6">
       {/* Header */}
@@ -350,7 +391,18 @@ export function NewOrder() {
         <Section title="Dados do cliente" icon={User}>
           <Input label="Nome *" value={nome} onChange={setNome} placeholder="Nome completo do cliente" />
           <Input label="Telefone *" value={telefone} onChange={setTelefone} placeholder="(16) 99999-9999" />
-          <Input label="Endereco" value={endereco} onChange={setEndereco} placeholder="Endereco encontrado na OS antiga" />
+          <Input label="CEP" value={cep} onChange={(value) => setCep(maskCep(value))} onBlur={handleCepLookup} placeholder="00000-000" />
+          {loadingCep && <div className="text-xs text-brand">Consultando CEP...</div>}
+          <Input label="Rua / logradouro" value={endereco} onChange={setEndereco} placeholder="Endereco encontrado na OS antiga" />
+          <div className="grid grid-cols-2 gap-3">
+            <Input label="Numero" value={numeroEndereco} onChange={setNumeroEndereco} placeholder="Numero" />
+            <Input label="Complemento" value={complemento} onChange={setComplemento} placeholder="Apto, bloco..." />
+          </div>
+          <Input label="Bairro" value={bairro} onChange={setBairro} placeholder="Bairro" />
+          <div className="grid grid-cols-[1fr_80px] gap-3">
+            <Input label="Cidade" value={cidade} onChange={setCidade} placeholder="Cidade" />
+            <Input label="UF" value={uf} onChange={(value) => setUf(value.toUpperCase().slice(0, 2))} placeholder="UF" />
+          </div>
           <Input label="CPF" value={cpf} onChange={setCpf} placeholder="000.000.000-00 (opcional)" />
           {dataHoraOrigem && (
             <div className="rounded-xl bg-white/5 border border-white/10 px-3 py-2">
@@ -628,8 +680,8 @@ function Section({ title, icon: Icon, children }: { title: string; icon: typeof 
   )
 }
 
-function Input({ label, value, onChange, placeholder, type = 'text' }: {
-  label: string; value: string; onChange: (v: string) => void; placeholder: string; type?: string
+function Input({ label, value, onChange, placeholder, type = 'text', onBlur }: {
+  label: string; value: string; onChange: (v: string) => void; placeholder: string; type?: string; onBlur?: () => void
 }) {
   return (
     <div>
@@ -638,6 +690,7 @@ function Input({ label, value, onChange, placeholder, type = 'text' }: {
         type={type}
         value={value}
         onChange={(e) => onChange(e.target.value)}
+        onBlur={onBlur}
         placeholder={placeholder}
         className="w-full h-11 px-3 rounded-xl bg-surface-input border border-white/5 focus:border-brand outline-none text-sm placeholder:text-gray-600"
       />

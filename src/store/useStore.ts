@@ -1,24 +1,60 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
-import type { ServiceOrder, AppUser } from '@/types/database'
+import type {
+  ServiceOrder,
+  AppUser,
+  Customer,
+  Supplier,
+  SaleDevice,
+  DeviceSale,
+  AuditLog,
+  AppSettings,
+} from '@/types/database'
 import type { AppNotification } from '@/types/notifications'
-import { authAdapter, ordersAdapter, isSupabaseEnabled } from '@/lib/storage-adapter'
+import {
+  authAdapter,
+  ordersAdapter,
+  customersAdapter,
+  suppliersAdapter,
+  saleDevicesAdapter,
+  deviceSalesAdapter,
+  auditLogsAdapter,
+  appSettingsAdapter,
+  isSupabaseEnabled,
+} from '@/lib/storage-adapter'
 
 interface AppState {
   user: AppUser | null
   users: AppUser[]
   orders: ServiceOrder[]
+  customers: Customer[]
+  suppliers: Supplier[]
+  saleDevices: SaleDevice[]
+  deviceSales: DeviceSale[]
+  auditLogs: AuditLog[]
+  settings: AppSettings
   notifications: AppNotification[]
   osCounter: number
+  saleCounter: number
   loading: boolean
   authReady: boolean
 
   setUser: (user: AppUser | null) => void
   setUsers: (users: AppUser[]) => void
   setOrders: (orders: ServiceOrder[]) => void
+  addCustomer: (customer: Customer) => void
+  updateCustomer: (id: string, updates: Partial<Customer>) => void
   addOrder: (order: ServiceOrder) => void
   updateOrder: (id: string, updates: Partial<ServiceOrder>) => void
   deleteOrder: (id: string) => void
+  addSupplier: (supplier: Supplier) => void
+  updateSupplier: (id: string, updates: Partial<Supplier>) => void
+  addSaleDevice: (device: SaleDevice) => void
+  updateSaleDevice: (id: string, updates: Partial<SaleDevice>) => void
+  addDeviceSale: (sale: DeviceSale) => void
+  cancelDeviceSale: (saleId: string, reason: string, returnToStock: boolean) => void
+  addAuditLog: (log: AuditLog) => void
+  updateSettings: (settings: Partial<AppSettings>) => void
   addUser: (user: AppUser) => void
   updateUser: (id: string, updates: Partial<AppUser>) => void
   removeUser: (id: string) => void
@@ -26,6 +62,7 @@ interface AppState {
   markNotificationRead: (id: string) => void
   markAllNotificationsRead: () => void
   nextOsNumber: () => string
+  nextSaleNumber: () => string
   setLoading: (loading: boolean) => void
   initializeAuth: () => Promise<void>
   signOut: () => Promise<void>
@@ -46,8 +83,18 @@ export const useStore = create<AppState>()(
         { id: 'u3', nome: 'Léo Martins', email: 'leo@amocelular.com', role: 'tecnico', ativo: true, telefone: '(16) 99000-0002', created_at: '2026-02-15T00:00:00Z' },
       ],
       orders: DEMO_DATA.orders,
+      customers: DEMO_DATA.customers,
+      suppliers: [],
+      saleDevices: [],
+      deviceSales: [],
+      auditLogs: [],
+      settings: {
+        warranty_terms: 'A garantia cobre exclusivamente o servico realizado e as pecas substituidas, respeitando mau uso, queda, oxidacao e violacao do aparelho.',
+        sale_terms: 'Declaro estar ciente das condicoes do aparelho, garantia informada e forma de pagamento registrada neste recibo.',
+      },
       notifications: DEMO_DATA.notifications,
       osCounter: 124,
+      saleCounter: 0,
       loading: false,
       authReady: false,
       isCloudConnected: isSupabaseEnabled,
@@ -55,8 +102,32 @@ export const useStore = create<AppState>()(
       setUser: (user) => set({ user }),
       setUsers: (users) => set({ users }),
       setOrders: (orders) => set({ orders }),
+      addCustomer: (customer) => {
+        set((s) => ({ customers: [customer, ...s.customers] }))
+        if (isSupabaseEnabled) {
+          void customersAdapter.create(customer).catch((err) => {
+            console.warn('Falha ao criar cliente no Supabase:', err)
+          })
+        }
+      },
+      updateCustomer: (id, updates) => {
+        set((s) => ({
+          customers: s.customers.map((c) => c.id === id ? { ...c, ...updates } : c),
+          orders: s.orders.map((o) => o.customer_id === id ? { ...o, customer: o.customer ? { ...o.customer, ...updates } : o.customer } : o),
+        }))
+        if (isSupabaseEnabled) {
+          void customersAdapter.update(id, updates).catch((err) => {
+            console.warn('Falha ao atualizar cliente no Supabase:', err)
+          })
+        }
+      },
 
-      addOrder: (order) => set((s) => ({ orders: [order, ...s.orders] })),
+      addOrder: (order) => set((s) => ({
+        orders: [order, ...s.orders],
+        customers: order.customer && !s.customers.some((c) => c.id === order.customer_id)
+          ? [order.customer, ...s.customers]
+          : s.customers,
+      })),
 
       updateOrder: (id, updates) => {
         set((s) => ({
@@ -92,6 +163,106 @@ export const useStore = create<AppState>()(
         users: s.users.filter((u) => u.id !== id),
       })),
 
+      addSupplier: (supplier) => {
+        set((s) => ({ suppliers: [supplier, ...s.suppliers] }))
+        if (isSupabaseEnabled) {
+          void suppliersAdapter.create(supplier).catch((err) => {
+            console.warn('Falha ao criar fornecedor no Supabase:', err)
+          })
+        }
+      },
+      updateSupplier: (id, updates) => {
+        const nextUpdates = { ...updates, updated_at: new Date().toISOString() }
+        set((s) => ({
+          suppliers: s.suppliers.map((supplier) => (
+            supplier.id === id ? { ...supplier, ...nextUpdates } : supplier
+          )),
+        }))
+        if (isSupabaseEnabled) {
+          void suppliersAdapter.update(id, nextUpdates).catch((err) => {
+            console.warn('Falha ao atualizar fornecedor no Supabase:', err)
+          })
+        }
+      },
+
+      addSaleDevice: (device) => {
+        set((s) => ({ saleDevices: [device, ...s.saleDevices] }))
+        if (isSupabaseEnabled) {
+          void saleDevicesAdapter.create(device).catch((err) => {
+            console.warn('Falha ao criar aparelho de venda no Supabase:', err)
+          })
+        }
+      },
+      updateSaleDevice: (id, updates) => {
+        const nextUpdates = { ...updates, updated_at: new Date().toISOString() }
+        set((s) => ({
+          saleDevices: s.saleDevices.map((device) => (
+            device.id === id ? { ...device, ...nextUpdates } : device
+          )),
+        }))
+        if (isSupabaseEnabled) {
+          void saleDevicesAdapter.update(id, nextUpdates).catch((err) => {
+            console.warn('Falha ao atualizar aparelho de venda no Supabase:', err)
+          })
+        }
+      },
+      addDeviceSale: (sale) => {
+        set((s) => ({
+          deviceSales: [sale, ...s.deviceSales],
+          saleDevices: s.saleDevices.map((device) => (
+            device.id === sale.device_id ? { ...device, status: 'vendido', updated_at: sale.sold_at } : device
+          )),
+        }))
+        if (isSupabaseEnabled) {
+          void deviceSalesAdapter.create(sale)
+            .then(() => saleDevicesAdapter.update(sale.device_id, { status: 'vendido', updated_at: sale.sold_at }))
+            .catch((err) => {
+              console.warn('Falha ao criar venda no Supabase:', err)
+            })
+        }
+      },
+      cancelDeviceSale: (saleId, reason, returnToStock) => set((s) => {
+        const sale = s.deviceSales.find((item) => item.id === saleId)
+        const cancelledAt = new Date().toISOString()
+        if (isSupabaseEnabled && sale) {
+          void deviceSalesAdapter.update(saleId, { cancel_reason: reason, cancelled_at: cancelledAt })
+            .then(() => (
+              returnToStock
+                ? saleDevicesAdapter.update(sale.device_id, { status: 'disponivel', updated_at: cancelledAt })
+                : undefined
+            ))
+            .catch((err) => {
+              console.warn('Falha ao cancelar venda no Supabase:', err)
+            })
+        }
+        return {
+          deviceSales: s.deviceSales.map((item) => (
+            item.id === saleId ? { ...item, cancel_reason: reason, cancelled_at: cancelledAt } : item
+          )),
+          saleDevices: returnToStock && sale
+            ? s.saleDevices.map((device) => (
+              device.id === sale.device_id ? { ...device, status: 'disponivel', updated_at: cancelledAt } : device
+            ))
+            : s.saleDevices,
+        }
+      }),
+      addAuditLog: (log) => {
+        set((s) => ({ auditLogs: [log, ...s.auditLogs] }))
+        if (isSupabaseEnabled) {
+          void auditLogsAdapter.create(log).catch((err) => {
+            console.warn('Falha ao registrar auditoria no Supabase:', err)
+          })
+        }
+      },
+      updateSettings: (settings) => {
+        set((s) => ({ settings: { ...s.settings, ...settings } }))
+        if (isSupabaseEnabled) {
+          void appSettingsAdapter.update(settings).catch((err) => {
+            console.warn('Falha ao salvar configuracoes no Supabase:', err)
+          })
+        }
+      },
+
       addNotification: (n) => set((s) => ({
         notifications: [n, ...s.notifications],
       })),
@@ -109,6 +280,13 @@ export const useStore = create<AppState>()(
         set({ osCounter: counter })
         const year = new Date().getFullYear()
         return `AMO-${year}-${String(counter).padStart(6, '0')}`
+      },
+
+      nextSaleNumber: () => {
+        const counter = get().saleCounter + 1
+        set({ saleCounter: counter })
+        const year = new Date().getFullYear()
+        return `VEN-${year}-${String(counter).padStart(6, '0')}`
       },
 
       setLoading: (loading) => set({ loading }),
@@ -135,22 +313,45 @@ export const useStore = create<AppState>()(
         } catch (err) {
           console.warn('Falha ao sair do Supabase:', err)
         } finally {
-          set({ user: null, orders: [], notifications: [], loading: false })
+          set({ user: null, orders: [], customers: [], notifications: [], loading: false })
         }
       },
 
       resetToDemo: () => set({
         orders: DEMO_DATA.orders,
+        customers: DEMO_DATA.customers,
+        suppliers: [],
+        saleDevices: [],
+        deviceSales: [],
+        auditLogs: [],
         notifications: DEMO_DATA.notifications,
         osCounter: 124,
+        saleCounter: 0,
       }),
 
       syncFromSupabase: async () => {
         if (!isSupabaseEnabled) return
         set({ loading: true })
         try {
-          const orders = await ordersAdapter.list()
-          set({ orders, loading: false })
+          const [customers, orders, suppliers, saleDevices, auditLogs, cloudSettings] = await Promise.all([
+            customersAdapter.list(),
+            ordersAdapter.list(),
+            suppliersAdapter.list(),
+            saleDevicesAdapter.list(),
+            auditLogsAdapter.list(),
+            appSettingsAdapter.get(),
+          ])
+          const deviceSales = await deviceSalesAdapter.list(customers, saleDevices)
+          set({
+            customers,
+            orders,
+            suppliers,
+            saleDevices,
+            deviceSales,
+            auditLogs,
+            settings: cloudSettings || get().settings,
+            loading: false,
+          })
         } catch (err) {
           console.warn('Falha ao sincronizar com Supabase:', err)
           set({ loading: false })
@@ -159,16 +360,38 @@ export const useStore = create<AppState>()(
     }),
     {
       name: 'amo-os-storage',
-      version: 2,
+      version: 3,
       partialize: (state) => ({
         users: state.users,
         orders: state.orders,
+        customers: state.customers,
+        suppliers: state.suppliers,
+        saleDevices: state.saleDevices,
+        deviceSales: state.deviceSales,
+        auditLogs: state.auditLogs,
+        settings: state.settings,
         notifications: state.notifications,
         osCounter: state.osCounter,
+        saleCounter: state.saleCounter,
       }),
       migrate: (persisted) => {
         if (!persisted || typeof persisted !== 'object') return persisted
-        return { ...(persisted as object), user: null, authReady: false, loading: false }
+        return {
+          customers: DEMO_DATA.customers,
+          suppliers: [],
+          saleDevices: [],
+          deviceSales: [],
+          auditLogs: [],
+          settings: {
+            warranty_terms: 'A garantia cobre exclusivamente o servico realizado e as pecas substituidas, respeitando mau uso, queda, oxidacao e violacao do aparelho.',
+            sale_terms: 'Declaro estar ciente das condicoes do aparelho, garantia informada e forma de pagamento registrada neste recibo.',
+          },
+          saleCounter: 0,
+          ...(persisted as object),
+          user: null,
+          authReady: false,
+          loading: false,
+        }
       },
     },
   ),
@@ -208,5 +431,5 @@ function buildDemoData() {
     { id: 'n3', title: 'Peça chegou', body: 'Display Redmi Note 12 disponível para retirada no fornecedor.', read: false, created_at: '2026-06-26T07:00:00Z', order_id: 'o4' },
   ]
 
-  return { orders, notifications }
+  return { customers: customers as Customer[], orders, notifications }
 }

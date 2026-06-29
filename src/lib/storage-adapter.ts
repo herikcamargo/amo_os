@@ -9,7 +9,17 @@
 
 import { createClient } from '@supabase/supabase-js'
 import { supabase, isDemoMode, supabaseUrl, supabaseAnonKey } from './supabase'
-import type { ServiceOrder, Customer, Device, AppUser } from '@/types/database'
+import type {
+  ServiceOrder,
+  Customer,
+  Device,
+  AppUser,
+  Supplier,
+  SaleDevice,
+  DeviceSale,
+  AuditLog,
+  AppSettings,
+} from '@/types/database'
 
 export const isSupabaseEnabled = !isDemoMode
 
@@ -71,6 +81,14 @@ export const ordersAdapter = {
         diagnostico: updates.diagnostico,
         servico_executado: updates.servico_executado,
         pecas_utilizadas: updates.pecas_utilizadas,
+        part_warranty: updates.part_warranty,
+        delivery_terms: updates.delivery_terms,
+        delivery_notes: updates.delivery_notes,
+        delivery_responsible: updates.delivery_responsible,
+        payment_method: updates.payment_method,
+        payment_status: updates.payment_status,
+        printed_entrada_at: updates.printed_entrada_at,
+        printed_saida_at: updates.printed_saida_at,
         valor_servico: updates.valor_servico,
         garantia_dias: updates.garantia_dias,
       })
@@ -120,6 +138,18 @@ export const customersAdapter = {
     if (error) throw error
     return data || []
   },
+
+  async update(id: string, updates: Partial<Customer>): Promise<Customer> {
+    if (!isSupabaseEnabled) throw new Error('Supabase nao configurado')
+    const { data, error } = await supabase
+      .from('customers')
+      .update(updates)
+      .eq('id', id)
+      .select('*')
+      .single()
+    if (error) throw error
+    return data
+  },
 }
 
 // ───────── DEVICES ─────────
@@ -133,6 +163,121 @@ export const devicesAdapter = {
       .select()
       .single()
 
+    if (error) throw error
+    return data
+  },
+}
+
+// â”€â”€â”€â”€â”€â”€â”€â”€â”€ SUPPLIERS / SALES / AUDIT â”€â”€â”€â”€â”€â”€â”€â”€â”€
+export const suppliersAdapter = {
+  async list(): Promise<Supplier[]> {
+    if (!isSupabaseEnabled) return []
+    const { data, error } = await supabase.from('suppliers').select('*').order('nome')
+    if (error) throw error
+    return data || []
+  },
+
+  async create(supplier: Supplier): Promise<Supplier> {
+    if (!isSupabaseEnabled) throw new Error('Supabase nao configurado')
+    const { data, error } = await supabase.from('suppliers').insert(supplier).select('*').single()
+    if (error) throw error
+    return data
+  },
+
+  async update(id: string, updates: Partial<Supplier>): Promise<Supplier> {
+    if (!isSupabaseEnabled) throw new Error('Supabase nao configurado')
+    const { data, error } = await supabase.from('suppliers').update(updates).eq('id', id).select('*').single()
+    if (error) throw error
+    return data
+  },
+}
+
+export const saleDevicesAdapter = {
+  async list(): Promise<SaleDevice[]> {
+    if (!isSupabaseEnabled) return []
+    const { data, error } = await supabase.from('sale_devices').select('*').order('created_at', { ascending: false })
+    if (error) throw error
+    return data || []
+  },
+
+  async create(device: SaleDevice): Promise<SaleDevice> {
+    if (!isSupabaseEnabled) throw new Error('Supabase nao configurado')
+    const { data, error } = await supabase.from('sale_devices').insert(device).select('*').single()
+    if (error) throw error
+    return data
+  },
+
+  async update(id: string, updates: Partial<SaleDevice>): Promise<SaleDevice> {
+    if (!isSupabaseEnabled) throw new Error('Supabase nao configurado')
+    const { data, error } = await supabase.from('sale_devices').update(updates).eq('id', id).select('*').single()
+    if (error) throw error
+    return data
+  },
+}
+
+export const deviceSalesAdapter = {
+  async list(customers: Customer[], devices: SaleDevice[]): Promise<DeviceSale[]> {
+    if (!isSupabaseEnabled) return []
+    const { data, error } = await supabase.from('device_sales').select('*').order('sold_at', { ascending: false })
+    if (error) throw error
+    return (data || []).map((sale) => ({
+      ...sale,
+      customer: customers.find((customer) => customer.id === sale.customer_id),
+      device: devices.find((device) => device.id === sale.device_id),
+    })) as DeviceSale[]
+  },
+
+  async create(sale: DeviceSale): Promise<DeviceSale> {
+    if (!isSupabaseEnabled) throw new Error('Supabase nao configurado')
+    const { customer, device, ...payload } = sale
+    const { data, error } = await supabase.from('device_sales').insert(payload).select('*').single()
+    if (error) throw error
+    return { ...data, customer, device } as DeviceSale
+  },
+
+  async update(id: string, updates: Partial<DeviceSale>): Promise<DeviceSale> {
+    if (!isSupabaseEnabled) throw new Error('Supabase nao configurado')
+    const { customer, device, ...payload } = updates
+    const { data, error } = await supabase.from('device_sales').update(payload).eq('id', id).select('*').single()
+    if (error) throw error
+    return { ...data, customer, device } as DeviceSale
+  },
+}
+
+export const auditLogsAdapter = {
+  async list(): Promise<AuditLog[]> {
+    if (!isSupabaseEnabled) return []
+    const { data, error } = await supabase.from('audit_logs').select('*').order('created_at', { ascending: false }).limit(300)
+    if (error) throw error
+    return data || []
+  },
+
+  async create(log: AuditLog): Promise<void> {
+    if (!isSupabaseEnabled) return
+    const { error } = await supabase.from('audit_logs').insert(log)
+    if (error) throw error
+  },
+}
+
+export const appSettingsAdapter = {
+  async get(): Promise<AppSettings | null> {
+    if (!isSupabaseEnabled) return null
+    const { data, error } = await supabase
+      .from('app_settings')
+      .select('warranty_terms, sale_terms')
+      .eq('id', 'default')
+      .maybeSingle()
+    if (error) throw error
+    return data
+  },
+
+  async update(settings: Partial<AppSettings>): Promise<AppSettings> {
+    if (!isSupabaseEnabled) throw new Error('Supabase nao configurado')
+    const { data, error } = await supabase
+      .from('app_settings')
+      .upsert({ id: 'default', ...settings, updated_at: new Date().toISOString() })
+      .select('warranty_terms, sale_terms')
+      .single()
     if (error) throw error
     return data
   },
@@ -308,6 +453,14 @@ interface ServiceOrderRow {
   diagnostico?: string | null
   servico_executado?: string | null
   pecas_utilizadas?: string | null
+  part_warranty?: ServiceOrder['part_warranty']
+  delivery_terms?: string | null
+  delivery_notes?: string | null
+  delivery_responsible?: string | null
+  payment_method?: string | null
+  payment_status?: string | null
+  printed_entrada_at?: string | null
+  printed_saida_at?: string | null
   valor_servico: number
   garantia_dias: number
   created_by: string
@@ -316,6 +469,13 @@ interface ServiceOrderRow {
   cliente_nome?: string
   cliente_telefone?: string
   cliente_cpf?: string | null
+  cliente_cep?: string | null
+  cliente_logradouro?: string | null
+  cliente_numero?: string | null
+  cliente_complemento?: string | null
+  cliente_bairro?: string | null
+  cliente_cidade?: string | null
+  cliente_uf?: string | null
   device_marca?: string
   device_modelo?: string
   device_cor?: string
@@ -335,6 +495,14 @@ function rowToOrder(row: ServiceOrderRow): ServiceOrder {
     diagnostico: row.diagnostico,
     servico_executado: row.servico_executado,
     pecas_utilizadas: row.pecas_utilizadas,
+    part_warranty: row.part_warranty,
+    delivery_terms: row.delivery_terms,
+    delivery_notes: row.delivery_notes,
+    delivery_responsible: row.delivery_responsible,
+    payment_method: row.payment_method,
+    payment_status: row.payment_status,
+    printed_entrada_at: row.printed_entrada_at,
+    printed_saida_at: row.printed_saida_at,
     valor_servico: row.valor_servico,
     garantia_dias: row.garantia_dias,
     created_by: row.created_by,
@@ -345,6 +513,13 @@ function rowToOrder(row: ServiceOrderRow): ServiceOrder {
       nome: row.cliente_nome,
       telefone: row.cliente_telefone || '',
       cpf: row.cliente_cpf,
+      cep: row.cliente_cep,
+      logradouro: row.cliente_logradouro,
+      numero: row.cliente_numero,
+      complemento: row.cliente_complemento,
+      bairro: row.cliente_bairro,
+      cidade: row.cliente_cidade,
+      uf: row.cliente_uf,
       created_at: row.created_at,
     } : undefined,
     device: row.device_marca ? {

@@ -1,4 +1,4 @@
-import { Home, Files, Users, Settings, Plus, Search } from 'lucide-react'
+import { Home, Files, Settings, Plus, Search, Package } from 'lucide-react'
 import { useNavigate, useLocation } from 'react-router-dom'
 
 const LEFT = [
@@ -7,7 +7,7 @@ const LEFT = [
 ]
 const RIGHT = [
   { key: '/precos', label: 'Preços', icon: Search },
-  { key: '/clientes', label: 'Clientes', icon: Users },
+  { key: '/vendas', label: 'Vendas', icon: Package },
   { key: '/ajustes', label: 'Ajustes', icon: Settings },
 ]
 

@@ -1,8 +1,11 @@
+/* eslint-disable react/only-export-components */
 import {
-  Document, Page, Text, View, StyleSheet, pdf, Font,
+  Document, Page, Text, View, StyleSheet, pdf,
 } from '@react-pdf/renderer'
-import type { ServiceOrder } from '@/types/database'
-import { STATUS_CONFIG, CHECK_ENTRADA, brl } from '@/lib/constants'
+import type { AppSettings, DeviceSale, ServiceOrder } from '@/types/database'
+import { STATUS_CONFIG, CHECK_ENTRADA, CHECK_SAIDA, brl } from '@/lib/constants'
+
+export type OsPrintKind = 'entrada' | 'saida'
 
 const styles = StyleSheet.create({
   page: { padding: 30, fontSize: 10, fontFamily: 'Helvetica', color: '#222' },
@@ -41,11 +44,17 @@ const styles = StyleSheet.create({
 
 interface Props {
   order: ServiceOrder
+  kind?: OsPrintKind
+  settings?: AppSettings
 }
 
-function OsPdfDocument({ order }: Props) {
+function OsPdfDocument({ order, kind = 'entrada', settings }: Props) {
   const st = STATUS_CONFIG[order.status]
   const data = new Date(order.created_at).toLocaleDateString('pt-BR')
+  const isSaida = kind === 'saida'
+  const warrantyEnd = order.garantia_dias > 0
+    ? new Date(Date.now() + order.garantia_dias * 86400000).toLocaleDateString('pt-BR')
+    : '—'
 
   return (
     <Document>
@@ -60,7 +69,7 @@ function OsPdfDocument({ order }: Props) {
             <Text style={{ fontSize: 8, color: '#888', marginTop: 4 }}>Araraquara/SP</Text>
           </View>
           <View>
-            <Text style={styles.osNumber}>{order.numero}</Text>
+            <Text style={styles.osNumber}>{isSaida ? 'OS_SAIDA' : 'OS_ENTRADA'} · {order.numero}</Text>
             <Text style={styles.osDate}>Data: {data}</Text>
             <View style={[styles.statusBadge, { backgroundColor: st.dot + '22', marginTop: 4 }]}>
               <Text style={{ color: st.dot }}>{st.label}</Text>
@@ -120,9 +129,9 @@ function OsPdfDocument({ order }: Props) {
 
         {/* Checklist de entrada */}
         <View style={styles.section}>
-          <Text style={styles.sectionTitle}>Checklist de Entrada</Text>
+          <Text style={styles.sectionTitle}>{isSaida ? 'Testes realizados antes da entrega' : 'Checklist de Entrada'}</Text>
           <View style={styles.checkGrid}>
-            {CHECK_ENTRADA.map((item, i) => {
+            {(isSaida ? CHECK_SAIDA : CHECK_ENTRADA).map((item, i) => {
               const ok = i % 4 !== 0
               return (
                 <View key={item} style={styles.checkItem}>
@@ -169,6 +178,40 @@ function OsPdfDocument({ order }: Props) {
           </View>
         )}
 
+        {isSaida && (
+          <View style={styles.section}>
+            <Text style={styles.sectionTitle}>Saida e retirada</Text>
+            <View style={styles.row}>
+              <Text style={styles.label}>Data/hora retirada</Text>
+              <Text style={styles.value}>{new Date().toLocaleString('pt-BR')}</Text>
+            </View>
+            <View style={styles.row}>
+              <Text style={styles.label}>Servico realizado</Text>
+              <Text style={styles.value}>{order.servico_executado || order.diagnostico || '—'}</Text>
+            </View>
+            <View style={styles.row}>
+              <Text style={styles.label}>Pecas substituidas</Text>
+              <Text style={styles.value}>{order.part_warranty?.description || order.pecas_utilizadas || '—'}</Text>
+            </View>
+            <View style={styles.row}>
+              <Text style={styles.label}>Pagamento</Text>
+              <Text style={styles.value}>{order.payment_method || 'A preencher'} · {order.payment_status || 'A preencher'}</Text>
+            </View>
+            <View style={styles.row}>
+              <Text style={styles.label}>Garantia ate</Text>
+              <Text style={styles.value}>{warrantyEnd}</Text>
+            </View>
+            <View style={styles.problema}>
+              <Text>{settings?.warranty_terms || order.delivery_terms || 'Termos de garantia nao configurados.'}</Text>
+            </View>
+            <View style={[styles.problema, { marginTop: 8 }]}>
+              <Text>
+                Declaro que recebi o aparelho acima identificado, tive a oportunidade de conferir seu funcionamento e estou de acordo com os servicos realizados, condicoes de entrega e termos de garantia apresentados neste documento.
+              </Text>
+            </View>
+          </View>
+        )}
+
         {/* Assinaturas */}
         <View style={styles.signatureSection}>
           <View style={styles.signatureBox}>
@@ -189,17 +232,73 @@ function OsPdfDocument({ order }: Props) {
   )
 }
 
-export async function generateOsPdf(order: ServiceOrder): Promise<Blob> {
-  const blob = await pdf(<OsPdfDocument order={order} />).toBlob()
+export async function generateOsPdf(order: ServiceOrder, kind: OsPrintKind = 'entrada', settings?: AppSettings): Promise<Blob> {
+  const blob = await pdf(<OsPdfDocument order={order} kind={kind} settings={settings} />).toBlob()
   return blob
 }
 
-export function downloadOsPdf(order: ServiceOrder) {
-  generateOsPdf(order).then((blob) => {
+export function downloadOsPdf(order: ServiceOrder, kind: OsPrintKind = 'entrada', settings?: AppSettings) {
+  generateOsPdf(order, kind, settings).then((blob) => {
     const url = URL.createObjectURL(blob)
     const a = document.createElement('a')
     a.href = url
-    a.download = `${order.numero}.pdf`
+    a.download = `${order.numero}-${kind}.pdf`
+    document.body.appendChild(a)
+    a.click()
+    document.body.removeChild(a)
+    URL.revokeObjectURL(url)
+  })
+}
+
+function SaleReceiptDocument({ sale }: { sale: DeviceSale }) {
+  return (
+    <Document>
+      <Page size="A4" style={styles.page}>
+        <View style={styles.header}>
+          <View>
+            <Text style={styles.logo}>Amo<Text style={styles.logoRed}>Celular</Text></Text>
+            <Text style={styles.subtitle}>RECIBO DE VENDA</Text>
+          </View>
+          <View>
+            <Text style={styles.osNumber}>{sale.numero}</Text>
+            <Text style={styles.osDate}>{new Date(sale.sold_at).toLocaleString('pt-BR')}</Text>
+          </View>
+        </View>
+        <View style={styles.section}>
+          <Text style={styles.sectionTitle}>Cliente</Text>
+          <View style={styles.row}><Text style={styles.label}>Nome</Text><Text style={styles.value}>{sale.customer?.nome || '—'}</Text></View>
+          <View style={styles.row}><Text style={styles.label}>Telefone</Text><Text style={styles.value}>{sale.customer?.telefone || '—'}</Text></View>
+        </View>
+        <View style={styles.section}>
+          <Text style={styles.sectionTitle}>Aparelho</Text>
+          <View style={styles.row}><Text style={styles.label}>Modelo</Text><Text style={styles.value}>{sale.device?.marca} {sale.device?.modelo}</Text></View>
+          <View style={styles.row}><Text style={styles.label}>IMEI/Serie</Text><Text style={styles.value}>{sale.device?.imei1 || sale.device?.serial || '—'}</Text></View>
+          <View style={styles.row}><Text style={styles.label}>Garantia</Text><Text style={styles.value}>{sale.device?.garantia || '—'}</Text></View>
+        </View>
+        <View style={styles.section}>
+          <Text style={styles.sectionTitle}>Pagamento</Text>
+          <View style={styles.row}><Text style={styles.label}>Valor venda</Text><Text style={styles.value}>{brl(sale.valor_final)}</Text></View>
+          <View style={styles.row}><Text style={styles.label}>Forma</Text><Text style={styles.value}>{sale.forma_pagamento}</Text></View>
+          <View style={styles.row}><Text style={styles.label}>Entrada/parcelas</Text><Text style={styles.value}>{brl(sale.valor_entrada)} · {sale.parcelas}x</Text></View>
+        </View>
+        <View style={styles.problema}>
+          <Text>Recibo preparado para impressao A4/PDF e impressora nao fiscal. Venda sem emissao fiscal automatica neste momento.</Text>
+        </View>
+        <View style={styles.signatureSection}>
+          <View style={styles.signatureBox}><Text style={styles.signatureLabel}>Assinatura do cliente</Text></View>
+          <View style={styles.signatureBox}><Text style={styles.signatureLabel}>Assinatura da loja</Text></View>
+        </View>
+      </Page>
+    </Document>
+  )
+}
+
+export function downloadSaleReceiptPdf(sale: DeviceSale) {
+  pdf(<SaleReceiptDocument sale={sale} />).toBlob().then((blob) => {
+    const url = URL.createObjectURL(blob)
+    const a = document.createElement('a')
+    a.href = url
+    a.download = `${sale.numero}-recibo.pdf`
     document.body.appendChild(a)
     a.click()
     document.body.removeChild(a)
