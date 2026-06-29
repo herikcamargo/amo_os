@@ -70,15 +70,15 @@ export function Login() {
   }
 
   return (
-    <div className="min-h-screen bg-surface flex items-center justify-center px-6 py-10">
+    <div className="min-h-screen bg-surface flex items-center justify-center px-6 py-10 grain">
       <div className="w-full max-w-[380px]">
         <div className="text-center mb-10">
           <div className="text-[32px] font-black tracking-tight">
             Amo<span className="text-brand">Celular</span>
             <span className="text-brand text-xl align-top ml-0.5">♥</span>
           </div>
-          <div className="text-[10px] tracking-[0.25em] text-gray-500 font-medium mt-1.5">
-            ASSISTÊNCIA TÉCNICA
+          <div className="text-[10px] tracking-wide text-gray-500 font-medium mt-1">
+            Assistência técnica
           </div>
           <p className="text-gray-500 text-sm mt-4">Entre na sua conta para continuar</p>
         </div>
@@ -129,7 +129,7 @@ export function Login() {
         {allowDemoLogin && (
           <div className="mt-8">
             <div className="text-center mb-3">
-              <div className="text-[10px] uppercase tracking-wider text-gray-500 font-bold">
+              <div className="text-[11px] text-gray-500 font-medium">
                 Modo demonstração — entrar como:
               </div>
             </div>
@@ -143,7 +143,7 @@ export function Login() {
                     className="w-full flex items-center gap-3 p-3 rounded-xl bg-white/[0.03] border border-white/5 hover:bg-white/[0.06] hover:border-white/10 transition-all"
                   >
                     <div
-                      className="w-9 h-9 rounded-full flex items-center justify-center font-bold text-xs shrink-0"
+                      className="w-9 h-9 rounded-xl flex items-center justify-center font-bold text-xs shrink-0"
                       style={{ background: color + '22', color }}
                     >
                       {u.nome.charAt(0).toUpperCase()}

@@ -6,6 +6,19 @@
       "runtimeExecutable": "C:\\Program Files\\nodejs\\node.exe",
       "runtimeArgs": ["node_modules/vite/bin/vite.js", "--port", "5173"],
       "port": 5173
+    },
+    {
+      "name": "amocelular-dev",
+      "runtimeExecutable": "C:\\Program Files\\nodejs\\node.exe",
+      "runtimeArgs": ["C:/Users/herik/AmoCelular/start-dev.js", "--port", "5174"],
+      "port": 5174
+    },
+    {
+      "name": "vitoria",
+      "runtimeExecutable": "C:\\Program Files\\nodejs\\node.exe",
+      "runtimeArgs": ["C:/Users/herik/Documents/Vitoria/server.js"],
+      "port": 3500,
+      "autoPort": false
     }
   ]
 }

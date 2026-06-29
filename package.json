@@ -7,7 +7,10 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "oxlint",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "migrate": "node scripts/migrate.mjs",
+    "migrate:pricing": "node scripts/migrate.mjs 006",
+    "seed:prices": "node scripts/seed-prices.mjs"
   },
   "dependencies": {
     "@react-pdf/renderer": "^4.5.1",
@@ -28,6 +31,7 @@
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.2",
     "oxlint": "^1.69.0",
+    "pg": "^8.22.0",
     "tailwindcss": "^4.3.1",
     "typescript": "~6.0.2",
     "vite": "^8.1.0"

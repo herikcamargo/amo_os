@@ -13,7 +13,10 @@ export function StatusBadge({ status, size = 'md' }: Props) {
     : 'text-sm px-3 py-1.5 gap-2'
 
   return (
-    <span className={`inline-flex items-center rounded-full bg-white/5 font-semibold ${sizeClasses}`}>
+    <span
+      className={`inline-flex items-center rounded-full font-semibold ${sizeClasses}`}
+      style={{ background: st.bg, color: st.dot }}
+    >
       <span className="w-2 h-2 rounded-full shrink-0" style={{ background: st.dot }} />
       {st.label}
     </span>

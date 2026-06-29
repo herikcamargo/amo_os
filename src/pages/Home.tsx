@@ -66,7 +66,7 @@ export function Home() {
             Amo<span className="text-brand">Celular</span>
             <span className="text-brand text-lg align-top ml-0.5">♥</span>
           </div>
-          <div className="text-[10px] tracking-[0.25em] text-gray-500 font-medium mt-1.5">ASSISTÊNCIA TÉCNICA</div>
+          <div className="text-[10px] tracking-wide text-gray-500 font-medium mt-1">Assistência técnica</div>
         </div>
         <div className="flex items-center gap-2.5">
           <IconBtn onClick={() => navigate('/ordens')}><Search size={20} /></IconBtn>
@@ -127,8 +127,10 @@ export function Home() {
             <button
               key={c.key}
               onClick={() => handleCard(c.key)}
-              className="group relative text-left rounded-[20px] h-[160px] md:h-[180px] overflow-hidden border border-white/5 hover:border-white/15 transition-all hover:-translate-y-1 hover:shadow-xl"
+              className="group relative text-left rounded-[20px] h-[160px] md:h-[180px] overflow-hidden border border-white/5 hover:border-white/15 transition-all duration-300 hover:-translate-y-1"
               style={{ backgroundColor: '#161618' }}
+              onMouseEnter={(e) => e.currentTarget.style.boxShadow = `0 12px 40px ${c.glow}`}
+              onMouseLeave={(e) => e.currentTarget.style.boxShadow = 'none'}
             >
               {/* Background glow */}
               <div
@@ -174,7 +176,7 @@ export function Home() {
           <div className="flex items-center justify-between mb-2">
             <div className="flex items-center gap-2">
               <Clock size={16} className="text-brand" />
-              <span className="text-[13px] font-bold tracking-wide uppercase text-gray-200">Últimas ordens</span>
+              <span className="text-sm font-semibold text-gray-200">Últimas ordens</span>
             </div>
             <button
               onClick={() => navigate('/ordens')}
@@ -194,7 +196,7 @@ export function Home() {
         <div className="md:hidden bg-surface-card rounded-[20px] border border-white/5 p-4">
           <div className="flex items-center gap-2 mb-3">
             <BarChart3 size={16} className="text-brand" />
-            <span className="text-[13px] font-bold tracking-wide uppercase text-gray-200">Resumo do dia</span>
+            <span className="text-sm font-semibold text-gray-200">Resumo do dia</span>
           </div>
           <div className={`grid gap-3 ${canFinance ? 'grid-cols-3' : 'grid-cols-2'}`}>
             <MiniStat label="Abertas" value={stats.abertas} />
@@ -209,7 +211,7 @@ export function Home() {
         <div className="hidden md:block bg-surface-card rounded-[20px] border border-white/5 p-4">
           <div className="flex items-center gap-2 mb-4">
             <Bell size={16} className="text-brand" />
-            <span className="text-[13px] font-bold tracking-wide uppercase text-gray-200">Alertas</span>
+            <span className="text-sm font-semibold text-gray-200">Alertas</span>
           </div>
           <div className="space-y-2">
             {visibleNotifications.slice(0, 3).map((n) => (
@@ -234,7 +236,7 @@ export function Home() {
 function MiniStat({ label, value, color }: { label: string; value: number | string; color?: string }) {
   return (
     <div className="text-center">
-      <div className="text-2xl font-bold" style={{ color: color || '#fff' }}>{value}</div>
+      <div className="text-2xl font-bold tabular-nums" style={{ color: color || '#fff' }}>{value}</div>
       <div className="text-[11px] text-gray-500 mt-0.5">{label}</div>
     </div>
   )
@@ -254,9 +256,9 @@ function KpiBox({ label, value, icon: Icon, color }: { label: string; value: num
       <div className="relative">
         <div className="flex items-center gap-2 mb-2">
           <Icon size={16} style={{ color }} />
-          <span className="text-[11px] font-bold uppercase tracking-wider text-gray-500">{label}</span>
+          <span className="text-xs font-semibold text-gray-500">{label}</span>
         </div>
-        <div className="text-3xl font-bold" style={{ color }}>{value}</div>
+        <div className="text-3xl font-bold tabular-nums" style={{ color }}>{value}</div>
       </div>
     </div>
   )

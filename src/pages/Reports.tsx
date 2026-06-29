@@ -105,7 +105,7 @@ function KpiCard({ icon: Icon, label, value, color }: {
   return (
     <div className="bg-surface-card rounded-[16px] border border-white/5 p-4">
       <Icon size={18} style={{ color }} className="mb-2" />
-      <div className="text-2xl font-bold">{value}</div>
+      <div className="text-2xl font-bold tabular-nums">{value}</div>
       <div className="text-[11px] text-gray-500 mt-0.5">{label}</div>
     </div>
   )

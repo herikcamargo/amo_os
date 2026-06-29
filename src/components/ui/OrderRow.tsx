@@ -24,7 +24,7 @@ export function OrderRow({ order, onClick, showValue }: Props) {
       onClick={onClick}
       className="group w-full flex items-center gap-3 py-3 text-left hover:bg-white/[0.02] -mx-2 px-2 rounded-xl transition-colors"
     >
-      <div className="w-12 h-14 rounded-xl bg-surface-muted border border-white/5 flex items-center justify-center shrink-0 group-hover:border-brand/30 group-hover:scale-105 transition-all">
+      <div className="w-12 h-14 rounded-xl bg-surface-muted border border-white/5 flex items-center justify-center shrink-0 group-hover:border-brand/30 group-hover:scale-105 group-hover:shadow-[0_4px_16px_rgba(215,25,32,0.12)] transition-all">
         <Smartphone size={20} className="text-gray-500 group-hover:text-brand transition-colors" />
       </div>
       <div className="min-w-0 flex-1">
