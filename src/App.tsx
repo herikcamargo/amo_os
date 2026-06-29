@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { Routes, Route, Navigate } from 'react-router-dom'
 import { useStore } from '@/store/useStore'
+import { authAdapter } from '@/lib/storage-adapter'
 import { AppShell } from '@/components/layout/AppShell'
 import { Home } from '@/pages/Home'
 import { OrderList } from '@/pages/OrderList'
@@ -18,7 +19,7 @@ import { PriceLookup } from '@/pages/PriceLookup'
 import { DeviceSales } from '@/pages/DeviceSales'
 
 export default function App() {
-  const { user, authReady, isCloudConnected, initializeAuth, syncFromSupabase } = useStore()
+  const { user, authReady, isCloudConnected, initializeAuth, syncFromSupabase, signOut } = useStore()
 
   useEffect(() => {
     initializeAuth()
@@ -29,6 +30,17 @@ export default function App() {
       syncFromSupabase()
     }
   }, [authReady, user, isCloudConnected, syncFromSupabase])
+
+  useEffect(() => {
+    if (!authReady || !user || !isCloudConnected) return
+
+    const interval = window.setInterval(async () => {
+      const sessionUser = await authAdapter.getSession()
+      if (!sessionUser) await signOut()
+    }, 60 * 1000)
+
+    return () => window.clearInterval(interval)
+  }, [authReady, user, isCloudConnected, signOut])
 
   if (!authReady) {
     return <LoadingScreen />

@@ -30,9 +30,45 @@ type CreateOrderInput = Omit<ServiceOrder, 'id' | 'numero' | 'created_at' | 'upd
 type CreateDeviceInput = Omit<Device, 'id' | 'created_at'>
 
 const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i
+const AUTH_SESSION_STARTED_AT_KEY = 'amo-os-auth-session-started-at'
+export const AUTH_SESSION_LIMIT_MS = 12 * 60 * 60 * 1000
 
 function validUuidOrNull(value?: string | null) {
   return value && UUID_RE.test(value) ? value : null
+}
+
+function readStoredSessionStartedAt() {
+  const raw = localStorage.getItem(AUTH_SESSION_STARTED_AT_KEY)
+  if (!raw) return null
+  const value = Number(raw)
+  return Number.isFinite(value) ? value : null
+}
+
+function writeSessionStartedAt(value = Date.now()) {
+  localStorage.setItem(AUTH_SESSION_STARTED_AT_KEY, String(value))
+}
+
+function clearSessionStartedAt() {
+  localStorage.removeItem(AUTH_SESSION_STARTED_AT_KEY)
+}
+
+function getSessionStartedAt(session: { user?: { last_sign_in_at?: string | null } }) {
+  const stored = readStoredSessionStartedAt()
+  if (stored) return stored
+
+  const lastSignIn = Date.parse(session.user?.last_sign_in_at || '')
+  if (Number.isFinite(lastSignIn)) {
+    writeSessionStartedAt(lastSignIn)
+    return lastSignIn
+  }
+
+  const now = Date.now()
+  writeSessionStartedAt(now)
+  return now
+}
+
+function isSessionPastLimit(session: { user?: { last_sign_in_at?: string | null } }) {
+  return Date.now() - getSessionStartedAt(session) >= AUTH_SESSION_LIMIT_MS
 }
 
 // ───────── ORDERS ─────────
@@ -396,6 +432,7 @@ export const authAdapter = {
 
     const { data, error } = await supabase.auth.signInWithPassword({ email, password })
     if (error) throw error
+    writeSessionStartedAt(Date.now())
 
     const { data: profile, error: profileError } = await supabase
       .from('users')
@@ -404,16 +441,22 @@ export const authAdapter = {
       .maybeSingle()
 
     if (profile && !profileError) {
-      if (!profile.ativo) throw new Error('Usuario desativado. Fale com o administrador.')
+      if (!profile.ativo) {
+        await supabase.auth.signOut()
+        clearSessionStartedAt()
+        throw new Error('Usuario desativado. Fale com o administrador.')
+      }
       return profile as unknown as AppUser
     }
 
     await supabase.auth.signOut()
+    clearSessionStartedAt()
     throw new Error('Usuario sem perfil de acesso. Peça para um administrador cadastrar este e-mail em Ajustes > Usuarios.')
   },
 
   async signOut(): Promise<void> {
     if (isSupabaseEnabled) await supabase.auth.signOut()
+    clearSessionStartedAt()
   },
 
   async getSession(): Promise<AppUser | null> {
@@ -421,6 +464,11 @@ export const authAdapter = {
 
     const { data } = await supabase.auth.getSession()
     if (!data.session) return null
+    if (isSessionPastLimit(data.session)) {
+      await supabase.auth.signOut()
+      clearSessionStartedAt()
+      return null
+    }
 
     const { data: profile } = await supabase
       .from('users')
@@ -431,12 +479,14 @@ export const authAdapter = {
     if (profile) {
       if (!profile.ativo) {
         await supabase.auth.signOut()
+        clearSessionStartedAt()
         return null
       }
       return profile as unknown as AppUser
     }
 
     await supabase.auth.signOut()
+    clearSessionStartedAt()
     return null
   },
 }
