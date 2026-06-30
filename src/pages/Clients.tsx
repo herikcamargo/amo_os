@@ -1,4 +1,5 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
+import { useSearchParams } from 'react-router-dom'
 import { Search, User, Phone, MapPin, Pencil, Plus, X } from 'lucide-react'
 import { useStore } from '@/store/useStore'
 import { generateId } from '@/lib/utils'
@@ -20,6 +21,7 @@ const emptyCustomer = {
 }
 
 export function Clients() {
+  const [searchParams] = useSearchParams()
   const { customers, orders, addCustomer, updateCustomer, user, addAuditLog } = useStore()
   const [q, setQ] = useState('')
   const [editing, setEditing] = useState<Customer | null>(null)
@@ -57,6 +59,12 @@ export function Clients() {
       uf: customer.uf || '',
     } : emptyCustomer)
   }
+
+  useEffect(() => {
+    if (searchParams.get('novo') === '1') {
+      openForm()
+    }
+  }, [searchParams])
 
   const setField = (key: keyof typeof emptyCustomer, value: string) => {
     setForm((current) => ({ ...current, [key]: value }))

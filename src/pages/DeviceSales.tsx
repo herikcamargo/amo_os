@@ -1,4 +1,5 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
+import { useSearchParams } from 'react-router-dom'
 import {
   ArrowLeft, Check, Package, Plus, Receipt, Search, Smartphone, XCircle, Printer,
 } from 'lucide-react'
@@ -44,11 +45,15 @@ const initialProduct = {
 }
 
 export function DeviceSales() {
+  const [searchParams] = useSearchParams()
   const {
     customers, saleDevices, deviceSales, suppliers, user, nextSaleNumber,
     addCustomer, addSaleDevice, addDeviceSale, cancelDeviceSale, addAuditLog,
   } = useStore()
-  const [tab, setTab] = useState<'rapida' | 'estoque' | 'historico'>('rapida')
+  const [tab, setTab] = useState<'rapida' | 'estoque' | 'historico'>(() => {
+    const requested = searchParams.get('tab')
+    return requested === 'estoque' || requested === 'historico' ? requested : 'rapida'
+  })
   const [step, setStep] = useState<1 | 2 | 3>(1)
   const [category, setCategory] = useState<ProductCategory>('celular')
   const [productQuery, setProductQuery] = useState('')
@@ -65,6 +70,15 @@ export function DeviceSales() {
   const [notes, setNotes] = useState('')
   const [productForm, setProductForm] = useState(initialProduct)
   const [quickCustomer, setQuickCustomer] = useState({ nome: '', telefone: '' })
+
+  useEffect(() => {
+    const requested = searchParams.get('tab')
+    if (requested === 'estoque' || requested === 'historico') {
+      setTab(requested)
+    } else if (!requested) {
+      setTab('rapida')
+    }
+  }, [searchParams])
 
   const selectedProduct = saleDevices.find((device) => device.id === selectedProductId)
   const selectedCustomer = customers.find((customer) => customer.id === selectedCustomerId)
