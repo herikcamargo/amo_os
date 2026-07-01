@@ -338,7 +338,17 @@ export const useStore = create<AppState>()(
         } catch (err) {
           console.warn('Falha ao sair do Supabase:', err)
         } finally {
-          set({ user: null, orders: [], customers: [], notifications: [], loading: false })
+          set({
+            user: null,
+            orders: [],
+            customers: [],
+            suppliers: [],
+            saleDevices: [],
+            deviceSales: [],
+            auditLogs: [],
+            notifications: [],
+            loading: false,
+          })
         }
       },
 
@@ -385,15 +395,15 @@ export const useStore = create<AppState>()(
     }),
     {
       name: 'amo-os-storage',
-      version: 3,
+      version: 4,
       partialize: (state) => ({
         users: state.users,
-        orders: state.orders,
-        customers: state.customers,
-        suppliers: state.suppliers,
-        saleDevices: state.saleDevices,
-        deviceSales: state.deviceSales,
-        auditLogs: state.auditLogs,
+        orders: isSupabaseEnabled ? [] : state.orders,
+        customers: isSupabaseEnabled ? [] : state.customers,
+        suppliers: isSupabaseEnabled ? [] : state.suppliers,
+        saleDevices: isSupabaseEnabled ? [] : state.saleDevices,
+        deviceSales: isSupabaseEnabled ? [] : state.deviceSales,
+        auditLogs: isSupabaseEnabled ? [] : state.auditLogs,
         settings: state.settings,
         notifications: state.notifications,
         osCounter: state.osCounter,
@@ -402,11 +412,6 @@ export const useStore = create<AppState>()(
       migrate: (persisted) => {
         if (!persisted || typeof persisted !== 'object') return persisted
         return {
-          customers: DEMO_DATA.customers,
-          suppliers: [],
-          saleDevices: [],
-          deviceSales: [],
-          auditLogs: [],
           settings: {
             warranty_terms: 'A garantia cobre exclusivamente o servico realizado e as pecas substituidas, respeitando mau uso, queda, oxidacao e violacao do aparelho.',
             sale_terms: 'Declaro estar ciente das condicoes do aparelho, garantia informada e forma de pagamento registrada neste recibo.',
@@ -415,6 +420,12 @@ export const useStore = create<AppState>()(
           },
           saleCounter: 0,
           ...(persisted as object),
+          orders: isSupabaseEnabled ? [] : ((persisted as { orders?: ServiceOrder[] }).orders || DEMO_DATA.orders),
+          customers: isSupabaseEnabled ? [] : ((persisted as { customers?: Customer[] }).customers || DEMO_DATA.customers),
+          suppliers: isSupabaseEnabled ? [] : ((persisted as { suppliers?: Supplier[] }).suppliers || []),
+          saleDevices: isSupabaseEnabled ? [] : ((persisted as { saleDevices?: SaleDevice[] }).saleDevices || []),
+          deviceSales: isSupabaseEnabled ? [] : ((persisted as { deviceSales?: DeviceSale[] }).deviceSales || []),
+          auditLogs: isSupabaseEnabled ? [] : ((persisted as { auditLogs?: AuditLog[] }).auditLogs || []),
           user: null,
           authReady: false,
           loading: false,
