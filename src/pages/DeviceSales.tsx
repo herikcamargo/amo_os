@@ -91,7 +91,6 @@ export function DeviceSales() {
       count: saleDevices.filter((device) => (
         device.status !== 'vendido'
         && device.status !== 'cancelado'
-        && (device.stock_quantity ?? 1) > 0
         && (device.product_category || 'outro') === item.key
       )).length,
     })).filter((item) => item.count > 0)
@@ -103,7 +102,7 @@ export function DeviceSales() {
     const words = term.split(' ').filter(Boolean)
 
     return saleDevices
-      .filter((item) => item.status !== 'vendido' && item.status !== 'cancelado' && (item.stock_quantity ?? 1) > 0)
+      .filter((item) => item.status !== 'vendido' && item.status !== 'cancelado')
       .filter((item) => !category || (item.product_category || 'outro') === category)
       .filter((item) => {
         if (!term) return true
@@ -139,7 +138,7 @@ export function DeviceSales() {
 
   const stockSummary = useMemo(() => {
     const totalItems = saleDevices.length
-    const available = saleDevices.filter((item) => item.status !== 'vendido' && item.status !== 'cancelado' && (item.stock_quantity ?? 1) > 0).length
+    const available = saleDevices.filter((item) => item.status !== 'vendido' && item.status !== 'cancelado').length
     const quantity = saleDevices.reduce((sum, item) => sum + Math.max(0, item.stock_quantity ?? 0), 0)
     return { totalItems, available, quantity }
   }, [saleDevices])
@@ -340,7 +339,7 @@ export function DeviceSales() {
             <Panel title="1. Selecione o produto" icon={Smartphone}>
               <div className="grid grid-cols-3 gap-2 mb-3">
                 <MiniStockStat label="Produtos" value={stockSummary.totalItems} />
-                <MiniStockStat label="Disponiveis" value={stockSummary.available} />
+                <MiniStockStat label="Cadastrados" value={stockSummary.available} />
                 <MiniStockStat label="Unidades" value={stockSummary.quantity} />
               </div>
               <SearchBox value={productQuery} onChange={setProductQuery} placeholder="Pesquise por nome, categoria, marca, SKU ou codigo..." />
@@ -532,10 +531,11 @@ function CategoryTabs({ category, setCategory, categories }: {
 
 function ProductSearchRow({ product, active, onClick }: { product: SaleDevice; active: boolean; onClick: () => void }) {
   const isPhone = (product.product_category || 'celular') === 'celular'
+  const hasStock = (product.stock_quantity ?? 0) > 0
   return (
     <button
       onClick={onClick}
-      className={`w-full text-left flex items-center gap-3 p-3 border-b border-white/6 last:border-b-0 transition-colors ${active ? 'bg-brand/12' : 'hover:bg-white/[0.035]'}`}
+      className={`w-full text-left flex items-center gap-3 p-3 border-b border-white/6 last:border-b-0 transition-colors ${active ? 'bg-brand/12' : 'hover:bg-white/[0.035]'} ${hasStock ? '' : 'opacity-70'}`}
     >
       <div className={`w-11 h-11 rounded-xl border flex items-center justify-center shrink-0 ${active ? 'border-brand/50 bg-brand/15' : 'border-white/8 bg-white/[0.04]'}`}>
         {isPhone ? <Smartphone size={22} className="text-brand" /> : <Package size={21} className="text-brand" />}
@@ -548,7 +548,9 @@ function ProductSearchRow({ product, active, onClick }: { product: SaleDevice; a
       </div>
       <div className="text-right shrink-0">
         <div className="font-bold text-sm">{brl(product.preco_venda)}</div>
-        <div className="text-[11px] text-gray-500 mt-0.5">Estoque {product.stock_quantity ?? 0}</div>
+        <div className={`text-[11px] mt-0.5 ${hasStock ? 'text-gray-500' : 'text-amber-300'}`}>
+          {hasStock ? `Estoque ${product.stock_quantity ?? 0}` : 'Sem estoque'}
+        </div>
       </div>
       {active && <span className="w-6 h-6 rounded-full bg-brand flex items-center justify-center shrink-0"><Check size={14} /></span>}
     </button>

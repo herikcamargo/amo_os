@@ -121,7 +121,8 @@ function mapProduct(row) {
   const legacyId = clean(row.ID)
   const description = normalizeSpaces(row.Descrição || row.Descricao)
   const rawStock = parseBrazilianNumber(row.Estoque)
-  const stock = Math.max(0, Math.round(rawStock))
+  const excessiveStock = rawStock > 9999
+  const stock = excessiveStock ? 0 : Math.max(0, Math.round(rawStock))
   const category = inferCategory(row, description)
   const brand = inferBrand(row, description, category)
   const condition = normalize(row['Condição do Produto'] || row['Condicao do Produto'])
@@ -136,6 +137,7 @@ function mapProduct(row) {
     `Importado do cadastro antigo: ${legacyId}`,
     row.__source_file ? `Arquivo: ${row.__source_file}` : '',
     rawStock < 0 ? `Estoque original negativo: ${formatNumber(rawStock)}` : '',
+    excessiveStock ? `Estoque original irreal: ${formatNumber(rawStock)}` : '',
     group ? `Categoria original: ${group}` : '',
     location ? `Localizacao: ${location}` : '',
     vendorCode ? `Codigo fornecedor: ${vendorCode}` : '',
