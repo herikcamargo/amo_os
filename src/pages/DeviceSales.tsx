@@ -55,7 +55,7 @@ export function DeviceSales() {
     return requested === 'estoque' || requested === 'historico' ? requested : 'rapida'
   })
   const [step, setStep] = useState<1 | 2 | 3>(1)
-  const [category, setCategory] = useState<ProductCategory>('celular')
+  const [category, setCategory] = useState<ProductCategory | ''>('')
   const [productQuery, setProductQuery] = useState('')
   const [customerQuery, setCustomerQuery] = useState('')
   const [selectedProductId, setSelectedProductId] = useState('')
@@ -85,21 +85,64 @@ export function DeviceSales() {
   const qty = Math.max(1, Number(quantity) || 1)
   const originalPrice = (selectedProduct?.preco_venda || 0) * qty
   const total = Math.max(0, originalPrice - money(discount) + money(increase))
+  const productCategories = useMemo(() => {
+    return CATEGORIES.map((item) => ({
+      ...item,
+      count: saleDevices.filter((device) => (
+        device.status !== 'vendido'
+        && device.status !== 'cancelado'
+        && (device.stock_quantity ?? 1) > 0
+        && (device.product_category || 'outro') === item.key
+      )).length,
+    })).filter((item) => item.count > 0)
+  }, [saleDevices])
 
   const availableProducts = useMemo(() => {
-    const term = productQuery.trim().toLowerCase()
+    const term = normalizeSearch(productQuery)
+    if (!term && !category) return []
+    const words = term.split(' ').filter(Boolean)
+
     return saleDevices
       .filter((item) => item.status !== 'vendido' && item.status !== 'cancelado' && (item.stock_quantity ?? 1) > 0)
-      .filter((item) => (item.product_category || 'celular') === category)
+      .filter((item) => !category || (item.product_category || 'outro') === category)
       .filter((item) => {
         if (!term) return true
-        return [item.marca, item.modelo, item.imei1, item.serial, item.sku, item.barcode]
-          .filter(Boolean)
-          .join(' ')
-          .toLowerCase()
-          .includes(term)
+        const haystack = normalizeSearch([
+          item.marca,
+          item.modelo,
+          categoryLabel(item.product_category || 'outro'),
+          item.product_category,
+          item.imei1,
+          item.imei2,
+          item.serial,
+          item.sku,
+          item.barcode,
+          item.observacoes,
+        ].filter(Boolean).join(' '))
+
+        return words.every((word) => haystack.includes(word))
+      })
+      .sort((a, b) => {
+        const byModel = a.modelo.localeCompare(b.modelo, 'pt-BR')
+        if (byModel !== 0) return byModel
+        return a.marca.localeCompare(b.marca, 'pt-BR')
       })
   }, [saleDevices, category, productQuery])
+
+  const sortedDevices = useMemo(() => {
+    return [...saleDevices].sort((a, b) => {
+      const byModel = a.modelo.localeCompare(b.modelo, 'pt-BR')
+      if (byModel !== 0) return byModel
+      return a.marca.localeCompare(b.marca, 'pt-BR')
+    })
+  }, [saleDevices])
+
+  const stockSummary = useMemo(() => {
+    const totalItems = saleDevices.length
+    const available = saleDevices.filter((item) => item.status !== 'vendido' && item.status !== 'cancelado' && (item.stock_quantity ?? 1) > 0).length
+    const quantity = saleDevices.reduce((sum, item) => sum + Math.max(0, item.stock_quantity ?? 0), 0)
+    return { totalItems, available, quantity }
+  }, [saleDevices])
 
   const visibleCustomers = useMemo(() => {
     const term = customerQuery.trim().toLowerCase()
@@ -295,19 +338,34 @@ export function DeviceSales() {
           <StepHeader step={step} />
           {step === 1 && (
             <Panel title="1. Selecione o produto" icon={Smartphone}>
-              <CategoryTabs category={category} setCategory={setCategory} />
-              <SearchBox value={productQuery} onChange={setProductQuery} placeholder="Buscar produto, IMEI, SKU..." />
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mt-3">
+              <div className="grid grid-cols-3 gap-2 mb-3">
+                <MiniStockStat label="Produtos" value={stockSummary.totalItems} />
+                <MiniStockStat label="Disponiveis" value={stockSummary.available} />
+                <MiniStockStat label="Unidades" value={stockSummary.quantity} />
+              </div>
+              <SearchBox value={productQuery} onChange={setProductQuery} placeholder="Pesquise por nome, categoria, marca, SKU ou codigo..." />
+              <CategoryTabs category={category} setCategory={setCategory} categories={productCategories} />
+              <div className="mt-3 rounded-2xl border border-white/6 bg-black/10 overflow-hidden">
+                {availableProducts.length > 0 && (
+                  <div className="px-3 py-2 text-[11px] text-gray-500 border-b border-white/6">
+                    {availableProducts.length} resultado{availableProducts.length > 1 ? 's' : ''} em ordem alfabetica
+                  </div>
+                )}
                 {availableProducts.map((product) => (
-                  <ProductCard
+                  <ProductSearchRow
                     key={product.id}
                     product={product}
                     active={selectedProductId === product.id}
                     onClick={() => setSelectedProductId(product.id)}
                   />
                 ))}
+                {!productQuery.trim() && !category && (
+                  <EmptyText>Pesquise um produto ou escolha uma categoria para listar o estoque.</EmptyText>
+                )}
+                {(productQuery.trim() || category) && availableProducts.length === 0 && (
+                  <EmptyText>Nenhum item encontrado para essa busca.</EmptyText>
+                )}
               </div>
-              {availableProducts.length === 0 && <EmptyText>Nenhum item disponivel nessa categoria.</EmptyText>}
               <FooterAction disabled={!canContinueProduct} onClick={() => setStep(2)}>Continuar</FooterAction>
             </Panel>
           )}
@@ -398,7 +456,7 @@ export function DeviceSales() {
               onSave={saveProduct}
             />
           </Panel>
-          <DeviceList devices={saleDevices} />
+          <DeviceList devices={sortedDevices} categories={productCategories} />
         </div>
       )}
 
@@ -446,35 +504,63 @@ function StepHeader({ step }: { step: 1 | 2 | 3 }) {
   )
 }
 
-function CategoryTabs({ category, setCategory }: { category: ProductCategory; setCategory: (category: ProductCategory) => void }) {
+function CategoryTabs({ category, setCategory, categories }: {
+  category: ProductCategory | ''
+  setCategory: (category: ProductCategory | '') => void
+  categories: { key: ProductCategory; label: string; count: number }[]
+}) {
   return (
-    <div className="flex gap-2 overflow-x-auto pb-2">
-      {CATEGORIES.map((item) => (
+    <div className="flex gap-2 overflow-x-auto pb-2 mt-3">
+      <button
+        onClick={() => setCategory('')}
+        className={`shrink-0 h-9 px-3 rounded-full text-xs font-semibold border ${category === '' ? 'bg-white/10 border-white/12 text-white' : 'bg-white/5 border-white/8 text-gray-400'}`}
+      >
+        Todas
+      </button>
+      {categories.map((item) => (
         <button
           key={item.key}
           onClick={() => setCategory(item.key)}
           className={`shrink-0 h-9 px-3 rounded-full text-xs font-semibold border ${category === item.key ? 'bg-brand border-brand text-white' : 'bg-white/5 border-white/8 text-gray-400'}`}
         >
-          {item.label}
+          {item.label} ({item.count})
         </button>
       ))}
     </div>
   )
 }
 
-function ProductCard({ product, active, onClick }: { product: SaleDevice; active: boolean; onClick: () => void }) {
+function ProductSearchRow({ product, active, onClick }: { product: SaleDevice; active: boolean; onClick: () => void }) {
   const isPhone = (product.product_category || 'celular') === 'celular'
   return (
-    <button onClick={onClick} className={`relative text-left rounded-2xl border p-3 min-h-[150px] bg-white/5 ${active ? 'border-brand bg-brand/10' : 'border-white/5'}`}>
-      {active && <span className="absolute top-2 right-2 w-6 h-6 rounded-full bg-brand flex items-center justify-center"><Check size={14} /></span>}
-      <div className="w-12 h-12 rounded-xl bg-black/30 border border-white/8 flex items-center justify-center mb-3">
-        {isPhone ? <Smartphone size={26} className="text-brand" /> : <Package size={24} className="text-brand" />}
+    <button
+      onClick={onClick}
+      className={`w-full text-left flex items-center gap-3 p-3 border-b border-white/6 last:border-b-0 transition-colors ${active ? 'bg-brand/12' : 'hover:bg-white/[0.035]'}`}
+    >
+      <div className={`w-11 h-11 rounded-xl border flex items-center justify-center shrink-0 ${active ? 'border-brand/50 bg-brand/15' : 'border-white/8 bg-white/[0.04]'}`}>
+        {isPhone ? <Smartphone size={22} className="text-brand" /> : <Package size={21} className="text-brand" />}
       </div>
-      <div className="font-semibold text-sm leading-tight">{product.marca} {product.modelo}</div>
-      <div className="text-xs text-gray-500 mt-1">{product.armazenamento || categoryLabel(product.product_category || 'celular')}</div>
-      <div className="font-bold mt-2">{brl(product.preco_venda)}</div>
-      <div className="text-[11px] text-gray-500 mt-1">Estoque: {product.stock_quantity ?? 1}</div>
+      <div className="min-w-0 flex-1">
+        <div className="font-semibold text-sm leading-tight truncate">{product.modelo}</div>
+        <div className="text-xs text-gray-500 mt-0.5 truncate">
+          {product.marca} | {categoryLabel(product.product_category || 'outro')} | {product.sku || product.barcode || 'sem codigo'}
+        </div>
+      </div>
+      <div className="text-right shrink-0">
+        <div className="font-bold text-sm">{brl(product.preco_venda)}</div>
+        <div className="text-[11px] text-gray-500 mt-0.5">Estoque {product.stock_quantity ?? 0}</div>
+      </div>
+      {active && <span className="w-6 h-6 rounded-full bg-brand flex items-center justify-center shrink-0"><Check size={14} /></span>}
     </button>
+  )
+}
+
+function MiniStockStat({ label, value }: { label: string; value: number }) {
+  return (
+    <div className="rounded-xl bg-white/[0.04] border border-white/6 p-3">
+      <div className="text-lg font-bold tabular-nums">{value}</div>
+      <div className="text-[11px] text-gray-500">{label}</div>
+    </div>
   )
 }
 
@@ -540,22 +626,53 @@ function ProductForm({
   )
 }
 
-function DeviceList({ devices }: { devices: SaleDevice[] }) {
+function DeviceList({ devices, categories }: {
+  devices: SaleDevice[]
+  categories: { key: ProductCategory; label: string; count: number }[]
+}) {
+  const [query, setQuery] = useState('')
+  const [category, setCategory] = useState<ProductCategory | ''>('')
+  const term = normalizeSearch(query)
+  const words = term.split(' ').filter(Boolean)
+  const filteredDevices = devices
+    .filter((device) => !category || (device.product_category || 'outro') === category)
+    .filter((device) => {
+      if (!term) return true
+      const haystack = normalizeSearch([
+        device.marca,
+        device.modelo,
+        categoryLabel(device.product_category || 'outro'),
+        device.product_category,
+        device.sku,
+        device.barcode,
+        device.serial,
+        device.observacoes,
+      ].filter(Boolean).join(' '))
+      return words.every((word) => haystack.includes(word))
+    })
+
   return (
     <Panel title="Produtos cadastrados" icon={Package}>
+      <SearchBox value={query} onChange={setQuery} placeholder="Buscar no estoque por nome, marca, categoria ou codigo..." />
+      <CategoryTabs category={category} setCategory={setCategory} categories={categories} />
+      <div className="text-[11px] text-gray-500 mb-2">
+        {filteredDevices.length} produto{filteredDevices.length !== 1 ? 's' : ''} em ordem alfabetica
+      </div>
       <div className="space-y-2">
-        {devices.map((device) => (
+        {filteredDevices.map((device) => (
           <div key={device.id} className="rounded-xl bg-white/5 border border-white/5 p-3">
             <div className="flex items-center justify-between gap-3">
-              <div>
-                <div className="font-semibold text-sm">{device.marca} {device.modelo}</div>
-                <div className="text-xs text-gray-500">{device.imei1 || device.serial || device.sku || 'Sem identificador'} | {brl(device.preco_venda)}</div>
+              <div className="min-w-0">
+                <div className="font-semibold text-sm truncate">{device.modelo}</div>
+                <div className="text-xs text-gray-500 truncate">
+                  {device.marca} | {categoryLabel(device.product_category || 'outro')} | {device.imei1 || device.serial || device.sku || device.barcode || 'Sem identificador'} | {brl(device.preco_venda)}
+                </div>
               </div>
               <span className="text-[10px] uppercase px-2 py-1 rounded-full bg-white/8">Estoque {device.stock_quantity ?? 1}</span>
             </div>
           </div>
         ))}
-        {devices.length === 0 && <EmptyText>Nenhum produto cadastrado.</EmptyText>}
+        {filteredDevices.length === 0 && <EmptyText>Nenhum produto encontrado.</EmptyText>}
       </div>
     </Panel>
   )
@@ -641,4 +758,13 @@ function categoryLabel(category: ProductCategory) {
 
 function money(value: string) {
   return Number(value.replace(/\./g, '').replace(',', '.')) || 0
+}
+
+function normalizeSearch(value: string) {
+  return value
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim()
 }

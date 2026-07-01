@@ -231,9 +231,22 @@ export const suppliersAdapter = {
 export const saleDevicesAdapter = {
   async list(): Promise<SaleDevice[]> {
     if (!isSupabaseEnabled) return []
-    const { data, error } = await supabase.from('sale_devices').select('*').order('created_at', { ascending: false })
-    if (error) throw error
-    return data || []
+    const pageSize = 1000
+    const allDevices: SaleDevice[] = []
+
+    for (let from = 0; ; from += pageSize) {
+      const { data, error } = await supabase
+        .from('sale_devices')
+        .select('*')
+        .order('modelo')
+        .range(from, from + pageSize - 1)
+
+      if (error) throw error
+      allDevices.push(...((data || []) as SaleDevice[]))
+      if (!data || data.length < pageSize) break
+    }
+
+    return allDevices
   },
 
   async create(device: SaleDevice): Promise<SaleDevice> {
