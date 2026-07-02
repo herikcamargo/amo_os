@@ -22,9 +22,9 @@ export function OrderRow({ order, onClick, showValue }: Props) {
   return (
     <button
       onClick={onClick}
-      className="group w-full flex items-center gap-3 py-3 text-left hover:bg-white/[0.02] -mx-2 px-2 rounded-xl transition-colors"
+      className="group w-full flex items-center gap-3 py-3 md:py-2 text-left hover:bg-white/[0.02] -mx-2 px-2 rounded-xl transition-colors"
     >
-      <div className="w-12 h-14 rounded-xl bg-surface-muted border border-white/5 flex items-center justify-center shrink-0 group-hover:border-brand/30 group-hover:scale-105 group-hover:shadow-[0_4px_16px_rgba(215,25,32,0.12)] transition-all">
+      <div className="w-12 h-14 md:w-10 md:h-12 rounded-xl bg-surface-muted border border-white/5 flex items-center justify-center shrink-0 group-hover:border-brand/30 transition-colors">
         <Smartphone size={20} className="text-gray-500 group-hover:text-brand transition-colors" />
       </div>
       <div className="min-w-0 flex-1">
@@ -37,9 +37,9 @@ export function OrderRow({ order, onClick, showValue }: Props) {
       </div>
       <div className="text-right shrink-0">
         {displayValue
-          ? <div className="text-sm font-bold">{brl(order.valor_servico)}</div>
-          : <div className="text-[13px] text-gray-500">{formatTimeAgo(order.created_at)}</div>}
-        <ChevronRight size={16} className="text-gray-600 inline-block mt-1 group-hover:text-brand group-hover:translate-x-1 transition-all" />
+          ? <div className="text-sm font-bold tabular-nums">{brl(order.valor_servico)}</div>
+          : <div className="text-[13px] text-gray-400">{formatTimeAgo(order.created_at)}</div>}
+        <ChevronRight size={16} className="text-gray-500 inline-block mt-1 group-hover:text-brand transition-colors" />
       </div>
     </button>
   )

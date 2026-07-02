@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import {
   ArrowLeft, Check, Package, Plus, Receipt, Search, Smartphone, XCircle, Printer,
+  UserRound, CreditCard, QrCode, CalendarClock, ShoppingCart, RotateCcw,
 } from 'lucide-react'
 import { useStore } from '@/store/useStore'
 import { brl, MARCAS } from '@/lib/constants'
@@ -320,13 +321,15 @@ export function DeviceSales() {
   }
 
   return (
-    <div className="px-5 pt-3 pb-24">
-      <div className="pt-2 mb-4">
-        <h1 className="text-xl font-bold tracking-tight">Vendas em 3 cliques</h1>
-        <p className="text-xs text-gray-500 mt-1">Celulares, carregadores, peliculas, capas e acessorios</p>
+    <div className="px-5 md:px-0 pt-3 md:pt-8 pb-24 md:pb-10">
+      <div className="pt-2 mb-4 flex items-end justify-between gap-3">
+        <div>
+          <h1 className="text-xl md:text-2xl font-bold tracking-tight">Vendas</h1>
+          <p className="text-xs text-gray-400 mt-1">Celulares, carregadores, peliculas, capas e acessorios</p>
+        </div>
       </div>
 
-      <div className="grid grid-cols-3 gap-2 mb-4">
+      <div className="grid grid-cols-3 gap-2 mb-4 md:inline-grid md:w-auto md:min-w-[360px]">
         <TabButton active={tab === 'rapida'} onClick={() => setTab('rapida')}>Venda</TabButton>
         <TabButton active={tab === 'estoque'} onClick={() => setTab('estoque')}>Estoque</TabButton>
         <TabButton active={tab === 'historico'} onClick={() => setTab('historico')}>Historico</TabButton>
@@ -334,119 +337,230 @@ export function DeviceSales() {
 
       {tab === 'rapida' && (
         <div className="space-y-4">
-          <StepHeader step={step} />
-          {step === 1 && (
-            <Panel title="1. Selecione o produto" icon={Smartphone}>
-              <div className="grid grid-cols-3 gap-2 mb-3">
-                <MiniStockStat label="Produtos" value={stockSummary.totalItems} />
-                <MiniStockStat label="Cadastrados" value={stockSummary.available} />
-                <MiniStockStat label="Unidades" value={stockSummary.quantity} />
-              </div>
-              <SearchBox value={productQuery} onChange={setProductQuery} placeholder="Pesquise por nome, categoria, marca, SKU ou codigo..." />
-              <CategoryTabs category={category} setCategory={setCategory} categories={productCategories} />
-              <div className="mt-3 rounded-2xl border border-white/6 bg-black/10 overflow-hidden">
-                {availableProducts.length > 0 && (
-                  <div className="px-3 py-2 text-[11px] text-gray-500 border-b border-white/6">
-                    {availableProducts.length} resultado{availableProducts.length > 1 ? 's' : ''} em ordem alfabetica
+          <StepHeader
+            step={step}
+            canGoCustomer={canContinueProduct}
+            canGoPayment={canContinueProduct && canContinueCustomer}
+            onNavigate={(target) => {
+              if (target === 1) setStep(1)
+              if (target === 2 && canContinueProduct) setStep(2)
+              if (target === 3 && canContinueProduct && canContinueCustomer) setStep(3)
+            }}
+          />
+
+          <div className="lg:grid lg:grid-cols-[minmax(0,1fr)_340px] lg:gap-4 lg:items-start space-y-4 lg:space-y-0">
+            {/* Coluna de trabalho */}
+            <div className="space-y-4 min-w-0">
+              {step === 1 && (
+                <Panel title="Selecione o produto" icon={Smartphone}>
+                  <div className="grid grid-cols-3 gap-2 mb-3">
+                    <MiniStockStat label="Produtos" value={stockSummary.totalItems} />
+                    <MiniStockStat label="Cadastrados" value={stockSummary.available} />
+                    <MiniStockStat label="Unidades" value={stockSummary.quantity} />
                   </div>
-                )}
-                {availableProducts.map((product) => (
-                  <ProductSearchRow
-                    key={product.id}
-                    product={product}
-                    active={selectedProductId === product.id}
-                    onClick={() => setSelectedProductId(product.id)}
-                  />
-                ))}
-                {!productQuery.trim() && !category && (
-                  <EmptyText>Pesquise um produto ou escolha uma categoria para listar o estoque.</EmptyText>
-                )}
-                {(productQuery.trim() || category) && availableProducts.length === 0 && (
-                  <EmptyText>Nenhum item encontrado para essa busca.</EmptyText>
-                )}
-              </div>
-              <FooterAction disabled={!canContinueProduct} onClick={() => setStep(2)}>Continuar</FooterAction>
-            </Panel>
-          )}
+                  <SearchBox value={productQuery} onChange={setProductQuery} placeholder="Pesquise por nome, categoria, marca, SKU ou codigo..." autoFocus />
+                  <CategoryTabs category={category} setCategory={setCategory} categories={productCategories} />
+                  <div className="mt-3 rounded-2xl border border-white/6 bg-black/10 overflow-hidden">
+                    {availableProducts.length > 0 && (
+                      <div className="px-3 py-2 text-[11px] text-gray-400 border-b border-white/6">
+                        {availableProducts.length} resultado{availableProducts.length > 1 ? 's' : ''} em ordem alfabetica
+                      </div>
+                    )}
+                    {availableProducts.map((product) => (
+                      <ProductSearchRow
+                        key={product.id}
+                        product={product}
+                        active={selectedProductId === product.id}
+                        onClick={() => setSelectedProductId(product.id)}
+                      />
+                    ))}
+                    {!productQuery.trim() && !category && (
+                      <EmptyText>Pesquise um produto ou escolha uma categoria para listar o estoque.</EmptyText>
+                    )}
+                    {(productQuery.trim() || category) && availableProducts.length === 0 && (
+                      <EmptyText>Nenhum item encontrado para essa busca.</EmptyText>
+                    )}
+                  </div>
+                  <FooterAction disabled={!canContinueProduct} onClick={() => setStep(2)}>Continuar</FooterAction>
+                </Panel>
+              )}
 
-          {step === 2 && (
-            <Panel title="2. Escolha o cliente" icon={Receipt}>
-              <button onClick={() => setStep(1)} className="text-xs text-gray-400 flex items-center gap-1 mb-3"><ArrowLeft size={14} /> Trocar produto</button>
-              <SearchBox value={customerQuery} onChange={setCustomerQuery} placeholder="Buscar cliente..." />
-              <div className="rounded-2xl bg-white/5 border border-white/8 p-3 mt-3">
-                <div className="text-sm font-semibold mb-2">Novo cliente</div>
-                <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr_auto] gap-2">
-                  <Field value={quickCustomer.nome} onChange={(v) => setQuickCustomer((current) => ({ ...current, nome: v }))} placeholder="Nome" />
-                  <Field value={quickCustomer.telefone} onChange={(v) => setQuickCustomer((current) => ({ ...current, telefone: v }))} placeholder="Telefone" />
-                  <button onClick={createQuickCustomer} className="h-11 px-4 rounded-xl bg-white/8 border border-white/10 text-sm font-semibold flex items-center justify-center gap-2">
-                    <Plus size={16} /> Criar
-                  </button>
-                </div>
-              </div>
-              <div className="space-y-2 mt-3">
-                {visibleCustomers.map((customer) => (
-                  <button
-                    key={customer.id}
-                    onClick={() => setSelectedCustomerId(customer.id)}
-                    className={`w-full flex items-center gap-3 rounded-2xl border p-3 text-left ${selectedCustomerId === customer.id ? 'border-brand bg-brand/10' : 'border-white/5 bg-white/5'}`}
-                  >
-                    <Avatar name={customer.nome} />
-                    <div className="flex-1">
-                      <div className="font-semibold text-sm">{customer.nome}</div>
-                      <div className="text-xs text-gray-500">{customer.telefone}</div>
+              {step === 2 && (
+                <Panel title="Escolha o cliente" icon={UserRound}>
+                  <button onClick={() => setStep(1)} className="text-xs text-gray-400 hover:text-white transition-colors flex items-center gap-1 mb-3"><ArrowLeft size={14} /> Trocar produto</button>
+                  <SearchBox value={customerQuery} onChange={setCustomerQuery} placeholder="Buscar cliente por nome, telefone ou CPF..." autoFocus />
+                  <div className="rounded-2xl bg-white/5 border border-white/8 p-3 mt-3">
+                    <div className="text-sm font-semibold mb-2 flex items-center gap-2"><Plus size={14} className="text-brand" /> Novo cliente</div>
+                    <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr_auto] gap-2">
+                      <Field value={quickCustomer.nome} onChange={(v) => setQuickCustomer((current) => ({ ...current, nome: v }))} placeholder="Nome" />
+                      <Field value={quickCustomer.telefone} onChange={(v) => setQuickCustomer((current) => ({ ...current, telefone: v }))} placeholder="Telefone" />
+                      <button onClick={createQuickCustomer} className="h-11 px-4 rounded-xl bg-white/8 border border-white/10 hover:bg-white/12 transition-colors text-sm font-semibold flex items-center justify-center gap-2">
+                        <Plus size={16} /> Criar
+                      </button>
                     </div>
-                    {selectedCustomerId === customer.id && <Check size={18} className="text-brand" />}
-                  </button>
-                ))}
-              </div>
-              <FooterAction disabled={!canContinueCustomer} onClick={() => setStep(3)}>Continuar</FooterAction>
-            </Panel>
-          )}
+                  </div>
+                  <div className="space-y-2 mt-3">
+                    {visibleCustomers.map((customer) => (
+                      <button
+                        key={customer.id}
+                        onClick={() => setSelectedCustomerId(customer.id)}
+                        className={`w-full flex items-center gap-3 rounded-2xl border p-3 text-left transition-colors ${selectedCustomerId === customer.id ? 'border-brand bg-brand/10' : 'border-white/5 bg-white/5 hover:bg-white/[0.07]'}`}
+                      >
+                        <Avatar name={customer.nome} />
+                        <div className="flex-1">
+                          <div className="font-semibold text-sm">{customer.nome}</div>
+                          <div className="text-xs text-gray-400">{customer.telefone}</div>
+                        </div>
+                        {selectedCustomerId === customer.id && <Check size={18} className="text-brand" />}
+                      </button>
+                    ))}
+                  </div>
+                  <FooterAction disabled={!canContinueCustomer} onClick={() => setStep(3)}>Continuar</FooterAction>
+                </Panel>
+              )}
 
-          {step === 3 && selectedProduct && selectedCustomer && (
-            <Panel title="3. Confirme e finalize" icon={Receipt}>
-              <button onClick={() => setStep(2)} className="text-xs text-gray-400 flex items-center gap-1 mb-3"><ArrowLeft size={14} /> Trocar cliente</button>
-              <SummaryRow label="Produto" value={`${selectedProduct.marca} ${selectedProduct.modelo}`} sub={brl(selectedProduct.preco_venda)} />
-              <SummaryRow label="Cliente" value={selectedCustomer.nome} sub={selectedCustomer.telefone} />
-              <div className="grid grid-cols-3 gap-2 mt-4">
-                {(['Pix', 'Cartao', 'Parcelado'] as const).map((item) => (
-                  <button
-                    key={item}
-                    onClick={() => setPayment(item)}
-                    className={`rounded-xl border p-3 text-left ${payment === item ? 'border-brand bg-brand/10' : 'border-white/8 bg-white/5'}`}
-                  >
-                    <div className="text-sm font-semibold">{item}</div>
-                    <div className="text-[11px] text-gray-500">{item === 'Parcelado' ? 'Em ate 12x' : 'A vista'}</div>
-                  </button>
-                ))}
-              </div>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-2 mt-3">
-                <LabeledField label="Quantidade" value={quantity} onChange={setQuantity} placeholder="1" />
-                <LabeledField label="Desconto" value={discount} onChange={setDiscount} placeholder="R$ 0,00" />
-                <LabeledField label="Acrescimo" value={increase} onChange={setIncrease} placeholder="R$ 0,00" />
-                <LabeledField label="Parcelas" value={installments} onChange={setInstallments} placeholder="1" />
-              </div>
-              <div className="grid grid-cols-2 gap-2 mt-2">
-                <LabeledField label="Entrada" value={entryValue} onChange={setEntryValue} placeholder="R$ 0,00" />
-                <LabeledField label="Financeira/parceira" value={financePartner} onChange={setFinancePartner} placeholder="Opcional" />
-              </div>
-              <Field value={notes} onChange={setNotes} placeholder="Observacoes" className="mt-2" />
-              <div className="rounded-2xl bg-white/5 border border-white/8 p-4 mt-4 flex items-center justify-between">
-                <div>
-                  <div className="text-xs text-gray-500">Total</div>
-                  <div className="text-sm text-gray-400">Qtd {qty}</div>
+              {step === 3 && selectedProduct && selectedCustomer && (
+                <Panel title="Pagamento" icon={CreditCard}>
+                  <button onClick={() => setStep(2)} className="text-xs text-gray-400 hover:text-white transition-colors flex items-center gap-1 mb-3"><ArrowLeft size={14} /> Trocar cliente</button>
+                  <div className="lg:hidden">
+                    <SummaryRow label="Produto" value={`${selectedProduct.marca} ${selectedProduct.modelo}`} sub={brl(selectedProduct.preco_venda)} />
+                    <SummaryRow label="Cliente" value={selectedCustomer.nome} sub={selectedCustomer.telefone} />
+                  </div>
+                  <div className="grid grid-cols-3 gap-2 mt-4">
+                    {(['Pix', 'Cartao', 'Parcelado'] as const).map((item) => {
+                      const PayIcon = item === 'Pix' ? QrCode : item === 'Cartao' ? CreditCard : CalendarClock
+                      return (
+                        <button
+                          key={item}
+                          onClick={() => setPayment(item)}
+                          className={`rounded-xl border p-3 text-left transition-colors ${payment === item ? 'border-brand bg-brand/10' : 'border-white/8 bg-white/5 hover:bg-white/[0.07]'}`}
+                        >
+                          <PayIcon size={16} className={payment === item ? 'text-brand mb-1.5' : 'text-gray-400 mb-1.5'} />
+                          <div className="text-sm font-semibold">{item}</div>
+                          <div className="text-[11px] text-gray-400">{item === 'Parcelado' ? 'Em ate 12x' : 'A vista'}</div>
+                        </button>
+                      )
+                    })}
+                  </div>
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-2 mt-3">
+                    <LabeledField label="Quantidade" value={quantity} onChange={setQuantity} placeholder="1" />
+                    <LabeledField label="Desconto" value={discount} onChange={setDiscount} placeholder="R$ 0,00" />
+                    <LabeledField label="Acrescimo" value={increase} onChange={setIncrease} placeholder="R$ 0,00" />
+                    <LabeledField label="Parcelas" value={installments} onChange={setInstallments} placeholder="1" />
+                  </div>
+                  <div className="grid grid-cols-2 gap-2 mt-2">
+                    <LabeledField label="Entrada" value={entryValue} onChange={setEntryValue} placeholder="R$ 0,00" />
+                    <LabeledField label="Financeira/parceira" value={financePartner} onChange={setFinancePartner} placeholder="Opcional" />
+                  </div>
+                  <Field value={notes} onChange={setNotes} placeholder="Observacoes" className="mt-2 w-full" />
+                  <div className="lg:hidden">
+                    <div className="rounded-2xl bg-white/5 border border-white/8 p-4 mt-4 flex items-center justify-between">
+                      <div>
+                        <div className="text-xs text-gray-400">Total</div>
+                        <div className="text-sm text-gray-400">Qtd {qty}</div>
+                      </div>
+                      <div className="text-2xl font-bold tabular-nums">{brl(total)}</div>
+                    </div>
+                    <FooterAction onClick={completeSale}>Finalizar venda</FooterAction>
+                    <button onClick={resetSale} className="w-full h-11 text-sm text-gray-400 hover:text-white transition-colors">Cancelar</button>
+                  </div>
+                </Panel>
+              )}
+            </div>
+
+            {/* Painel lateral fixo — resumo da venda (desktop) */}
+            <aside className="hidden lg:block sticky top-6">
+              <div className="bg-surface-card rounded-[18px] border border-white/8 overflow-hidden">
+                <div className="px-4 py-3 border-b border-white/6 flex items-center gap-2">
+                  <ShoppingCart size={15} className="text-brand" />
+                  <span className="text-sm font-bold flex-1">Resumo da venda</span>
+                  {(selectedProduct || selectedCustomer) && (
+                    <button
+                      onClick={resetSale}
+                      title="Limpar venda"
+                      className="h-7 w-7 rounded-lg bg-white/5 hover:bg-white/10 transition-colors flex items-center justify-center text-gray-400"
+                    >
+                      <RotateCcw size={13} />
+                    </button>
+                  )}
                 </div>
-                <div className="text-2xl font-bold">{brl(total)}</div>
+
+                <div className="p-4 space-y-3">
+                  {/* Produto */}
+                  <div className="flex items-center gap-3">
+                    <div className={`w-10 h-10 rounded-xl border flex items-center justify-center shrink-0 ${selectedProduct ? 'border-brand/40 bg-brand/10' : 'border-dashed border-white/10 bg-white/[0.03]'}`}>
+                      <Smartphone size={18} className={selectedProduct ? 'text-brand' : 'text-gray-500'} />
+                    </div>
+                    {selectedProduct ? (
+                      <div className="min-w-0 flex-1">
+                        <div className="text-sm font-semibold truncate">{selectedProduct.modelo}</div>
+                        <div className="text-xs text-gray-400 truncate">{selectedProduct.marca} · {brl(selectedProduct.preco_venda)}{qty > 1 ? ` × ${qty}` : ''}</div>
+                      </div>
+                    ) : (
+                      <div className="text-xs text-gray-500">Nenhum produto selecionado</div>
+                    )}
+                  </div>
+
+                  {/* Cliente */}
+                  <div className="flex items-center gap-3">
+                    <div className={`w-10 h-10 rounded-xl border flex items-center justify-center shrink-0 ${selectedCustomer ? 'border-brand/40 bg-brand/10' : 'border-dashed border-white/10 bg-white/[0.03]'}`}>
+                      <UserRound size={18} className={selectedCustomer ? 'text-brand' : 'text-gray-500'} />
+                    </div>
+                    {selectedCustomer ? (
+                      <div className="min-w-0 flex-1">
+                        <div className="text-sm font-semibold truncate">{selectedCustomer.nome}</div>
+                        <div className="text-xs text-gray-400 truncate">{selectedCustomer.telefone}</div>
+                      </div>
+                    ) : (
+                      <div className="text-xs text-gray-500">Nenhum cliente selecionado</div>
+                    )}
+                  </div>
+
+                  {/* Pagamento */}
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-xl border border-white/10 bg-white/[0.03] flex items-center justify-center shrink-0">
+                      {payment === 'Pix' ? <QrCode size={18} className="text-gray-400" /> : payment === 'Cartao' ? <CreditCard size={18} className="text-gray-400" /> : <CalendarClock size={18} className="text-gray-400" />}
+                    </div>
+                    <div className="min-w-0 flex-1">
+                      <div className="text-sm font-semibold">{payment}</div>
+                      <div className="text-xs text-gray-400">
+                        {payment === 'Parcelado' ? `${Number(installments) || 1}x${money(entryValue) > 0 ? ` · entrada ${brl(money(entryValue))}` : ''}` : 'A vista'}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Valores */}
+                <div className="px-4 pb-4">
+                  <div className="rounded-xl bg-black/20 border border-white/6 p-3 space-y-1.5">
+                    <ValueLine label="Subtotal" value={brl(originalPrice)} />
+                    {money(discount) > 0 && <ValueLine label="Desconto" value={`− ${brl(money(discount))}`} tone="green" />}
+                    {money(increase) > 0 && <ValueLine label="Acrescimo" value={`+ ${brl(money(increase))}`} tone="amber" />}
+                    <div className="border-t border-white/8 pt-2 mt-2 flex items-baseline justify-between">
+                      <span className="text-xs font-semibold text-gray-400 uppercase tracking-wide">Total</span>
+                      <span className="text-2xl font-bold tabular-nums">{brl(total)}</span>
+                    </div>
+                  </div>
+
+                  <button
+                    onClick={completeSale}
+                    disabled={!canContinueProduct || !canContinueCustomer}
+                    className="w-full h-12 rounded-xl bg-brand font-semibold mt-3 disabled:opacity-40 disabled:cursor-not-allowed transition-colors hover:bg-brand-dark flex items-center justify-center gap-2"
+                  >
+                    <Check size={17} /> Finalizar venda
+                  </button>
+                  {step !== 3 && canContinueProduct && canContinueCustomer && (
+                    <p className="text-[11px] text-gray-500 text-center mt-2">Confira o pagamento na etapa 3 antes de finalizar</p>
+                  )}
+                </div>
               </div>
-              <FooterAction onClick={completeSale}>Finalizar venda</FooterAction>
-              <button onClick={resetSale} className="w-full h-11 text-sm text-gray-500">Cancelar</button>
-            </Panel>
-          )}
+            </aside>
+          </div>
         </div>
       )}
 
       {tab === 'estoque' && (
-        <div className="space-y-4">
+        <div className="space-y-4 lg:grid lg:grid-cols-[380px_minmax(0,1fr)] lg:gap-4 lg:items-start lg:space-y-0">
           <Panel title="Cadastrar produto" icon={Plus}>
             <ProductForm
               form={productForm}
@@ -467,11 +581,11 @@ export function DeviceSales() {
                 <div className="flex items-center gap-2">
                   <div className="flex-1">
                     <div className="font-semibold text-sm">{sale.numero} - {sale.customer?.nome}</div>
-                    <div className="text-xs text-gray-500">{sale.device?.marca} {sale.device?.modelo} | {brl(sale.valor_final)}</div>
-                    <div className="text-[11px] text-gray-600">Qtd {sale.quantity || 1} | Fiscal: {sale.fiscal.status}</div>
+                    <div className="text-xs text-gray-400">{sale.device?.marca} {sale.device?.modelo} | <span className="tabular-nums">{brl(sale.valor_final)}</span></div>
+                    <div className="text-[11px] text-gray-500">Qtd {sale.quantity || 1} | Fiscal: {sale.fiscal.status}</div>
                   </div>
-                  <button onClick={() => downloadSaleReceiptPdf(sale)} className="h-9 w-9 rounded-lg bg-white/8 flex items-center justify-center"><Printer size={15} /></button>
-                  {!sale.cancelled_at && <button onClick={() => cancelSale(sale)} className="h-9 w-9 rounded-lg bg-red-500/10 text-red-300 flex items-center justify-center"><XCircle size={15} /></button>}
+                  <button onClick={() => downloadSaleReceiptPdf(sale)} title="Imprimir recibo" className="h-9 w-9 rounded-lg bg-white/8 hover:bg-white/12 transition-colors flex items-center justify-center"><Printer size={15} /></button>
+                  {!sale.cancelled_at && <button onClick={() => cancelSale(sale)} title="Cancelar venda" className="h-9 w-9 rounded-lg bg-red-500/10 hover:bg-red-500/20 transition-colors text-red-300 flex items-center justify-center"><XCircle size={15} /></button>}
                 </div>
                 {sale.cancelled_at && <div className="text-xs text-red-300 mt-2">Cancelada: {sale.cancel_reason}</div>}
               </div>
@@ -484,21 +598,58 @@ export function DeviceSales() {
   )
 }
 
-function StepHeader({ step }: { step: 1 | 2 | 3 }) {
+function StepHeader({ step, canGoCustomer, canGoPayment, onNavigate }: {
+  step: 1 | 2 | 3
+  canGoCustomer: boolean
+  canGoPayment: boolean
+  onNavigate: (target: 1 | 2 | 3) => void
+}) {
+  const items = [
+    { n: 1 as const, label: 'Produto', icon: Smartphone, enabled: true },
+    { n: 2 as const, label: 'Cliente', icon: UserRound, enabled: canGoCustomer },
+    { n: 3 as const, label: 'Pagamento', icon: CreditCard, enabled: canGoPayment },
+  ]
   return (
     <div className="grid grid-cols-3 gap-2">
-      {['Produto', 'Cliente', 'Confirmar'].map((label, index) => {
-        const active = step === index + 1
-        const done = step > index + 1
+      {items.map((item) => {
+        const active = step === item.n
+        const done = step > item.n
+        const Icon = item.icon
         return (
-          <div key={label} className={`rounded-2xl border p-3 ${active ? 'border-brand bg-brand/10' : done ? 'border-green-500/30 bg-green-500/10' : 'border-white/5 bg-white/5'}`}>
+          <button
+            key={item.label}
+            onClick={() => item.enabled && onNavigate(item.n)}
+            disabled={!item.enabled}
+            className={`rounded-2xl border p-3 text-left transition-colors ${
+              active
+                ? 'border-brand bg-brand/10'
+                : done
+                  ? 'border-green-500/30 bg-green-500/10 hover:bg-green-500/15'
+                  : item.enabled
+                    ? 'border-white/8 bg-white/5 hover:bg-white/[0.07]'
+                    : 'border-white/5 bg-white/[0.02] opacity-50 cursor-not-allowed'
+            }`}
+          >
             <div className="flex items-center gap-2">
-              <span className={`w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold ${active ? 'bg-brand' : 'bg-white/10'}`}>{done ? <Check size={15} /> : index + 1}</span>
-              <span className="text-xs font-semibold">{label}</span>
+              <span className={`w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold shrink-0 ${active ? 'bg-brand text-white' : done ? 'bg-green-500/20 text-green-300' : 'bg-white/10 text-gray-300'}`}>
+                {done ? <Check size={15} /> : item.n}
+              </span>
+              <span className="text-xs font-semibold flex-1">{item.label}</span>
+              <Icon size={14} className={active ? 'text-brand' : done ? 'text-green-400' : 'text-gray-500'} />
             </div>
-          </div>
+          </button>
         )
       })}
+    </div>
+  )
+}
+
+function ValueLine({ label, value, tone }: { label: string; value: string; tone?: 'green' | 'amber' }) {
+  const color = tone === 'green' ? 'text-green-400' : tone === 'amber' ? 'text-amber-300' : 'text-gray-300'
+  return (
+    <div className="flex items-center justify-between">
+      <span className="text-xs text-gray-400">{label}</span>
+      <span className={`text-sm font-semibold tabular-nums ${color}`}>{value}</span>
     </div>
   )
 }
@@ -509,10 +660,10 @@ function CategoryTabs({ category, setCategory, categories }: {
   categories: { key: ProductCategory; label: string; count: number }[]
 }) {
   return (
-    <div className="flex gap-2 overflow-x-auto pb-2 mt-3">
+    <div className="flex flex-wrap gap-2 pb-2 mt-3">
       <button
         onClick={() => setCategory('')}
-        className={`shrink-0 h-9 px-3 rounded-full text-xs font-semibold border ${category === '' ? 'bg-white/10 border-white/12 text-white' : 'bg-white/5 border-white/8 text-gray-400'}`}
+        className={`shrink-0 h-9 px-3 rounded-full text-xs font-semibold border transition-colors ${category === '' ? 'bg-white/10 border-white/12 text-white' : 'bg-white/5 border-white/8 text-gray-400 hover:text-white'}`}
       >
         Todas
       </button>
@@ -520,7 +671,7 @@ function CategoryTabs({ category, setCategory, categories }: {
         <button
           key={item.key}
           onClick={() => setCategory(item.key)}
-          className={`shrink-0 h-9 px-3 rounded-full text-xs font-semibold border ${category === item.key ? 'bg-brand border-brand text-white' : 'bg-white/5 border-white/8 text-gray-400'}`}
+          className={`shrink-0 h-9 px-3 rounded-full text-xs font-semibold border transition-colors ${category === item.key ? 'bg-brand border-brand text-white' : 'bg-white/5 border-white/8 text-gray-400 hover:text-white'}`}
         >
           {item.label} ({item.count})
         </button>
@@ -535,20 +686,20 @@ function ProductSearchRow({ product, active, onClick }: { product: SaleDevice; a
   return (
     <button
       onClick={onClick}
-      className={`w-full text-left flex items-center gap-3 p-3 border-b border-white/6 last:border-b-0 transition-colors ${active ? 'bg-brand/12' : 'hover:bg-white/[0.035]'} ${hasStock ? '' : 'opacity-70'}`}
+      className={`w-full text-left flex items-center gap-3 p-3 md:py-2.5 border-b border-white/6 last:border-b-0 transition-colors ${active ? 'bg-brand/12' : 'hover:bg-white/[0.035]'} ${hasStock ? '' : 'opacity-70'}`}
     >
-      <div className={`w-11 h-11 rounded-xl border flex items-center justify-center shrink-0 ${active ? 'border-brand/50 bg-brand/15' : 'border-white/8 bg-white/[0.04]'}`}>
-        {isPhone ? <Smartphone size={22} className="text-brand" /> : <Package size={21} className="text-brand" />}
+      <div className={`w-11 h-11 md:w-10 md:h-10 rounded-xl border flex items-center justify-center shrink-0 ${active ? 'border-brand/50 bg-brand/15' : 'border-white/8 bg-white/[0.04]'}`}>
+        {isPhone ? <Smartphone size={20} className="text-brand" /> : <Package size={19} className="text-brand" />}
       </div>
       <div className="min-w-0 flex-1">
         <div className="font-semibold text-sm leading-tight truncate">{product.modelo}</div>
-        <div className="text-xs text-gray-500 mt-0.5 truncate">
+        <div className="text-xs text-gray-400 mt-0.5 truncate">
           {product.marca} | {categoryLabel(product.product_category || 'outro')} | {product.sku || product.barcode || 'sem codigo'}
         </div>
       </div>
       <div className="text-right shrink-0">
-        <div className="font-bold text-sm">{brl(product.preco_venda)}</div>
-        <div className={`text-[11px] mt-0.5 ${hasStock ? 'text-gray-500' : 'text-amber-300'}`}>
+        <div className="font-bold text-sm tabular-nums">{brl(product.preco_venda)}</div>
+        <div className={`text-[11px] mt-0.5 ${hasStock ? 'text-gray-400' : 'text-amber-300'}`}>
           {hasStock ? `Estoque ${product.stock_quantity ?? 0}` : 'Sem estoque'}
         </div>
       </div>
@@ -561,7 +712,7 @@ function MiniStockStat({ label, value }: { label: string; value: number }) {
   return (
     <div className="rounded-xl bg-white/[0.04] border border-white/6 p-3">
       <div className="text-lg font-bold tabular-nums">{value}</div>
-      <div className="text-[11px] text-gray-500">{label}</div>
+      <div className="text-[11px] text-gray-400">{label}</div>
     </div>
   )
 }
@@ -623,7 +774,7 @@ function ProductForm({
       </select>
       <Field value={form.garantia} onChange={(v) => set('garantia', v)} placeholder="Garantia" />
       <Field value={form.observacoes} onChange={(v) => set('observacoes', v)} placeholder="Observacoes" />
-      <button onClick={onSave} className="h-12 rounded-xl bg-brand font-semibold">Salvar produto</button>
+      <button onClick={onSave} className="h-12 rounded-xl bg-brand hover:bg-brand-dark transition-colors font-semibold">Salvar produto</button>
     </div>
   )
 }
@@ -657,7 +808,7 @@ function DeviceList({ devices, categories }: {
     <Panel title="Produtos cadastrados" icon={Package}>
       <SearchBox value={query} onChange={setQuery} placeholder="Buscar no estoque por nome, marca, categoria ou codigo..." />
       <CategoryTabs category={category} setCategory={setCategory} categories={categories} />
-      <div className="text-[11px] text-gray-500 mb-2">
+      <div className="text-[11px] text-gray-400 mb-2">
         {filteredDevices.length} produto{filteredDevices.length !== 1 ? 's' : ''} em ordem alfabetica
       </div>
       <div className="space-y-2">
@@ -666,11 +817,11 @@ function DeviceList({ devices, categories }: {
             <div className="flex items-center justify-between gap-3">
               <div className="min-w-0">
                 <div className="font-semibold text-sm truncate">{device.modelo}</div>
-                <div className="text-xs text-gray-500 truncate">
-                  {device.marca} | {categoryLabel(device.product_category || 'outro')} | {device.imei1 || device.serial || device.sku || device.barcode || 'Sem identificador'} | {brl(device.preco_venda)}
+                <div className="text-xs text-gray-400 truncate">
+                  {device.marca} | {categoryLabel(device.product_category || 'outro')} | {device.imei1 || device.serial || device.sku || device.barcode || 'Sem identificador'} | <span className="tabular-nums">{brl(device.preco_venda)}</span>
                 </div>
               </div>
-              <span className="text-[10px] uppercase px-2 py-1 rounded-full bg-white/8">Estoque {device.stock_quantity ?? 1}</span>
+              <span className="text-[10px] uppercase px-2 py-1 rounded-full bg-white/8 shrink-0">Estoque {device.stock_quantity ?? 1}</span>
             </div>
           </div>
         ))}
@@ -693,33 +844,33 @@ function Panel({ title, icon: Icon, children }: { title: string; icon: typeof Pa
 }
 
 function TabButton({ active, onClick, children }: { active: boolean; onClick: () => void; children: React.ReactNode }) {
-  return <button onClick={onClick} className={`h-10 rounded-xl text-sm font-semibold ${active ? 'bg-brand' : 'bg-white/8'}`}>{children}</button>
+  return <button onClick={onClick} className={`h-10 md:px-8 rounded-xl text-sm font-semibold transition-colors ${active ? 'bg-brand' : 'bg-white/8 hover:bg-white/12 text-gray-300'}`}>{children}</button>
 }
 
-function SearchBox({ value, onChange, placeholder }: { value: string; onChange: (value: string) => void; placeholder: string }) {
+function SearchBox({ value, onChange, placeholder, autoFocus }: { value: string; onChange: (value: string) => void; placeholder: string; autoFocus?: boolean }) {
   return (
     <div className="relative mt-3">
       <Search size={16} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-500" />
-      <input value={value} onChange={(e) => onChange(e.target.value)} placeholder={placeholder} className="w-full h-11 pl-10 pr-3 rounded-xl bg-surface-input border border-white/5 focus:border-brand outline-none text-sm placeholder:text-gray-600" />
+      <input value={value} onChange={(e) => onChange(e.target.value)} placeholder={placeholder} autoFocus={autoFocus} className="w-full h-11 pl-10 pr-3 rounded-xl bg-surface-input border border-white/5 focus:border-brand outline-none text-sm placeholder:text-gray-600" />
     </div>
   )
 }
 
 function Field({ value, onChange, placeholder, className = '' }: { value: string; onChange: (value: string) => void; placeholder: string; className?: string }) {
   return (
-    <input value={value} onChange={(e) => onChange(e.target.value)} placeholder={placeholder} className={`h-11 px-3 rounded-xl bg-surface-input border border-white/5 text-sm placeholder:text-gray-600 ${className}`} />
+    <input value={value} onChange={(e) => onChange(e.target.value)} placeholder={placeholder} className={`h-11 px-3 rounded-xl bg-surface-input border border-white/5 focus:border-brand outline-none text-sm placeholder:text-gray-600 ${className}`} />
   )
 }
 
 function LabeledField({ label, value, onChange, placeholder }: { label: string; value: string; onChange: (value: string) => void; placeholder: string }) {
   return (
     <label className="block">
-      <span className="block text-[11px] font-semibold text-gray-500 mb-1">{label}</span>
+      <span className="block text-[11px] font-semibold text-gray-400 mb-1">{label}</span>
       <input
         value={value}
         onChange={(e) => onChange(e.target.value)}
         placeholder={placeholder}
-        className="h-11 w-full px-3 rounded-xl bg-surface-input border border-white/5 text-sm placeholder:text-gray-600"
+        className="h-11 w-full px-3 rounded-xl bg-surface-input border border-white/5 focus:border-brand outline-none text-sm placeholder:text-gray-600"
       />
     </label>
   )
@@ -727,7 +878,7 @@ function LabeledField({ label, value, onChange, placeholder }: { label: string; 
 
 function FooterAction({ children, disabled, onClick }: { children: React.ReactNode; disabled?: boolean; onClick: () => void }) {
   return (
-    <button onClick={onClick} disabled={disabled} className="w-full h-12 rounded-xl bg-brand font-semibold mt-4 disabled:opacity-50 disabled:cursor-not-allowed">
+    <button onClick={onClick} disabled={disabled} className="w-full h-12 rounded-xl bg-brand hover:bg-brand-dark transition-colors font-semibold mt-4 disabled:opacity-50 disabled:cursor-not-allowed">
       {children}
     </button>
   )
@@ -742,7 +893,7 @@ function SummaryRow({ label, value, sub }: { label: string; value: string; sub: 
   return (
     <div className="flex items-center justify-between gap-3 border-b border-white/5 py-3">
       <div>
-        <div className="text-xs text-gray-500">{label}</div>
+        <div className="text-xs text-gray-400">{label}</div>
         <div className="font-semibold text-sm">{value}</div>
       </div>
       <div className="text-sm text-gray-400">{sub}</div>
@@ -765,7 +916,7 @@ function money(value: string) {
 function normalizeSearch(value: string) {
   return value
     .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[̀-ͯ]/g, '')
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, ' ')
     .trim()

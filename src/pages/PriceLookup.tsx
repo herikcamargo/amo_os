@@ -91,17 +91,17 @@ export function PriceLookup() {
       </div>
 
       {query && results.length > 0 && (
-        <div className="flex gap-2 overflow-x-auto pb-2 mb-4">
+        <div className="flex gap-2 overflow-x-auto pb-2 mb-4 md:grid md:grid-cols-3 lg:grid-cols-4 md:overflow-visible md:pb-0">
           {results.map((item) => (
             <button
               key={item.id}
               onClick={() => setSelected(item)}
-              className={`shrink-0 px-3 py-2 rounded-xl border text-left ${
-                active?.id === item.id ? 'bg-brand/15 border-brand/40' : 'bg-white/5 border-white/10'
+              className={`shrink-0 px-3 py-2 rounded-xl border text-left transition-colors ${
+                active?.id === item.id ? 'bg-brand/15 border-brand/40' : 'bg-white/5 border-white/10 hover:bg-white/[0.08]'
               }`}
             >
-              <div className="text-xs text-gray-500">{item.brand}</div>
-              <div className="text-sm font-semibold">{item.model}</div>
+              <div className="text-xs text-gray-400">{item.brand}</div>
+              <div className="text-sm font-semibold truncate">{item.model}</div>
             </button>
           ))}
         </div>

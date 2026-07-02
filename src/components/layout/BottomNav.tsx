@@ -32,7 +32,7 @@ export function BottomNav() {
         ))}
         <button
           onClick={() => navigate('/nova-os')}
-          className="absolute left-1/2 -translate-x-1/2 -top-6 w-14 h-14 rounded-full bg-brand flex items-center justify-center shadow-lg shadow-brand/40 hover:shadow-brand/70 hover:scale-110 active:scale-95 transition-all hover:rotate-90 duration-300"
+          className="absolute left-1/2 -translate-x-1/2 -top-6 w-14 h-14 rounded-full bg-brand hover:bg-brand-dark flex items-center justify-center shadow-lg shadow-brand/40 active:scale-95 transition-colors duration-150"
         >
           <Plus size={26} className="text-white" />
         </button>

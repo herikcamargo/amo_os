@@ -4,7 +4,7 @@ import { Sidebar } from './Sidebar'
 
 export function AppShell() {
   return (
-    <div className="min-h-screen bg-surface text-white font-sans grain">
+    <div className="min-h-screen bg-surface text-white font-sans">
       <div className="flex">
         <Sidebar />
         <main className="flex-1 min-h-screen flex justify-center md:justify-start">
