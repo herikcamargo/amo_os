@@ -58,7 +58,7 @@ export function Sidebar() {
 
       <button
         onClick={() => navigate('/nova-os')}
-        className="w-full h-12 rounded-[12px] bg-brand font-semibold text-sm flex items-center justify-center gap-2 mb-6 shadow-lg shadow-brand/20 hover:bg-brand/90 active:scale-[0.98] transition-all"
+        className="w-full h-12 rounded-[12px] bg-brand font-semibold text-sm flex items-center justify-center gap-2 mb-6 shadow-[0_4px_24px_rgba(215,25,32,0.35)] hover:bg-brand-dark hover:shadow-[0_4px_32px_rgba(215,25,32,0.5)] active:scale-[0.98] transition-all"
       >
         <Plus size={18} /> Nova OS
       </button>

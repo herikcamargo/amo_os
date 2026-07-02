@@ -100,7 +100,13 @@ export function Home() {
   }
 
   return (
-    <div className="px-4 md:px-0 pt-4 md:pt-6 pb-8">
+    <div className="relative px-4 md:px-0 pt-4 md:pt-6 pb-8">
+      {/* Luz ambiente estatica no topo (profundidade, sem custo de render) */}
+      <div
+        className="pointer-events-none absolute -top-24 left-1/2 -translate-x-1/2 h-[420px] w-[820px] max-w-full opacity-60"
+        style={{ background: 'radial-gradient(50% 50% at 50% 50%, rgba(215,25,32,0.07), transparent 70%)' }}
+      />
+
       {/* Top bar */}
       <div className="flex items-center justify-between gap-4 mb-6">
         <div className="min-w-0">
@@ -135,7 +141,7 @@ export function Home() {
         <section className="min-w-0">
           <div className="mb-5">
             <div className="text-sm font-semibold text-gray-300 mb-3">Acesso rapido</div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-3">
+            <div className="grid grid-cols-2 xl:grid-cols-4 gap-2.5 md:gap-3">
               {MAIN_ACTIONS.map((action) => (
                 <MainActionCard key={action.title} {...action} onClick={() => navigate(action.path)} />
               ))}
@@ -180,27 +186,40 @@ function MainActionCard({ title, description, icon: Icon, color, featured, onCli
   return (
     <button
       onClick={onClick}
-      className={`group min-h-[176px] rounded-[16px] border p-5 text-left flex flex-col transition-colors ${
+      className={`group relative overflow-hidden min-h-[160px] md:min-h-[196px] rounded-[18px] border p-5 text-left flex flex-col transition-colors ${
         featured
-          ? 'bg-brand/[0.08] border-brand/30 hover:bg-brand/[0.12] hover:border-brand/45'
-          : 'bg-surface-card border-white/8 hover:border-white/16 hover:bg-white/[0.03]'
+          ? 'border-brand/35 hover:border-brand/55'
+          : 'border-white/8 hover:border-white/18'
       }`}
+      style={{ backgroundColor: '#101012' }}
     >
+      {/* Tinta radial da cor no topo do card */}
       <div
-        className="h-[52px] w-[52px] rounded-full flex items-center justify-center mb-5 transition-colors"
+        className="absolute inset-0 pointer-events-none opacity-70 group-hover:opacity-100 transition-opacity duration-300"
+        style={{ background: `radial-gradient(130% 80% at 18% 0%, ${color}17, transparent 55%)` }}
+      />
+
+      {/* Icone neon */}
+      <div
+        className="relative h-[60px] w-[60px] rounded-full flex items-center justify-center mb-5 md:mb-6 transition-shadow duration-300"
         style={{
-          backgroundColor: color + '1F',
-          boxShadow: `inset 0 0 0 1px ${color}30`,
+          backgroundColor: '#0C0C0E',
+          boxShadow: `0 0 0 1px ${color}50, 0 0 26px ${color}38, inset 0 0 14px ${color}1E`,
         }}
       >
-        <Icon size={22} style={{ color }} strokeWidth={2} />
+        <Icon size={24} style={{ color, filter: `drop-shadow(0 0 6px ${color}90)` }} strokeWidth={2} />
       </div>
-      <div className="flex-1">
-        <div className="text-[15px] font-extrabold tracking-tight leading-tight">{title}</div>
+
+      <div className="relative flex-1">
+        <div className="text-[15px] md:text-base font-extrabold tracking-tight leading-tight">{title}</div>
         <div className="text-xs text-gray-400 mt-1">{description}</div>
       </div>
-      <div className="flex justify-end mt-3">
-        <ArrowRight size={17} className="text-gray-500 group-hover:text-white transition-colors" />
+
+      {/* Seta em circulo delineado */}
+      <div className="relative flex justify-end mt-4">
+        <span className="h-9 w-9 rounded-full border border-white/12 flex items-center justify-center text-gray-400 group-hover:border-white/30 group-hover:text-white transition-colors">
+          <ArrowRight size={15} />
+        </span>
       </div>
     </button>
   )
@@ -219,10 +238,13 @@ function ShortcutButton({ label, description, icon: Icon, color, onClick }: {
       className="group min-h-[72px] rounded-[14px] bg-surface-card border border-white/8 px-4 py-3 text-left flex items-center gap-3 hover:border-white/16 hover:bg-white/[0.03] transition-colors"
     >
       <div
-        className="h-10 w-10 rounded-full flex items-center justify-center shrink-0"
-        style={{ backgroundColor: color + '1C', boxShadow: `inset 0 0 0 1px ${color}2E` }}
+        className="h-10 w-10 rounded-[12px] flex items-center justify-center shrink-0"
+        style={{
+          backgroundColor: color + '16',
+          boxShadow: `inset 0 0 0 1px ${color}30, 0 0 14px ${color}20`,
+        }}
       >
-        <Icon size={17} style={{ color }} />
+        <Icon size={17} style={{ color, filter: `drop-shadow(0 0 4px ${color}70)` }} />
       </div>
       <div className="min-w-0 flex-1">
         <div className="text-sm font-semibold truncate">{label}</div>
@@ -246,7 +268,36 @@ function RecentOrdersTable({ orders, onOpen, onViewAll }: {
         </button>
       </div>
 
-      <div className="overflow-x-auto">
+      {/* Lista compacta — mobile */}
+      <div className="md:hidden divide-y divide-white/6">
+        {orders.map((order) => {
+          const status = STATUS_CONFIG[order.status]
+          return (
+            <button
+              key={order.id}
+              onClick={() => onOpen(order)}
+              className="w-full text-left px-4 py-3 hover:bg-white/[0.03] transition-colors"
+            >
+              <div className="flex items-center justify-between gap-3">
+                <span className="font-semibold text-sm">{order.numero}</span>
+                <span className="inline-flex items-center gap-1.5 rounded-full px-2 py-0.5 text-[10px] font-semibold whitespace-nowrap" style={{ color: status.dot, backgroundColor: status.bg }}>
+                  <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: status.dot }} />
+                  {status.label}
+                </span>
+              </div>
+              <div className="text-xs text-gray-400 mt-1 truncate">
+                {order.customer?.nome || '-'} · {deviceName(order)}
+              </div>
+              <div className="text-[11px] text-gray-500 mt-0.5 truncate">
+                {order.problema_relatado || '-'} · {formatDate(order.created_at)}
+              </div>
+            </button>
+          )
+        })}
+      </div>
+
+      {/* Tabela — desktop */}
+      <div className="hidden md:block overflow-x-auto">
         <table className="w-full min-w-[760px] text-sm">
           <thead className="text-xs text-gray-500">
             <tr className="border-b border-white/6">
@@ -371,10 +422,14 @@ function PickupPanel({ orders, onOpen, onViewAll }: {
                 <div className="text-xs text-gray-500 truncate mt-0.5">{deviceName(order)}</div>
               </div>
               <div className="text-right text-xs whitespace-nowrap">
-                <div className={isToday(order.updated_at) ? 'text-green-400 font-semibold' : 'text-gray-400'}>
-                  {relativeDay(order.updated_at)}
-                </div>
-                <div className="text-gray-500 mt-0.5 tabular-nums">{formatTime(order.updated_at)}</div>
+                {isToday(order.updated_at) ? (
+                  <span className="inline-block px-2 py-0.5 rounded-md bg-green-500/15 text-green-400 font-semibold">
+                    Hoje
+                  </span>
+                ) : (
+                  <div className="text-gray-400">{relativeDay(order.updated_at)}</div>
+                )}
+                <div className="text-gray-500 mt-1 tabular-nums">{formatTime(order.updated_at)}</div>
               </div>
             </div>
           </button>
@@ -389,7 +444,10 @@ function PickupPanel({ orders, onOpen, onViewAll }: {
 
 function TipPanel() {
   return (
-    <div className="rounded-[16px] bg-brand/[0.08] border border-brand/25 p-5">
+    <div
+      className="relative overflow-hidden rounded-[16px] border border-brand/30 p-5"
+      style={{ background: 'radial-gradient(140% 120% at 100% 0%, rgba(215,25,32,0.16), rgba(215,25,32,0.05) 60%)' }}
+    >
       <div className="flex items-start justify-between gap-4">
         <div>
           <h2 className="font-bold text-brand-light">Dica rapida</h2>
@@ -397,8 +455,14 @@ function TipPanel() {
             Use a consulta de precos para gerar orcamentos mais rapidos e precisos.
           </p>
         </div>
-        <div className="h-10 w-10 rounded-full bg-brand/15 flex items-center justify-center shrink-0" style={{ boxShadow: 'inset 0 0 0 1px rgba(215,25,32,0.3)' }}>
-          <Lightbulb size={17} className="text-brand-light" />
+        <div
+          className="h-10 w-10 rounded-full flex items-center justify-center shrink-0"
+          style={{
+            backgroundColor: '#160B0C',
+            boxShadow: '0 0 0 1px rgba(215,25,32,0.45), 0 0 20px rgba(215,25,32,0.35)',
+          }}
+        >
+          <Lightbulb size={17} className="text-brand-light" style={{ filter: 'drop-shadow(0 0 5px rgba(255,66,66,0.8))' }} />
         </div>
       </div>
     </div>
