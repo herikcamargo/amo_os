@@ -170,7 +170,7 @@ function OsPdfDocument({ order, kind = 'entrada', settings }: { order: ServiceOr
               <Text style={styles.sectionTitle}>GARANTIA</Text>
               <View style={styles.row}><Text style={styles.label}>Prazo</Text><Text style={styles.value}>{order.garantia_dias || 0} dias</Text></View>
               <View style={styles.row}><Text style={styles.label}>Final</Text><Text style={styles.value}>{serviceWarrantyEnd(order)}</Text></View>
-              <View style={styles.row}><Text style={styles.label}>Tecnico</Text><Text style={styles.value}>{order.delivery_responsible || '--'}</Text></View>
+              <View style={styles.row}><Text style={styles.label}>Retirado por</Text><Text style={styles.value}>{order.delivery_receiver || order.delivery_responsible || '--'}</Text></View>
             </View>
           </View>
         )}

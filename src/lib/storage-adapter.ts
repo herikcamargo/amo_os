@@ -19,6 +19,7 @@ import type {
   DeviceSale,
   AuditLog,
   AppSettings,
+  ServiceOrderPhoto,
 } from '@/types/database'
 
 export const isSupabaseEnabled = !isDemoMode
@@ -121,6 +122,8 @@ export const ordersAdapter = {
         delivery_terms: updates.delivery_terms,
         delivery_notes: updates.delivery_notes,
         delivery_responsible: updates.delivery_responsible,
+        delivery_receiver: updates.delivery_receiver,
+        delivery_receiver_document: updates.delivery_receiver_document,
         payment_method: updates.payment_method,
         payment_status: updates.payment_status,
         printed_entrada_at: updates.printed_entrada_at,
@@ -290,6 +293,30 @@ export const deviceSalesAdapter = {
     const { data, error } = await supabase.from('device_sales').update(payload).eq('id', id).select('*').single()
     if (error) throw error
     return { ...data, customer, device } as DeviceSale
+  },
+}
+
+export const serviceOrderPhotosAdapter = {
+  async list(): Promise<ServiceOrderPhoto[]> {
+    if (!isSupabaseEnabled) return []
+    const { data, error } = await supabase
+      .from('service_order_photos')
+      .select('*')
+      .order('created_at', { ascending: false })
+    if (error) throw error
+    return data || []
+  },
+
+  async create(photo: ServiceOrderPhoto): Promise<ServiceOrderPhoto> {
+    if (!isSupabaseEnabled) throw new Error('Supabase nao configurado')
+    const { url, ...payload } = photo
+    const { data, error } = await supabase
+      .from('service_order_photos')
+      .insert(payload)
+      .select('*')
+      .single()
+    if (error) throw error
+    return { ...data, url } as ServiceOrderPhoto
   },
 }
 
@@ -520,6 +547,8 @@ interface ServiceOrderRow {
   delivery_terms?: string | null
   delivery_notes?: string | null
   delivery_responsible?: string | null
+  delivery_receiver?: string | null
+  delivery_receiver_document?: string | null
   payment_method?: string | null
   payment_status?: string | null
   printed_entrada_at?: string | null
@@ -562,6 +591,8 @@ function rowToOrder(row: ServiceOrderRow): ServiceOrder {
     delivery_terms: row.delivery_terms,
     delivery_notes: row.delivery_notes,
     delivery_responsible: row.delivery_responsible,
+    delivery_receiver: row.delivery_receiver,
+    delivery_receiver_document: row.delivery_receiver_document,
     payment_method: row.payment_method,
     payment_status: row.payment_status,
     printed_entrada_at: row.printed_entrada_at,

@@ -9,6 +9,7 @@ import type {
   DeviceSale,
   AuditLog,
   AppSettings,
+  ServiceOrderPhoto,
 } from '@/types/database'
 import type { AppNotification } from '@/types/notifications'
 import {
@@ -20,6 +21,7 @@ import {
   deviceSalesAdapter,
   auditLogsAdapter,
   appSettingsAdapter,
+  serviceOrderPhotosAdapter,
   isSupabaseEnabled,
 } from '@/lib/storage-adapter'
 
@@ -31,6 +33,7 @@ interface AppState {
   suppliers: Supplier[]
   saleDevices: SaleDevice[]
   deviceSales: DeviceSale[]
+  serviceOrderPhotos: ServiceOrderPhoto[]
   auditLogs: AuditLog[]
   settings: AppSettings
   notifications: AppNotification[]
@@ -53,6 +56,7 @@ interface AppState {
   updateSaleDevice: (id: string, updates: Partial<SaleDevice>) => void
   addDeviceSale: (sale: DeviceSale) => void
   cancelDeviceSale: (saleId: string, reason: string, returnToStock: boolean) => void
+  addServiceOrderPhoto: (photo: ServiceOrderPhoto) => void
   addAuditLog: (log: AuditLog) => void
   updateSettings: (settings: Partial<AppSettings>) => void
   addUser: (user: AppUser) => void
@@ -87,6 +91,7 @@ export const useStore = create<AppState>()(
       suppliers: [],
       saleDevices: [],
       deviceSales: [],
+      serviceOrderPhotos: [],
       auditLogs: [],
       settings: {
         warranty_terms: 'A garantia cobre exclusivamente o servico realizado e as pecas substituidas, respeitando mau uso, queda, oxidacao e violacao do aparelho.',
@@ -271,6 +276,14 @@ export const useStore = create<AppState>()(
             : s.saleDevices,
         }
       }),
+      addServiceOrderPhoto: (photo) => {
+        set((s) => ({ serviceOrderPhotos: [photo, ...s.serviceOrderPhotos] }))
+        if (isSupabaseEnabled) {
+          void serviceOrderPhotosAdapter.create(photo).catch((err) => {
+            console.warn('Falha ao registrar foto da OS no Supabase:', err)
+          })
+        }
+      },
       addAuditLog: (log) => {
         set((s) => ({ auditLogs: [log, ...s.auditLogs] }))
         if (isSupabaseEnabled) {
@@ -345,6 +358,7 @@ export const useStore = create<AppState>()(
             suppliers: [],
             saleDevices: [],
             deviceSales: [],
+            serviceOrderPhotos: [],
             auditLogs: [],
             notifications: [],
             loading: false,
@@ -358,6 +372,7 @@ export const useStore = create<AppState>()(
         suppliers: [],
         saleDevices: [],
         deviceSales: [],
+        serviceOrderPhotos: [],
         auditLogs: [],
         notifications: DEMO_DATA.notifications,
         osCounter: 124,
@@ -368,12 +383,13 @@ export const useStore = create<AppState>()(
         if (!isSupabaseEnabled) return
         set({ loading: true })
         try {
-          const [customers, orders, suppliers, saleDevices, auditLogs, cloudSettings] = await Promise.all([
+          const [customers, orders, suppliers, saleDevices, auditLogs, serviceOrderPhotos, cloudSettings] = await Promise.all([
             customersAdapter.list(),
             ordersAdapter.list(),
             suppliersAdapter.list(),
             saleDevicesAdapter.list(),
             auditLogsAdapter.list(),
+            serviceOrderPhotosAdapter.list(),
             appSettingsAdapter.get(),
           ])
           const deviceSales = await deviceSalesAdapter.list(customers, saleDevices)
@@ -383,6 +399,7 @@ export const useStore = create<AppState>()(
             suppliers,
             saleDevices,
             deviceSales,
+            serviceOrderPhotos,
             auditLogs,
             settings: cloudSettings || get().settings,
             loading: false,
@@ -395,7 +412,7 @@ export const useStore = create<AppState>()(
     }),
     {
       name: 'amo-os-storage',
-      version: 4,
+      version: 5,
       partialize: (state) => ({
         users: state.users,
         orders: isSupabaseEnabled ? [] : state.orders,
@@ -403,6 +420,7 @@ export const useStore = create<AppState>()(
         suppliers: isSupabaseEnabled ? [] : state.suppliers,
         saleDevices: isSupabaseEnabled ? [] : state.saleDevices,
         deviceSales: isSupabaseEnabled ? [] : state.deviceSales,
+        serviceOrderPhotos: isSupabaseEnabled ? [] : state.serviceOrderPhotos,
         auditLogs: isSupabaseEnabled ? [] : state.auditLogs,
         settings: state.settings,
         notifications: state.notifications,
@@ -425,6 +443,7 @@ export const useStore = create<AppState>()(
           suppliers: isSupabaseEnabled ? [] : ((persisted as { suppliers?: Supplier[] }).suppliers || []),
           saleDevices: isSupabaseEnabled ? [] : ((persisted as { saleDevices?: SaleDevice[] }).saleDevices || []),
           deviceSales: isSupabaseEnabled ? [] : ((persisted as { deviceSales?: DeviceSale[] }).deviceSales || []),
+          serviceOrderPhotos: isSupabaseEnabled ? [] : ((persisted as { serviceOrderPhotos?: ServiceOrderPhoto[] }).serviceOrderPhotos || []),
           auditLogs: isSupabaseEnabled ? [] : ((persisted as { auditLogs?: AuditLog[] }).auditLogs || []),
           user: null,
           authReady: false,

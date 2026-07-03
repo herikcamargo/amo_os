@@ -99,6 +99,8 @@ export interface ServiceOrder {
   delivery_terms?: string | null
   delivery_notes?: string | null
   delivery_responsible?: string | null
+  delivery_receiver?: string | null
+  delivery_receiver_document?: string | null
   payment_method?: string | null
   payment_status?: string | null
   printed_entrada_at?: string | null

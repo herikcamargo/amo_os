@@ -1,9 +1,9 @@
-import { useMemo, useState } from 'react'
+import { useMemo, useRef, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import {
   ChevronLeft, Download, Wrench, User, Smartphone, CheckCircle2,
   Camera, ShieldCheck, History, AlertTriangle, Phone, MessageSquare,
-  Package, Save, Plus,
+  Package, Save, Plus, CreditCard, X, ImageIcon,
 } from 'lucide-react'
 import { useStore } from '@/store/useStore'
 import { IconBtn } from '@/components/ui/IconBtn'
@@ -16,7 +16,9 @@ import { downloadOsPdf } from '@/lib/generate-pdf'
 import { can } from '@/lib/permissions'
 import { calculateWarrantyUntil, isPartWarrantyActive, partWarrantyLabel } from '@/lib/warranty'
 import { generateId } from '@/lib/utils'
-import type { OsStatus, PartWarranty, WarrantyUnit, Supplier } from '@/types/database'
+import { compressImage, formatFileSize } from '@/lib/image-compressor'
+import { formatOsPhotoFileName, getDemoPhotos, uploadToDrive } from '@/lib/google-drive'
+import type { OsStatus, PartWarranty, WarrantyUnit, Supplier, ServiceOrderPhoto } from '@/types/database'
 import toast from 'react-hot-toast'
 
 const DEMO_LOGS = [
@@ -28,16 +30,42 @@ export function OrderDetail() {
   const { id } = useParams()
   const navigate = useNavigate()
   const {
-    orders, updateOrder, user, suppliers, addSupplier, addAuditLog, settings,
+    orders, updateOrder, user, suppliers, addSupplier, addAuditLog, settings, serviceOrderPhotos, addServiceOrderPhoto,
   } = useStore()
   const [showStatusModal, setShowStatusModal] = useState(false)
+  const [finishOpen, setFinishOpen] = useState(false)
   const [pieceOpen, setPieceOpen] = useState(false)
   const [quickSupplier, setQuickSupplier] = useState('')
+  const exitFileInputRef = useRef<HTMLInputElement>(null)
+  const [exitPhoto, setExitPhoto] = useState<{ blob: Blob; preview: string; compressedSize: number; originalSize: number } | null>(null)
+  const [finishPayment, setFinishPayment] = useState('Pix')
+  const [finishValue, setFinishValue] = useState('')
+  const [finishReceiver, setFinishReceiver] = useState('')
+  const [finishReceiverDocument, setFinishReceiverDocument] = useState('')
+  const [finishNotes, setFinishNotes] = useState('')
+  const [finishing, setFinishing] = useState(false)
   const canFinance = can(user, 'view_financial')
   const canExportPdf = can(user, 'export_pdf')
   const canUpdateStatus = can(user, 'update_status')
 
   const order = useMemo(() => orders.find((o) => o.id === id), [orders, id])
+  const photos = useMemo(() => {
+    if (!order) return []
+    const fromState = serviceOrderPhotos.filter((photo) => photo.service_order_id === order.id)
+    const demo = getDemoPhotos(order.numero).map<ServiceOrderPhoto>((photo) => ({
+      id: photo.fileId,
+      service_order_id: order.id,
+      kind: photo.fileName.includes('saida') ? 'saida' : 'entrada',
+      storage_path: photo.fileId,
+      legenda: photo.fileName,
+      url: photo.thumbnailLink || photo.webViewLink,
+      created_at: order.created_at,
+    }))
+    const map = new Map<string, ServiceOrderPhoto>()
+    ;[...fromState, ...demo].forEach((photo) => map.set(photo.id, photo))
+    return Array.from(map.values())
+  }, [serviceOrderPhotos, order])
+
   if (!order) {
     return (
       <div className="flex items-center justify-center h-screen">
@@ -53,14 +81,22 @@ export function OrderDetail() {
   const readyDays = order.status === 'pronto' ? daysSince(order.updated_at) : 0
   const part = order.part_warranty
   const partActive = isPartWarrantyActive(part)
+  const entryPhotos = photos.filter((photo) => photo.kind === 'entrada')
+  const exitPhotos = photos.filter((photo) => photo.kind === 'saida')
 
   const handleStatusChange = (newStatus: OsStatus) => {
+    if (newStatus === 'entregue') {
+      setShowStatusModal(false)
+      setFinishValue(String(order.valor_servico || ''))
+      setFinishOpen(true)
+      return
+    }
     updateOrder(order.id, { status: newStatus, updated_at: new Date().toISOString() })
     addAuditLog({
       id: generateId(),
       user_id: user?.id,
       user_name: user?.nome,
-      action: newStatus === 'entregue' ? 'finalizacao_os' : 'alteracao_status_os',
+      action: 'alteracao_status_os',
       entity: 'service_order',
       entity_id: order.id,
       previous_values: { status: order.status },
@@ -68,6 +104,92 @@ export function OrderDetail() {
       created_at: new Date().toISOString(),
     })
     setShowStatusModal(false)
+  }
+
+  const handleExitPhotoCapture = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0]
+    if (!file) return
+    try {
+      const compressed = await compressImage(file)
+      setExitPhoto({
+        blob: compressed.blob,
+        preview: URL.createObjectURL(compressed.blob),
+        compressedSize: compressed.compressedSize,
+        originalSize: compressed.originalSize,
+      })
+      toast.success(`Foto de saida pronta: ${formatFileSize(compressed.originalSize)} -> ${formatFileSize(compressed.compressedSize)}`)
+    } catch {
+      toast.error('Erro ao processar foto de saida')
+    } finally {
+      e.target.value = ''
+    }
+  }
+
+  const finishOrder = async () => {
+    if (!finishPayment) {
+      toast.error('Selecione a forma de pagamento')
+      return
+    }
+    if (!finishReceiver.trim()) {
+      toast.error('Informe quem retirou o aparelho')
+      return
+    }
+    if (!exitPhoto && exitPhotos.length === 0) {
+      toast.error('Adicione pelo menos 1 foto de saida antes de finalizar a OS')
+      return
+    }
+
+    setFinishing(true)
+    try {
+      const now = new Date().toISOString()
+      let uploadedPhoto: ServiceOrderPhoto | null = null
+      if (exitPhoto) {
+        const fileName = formatOsPhotoFileName(order.numero, 'saida_retirada', exitPhotos.length)
+        const uploaded = await uploadToDrive(exitPhoto.blob, fileName, order.numero)
+        uploadedPhoto = {
+          id: generateId(),
+          service_order_id: order.id,
+          kind: 'saida',
+          storage_path: uploaded.fileId || fileName,
+          legenda: 'Saida / retirada',
+          url: uploaded.thumbnailLink || uploaded.webViewLink,
+          created_at: now,
+        }
+        addServiceOrderPhoto(uploadedPhoto)
+      }
+
+      const nextValue = money(finishValue)
+      const updates = {
+        status: 'entregue' as OsStatus,
+        updated_at: now,
+        payment_method: finishPayment,
+        payment_status: 'pago',
+        delivery_receiver: finishReceiver.trim(),
+        delivery_receiver_document: finishReceiverDocument.trim() || null,
+        delivery_notes: finishNotes.trim() || order.delivery_notes || null,
+        valor_servico: nextValue > 0 ? nextValue : order.valor_servico,
+      }
+      updateOrder(order.id, updates)
+      addAuditLog({
+        id: generateId(),
+        user_id: user?.id,
+        user_name: user?.nome,
+        action: 'finalizacao_os_caixa',
+        entity: 'service_order',
+        entity_id: order.id,
+        previous_values: { status: order.status, payment_method: order.payment_method, valor_servico: order.valor_servico },
+        new_values: { ...updates, photo_id: uploadedPhoto?.id || null },
+        created_at: now,
+      })
+      toast.success('OS finalizada e registrada para o caixa')
+      setFinishOpen(false)
+      setExitPhoto(null)
+    } catch (err) {
+      const message = err instanceof Error ? err.message : 'Erro desconhecido'
+      toast.error(`Nao consegui finalizar: ${message}`)
+    } finally {
+      setFinishing(false)
+    }
   }
 
   const handlePrint = (kind: 'entrada' | 'saida') => {
@@ -157,10 +279,21 @@ export function OrderDetail() {
         )}
 
         <div className="flex gap-2.5 mt-4">
+          {canUpdateStatus && !['entregue', 'cancelado'].includes(order.status) && (
+            <button
+              onClick={() => {
+                setFinishValue(String(order.valor_servico || ''))
+                setFinishOpen(true)
+              }}
+              className="flex-1 h-11 rounded-xl bg-brand font-semibold text-sm flex items-center justify-center gap-2 active:scale-95 transition-transform"
+            >
+              <CreditCard size={16} /> Finalizar OS
+            </button>
+          )}
           {canExportPdf && (
             <button
               onClick={() => handlePrint('entrada')}
-              className="flex-1 h-11 rounded-xl bg-brand font-semibold text-sm flex items-center justify-center gap-2 active:scale-95 transition-transform"
+              className="flex-1 h-11 rounded-xl bg-white/8 border border-white/10 font-semibold text-sm flex items-center justify-center gap-2 active:scale-95 transition-transform"
             >
               <Download size={16} /> OS entrada
             </button>
@@ -248,13 +381,11 @@ export function OrderDetail() {
 
         {/* Fotos */}
         <CardBox title="Fotos de entrada" icon={Camera}>
-          <div className="grid grid-cols-4 gap-2">
-            {['Frente', 'Traseira', 'Lateral', 'IMEI'].map((f) => (
-              <div key={f} className="aspect-square rounded-xl bg-surface-muted border border-white/5 flex flex-col items-center justify-center gap-1 text-gray-500">
-                <Camera size={15} /><span className="text-[9px]">{f}</span>
-              </div>
-            ))}
-          </div>
+          <PhotoGrid photos={entryPhotos} emptyText="Nenhuma foto de entrada registrada nesta OS." />
+        </CardBox>
+
+        <CardBox title="Fotos de saida" icon={Camera}>
+          <PhotoGrid photos={exitPhotos} emptyText="A foto de saida sera obrigatoria ao finalizar a OS." />
         </CardBox>
 
         {/* Serviço & Garantia (financeiro — admin) ou só garantia (atendente/técnico) */}
@@ -358,6 +489,28 @@ export function OrderDetail() {
           onSave={savePiece}
         />
       )}
+      {finishOpen && (
+        <FinishOrderModal
+          payment={finishPayment}
+          setPayment={setFinishPayment}
+          value={finishValue}
+          setValue={setFinishValue}
+          receiver={finishReceiver}
+          setReceiver={setFinishReceiver}
+          receiverDocument={finishReceiverDocument}
+          setReceiverDocument={setFinishReceiverDocument}
+          notes={finishNotes}
+          setNotes={setFinishNotes}
+          exitPhoto={exitPhoto}
+          existingExitPhotos={exitPhotos.length}
+          onPickPhoto={() => exitFileInputRef.current?.click()}
+          onRemovePhoto={() => setExitPhoto(null)}
+          onClose={() => setFinishOpen(false)}
+          onSave={finishOrder}
+          saving={finishing}
+        />
+      )}
+      <input ref={exitFileInputRef} type="file" accept="image/*" capture="environment" className="hidden" onChange={handleExitPhotoCapture} />
     </div>
   )
 }
@@ -450,6 +603,142 @@ function PieceModal({
   )
 }
 
+function PhotoGrid({ photos, emptyText }: { photos: ServiceOrderPhoto[]; emptyText: string }) {
+  if (photos.length === 0) {
+    return (
+      <div className="rounded-xl bg-surface-muted border border-dashed border-white/10 px-3 py-5 text-center">
+        <Camera size={18} className="mx-auto text-gray-500 mb-2" />
+        <div className="text-xs text-gray-500">{emptyText}</div>
+      </div>
+    )
+  }
+
+  return (
+    <div className="grid grid-cols-3 sm:grid-cols-4 gap-2">
+      {photos.map((photo) => (
+        <a
+          key={photo.id}
+          href={photo.url || photo.storage_path}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="relative aspect-square rounded-xl overflow-hidden bg-surface-muted border border-white/5 flex items-center justify-center"
+        >
+          {photo.url ? (
+            <img src={photo.url} alt={photo.legenda || 'Foto da OS'} className="w-full h-full object-cover" />
+          ) : (
+            <ImageIcon size={20} className="text-gray-500" />
+          )}
+          <span className="absolute bottom-0 left-0 right-0 bg-black/65 px-1.5 py-1 text-[9px] text-white truncate">
+            {photo.legenda || photo.kind}
+          </span>
+        </a>
+      ))}
+    </div>
+  )
+}
+
+function FinishOrderModal({
+  payment,
+  setPayment,
+  value,
+  setValue,
+  receiver,
+  setReceiver,
+  receiverDocument,
+  setReceiverDocument,
+  notes,
+  setNotes,
+  exitPhoto,
+  existingExitPhotos,
+  onPickPhoto,
+  onRemovePhoto,
+  onClose,
+  onSave,
+  saving,
+}: {
+  payment: string
+  setPayment: (value: string) => void
+  value: string
+  setValue: (value: string) => void
+  receiver: string
+  setReceiver: (value: string) => void
+  receiverDocument: string
+  setReceiverDocument: (value: string) => void
+  notes: string
+  setNotes: (value: string) => void
+  exitPhoto: { preview: string; compressedSize: number; originalSize: number } | null
+  existingExitPhotos: number
+  onPickPhoto: () => void
+  onRemovePhoto: () => void
+  onClose: () => void
+  onSave: () => void
+  saving: boolean
+}) {
+  const paymentOptions = ['Pix', 'Cartao', 'Dinheiro', 'Parcelado', 'Transferencia']
+  return (
+    <div className="fixed inset-0 bg-black/60 z-50 flex items-end justify-center" onClick={onClose}>
+      <div className="w-full max-w-[520px] max-h-[92vh] overflow-y-auto bg-surface-elevated rounded-t-[24px] border-t border-white/10 p-5 pb-8" onClick={(e) => e.stopPropagation()}>
+        <div className="flex items-center justify-between mb-4">
+          <div>
+            <h2 className="text-lg font-bold">Finalizar OS</h2>
+            <p className="text-xs text-gray-500 mt-0.5">Registre o pagamento, retirada e foto de saida.</p>
+          </div>
+          <button onClick={onClose} className="h-9 w-9 rounded-xl bg-white/5 flex items-center justify-center"><X size={16} /></button>
+        </div>
+
+        <div className="space-y-4">
+          <div>
+            <label className="block text-sm text-gray-400 mb-2">Forma de pagamento *</label>
+            <div className="grid grid-cols-2 gap-2">
+              {paymentOptions.map((item) => (
+                <button
+                  key={item}
+                  onClick={() => setPayment(item)}
+                  className={`h-11 rounded-xl border text-sm font-semibold ${payment === item ? 'bg-brand/15 border-brand text-white' : 'bg-white/5 border-white/8 text-gray-400'}`}
+                >
+                  {item}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <InputLine label="Valor recebido / servico" value={value} onChange={setValue} />
+          <InputLine label="Quem retirou *" value={receiver} onChange={setReceiver} />
+          <InputLine label="Documento de quem retirou" value={receiverDocument} onChange={setReceiverDocument} />
+          <InputLine label="Observacoes da retirada" value={notes} onChange={setNotes} />
+
+          <div>
+            <label className="block text-sm text-gray-400 mb-2">Foto de saida *</label>
+            {exitPhoto ? (
+              <div className="relative rounded-xl overflow-hidden border border-white/10">
+                <img src={exitPhoto.preview} alt="Foto de saida" className="w-full h-48 object-cover" />
+                <button onClick={onRemovePhoto} className="absolute top-2 right-2 h-8 w-8 rounded-full bg-black/70 flex items-center justify-center">
+                  <X size={14} />
+                </button>
+                <div className="absolute bottom-0 left-0 right-0 bg-black/60 px-3 py-2 text-xs text-green-300">
+                  {formatFileSize(exitPhoto.originalSize)} &gt; {formatFileSize(exitPhoto.compressedSize)}
+                </div>
+              </div>
+            ) : (
+              <button
+                onClick={onPickPhoto}
+                className="w-full h-24 rounded-xl bg-surface-muted border border-dashed border-white/12 flex flex-col items-center justify-center gap-2 text-gray-500 hover:border-brand/40"
+              >
+                <Camera size={20} />
+                <span className="text-xs">{existingExitPhotos > 0 ? `${existingExitPhotos} foto(s) ja registrada(s). Adicionar outra` : 'Tirar foto de saida'}</span>
+              </button>
+            )}
+          </div>
+
+          <button onClick={onSave} disabled={saving} className="w-full h-12 rounded-xl bg-brand font-semibold flex items-center justify-center gap-2 disabled:opacity-60">
+            <Save size={16} /> {saving ? 'Finalizando...' : 'Finalizar e enviar ao caixa'}
+          </button>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 function InputLine({ label, value, onChange, type = 'text' }: { label: string; value: string; onChange: (value: string) => void; type?: string }) {
   return (
     <label>
@@ -457,4 +746,8 @@ function InputLine({ label, value, onChange, type = 'text' }: { label: string; v
       <input type={type} value={value} onChange={(e) => onChange(e.target.value)} className="h-11 w-full px-3 rounded-xl bg-surface-input border border-white/5 text-sm" />
     </label>
   )
+}
+
+function money(value: string) {
+  return Number(value.replace(/\./g, '').replace(',', '.')) || 0
 }

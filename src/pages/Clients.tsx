@@ -1,10 +1,10 @@
 import { useEffect, useMemo, useState } from 'react'
-import { useSearchParams } from 'react-router-dom'
-import { Search, User, Phone, MapPin, Pencil, Plus, X } from 'lucide-react'
+import { useNavigate, useSearchParams } from 'react-router-dom'
+import { Search, User, Phone, MapPin, Pencil, Plus, X, CalendarDays, Wrench } from 'lucide-react'
 import { useStore } from '@/store/useStore'
 import { generateId } from '@/lib/utils'
 import { isValidCep, lookupCep, maskCep } from '@/lib/cep'
-import type { Customer } from '@/types/database'
+import type { Customer, ServiceOrder } from '@/types/database'
 import toast from 'react-hot-toast'
 
 const emptyCustomer = {
@@ -22,6 +22,7 @@ const emptyCustomer = {
 
 export function Clients() {
   const [searchParams] = useSearchParams()
+  const navigate = useNavigate()
   const { customers, orders, addCustomer, updateCustomer, user, addAuditLog } = useStore()
   const [q, setQ] = useState('')
   const [editing, setEditing] = useState<Customer | null>(null)
@@ -40,9 +41,9 @@ export function Clients() {
     ].filter(Boolean).join(' ').toLowerCase().includes(term))
   }, [customers, orders, q])
 
-  const orderCount = (customer: Customer) => orders.filter((order) => (
-    order.customer_id === customer.id || order.customer?.telefone === customer.telefone
-  )).length
+  const customerOrders = (customer: Customer) => orders
+    .filter((order) => sameCustomer(customer, order))
+    .sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime())
 
   const openForm = (customer?: Customer) => {
     setEditing(customer || null)
@@ -182,28 +183,64 @@ export function Clients() {
       </div>
 
       <div className="space-y-2">
-        {clients.map((c) => (
-          <div key={c.id} className="bg-surface-card rounded-[16px] border border-white/5 p-4 flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-brand/15 flex items-center justify-center shrink-0">
-              <User size={18} className="text-brand" />
-            </div>
-            <div className="flex-1 min-w-0">
-              <div className="font-semibold text-sm truncate">{c.nome}</div>
-              <div className="flex items-center gap-1.5 text-xs text-gray-400 mt-0.5"><Phone size={11} /> {c.telefone}</div>
-              {(c.logradouro || c.cidade) && (
-                <div className="flex items-center gap-1.5 text-xs text-gray-500 mt-0.5 truncate">
-                  <MapPin size={11} /> {[c.logradouro, c.numero, c.bairro, c.cidade, c.uf].filter(Boolean).join(', ')}
+        {clients.map((c) => {
+          const history = customerOrders(c)
+          return (
+            <div key={c.id} className="bg-surface-card rounded-[16px] border border-white/5 p-4">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-xl bg-brand/15 flex items-center justify-center shrink-0">
+                  <User size={18} className="text-brand" />
                 </div>
-              )}
+                <div className="flex-1 min-w-0">
+                  <div className="font-semibold text-sm truncate">{c.nome}</div>
+                  <div className="flex items-center gap-1.5 text-xs text-gray-400 mt-0.5"><Phone size={11} /> {c.telefone}</div>
+                  {(c.logradouro || c.cidade) && (
+                    <div className="flex items-center gap-1.5 text-xs text-gray-500 mt-0.5 truncate">
+                      <MapPin size={11} /> {[c.logradouro, c.numero, c.bairro, c.cidade, c.uf].filter(Boolean).join(', ')}
+                    </div>
+                  )}
+                </div>
+                <div className="text-right shrink-0">
+                  <div className="text-xs text-gray-500 mb-2">{history.length} OS</div>
+                  <button onClick={() => openForm(c)} className="h-8 w-8 rounded-lg bg-white/5 flex items-center justify-center">
+                    <Pencil size={14} />
+                  </button>
+                </div>
+              </div>
+
+              <div className="mt-3 border-t border-white/5 pt-3">
+                <div className="text-[11px] uppercase tracking-wide text-gray-500 mb-2">Historico de OS</div>
+                {history.length === 0 ? (
+                  <div className="text-xs text-gray-600">Nenhuma ordem de servico registrada para este cliente.</div>
+                ) : (
+                  <div className="space-y-2">
+                    {history.slice(0, 3).map((order) => (
+                      <button
+                        key={order.id}
+                        onClick={() => navigate(`/os/${order.id}`)}
+                        className="w-full text-left rounded-xl bg-white/[0.035] border border-white/5 px-3 py-2 hover:bg-white/[0.06] transition-colors"
+                      >
+                        <div className="flex items-center justify-between gap-2">
+                          <div className="font-semibold text-xs text-gray-200 truncate">{order.numero}</div>
+                          <div className="text-[10px] text-gray-500 shrink-0">{formatDate(order.created_at)}</div>
+                        </div>
+                        <div className="flex items-center gap-1.5 text-xs text-gray-500 mt-1">
+                          <Wrench size={11} />
+                          <span className="truncate">{serviceSummary(order)}</span>
+                        </div>
+                        <div className="flex items-center gap-1.5 text-[11px] text-gray-600 mt-1">
+                          <CalendarDays size={10} />
+                          <span>{order.status} {order.updated_at ? `- atualizado ${formatDate(order.updated_at)}` : ''}</span>
+                        </div>
+                      </button>
+                    ))}
+                    {history.length > 3 && <div className="text-[11px] text-gray-600">+{history.length - 3} OS anteriores</div>}
+                  </div>
+                )}
+              </div>
             </div>
-            <div className="text-right shrink-0">
-              <div className="text-xs text-gray-500 mb-2">{orderCount(c)} OS</div>
-              <button onClick={() => openForm(c)} className="h-8 w-8 rounded-lg bg-white/5 flex items-center justify-center">
-                <Pencil size={14} />
-              </button>
-            </div>
-          </div>
-        ))}
+          )
+        })}
       </div>
 
       {formOpen && (
@@ -255,4 +292,39 @@ function Field({ label, value, onChange }: { label: string; value: string; onCha
       />
     </label>
   )
+}
+
+function normalizeDigits(value?: string | null) {
+  return (value || '').replace(/\D/g, '')
+}
+
+function normalizeName(value?: string | null) {
+  return (value || '').trim().toLowerCase().replace(/\s+/g, ' ')
+}
+
+function sameCustomer(customer: Customer, order: ServiceOrder) {
+  const orderCustomer = order.customer
+  if (order.customer_id && order.customer_id === customer.id) return true
+  if (!orderCustomer) return false
+  if (orderCustomer.id && orderCustomer.id === customer.id) return true
+  const phone = normalizeDigits(customer.telefone)
+  const orderPhone = normalizeDigits(orderCustomer.telefone)
+  if (phone && orderPhone && phone === orderPhone) return true
+  const cpf = normalizeDigits(customer.cpf)
+  const orderCpf = normalizeDigits(orderCustomer.cpf)
+  if (cpf && orderCpf && cpf === orderCpf) return true
+  return Boolean(normalizeName(customer.nome) && normalizeName(customer.nome) === normalizeName(orderCustomer.nome))
+}
+
+function formatDate(value?: string | null) {
+  if (!value) return '--'
+  return new Date(value).toLocaleDateString('pt-BR')
+}
+
+function serviceSummary(order: ServiceOrder) {
+  return order.servico_executado
+    || order.diagnostico
+    || order.pecas_utilizadas
+    || order.problema_relatado
+    || 'Sem resumo do servico'
 }

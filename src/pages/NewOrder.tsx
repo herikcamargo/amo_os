@@ -38,7 +38,7 @@ const STEPS: { key: Step; label: string; icon: typeof User }[] = [
 
 export function NewOrder() {
   const navigate = useNavigate()
-  const { addOrder, nextOsNumber, user, addNotification } = useStore()
+  const { addOrder, nextOsNumber, user, addNotification, addServiceOrderPhoto } = useStore()
   const [step, setStep] = useState<Step>('cliente')
   const [saving, setSaving] = useState(false)
   const [scanning, setScanning] = useState(false)
@@ -182,6 +182,13 @@ export function NewOrder() {
   }
 
   const handleSave = async () => {
+    const photosWithBlob = photos.filter((p) => p.blob)
+    if (photosWithBlob.length === 0) {
+      toast.error('Adicione pelo menos 1 foto de entrada do aparelho antes de abrir a OS')
+      setStep('fotos')
+      return
+    }
+
     setSaving(true)
     try {
       const now = new Date().toISOString()
@@ -295,22 +302,29 @@ export function NewOrder() {
         target_role: 'admin',
       })
 
-      const photosWithBlob = photos.filter((p) => p.blob)
-      if (photosWithBlob.length > 0) {
-        toast.loading(`Enviando ${photosWithBlob.length} foto(s)...`, { id: 'upload' })
-        for (const [index, photo] of photosWithBlob.entries()) {
-          try {
-            await uploadToDrive(
-              photo.blob!,
-              formatOsPhotoFileName(savedOrder.numero, photo.label, index),
-              savedOrder.numero,
-            )
-          } catch {
-            console.warn(`Falha ao enviar foto ${photo.label}`)
-          }
+      toast.loading(`Enviando ${photosWithBlob.length} foto(s)...`, { id: 'upload' })
+      for (const [index, photo] of photosWithBlob.entries()) {
+        try {
+          const fileName = formatOsPhotoFileName(savedOrder.numero, `entrada_${photo.label}`, index)
+          const uploaded = await uploadToDrive(
+            photo.blob!,
+            fileName,
+            savedOrder.numero,
+          )
+          addServiceOrderPhoto({
+            id: generateId(),
+            service_order_id: savedOrder.id,
+            kind: 'entrada',
+            storage_path: uploaded.fileId || fileName,
+            legenda: photo.label,
+            url: uploaded.thumbnailLink || uploaded.webViewLink,
+            created_at: new Date().toISOString(),
+          })
+        } catch {
+          console.warn(`Falha ao enviar foto ${photo.label}`)
         }
-        toast.success(`${photosWithBlob.length} foto(s) salva(s)!`, { id: 'upload' })
       }
+      toast.success(`${photosWithBlob.length} foto(s) salva(s)!`, { id: 'upload' })
 
       if (!isSupabaseEnabled) toast.success(`OS ${savedOrder.numero} criada!`)
       navigate(`/os/${savedOrder.id}`)
