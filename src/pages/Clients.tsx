@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
-import { Search, User, Phone, MapPin, Pencil, Plus, X, CalendarDays, Wrench } from 'lucide-react'
+import { Search, User, Phone, MapPin, Pencil, Plus, X, CalendarDays, Wrench, ChevronDown } from 'lucide-react'
 import { useStore } from '@/store/useStore'
 import { generateId } from '@/lib/utils'
 import { isValidCep, lookupCep, maskCep } from '@/lib/cep'
@@ -28,6 +28,7 @@ export function Clients() {
   const [editing, setEditing] = useState<Customer | null>(null)
   const [form, setForm] = useState(emptyCustomer)
   const [loadingCep, setLoadingCep] = useState(false)
+  const [expandedCustomerId, setExpandedCustomerId] = useState<string | null>(null)
 
   const clients = useMemo(() => {
     const fromOrders = orders.map((order) => order.customer).filter(Boolean) as Customer[]
@@ -186,58 +187,80 @@ export function Clients() {
         {clients.map((c) => {
           const history = customerOrders(c)
           return (
-            <div key={c.id} className="bg-surface-card rounded-[16px] border border-white/5 p-4">
-              <div className="flex items-center gap-3">
+            <div key={c.id} className="bg-surface-card rounded-[16px] border border-white/5 overflow-hidden">
+              <button
+                onClick={() => setExpandedCustomerId((current) => current === c.id ? null : c.id)}
+                className="w-full p-4 flex items-center gap-3 text-left hover:bg-white/[0.025] transition-colors"
+              >
                 <div className="w-10 h-10 rounded-xl bg-brand/15 flex items-center justify-center shrink-0">
                   <User size={18} className="text-brand" />
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="font-semibold text-sm truncate">{c.nome}</div>
                   <div className="flex items-center gap-1.5 text-xs text-gray-400 mt-0.5"><Phone size={11} /> {c.telefone}</div>
-                  {(c.logradouro || c.cidade) && (
-                    <div className="flex items-center gap-1.5 text-xs text-gray-500 mt-0.5 truncate">
-                      <MapPin size={11} /> {[c.logradouro, c.numero, c.bairro, c.cidade, c.uf].filter(Boolean).join(', ')}
+                </div>
+                <div className="flex items-center gap-2 shrink-0">
+                  <div className="text-right">
+                    <div className="text-xs text-gray-400">{history.length} OS</div>
+                    <div className="text-[10px] text-gray-600">{expandedCustomerId === c.id ? 'Ocultar' : 'Abrir'}</div>
+                  </div>
+                  <button
+                    onClick={(event) => {
+                      event.stopPropagation()
+                      openForm(c)
+                    }}
+                    className="h-8 w-8 rounded-lg bg-white/5 flex items-center justify-center"
+                    aria-label={`Editar ${c.nome}`}
+                  >
+                    <Pencil size={14} />
+                  </button>
+                  <ChevronDown size={16} className={`text-gray-500 transition-transform ${expandedCustomerId === c.id ? 'rotate-180' : ''}`} />
+                </div>
+              </button>
+
+              {expandedCustomerId === c.id && (
+                <div className="border-t border-white/5 px-4 py-3">
+                  {(c.logradouro || c.cidade || c.cpf) && (
+                    <div className="rounded-xl bg-white/[0.025] border border-white/5 px-3 py-2 mb-3">
+                      {c.cpf && <div className="text-xs text-gray-500">CPF/CNPJ: <span className="text-gray-300">{c.cpf}</span></div>}
+                      {(c.logradouro || c.cidade) && (
+                        <div className="flex items-center gap-1.5 text-xs text-gray-500 mt-1">
+                          <MapPin size={11} />
+                          <span className="truncate">{[c.logradouro, c.numero, c.bairro, c.cidade, c.uf].filter(Boolean).join(', ')}</span>
+                        </div>
+                      )}
+                    </div>
+                  )}
+
+                  <div className="text-[11px] uppercase tracking-wide text-gray-500 mb-2">Historico de OS</div>
+                  {history.length === 0 ? (
+                    <div className="text-xs text-gray-600">Nenhuma ordem de servico registrada para este cliente.</div>
+                  ) : (
+                    <div className="space-y-2">
+                      {history.map((order) => (
+                        <button
+                          key={order.id}
+                          onClick={() => navigate(`/os/${order.id}`)}
+                          className="w-full text-left rounded-xl bg-white/[0.035] border border-white/5 px-3 py-2 hover:bg-white/[0.06] transition-colors"
+                        >
+                          <div className="flex items-center justify-between gap-2">
+                            <div className="font-semibold text-xs text-gray-200 truncate">{order.numero}</div>
+                            <div className="text-[10px] text-gray-500 shrink-0">{formatDate(order.created_at)}</div>
+                          </div>
+                          <div className="flex items-center gap-1.5 text-xs text-gray-500 mt-1">
+                            <Wrench size={11} />
+                            <span className="truncate">{serviceSummary(order)}</span>
+                          </div>
+                          <div className="flex items-center gap-1.5 text-[11px] text-gray-600 mt-1">
+                            <CalendarDays size={10} />
+                            <span>{order.status} {order.updated_at ? `- atualizado ${formatDate(order.updated_at)}` : ''}</span>
+                          </div>
+                        </button>
+                      ))}
                     </div>
                   )}
                 </div>
-                <div className="text-right shrink-0">
-                  <div className="text-xs text-gray-500 mb-2">{history.length} OS</div>
-                  <button onClick={() => openForm(c)} className="h-8 w-8 rounded-lg bg-white/5 flex items-center justify-center">
-                    <Pencil size={14} />
-                  </button>
-                </div>
-              </div>
-
-              <div className="mt-3 border-t border-white/5 pt-3">
-                <div className="text-[11px] uppercase tracking-wide text-gray-500 mb-2">Historico de OS</div>
-                {history.length === 0 ? (
-                  <div className="text-xs text-gray-600">Nenhuma ordem de servico registrada para este cliente.</div>
-                ) : (
-                  <div className="space-y-2">
-                    {history.slice(0, 3).map((order) => (
-                      <button
-                        key={order.id}
-                        onClick={() => navigate(`/os/${order.id}`)}
-                        className="w-full text-left rounded-xl bg-white/[0.035] border border-white/5 px-3 py-2 hover:bg-white/[0.06] transition-colors"
-                      >
-                        <div className="flex items-center justify-between gap-2">
-                          <div className="font-semibold text-xs text-gray-200 truncate">{order.numero}</div>
-                          <div className="text-[10px] text-gray-500 shrink-0">{formatDate(order.created_at)}</div>
-                        </div>
-                        <div className="flex items-center gap-1.5 text-xs text-gray-500 mt-1">
-                          <Wrench size={11} />
-                          <span className="truncate">{serviceSummary(order)}</span>
-                        </div>
-                        <div className="flex items-center gap-1.5 text-[11px] text-gray-600 mt-1">
-                          <CalendarDays size={10} />
-                          <span>{order.status} {order.updated_at ? `- atualizado ${formatDate(order.updated_at)}` : ''}</span>
-                        </div>
-                      </button>
-                    ))}
-                    {history.length > 3 && <div className="text-[11px] text-gray-600">+{history.length - 3} OS anteriores</div>}
-                  </div>
-                )}
-              </div>
+              )}
             </div>
           )
         })}
