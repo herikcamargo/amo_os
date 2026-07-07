@@ -4,8 +4,11 @@ import { Search, User, Phone, MapPin, Pencil, Plus, X, CalendarDays, Wrench, Che
 import { useStore } from '@/store/useStore'
 import { generateId } from '@/lib/utils'
 import { isValidCep, lookupCep, maskCep } from '@/lib/cep'
+import { isLegacyOrder } from '@/lib/legacy'
 import type { Customer, ServiceOrder } from '@/types/database'
 import toast from 'react-hot-toast'
+
+const PAGE_SIZE = 60
 
 const emptyCustomer = {
   nome: '',
@@ -29,22 +32,58 @@ export function Clients() {
   const [form, setForm] = useState(emptyCustomer)
   const [loadingCep, setLoadingCep] = useState(false)
   const [expandedCustomerId, setExpandedCustomerId] = useState<string | null>(null)
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE)
 
-  const clients = useMemo(() => {
+  // Lista base de clientes: uma unica passagem O(n), sem comparacao cruzada.
+  const allClients = useMemo(() => {
     const fromOrders = orders.map((order) => order.customer).filter(Boolean) as Customer[]
     const map = new Map<string, Customer>()
     ;[...customers, ...fromOrders].forEach((customer) => map.set(customer.id, customer))
-    const list = Array.from(map.values())
+    return Array.from(map.values())
+  }, [customers, orders])
+
+  // Indice OS por cliente: uma unica passagem O(n) sobre as ordens (nao O(clientes x ordens)).
+  // customer_id ja e confiavel, inclusive para as OS antigas importadas do FPQ.
+  // Telefone normalizado entra como chave auxiliar so pra pegar casos raros
+  // sem customer_id preenchido (ex: dado antigo incompleto).
+  const ordersByCustomerKey = useMemo(() => {
+    const map = new Map<string, ServiceOrder[]>()
+    const push = (key: string | null | undefined, order: ServiceOrder) => {
+      if (!key) return
+      const list = map.get(key)
+      if (list) list.push(order)
+      else map.set(key, [order])
+    }
+    for (const order of orders) {
+      push(order.customer_id, order)
+      const phone = normalizeDigits(order.customer?.telefone)
+      if (phone) push(`tel:${phone}`, order)
+    }
+    for (const list of map.values()) {
+      list.sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime())
+    }
+    return map
+  }, [orders])
+
+  const customerOrders = (customer: Customer): ServiceOrder[] => {
+    const byId = ordersByCustomerKey.get(customer.id)
+    if (byId && byId.length > 0) return byId
+    const phone = normalizeDigits(customer.telefone)
+    return phone ? ordersByCustomerKey.get(`tel:${phone}`) || [] : []
+  }
+
+  const filteredClients = useMemo(() => {
     const term = q.trim().toLowerCase()
-    if (!term) return list
-    return list.filter((c) => [
+    if (!term) return allClients
+    return allClients.filter((c) => [
       c.nome, c.telefone, c.cpf, c.cep, c.logradouro, c.bairro, c.cidade, c.uf,
     ].filter(Boolean).join(' ').toLowerCase().includes(term))
-  }, [customers, orders, q])
+  }, [allClients, q])
 
-  const customerOrders = (customer: Customer) => orders
-    .filter((order) => sameCustomer(customer, order))
-    .sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime())
+  // Renderizar milhares de cards de uma vez trava o navegador — pagina.
+  useEffect(() => { setVisibleCount(PAGE_SIZE) }, [q])
+  const clients = filteredClients.slice(0, visibleCount)
+  const hasMore = filteredClients.length > clients.length
 
   const openForm = (customer?: Customer) => {
     setEditing(customer || null)
@@ -166,7 +205,7 @@ export function Clients() {
       <div className="pt-2 mb-4 flex items-start justify-between gap-3">
         <div>
           <h1 className="text-xl font-bold tracking-tight">Clientes</h1>
-          <p className="text-xs text-gray-500 mt-1">{clients.length} clientes registrados</p>
+          <p className="text-xs text-gray-500 mt-1">{filteredClients.length} clientes registrados</p>
         </div>
         <button onClick={() => openForm()} className="h-10 px-3 rounded-xl bg-brand font-semibold text-sm flex items-center gap-2">
           <Plus size={16} /> Novo
@@ -244,8 +283,15 @@ export function Clients() {
                           className="w-full text-left rounded-xl bg-white/[0.035] border border-white/5 px-3 py-2 hover:bg-white/[0.06] transition-colors"
                         >
                           <div className="flex items-center justify-between gap-2">
-                            <div className="font-semibold text-xs text-gray-200 truncate">{order.numero}</div>
-                            <div className="text-[10px] text-gray-500 shrink-0">{formatDate(order.created_at)}</div>
+                            <div className="flex items-center gap-1.5 min-w-0">
+                              <div className="font-semibold text-xs text-gray-200 truncate">{order.numero}</div>
+                              {isLegacyOrder(order) && (
+                                <span className="shrink-0 text-[9px] font-bold uppercase px-1.5 py-0.5 rounded-md bg-purple-500/15 text-purple-300">
+                                  FPQ
+                                </span>
+                              )}
+                            </div>
+                            <div className="text-[10px] text-gray-500 shrink-0">Entrada: {formatDate(order.created_at)}</div>
                           </div>
                           <div className="flex items-center gap-1.5 text-xs text-gray-500 mt-1">
                             <Wrench size={11} />
@@ -265,6 +311,15 @@ export function Clients() {
           )
         })}
       </div>
+
+      {hasMore && (
+        <button
+          onClick={() => setVisibleCount((current) => current + PAGE_SIZE)}
+          className="w-full h-11 mt-3 rounded-xl bg-white/5 border border-white/10 text-sm font-semibold text-gray-300 hover:bg-white/[0.08] transition-colors"
+        >
+          Carregar mais ({filteredClients.length - clients.length} restantes)
+        </button>
+      )}
 
       {formOpen && (
         <div className="fixed inset-0 bg-black/60 z-50 flex items-end justify-center" onClick={() => { setEditing(null); setForm(emptyCustomer) }}>
@@ -319,24 +374,6 @@ function Field({ label, value, onChange }: { label: string; value: string; onCha
 
 function normalizeDigits(value?: string | null) {
   return (value || '').replace(/\D/g, '')
-}
-
-function normalizeName(value?: string | null) {
-  return (value || '').trim().toLowerCase().replace(/\s+/g, ' ')
-}
-
-function sameCustomer(customer: Customer, order: ServiceOrder) {
-  const orderCustomer = order.customer
-  if (order.customer_id && order.customer_id === customer.id) return true
-  if (!orderCustomer) return false
-  if (orderCustomer.id && orderCustomer.id === customer.id) return true
-  const phone = normalizeDigits(customer.telefone)
-  const orderPhone = normalizeDigits(orderCustomer.telefone)
-  if (phone && orderPhone && phone === orderPhone) return true
-  const cpf = normalizeDigits(customer.cpf)
-  const orderCpf = normalizeDigits(orderCustomer.cpf)
-  if (cpf && orderCpf && cpf === orderCpf) return true
-  return Boolean(normalizeName(customer.nome) && normalizeName(customer.nome) === normalizeName(orderCustomer.nome))
 }
 
 function formatDate(value?: string | null) {
