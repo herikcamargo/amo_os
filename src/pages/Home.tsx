@@ -1,4 +1,4 @@
-import { useEffect, useMemo } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import {
   Archive, ArrowRight, Bell, CheckCircle2, ClipboardList,
@@ -11,6 +11,7 @@ import { STATUS_CONFIG, brl } from '@/lib/constants'
 import { filterNotificationsForUser } from '@/lib/notifications'
 import { can } from '@/lib/permissions'
 import { isLegacyOrder } from '@/lib/legacy'
+import { SearchOsModal } from '@/components/SearchOsModal'
 import type { OsStatus, ServiceOrder } from '@/types/database'
 
 const MAIN_ACTIONS = [
@@ -59,17 +60,18 @@ export function Home() {
   const visibleNotifications = useMemo(() => filterNotificationsForUser(notifications, user), [notifications, user])
   const unreadCount = useMemo(() => visibleNotifications.filter((n) => !n.read).length, [visibleNotifications])
   const canFinance = can(user, 'view_financial')
+  const [searchOpen, setSearchOpen] = useState(false)
 
   useEffect(() => {
     const handler = (event: KeyboardEvent) => {
       if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 'k') {
         event.preventDefault()
-        navigate('/ordens')
+        setSearchOpen(true)
       }
     }
     window.addEventListener('keydown', handler)
     return () => window.removeEventListener('keydown', handler)
-  }, [navigate])
+  }, [])
 
   // O dashboard operacional reflete o fluxo atual da loja — OS importadas
   // do sistema antigo (FPQ) nao entram nesses contadores/listas, senao
@@ -124,12 +126,19 @@ export function Home() {
         </div>
         <div className="flex items-center gap-2.5 shrink-0">
           <button
-            onClick={() => navigate('/ordens')}
+            onClick={() => setSearchOpen(true)}
             className="hidden md:flex h-11 w-[300px] lg:w-[340px] items-center gap-2.5 px-3.5 rounded-[12px] bg-surface-card border border-white/10 text-gray-500 hover:border-white/20 hover:text-gray-400 transition-colors"
           >
             <Search size={16} className="shrink-0" />
             <span className="text-sm flex-1 text-left">Buscar OS, cliente, IMEI...</span>
             <span className="text-[11px] font-medium border border-white/10 rounded-md px-1.5 py-0.5 text-gray-500">Ctrl K</span>
+          </button>
+          <button
+            onClick={() => setSearchOpen(true)}
+            className="md:hidden h-11 w-11 rounded-[12px] bg-surface-card border border-white/10 flex items-center justify-center hover:border-brand/40 hover:bg-white/[0.04] transition-colors"
+            title="Buscar OS"
+          >
+            <Search size={18} />
           </button>
           <button
             onClick={() => navigate('/notificacoes')}
@@ -180,6 +189,8 @@ export function Home() {
           <TipPanel />
         </aside>
       </div>
+
+      <SearchOsModal open={searchOpen} onClose={() => setSearchOpen(false)} />
     </div>
   )
 }

@@ -6,6 +6,7 @@ import { IconBtn } from '@/components/ui/IconBtn'
 import { OrderRow } from '@/components/ui/OrderRow'
 import { STATUS_CONFIG } from '@/lib/constants'
 import { matchesLegacyFilter, type LegacyFilter } from '@/lib/legacy'
+import { matchesOsQuery } from '@/lib/os-search'
 import type { OsStatus } from '@/types/database'
 
 const LEGACY_OPTIONS: { key: LegacyFilter; label: string }[] = [
@@ -18,7 +19,7 @@ export function OrderList() {
   const navigate = useNavigate()
   const [searchParams] = useSearchParams()
   const { orders } = useStore()
-  const [q, setQ] = useState('')
+  const [q, setQ] = useState(() => searchParams.get('q') || '')
   const [showFilter, setShowFilter] = useState(false)
   const [activeStatuses, setActiveStatuses] = useState<OsStatus[]>(() => {
     const param = searchParams.get('status')
@@ -26,7 +27,10 @@ export function OrderList() {
   })
   const [legacyFilter, setLegacyFilter] = useState<LegacyFilter>(() => {
     const param = searchParams.get('legacy')
-    return param === 'fpq' || param === 'todas' ? param : 'atuais'
+    if (param === 'fpq' || param === 'todas') return param
+    // Busca global (vinda do popup) nao sabe se a OS e nova ou antiga —
+    // parte procurando em tudo por padrao.
+    return searchParams.get('q') ? 'todas' : 'atuais'
   })
 
   const label = useMemo(() => {
@@ -39,12 +43,7 @@ export function OrderList() {
     const filtered = orders.filter((o) => {
       const matchStatus = activeStatuses.length === 0 || activeStatuses.includes(o.status)
       const matchLegacy = matchesLegacyFilter(o, legacyFilter)
-      const t = q.trim().toLowerCase()
-      const searchable = [
-        o.customer?.nome, o.customer?.telefone, o.device?.imei,
-        o.numero, o.device?.modelo, o.device?.marca,
-      ].join(' ').toLowerCase()
-      const matchQuery = !t || searchable.includes(t)
+      const matchQuery = !q.trim() || matchesOsQuery(o, q)
       return matchStatus && matchLegacy && matchQuery
     })
     // Sempre da mais nova para a mais antiga, independente da ordem de chegada dos dados
