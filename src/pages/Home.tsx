@@ -10,6 +10,7 @@ import { useStore } from '@/store/useStore'
 import { STATUS_CONFIG, brl } from '@/lib/constants'
 import { filterNotificationsForUser } from '@/lib/notifications'
 import { can } from '@/lib/permissions'
+import { isLegacyOrder } from '@/lib/legacy'
 import type { OsStatus, ServiceOrder } from '@/types/database'
 
 const MAIN_ACTIONS = [
@@ -44,11 +45,12 @@ const MAIN_ACTIONS = [
   },
 ]
 
-const SHORTCUTS: { label: string; description: string; icon: LucideIcon; color: string; statuses: OsStatus[] }[] = [
+const SHORTCUTS: { label: string; description: string; icon: LucideIcon; color: string; statuses: OsStatus[]; legacy?: 'todas' }[] = [
   { label: 'Pendencias', description: 'Aguardando atencao', icon: ClipboardList, color: '#F59E0B', statuses: ['recebido', 'analise', 'aprovacao', 'peca'] },
   { label: 'Em manutencao', description: 'Ordens em andamento', icon: Wrench, color: '#F97316', statuses: ['manutencao'] },
   { label: 'Prontos', description: 'Aguardando retirada', icon: CheckCircle2, color: '#22C55E', statuses: ['pronto'] },
-  { label: 'Historico', description: 'Ordens finalizadas', icon: Archive, color: '#8B5CF6', statuses: ['entregue', 'cancelado'] },
+  // Historico mostra tambem as OS legadas do FPQ (é literalmente o arquivo historico da loja)
+  { label: 'Historico', description: 'Ordens finalizadas', icon: Archive, color: '#8B5CF6', statuses: ['entregue', 'cancelado'], legacy: 'todas' },
 ]
 
 export function Home() {
@@ -69,34 +71,41 @@ export function Home() {
     return () => window.removeEventListener('keydown', handler)
   }, [navigate])
 
+  // O dashboard operacional reflete o fluxo atual da loja — OS importadas
+  // do sistema antigo (FPQ) nao entram nesses contadores/listas, senao
+  // centenas de registros historicos poluem "em aberto", "prontas" etc.
+  // Elas continuam acessiveis via Historico ou pelo filtro em /ordens.
+  const activeOrders = useMemo(() => orders.filter((order) => !isLegacyOrder(order)), [orders])
+
   const todaySummary = useMemo(() => {
-    const open = orders.filter((order) => !['entregue', 'cancelado'].includes(order.status)).length
-    const ready = orders.filter((order) => order.status === 'pronto').length
-    const maintenance = orders.filter((order) => order.status === 'manutencao').length
-    const waitingPart = orders.filter((order) => order.status === 'peca').length
+    const open = activeOrders.filter((order) => !['entregue', 'cancelado'].includes(order.status)).length
+    const ready = activeOrders.filter((order) => order.status === 'pronto').length
+    const maintenance = activeOrders.filter((order) => order.status === 'manutencao').length
+    const waitingPart = activeOrders.filter((order) => order.status === 'peca').length
     const revenue = getRevenueForDate(orders, deviceSales, new Date())
     const yesterday = new Date()
     yesterday.setDate(yesterday.getDate() - 1)
     const revenueYesterday = getRevenueForDate(orders, deviceSales, yesterday)
 
     return { open, ready, maintenance, waitingPart, revenue, revenueYesterday }
-  }, [orders, deviceSales])
+  }, [activeOrders, orders, deviceSales])
 
   const recentOrders = useMemo(() => (
-    [...orders]
+    [...activeOrders]
       .sort((a, b) => Date.parse(b.created_at) - Date.parse(a.created_at))
       .slice(0, 6)
-  ), [orders])
+  ), [activeOrders])
 
   const nextPickups = useMemo(() => (
-    [...orders]
+    [...activeOrders]
       .filter((order) => order.status === 'pronto')
       .sort((a, b) => Date.parse(a.updated_at) - Date.parse(b.updated_at))
       .slice(0, 4)
-  ), [orders])
+  ), [activeOrders])
 
-  const goToStatuses = (statuses: OsStatus[]) => {
-    navigate(`/ordens?status=${statuses.join(',')}`)
+  const goToStatuses = (statuses: OsStatus[], legacy?: 'todas') => {
+    const legacyParam = legacy ? `&legacy=${legacy}` : '&legacy=atuais'
+    navigate(`/ordens?status=${statuses.join(',')}${legacyParam}`)
   }
 
   return (
@@ -155,7 +164,7 @@ export function Home() {
                 <ShortcutButton
                   key={shortcut.label}
                   {...shortcut}
-                  onClick={() => goToStatuses(shortcut.statuses)}
+                  onClick={() => goToStatuses(shortcut.statuses, shortcut.legacy)}
                 />
               ))}
             </div>

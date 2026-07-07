@@ -11,12 +11,13 @@ import { CardBox } from '@/components/ui/CardBox'
 import { Row } from '@/components/ui/Row'
 import { StatusBadge } from '@/components/ui/StatusBadge'
 import { STATUS_CONFIG, CHECK_ENTRADA, brl, STATUS_FLOW } from '@/lib/constants'
-import { daysSince } from '@/lib/utils'
+import { daysSince, formatDate } from '@/lib/utils'
 import { downloadOsPdf } from '@/lib/generate-pdf'
 import { can } from '@/lib/permissions'
 import { calculateWarrantyUntil, isPartWarrantyActive, partWarrantyLabel } from '@/lib/warranty'
 import { printEntradaA4 } from '@/lib/print-entrada'
 import { buildWhatsappMessage, getOsConfig } from '@/lib/os-config'
+import { isLegacyOrder } from '@/lib/legacy'
 import { generateId } from '@/lib/utils'
 import { compressImage, formatFileSize } from '@/lib/image-compressor'
 import { formatOsPhotoFileName, getDemoPhotos, uploadToDrive } from '@/lib/google-drive'
@@ -297,7 +298,19 @@ export function OrderDetail() {
           </div>
         </div>
 
-        <StatusBadge status={order.status} />
+        <div className="flex items-center gap-2 flex-wrap">
+          <StatusBadge status={order.status} />
+          {isLegacyOrder(order) && (
+            <span className="text-[10px] font-bold uppercase px-2 py-1 rounded-full bg-purple-500/15 text-purple-300">
+              FPQ (sistema antigo)
+            </span>
+          )}
+        </div>
+
+        <div className="mt-2.5 text-sm text-gray-300">
+          <span className="text-gray-500">Data de entrada:</span>{' '}
+          <span className="font-semibold tabular-nums">{formatDate(order.created_at)}</span>
+        </div>
 
         {readyDays >= 3 && (
           <div className="mt-3 bg-yellow-500/10 border border-yellow-500/30 rounded-xl px-3 py-2 flex items-center gap-2">

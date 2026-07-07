@@ -5,7 +5,14 @@ import { useStore } from '@/store/useStore'
 import { IconBtn } from '@/components/ui/IconBtn'
 import { OrderRow } from '@/components/ui/OrderRow'
 import { STATUS_CONFIG } from '@/lib/constants'
+import { matchesLegacyFilter, type LegacyFilter } from '@/lib/legacy'
 import type { OsStatus } from '@/types/database'
+
+const LEGACY_OPTIONS: { key: LegacyFilter; label: string }[] = [
+  { key: 'atuais', label: 'Atuais' },
+  { key: 'fpq', label: 'FPQ (antigas)' },
+  { key: 'todas', label: 'Todas' },
+]
 
 export function OrderList() {
   const navigate = useNavigate()
@@ -17,6 +24,10 @@ export function OrderList() {
     const param = searchParams.get('status')
     return param ? param.split(',') as OsStatus[] : []
   })
+  const [legacyFilter, setLegacyFilter] = useState<LegacyFilter>(() => {
+    const param = searchParams.get('legacy')
+    return param === 'fpq' || param === 'todas' ? param : 'atuais'
+  })
 
   const label = useMemo(() => {
     if (activeStatuses.length === 0) return 'Todas as ordens'
@@ -25,17 +36,20 @@ export function OrderList() {
   }, [activeStatuses])
 
   const list = useMemo(() => {
-    return orders.filter((o) => {
+    const filtered = orders.filter((o) => {
       const matchStatus = activeStatuses.length === 0 || activeStatuses.includes(o.status)
+      const matchLegacy = matchesLegacyFilter(o, legacyFilter)
       const t = q.trim().toLowerCase()
       const searchable = [
         o.customer?.nome, o.customer?.telefone, o.device?.imei,
         o.numero, o.device?.modelo, o.device?.marca,
       ].join(' ').toLowerCase()
       const matchQuery = !t || searchable.includes(t)
-      return matchStatus && matchQuery
+      return matchStatus && matchLegacy && matchQuery
     })
-  }, [q, activeStatuses, orders])
+    // Sempre da mais nova para a mais antiga, independente da ordem de chegada dos dados
+    return [...filtered].sort((a, b) => Date.parse(b.created_at) - Date.parse(a.created_at))
+  }, [q, activeStatuses, legacyFilter, orders])
 
   const toggleStatus = (s: OsStatus) => {
     setActiveStatuses((prev) =>
@@ -52,6 +66,23 @@ export function OrderList() {
         <IconBtn onClick={() => setShowFilter(!showFilter)}>
           <Filter size={18} className={activeStatuses.length > 0 ? 'text-brand' : ''} />
         </IconBtn>
+      </div>
+
+      {/* Filtro Atuais / FPQ / Todas — sempre visivel */}
+      <div className="flex gap-2 mb-3">
+        {LEGACY_OPTIONS.map((opt) => (
+          <button
+            key={opt.key}
+            onClick={() => setLegacyFilter(opt.key)}
+            className={`flex-1 h-9 rounded-xl text-xs font-semibold border transition-colors ${
+              legacyFilter === opt.key
+                ? 'bg-brand/20 border-brand text-white'
+                : 'bg-white/5 border-white/10 text-gray-400'
+            }`}
+          >
+            {opt.label}
+          </button>
+        ))}
       </div>
 
       {showFilter && (
