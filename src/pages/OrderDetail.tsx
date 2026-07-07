@@ -3,7 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom'
 import {
   ChevronLeft, Download, Wrench, User, Smartphone, CheckCircle2,
   Camera, ShieldCheck, History, AlertTriangle, Phone, MessageSquare,
-  Package, Save, Plus, CreditCard, X, ImageIcon,
+  Package, Save, Plus, CreditCard, X, ImageIcon, Copy, Printer,
 } from 'lucide-react'
 import { useStore } from '@/store/useStore'
 import { IconBtn } from '@/components/ui/IconBtn'
@@ -15,6 +15,8 @@ import { daysSince } from '@/lib/utils'
 import { downloadOsPdf } from '@/lib/generate-pdf'
 import { can } from '@/lib/permissions'
 import { calculateWarrantyUntil, isPartWarrantyActive, partWarrantyLabel } from '@/lib/warranty'
+import { printEntradaA4 } from '@/lib/print-entrada'
+import { buildWhatsappMessage, getOsConfig } from '@/lib/os-config'
 import { generateId } from '@/lib/utils'
 import { compressImage, formatFileSize } from '@/lib/image-compressor'
 import { formatOsPhotoFileName, getDemoPhotos, uploadToDrive } from '@/lib/google-drive'
@@ -193,7 +195,12 @@ export function OrderDetail() {
   }
 
   const handlePrint = (kind: 'entrada' | 'saida') => {
-    downloadOsPdf(order, kind, settings)
+    if (kind === 'entrada') {
+      // Impressao direta em A4 com 2 vias (cliente + assistencia)
+      printEntradaA4(order, settings)
+    } else {
+      downloadOsPdf(order, kind, settings)
+    }
     updateOrder(order.id, {
       [kind === 'entrada' ? 'printed_entrada_at' : 'printed_saida_at']: new Date().toISOString(),
     })
@@ -206,7 +213,30 @@ export function OrderDetail() {
       entity_id: order.id,
       created_at: new Date().toISOString(),
     })
-    toast.success(kind === 'entrada' ? 'OS de entrada gerada' : 'OS de saida gerada')
+    toast.success(kind === 'entrada' ? 'OS de entrada gerada (2 vias)' : 'OS de saida gerada')
+  }
+
+  const handleCopyWhatsapp = async () => {
+    const message = buildWhatsappMessage(order)
+    try {
+      await navigator.clipboard.writeText(message)
+      toast.success('Mensagem copiada! Cole no WhatsApp do cliente.')
+    } catch {
+      // Fallback para contextos sem Clipboard API (HTTP, foco perdido, navegadores antigos)
+      const textarea = document.createElement('textarea')
+      textarea.value = message
+      textarea.style.position = 'fixed'
+      textarea.style.opacity = '0'
+      document.body.appendChild(textarea)
+      textarea.select()
+      const ok = document.execCommand('copy')
+      document.body.removeChild(textarea)
+      if (ok) {
+        toast.success('Mensagem copiada! Cole no WhatsApp do cliente.')
+      } else {
+        toast.error('Nao consegui copiar a mensagem')
+      }
+    }
   }
 
   const savePiece = (piece: PartWarranty) => {
@@ -295,7 +325,7 @@ export function OrderDetail() {
               onClick={() => handlePrint('entrada')}
               className="flex-1 h-11 rounded-xl bg-white/8 border border-white/10 font-semibold text-sm flex items-center justify-center gap-2 active:scale-95 transition-transform"
             >
-              <Download size={16} /> OS entrada
+              <Printer size={16} /> Imprimir entrada
             </button>
           )}
           {canUpdateStatus && (
@@ -313,9 +343,17 @@ export function OrderDetail() {
             onClick={() => handlePrint('saida')}
             className="w-full h-11 mt-2 rounded-xl bg-white/8 border border-white/10 font-semibold text-sm flex items-center justify-center gap-2 active:scale-95 transition-transform"
           >
-            <Download size={16} /> Imprimir OS de saida
+            <Download size={16} /> Comprovante de saida
           </button>
         )}
+
+        {/* Mensagem por status — copia para colar no WhatsApp */}
+        <button
+          onClick={handleCopyWhatsapp}
+          className="w-full h-11 mt-2 rounded-xl bg-[#25D366]/10 border border-[#25D366]/25 font-semibold text-sm flex items-center justify-center gap-2 text-[#25D366] active:scale-95 transition-transform"
+        >
+          <Copy size={15} /> Copiar mensagem para WhatsApp
+        </button>
 
         {order.customer?.telefone && (
           <div className="flex gap-2.5 mt-2.5">
@@ -401,6 +439,15 @@ export function OrderDetail() {
           </CardBox>
         )}
 
+        {/* Condicoes de pagamento */}
+        {(order.payment_method || order.payment_status) && (
+          <CardBox title="Condicoes de pagamento" icon={CreditCard}>
+            {order.payment_method && <Row k="Forma de pagamento" v={order.payment_method} />}
+            {order.payment_status && <Row k="Situacao" v={order.payment_status === 'pago' ? 'Pago' : order.payment_status} />}
+            {order.delivery_receiver && <Row k="Retirado por" v={order.delivery_receiver} />}
+          </CardBox>
+        )}
+
         <CardBox title="Dados da peca utilizada" icon={Package}>
           {part?.has_part ? (
             <div className={`rounded-xl border p-3 mb-3 ${partActive ? 'bg-green-500/10 border-green-500/25' : 'bg-red-500/10 border-red-500/25'}`}>
@@ -450,7 +497,7 @@ export function OrderDetail() {
             <div className="w-10 h-1 rounded-full bg-white/20 mx-auto mb-4" />
             <h2 className="text-lg font-bold mb-4">Atualizar status</h2>
             <div className="space-y-2">
-              {STATUS_FLOW.map((s) => {
+              {STATUS_FLOW.filter((s) => getOsConfig().enabledStatuses.includes(s)).map((s) => {
                 const cfg = STATUS_CONFIG[s]
                 const isCurrent = s === order.status
                 return (

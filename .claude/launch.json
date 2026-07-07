@@ -14,6 +14,18 @@
       "port": 5174
     },
     {
+      "name": "amocelular-landing",
+      "runtimeExecutable": "C:\\Program Files\\nodejs\\node.exe",
+      "runtimeArgs": [
+        "C:/Users/herik/Documents/Amocelular/node_modules/vite/bin/vite.js",
+        "C:/Users/herik/Documents/Amocelular",
+        "--port",
+        "5199",
+        "--strictPort"
+      ],
+      "port": 5199
+    },
+    {
       "name": "vitoria",
       "runtimeExecutable": "C:\\Program Files\\nodejs\\node.exe",
       "runtimeArgs": ["C:/Users/herik/Documents/Vitoria/server.js"],

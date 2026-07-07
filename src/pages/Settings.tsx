@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom'
 import {
   User, Bell, Shield, Database, Smartphone, Palette,
   ChevronRight, LogOut, MessageSquare, Cloud, UsersRound, HardDrive, Tags, Package, Save,
+  ClipboardList,
 } from 'lucide-react'
 import { useStore } from '@/store/useStore'
 import { can, roleLabel } from '@/lib/permissions'
@@ -22,6 +23,12 @@ export function Settings() {
 
   const sistemaItems = [
     { icon: Bell, label: 'Notificações', sub: 'Lembretes e alertas', action: () => {}, show: true },
+    {
+      icon: ClipboardList, label: 'Configurações da OS',
+      sub: 'Status, mensagens WhatsApp, impressão e textos',
+      action: () => navigate('/ajustes/os'),
+      show: can(user, 'manage_settings'),
+    },
     {
       icon: UsersRound, label: 'Gerenciar usuários',
       sub: 'Criar e definir perfis',
