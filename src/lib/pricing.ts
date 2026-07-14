@@ -1,11 +1,14 @@
 import { PRICE_CATALOG, PRICE_CATALOG_VERSION } from '@/data/priceCatalog'
 import { isSupabaseEnabled } from '@/lib/storage-adapter'
 import { supabase } from '@/lib/supabase'
-import type { PriceCatalogItem, PriceService, PricingConfig, PriceSyncResult } from '@/types/pricing'
+import type { NewServiceOptionInput, PriceCatalogItem, PriceService, PricingConfig, PriceSyncResult } from '@/types/pricing'
 
 const PRICE_OVERRIDES_KEY = 'amo-os-price-overrides'
 const PRICING_CONFIG_KEY = 'amo-os-pricing-config'
 const REMOTE_PRICE_CATALOG_KEY = 'amo-os-remote-price-catalog'
+// Fallback local (modo demo/offline): opcoes criadas e excluidas pelo admin
+const CUSTOM_SERVICES_KEY = 'amo-os-custom-price-services'
+const REMOVED_SERVICES_KEY = 'amo-os-removed-price-services'
 
 const DEFAULT_CONFIG: PricingConfig = {
   attendantDiscountLimitPct: 5,
@@ -38,6 +41,7 @@ type PriceServiceRow = {
   installment_price?: number | string | null
   cost_price?: number | string | null
   note?: string | null
+  supplier_id?: string | null
 }
 type PricingConfigRow = {
   attendant_discount_limit_pct?: number | string | null
@@ -67,7 +71,7 @@ export async function syncPricingFromSupabase(): Promise<PriceSyncResult> {
       { data: config, error: configError },
     ] = await Promise.all([
       supabase.from('price_catalog').select('id, brand, model, search').order('brand').order('model'),
-      supabase.from('price_services').select('catalog_id, key, label, source_label, quality, final_price, installment_price, cost_price, note'),
+      supabase.from('price_services').select('catalog_id, key, label, source_label, quality, final_price, installment_price, cost_price, note, supplier_id'),
       supabase
         .from('pricing_config')
         .select('attendant_discount_limit_pct, card_installment_fee_pct, max_installments')
@@ -128,13 +132,27 @@ export async function syncPricingFromSupabase(): Promise<PriceSyncResult> {
 export function getPriceCatalog(): PriceCatalogItem[] {
   const baseCatalog = getRemoteCatalog() || PRICE_CATALOG
   const overrides = getOverrides()
-  return baseCatalog.map((item) => ({
-    ...item,
-    services: item.services.map((service) => ({
-      ...service,
-      ...(overrides[serviceOverrideKey(item.id, service.key)] || {}),
-    })),
-  }))
+  const custom = getCustomServices()
+  const removed = getRemovedServiceKeys()
+
+  return baseCatalog.map((item) => {
+    const baseServices = item.services
+      .filter((service) => !removed.has(serviceOverrideKey(item.id, service.key)))
+      .map((service) => ({
+        ...service,
+        ...(overrides[serviceOverrideKey(item.id, service.key)] || {}),
+      }))
+    const extras = (custom[item.id] || [])
+      .filter(
+        (service) => !removed.has(serviceOverrideKey(item.id, service.key))
+          && !baseServices.some((existing) => existing.key === service.key),
+      )
+      .map((service) => ({
+        ...service,
+        ...(overrides[serviceOverrideKey(item.id, service.key)] || {}),
+      }))
+    return { ...item, services: [...baseServices, ...extras] }
+  })
 }
 
 export function searchPriceCatalog(query: string, limit = 12): PriceCatalogItem[] {
@@ -183,6 +201,8 @@ export async function saveServicePrice(itemId: string, serviceKey: string, updat
     final_price: finalPrice,
     installment_price: installmentPrice,
     note: updates.note ?? existing?.note ?? null,
+    supplier_id: updates.supplierId ?? existing?.supplierId ?? null,
+    updated_at: new Date().toISOString(),
   }
 
   const { error: serviceError } = await supabase
@@ -208,6 +228,75 @@ export async function saveServicePrice(itemId: string, serviceKey: string, updat
     }, { onConflict: 'item_id,service_key' })
 
   if (error) throw error
+}
+
+export async function addServiceOption(itemId: string, input: NewServiceOptionInput): Promise<PriceService> {
+  const item = getPriceCatalog().find((entry) => entry.id === itemId)
+  if (!item) throw new Error('Modelo não encontrado no catálogo')
+
+  const key = uniqueServiceKey(item.services, input.label, input.quality)
+  const service: PriceService = {
+    key,
+    label: input.label.trim(),
+    sourceLabel: 'Cadastro manual',
+    quality: input.quality?.trim() || null,
+    finalPrice: input.finalPrice,
+    installmentPrice: calculateInstallmentPrice(input.finalPrice),
+    costPrice: input.costPrice ?? null,
+    note: input.note?.trim() || null,
+    supplierId: input.supplierId || null,
+  }
+
+  if (isSupabaseEnabled) {
+    const { error } = await supabase.from('price_services').insert({
+      catalog_id: itemId,
+      key: service.key,
+      label: service.label,
+      source_label: service.sourceLabel,
+      quality: service.quality,
+      final_price: service.finalPrice,
+      installment_price: service.installmentPrice,
+      cost_price: service.costPrice,
+      note: service.note,
+      supplier_id: service.supplierId,
+      updated_at: new Date().toISOString(),
+    })
+    if (error) throw error
+    await syncPricingFromSupabase()
+    return service
+  }
+
+  const custom = getCustomServices()
+  custom[itemId] = [...(custom[itemId] || []), service]
+  localStorage.setItem(CUSTOM_SERVICES_KEY, JSON.stringify(custom))
+  return service
+}
+
+export async function deleteServiceOption(itemId: string, serviceKey: string): Promise<void> {
+  if (isSupabaseEnabled) {
+    const { error } = await supabase
+      .from('price_services')
+      .delete()
+      .eq('catalog_id', itemId)
+      .eq('key', serviceKey)
+    if (error) throw error
+    await syncPricingFromSupabase()
+    return
+  }
+
+  // Modo local: se for opcao customizada, remove da lista; se vier do
+  // catalogo base, marca como removida.
+  const custom = getCustomServices()
+  const list = custom[itemId] || []
+  if (list.some((service) => service.key === serviceKey)) {
+    custom[itemId] = list.filter((service) => service.key !== serviceKey)
+    localStorage.setItem(CUSTOM_SERVICES_KEY, JSON.stringify(custom))
+    return
+  }
+
+  const removed = getRemovedServiceKeys()
+  removed.add(serviceOverrideKey(itemId, serviceKey))
+  localStorage.setItem(REMOVED_SERVICES_KEY, JSON.stringify(Array.from(removed)))
 }
 
 export async function savePricingConfigToSupabase(config: PricingConfig, userId?: string) {
@@ -304,6 +393,7 @@ function rowsToCatalog(catalogRows: PriceCatalogRow[], serviceRows: PriceService
       installmentPrice: toNumberOrNull(row.installment_price),
       costPrice: toNumberOrNull(row.cost_price),
       note: row.note || null,
+      supplierId: row.supplier_id || null,
     })
     acc[row.catalog_id] = list
     return acc
@@ -353,6 +443,32 @@ function toNumberOrDefault(value: number | string | null | undefined, fallback: 
 
 function serviceOverrideKey(itemId: string, serviceKey: string) {
   return `${itemId}:${serviceKey}`
+}
+
+function getCustomServices(): Record<string, PriceService[]> {
+  try {
+    const parsed = JSON.parse(localStorage.getItem(CUSTOM_SERVICES_KEY) || '{}')
+    return parsed && typeof parsed === 'object' ? parsed : {}
+  } catch {
+    return {}
+  }
+}
+
+function getRemovedServiceKeys(): Set<string> {
+  try {
+    const parsed = JSON.parse(localStorage.getItem(REMOVED_SERVICES_KEY) || '[]')
+    return new Set(Array.isArray(parsed) ? parsed : [])
+  } catch {
+    return new Set()
+  }
+}
+
+function uniqueServiceKey(existing: PriceService[], label: string, quality?: string | null) {
+  const base = normalize(`${label} ${quality || ''}`).replace(/\s+/g, '-') || 'servico'
+  if (!existing.some((service) => service.key === base)) return base
+  let suffix = 2
+  while (existing.some((service) => service.key === `${base}-${suffix}`)) suffix++
+  return `${base}-${suffix}`
 }
 
 function normalize(value: string) {
