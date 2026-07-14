@@ -499,6 +499,22 @@ export const authAdapter = {
     clearSessionStartedAt()
   },
 
+  async requestPasswordReset(email: string): Promise<void> {
+    if (!isSupabaseEnabled) throw new Error('Supabase nao configurado')
+
+    const { error } = await supabase.auth.resetPasswordForEmail(email, {
+      redirectTo: `${window.location.origin}/redefinir-senha`,
+    })
+    if (error) throw error
+  },
+
+  async updatePassword(newPassword: string): Promise<void> {
+    if (!isSupabaseEnabled) throw new Error('Supabase nao configurado')
+
+    const { error } = await supabase.auth.updateUser({ password: newPassword })
+    if (error) throw error
+  },
+
   async getSession(): Promise<AppUser | null> {
     if (!isSupabaseEnabled) return null
 

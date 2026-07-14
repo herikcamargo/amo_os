@@ -12,6 +12,7 @@ import { Clients } from '@/pages/Clients'
 import { Settings } from '@/pages/Settings'
 import { Reports } from '@/pages/Reports'
 import { Login } from '@/pages/Login'
+import { ResetPassword } from '@/pages/ResetPassword'
 import { CloudSetup } from '@/pages/CloudSetup'
 import { UserManagement } from '@/pages/UserManagement'
 import { GoogleDriveSetup } from '@/pages/GoogleDriveSetup'
@@ -21,6 +22,7 @@ import { OsSettings } from '@/pages/OsSettings'
 
 export default function App() {
   const { user, authReady, isCloudConnected, initializeAuth, syncFromSupabase, signOut } = useStore()
+  const isRecoveryFlow = window.location.hash.includes('type=recovery')
 
   useEffect(() => {
     initializeAuth()
@@ -43,6 +45,14 @@ export default function App() {
     return () => window.clearInterval(interval)
   }, [authReady, user, isCloudConnected, signOut])
 
+  if (isRecoveryFlow) {
+    return (
+      <Routes>
+        <Route path="*" element={<ResetPassword />} />
+      </Routes>
+    )
+  }
+
   if (!authReady) {
     return <LoadingScreen />
   }
@@ -51,6 +61,7 @@ export default function App() {
     return (
       <Routes>
         <Route path="/login" element={<Login />} />
+        <Route path="/redefinir-senha" element={<ResetPassword />} />
         <Route path="*" element={<Navigate to="/login" replace />} />
       </Routes>
     )
