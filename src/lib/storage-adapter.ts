@@ -53,6 +53,35 @@ function clearSessionStartedAt() {
   localStorage.removeItem(AUTH_SESSION_STARTED_AT_KEY)
 }
 
+// Busca paginas de mais de 1000 linhas (limite do PostgREST) em paralelo
+// em vez de uma atras da outra — a 1a pagina traz o total (count: 'exact')
+// e as demais saem todas de uma vez via Promise.all. Concatenar por indice
+// de pagina preserva a ordenacao do servidor mesmo chegando fora de ordem.
+async function fetchAllPages<T>(
+  page: (from: number, to: number) => PromiseLike<{ data: T[] | null; error: unknown; count?: number | null }>,
+  pageSize = 1000,
+): Promise<T[]> {
+  const first = await page(0, pageSize - 1)
+  if (first.error) throw first.error
+
+  const firstRows = first.data || []
+  const total = first.count ?? firstRows.length
+  if (total <= pageSize) return firstRows
+
+  const ranges: [number, number][] = []
+  for (let from = pageSize; from < total; from += pageSize) {
+    ranges.push([from, Math.min(from + pageSize - 1, total - 1)])
+  }
+
+  const rest = await Promise.all(ranges.map(([from, to]) => page(from, to)))
+  const pages = [firstRows]
+  for (const result of rest) {
+    if (result.error) throw result.error
+    pages.push(result.data || [])
+  }
+  return pages.flat()
+}
+
 function getSessionStartedAt(session: { user?: { last_sign_in_at?: string | null } }) {
   const stored = readStoredSessionStartedAt()
   if (stored) return stored
@@ -77,22 +106,15 @@ export const ordersAdapter = {
   async list(): Promise<ServiceOrder[]> {
     if (!isSupabaseEnabled) return []
 
-    const pageSize = 1000
-    const allRows: ServiceOrderRow[] = []
-
-    for (let from = 0; ; from += pageSize) {
-      const { data, error } = await supabase
+    const rows = await fetchAllPages<ServiceOrderRow>((from, to) =>
+      supabase
         .from('v_service_orders')
-        .select('*')
+        .select('*', { count: 'exact' })
         .order('created_at', { ascending: false })
-        .range(from, from + pageSize - 1)
+        .range(from, to) as unknown as PromiseLike<{ data: ServiceOrderRow[] | null; error: unknown; count?: number | null }>,
+    )
 
-      if (error) throw error
-      allRows.push(...((data || []) as ServiceOrderRow[]))
-      if (!data || data.length < pageSize) break
-    }
-
-    return allRows.map(rowToOrder)
+    return rows.map(rowToOrder)
   },
 
   async create(order: CreateOrderInput): Promise<ServiceOrder> {
@@ -179,22 +201,13 @@ export const customersAdapter = {
 
   async list(): Promise<Customer[]> {
     if (!isSupabaseEnabled) return []
-    const pageSize = 1000
-    const allCustomers: Customer[] = []
-
-    for (let from = 0; ; from += pageSize) {
-      const { data, error } = await supabase
+    return fetchAllPages<Customer>((from, to) =>
+      supabase
         .from('customers')
-        .select('*')
+        .select('*', { count: 'exact' })
         .order('nome')
-        .range(from, from + pageSize - 1)
-
-      if (error) throw error
-      allCustomers.push(...((data || []) as Customer[]))
-      if (!data || data.length < pageSize) break
-    }
-
-    return allCustomers
+        .range(from, to) as unknown as PromiseLike<{ data: Customer[] | null; error: unknown; count?: number | null }>,
+    )
   },
 
   async update(id: string, updates: Partial<Customer>): Promise<Customer> {
@@ -253,22 +266,13 @@ export const suppliersAdapter = {
 export const saleDevicesAdapter = {
   async list(): Promise<SaleDevice[]> {
     if (!isSupabaseEnabled) return []
-    const pageSize = 1000
-    const allDevices: SaleDevice[] = []
-
-    for (let from = 0; ; from += pageSize) {
-      const { data, error } = await supabase
+    return fetchAllPages<SaleDevice>((from, to) =>
+      supabase
         .from('sale_devices')
-        .select('*')
+        .select('*', { count: 'exact' })
         .order('modelo')
-        .range(from, from + pageSize - 1)
-
-      if (error) throw error
-      allDevices.push(...((data || []) as SaleDevice[]))
-      if (!data || data.length < pageSize) break
-    }
-
-    return allDevices
+        .range(from, to) as unknown as PromiseLike<{ data: SaleDevice[] | null; error: unknown; count?: number | null }>,
+    )
   },
 
   async create(device: SaleDevice): Promise<SaleDevice> {
@@ -289,20 +293,13 @@ export const saleDevicesAdapter = {
 export const deviceSalesAdapter = {
   async list(customers: Customer[], devices: SaleDevice[]): Promise<DeviceSale[]> {
     if (!isSupabaseEnabled) return []
-    const pageSize = 1000
-    const data: DeviceSale[] = []
-
-    for (let from = 0; ; from += pageSize) {
-      const { data: page, error } = await supabase
+    const data = await fetchAllPages<DeviceSale>((from, to) =>
+      supabase
         .from('device_sales')
-        .select('*')
+        .select('*', { count: 'exact' })
         .order('sold_at', { ascending: false })
-        .range(from, from + pageSize - 1)
-
-      if (error) throw error
-      data.push(...((page || []) as DeviceSale[]))
-      if (!page || page.length < pageSize) break
-    }
+        .range(from, to) as unknown as PromiseLike<{ data: DeviceSale[] | null; error: unknown; count?: number | null }>,
+    )
 
     return data.map((sale) => ({
       ...sale,
@@ -331,22 +328,13 @@ export const deviceSalesAdapter = {
 export const serviceOrderPhotosAdapter = {
   async list(): Promise<ServiceOrderPhoto[]> {
     if (!isSupabaseEnabled) return []
-    const pageSize = 1000
-    const allPhotos: ServiceOrderPhoto[] = []
-
-    for (let from = 0; ; from += pageSize) {
-      const { data, error } = await supabase
+    return fetchAllPages<ServiceOrderPhoto>((from, to) =>
+      supabase
         .from('service_order_photos')
-        .select('*')
+        .select('*', { count: 'exact' })
         .order('created_at', { ascending: false })
-        .range(from, from + pageSize - 1)
-
-      if (error) throw error
-      allPhotos.push(...((data || []) as ServiceOrderPhoto[]))
-      if (!data || data.length < pageSize) break
-    }
-
-    return allPhotos
+        .range(from, to) as unknown as PromiseLike<{ data: ServiceOrderPhoto[] | null; error: unknown; count?: number | null }>,
+    )
   },
 
   async create(photo: ServiceOrderPhoto): Promise<ServiceOrderPhoto> {
