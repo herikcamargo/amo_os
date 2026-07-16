@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import {
   ChevronLeft, Lock, Save, Building2, Clock3, MessageSquare,
-  FileText, ShieldCheck, Printer, ListChecks,
+  FileText, ShieldCheck, Printer, ListChecks, MessageSquarePlus, Trash2,
 } from 'lucide-react'
 import { useStore } from '@/store/useStore'
 import { IconBtn } from '@/components/ui/IconBtn'
@@ -82,6 +82,10 @@ export function OsSettings() {
             <Field label="Telefone" value={config.companyPhone} onChange={(v) => set({ companyPhone: v })} />
           </div>
           <Field label="Endereco" value={config.companyAddress} onChange={(v) => set({ companyAddress: v })} />
+          <div className="md:grid md:grid-cols-2 md:gap-3 space-y-3 md:space-y-0">
+            <Field label="CNPJ" value={config.companyCnpj} onChange={(v) => set({ companyCnpj: v })} />
+            <Field label="E-mail" value={config.companyEmail} onChange={(v) => set({ companyEmail: v })} />
+          </div>
           <Field label="Rodape da impressao" value={config.companyFooter} onChange={(v) => set({ companyFooter: v })} />
         </Panel>
 
@@ -147,6 +151,60 @@ export function OsSettings() {
           </div>
         </Panel>
 
+        {/* Templates avulsos de WhatsApp */}
+        <Panel title="Templates avulsos de WhatsApp (menu Mensagem para o cliente)" icon={MessageSquarePlus}>
+          <p className="text-xs text-gray-500 mb-1">
+            Aparecem como opcoes no detalhe da OS, junto com a mensagem do status atual.
+            Placeholders: <code className="text-gray-300">{'{cliente}'}</code> <code className="text-gray-300">{'{numero}'}</code> <code className="text-gray-300">{'{aparelho}'}</code> <code className="text-gray-300">{'{loja}'}</code>
+          </p>
+          <div className="space-y-3">
+            {config.whatsappTemplates.map((template, index) => (
+              <div key={template.id} className="rounded-xl bg-white/[0.02] border border-white/8 p-3 space-y-2">
+                <div className="flex gap-2">
+                  <input
+                    value={template.label}
+                    onChange={(e) => {
+                      const next = [...config.whatsappTemplates]
+                      next[index] = { ...template, label: e.target.value }
+                      set({ whatsappTemplates: next })
+                    }}
+                    placeholder="Nome do template"
+                    className="flex-1 h-10 px-3 rounded-xl bg-surface-input border border-white/5 focus:border-brand outline-none text-sm font-semibold"
+                  />
+                  <button
+                    onClick={() => set({ whatsappTemplates: config.whatsappTemplates.filter((t) => t.id !== template.id) })}
+                    className="h-10 w-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-red-400 transition-colors"
+                    title="Remover template"
+                  >
+                    <Trash2 size={15} />
+                  </button>
+                </div>
+                <textarea
+                  value={template.text}
+                  onChange={(e) => {
+                    const next = [...config.whatsappTemplates]
+                    next[index] = { ...template, text: e.target.value }
+                    set({ whatsappTemplates: next })
+                  }}
+                  rows={2}
+                  className="w-full px-3 py-2 rounded-xl bg-surface-input border border-white/5 focus:border-brand outline-none text-sm resize-none"
+                />
+              </div>
+            ))}
+            <button
+              onClick={() => set({
+                whatsappTemplates: [
+                  ...config.whatsappTemplates,
+                  { id: `t-${Date.now()}`, label: 'Novo template', text: 'Ola, {cliente}! ... (OS {numero}) — {loja}' },
+                ],
+              })}
+              className="w-full h-10 rounded-xl bg-white/5 border border-white/10 text-xs font-semibold text-gray-300 hover:bg-white/[0.08] transition-colors"
+            >
+              + Adicionar template
+            </button>
+          </div>
+        </Panel>
+
         {/* Condicoes de servico */}
         <Panel title="Condicoes de servico (impressas na OS de entrada)" icon={FileText}>
           <textarea
@@ -178,6 +236,11 @@ export function OsSettings() {
             label="Mostrar valores na impressao da OS"
             checked={config.printShowValues}
             onChange={(v) => set({ printShowValues: v })}
+          />
+          <ToggleRow
+            label="Imprimir itens do checklist de entrada na OS"
+            checked={config.printChecklist}
+            onChange={(v) => set({ printChecklist: v })}
           />
         </Panel>
 

@@ -14,6 +14,7 @@ import { scanOsImage } from '@/lib/os-scanner'
 import { customersAdapter, devicesAdapter, isSupabaseEnabled, ordersAdapter } from '@/lib/storage-adapter'
 import { isValidCep, lookupCep, maskCep } from '@/lib/cep'
 import { printEntradaA4 } from '@/lib/print-entrada'
+import { saveChecklist } from '@/lib/checklists'
 import type { ServiceOrder, Customer, Device, CondicaoEstetica } from '@/types/database'
 import toast from 'react-hot-toast'
 
@@ -284,6 +285,13 @@ export function NewOrder() {
         }
       }
 
+      // Persiste o checklist de entrada — impresso na OS e exibido no detalhe
+      try {
+        await saveChecklist(savedOrder.id, 'entrada', checklist, obsChecklist)
+      } catch {
+        console.warn('Falha ao salvar checklist de entrada')
+      }
+
       addOrder(savedOrder)
       addNotification({
         id: generateId(),
@@ -323,7 +331,7 @@ export function NewOrder() {
 
       if (printAfter) {
         try {
-          printEntradaA4(savedOrder, settings)
+          printEntradaA4(savedOrder, settings, undefined, { itens: checklist, observacoes: obsChecklist })
           toast.success('Impressao de entrada gerada (2 vias)')
         } catch (err) {
           const message = err instanceof Error ? err.message : 'Erro desconhecido'

@@ -1,22 +1,23 @@
-import { useMemo, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import {
   ChevronLeft, Download, Wrench, User, Smartphone, CheckCircle2,
   Camera, ShieldCheck, History, AlertTriangle, Phone, MessageSquare,
-  Package, Save, Plus, CreditCard, X, ImageIcon, Copy, Printer,
+  Package, Save, Plus, CreditCard, X, ImageIcon, Copy, Printer, Send,
 } from 'lucide-react'
 import { useStore } from '@/store/useStore'
 import { IconBtn } from '@/components/ui/IconBtn'
 import { CardBox } from '@/components/ui/CardBox'
 import { Row } from '@/components/ui/Row'
 import { StatusBadge } from '@/components/ui/StatusBadge'
-import { STATUS_CONFIG, CHECK_ENTRADA, brl, STATUS_FLOW } from '@/lib/constants'
+import { STATUS_CONFIG, brl, STATUS_FLOW } from '@/lib/constants'
 import { daysSince, formatDate } from '@/lib/utils'
 import { downloadOsPdf } from '@/lib/generate-pdf'
 import { can } from '@/lib/permissions'
 import { calculateWarrantyUntil, isPartWarrantyActive, partWarrantyLabel } from '@/lib/warranty'
-import { printEntradaA4 } from '@/lib/print-entrada'
-import { buildWhatsappMessage, getOsConfig } from '@/lib/os-config'
+import { printEntradaA4, type PrintChecklist } from '@/lib/print-entrada'
+import { applyMessageTemplate, buildWhatsappMessage, getOsConfig } from '@/lib/os-config'
+import { getChecklist } from '@/lib/checklists'
 import { isLegacyOrder } from '@/lib/legacy'
 import { generateId } from '@/lib/utils'
 import { compressImage, formatFileSize } from '@/lib/image-compressor'
@@ -36,6 +37,8 @@ export function OrderDetail() {
     orders, updateOrder, user, suppliers, addSupplier, addAuditLog, settings, serviceOrderPhotos, addServiceOrderPhoto,
   } = useStore()
   const [showStatusModal, setShowStatusModal] = useState(false)
+  const [whatsappOpen, setWhatsappOpen] = useState(false)
+  const [entryChecklist, setEntryChecklist] = useState<PrintChecklist | null>(null)
   const [finishOpen, setFinishOpen] = useState(false)
   const [pieceOpen, setPieceOpen] = useState(false)
   const [quickSupplier, setQuickSupplier] = useState('')
@@ -52,6 +55,17 @@ export function OrderDetail() {
   const canUpdateStatus = can(user, 'update_status')
 
   const order = useMemo(() => orders.find((o) => o.id === id), [orders, id])
+
+  // Checklist real registrado na abertura da OS (Supabase ou localStorage)
+  useEffect(() => {
+    if (!id) return
+    let cancelled = false
+    getChecklist(id, 'entrada')
+      .then((data) => { if (!cancelled) setEntryChecklist(data) })
+      .catch(() => { if (!cancelled) setEntryChecklist(null) })
+    return () => { cancelled = true }
+  }, [id])
+
   const photos = useMemo(() => {
     if (!order) return []
     const fromState = serviceOrderPhotos.filter((photo) => photo.service_order_id === order.id)
@@ -198,7 +212,7 @@ export function OrderDetail() {
   const handlePrint = (kind: 'entrada' | 'saida') => {
     if (kind === 'entrada') {
       // Impressao direta em A4 com 2 vias (cliente + assistencia)
-      printEntradaA4(order, settings)
+      printEntradaA4(order, settings, undefined, entryChecklist)
     } else {
       downloadOsPdf(order, kind, settings)
     }
@@ -217,8 +231,7 @@ export function OrderDetail() {
     toast.success(kind === 'entrada' ? 'OS de entrada gerada (2 vias)' : 'OS de saida gerada')
   }
 
-  const handleCopyWhatsapp = async () => {
-    const message = buildWhatsappMessage(order)
+  const copyMessage = async (message: string) => {
     try {
       await navigator.clipboard.writeText(message)
       toast.success('Mensagem copiada! Cole no WhatsApp do cliente.')
@@ -238,6 +251,26 @@ export function OrderDetail() {
         toast.error('Nao consegui copiar a mensagem')
       }
     }
+  }
+
+  // Opcoes de mensagem: a do status atual + templates configurados em Ajustes > OS
+  const whatsappConfig = getOsConfig()
+  const whatsappOptions = [
+    {
+      id: 'status-atual',
+      label: `Status atual (${STATUS_CONFIG[order.status]?.label || order.status})`,
+      text: buildWhatsappMessage(order, whatsappConfig),
+    },
+    ...whatsappConfig.whatsappTemplates.map((template) => ({
+      id: template.id,
+      label: template.label,
+      text: applyMessageTemplate(order, template.text, whatsappConfig),
+    })),
+  ]
+
+  const whatsappSendUrl = (message: string) => {
+    const phone = (order.customer?.telefone || '').replace(/\D/g, '')
+    return phone ? `https://wa.me/55${phone}?text=${encodeURIComponent(message)}` : null
   }
 
   const savePiece = (piece: PartWarranty) => {
@@ -360,12 +393,12 @@ export function OrderDetail() {
           </button>
         )}
 
-        {/* Mensagem por status — copia para colar no WhatsApp */}
+        {/* Templates de mensagem — copiar ou enviar direto no WhatsApp */}
         <button
-          onClick={handleCopyWhatsapp}
+          onClick={() => setWhatsappOpen(true)}
           className="w-full h-11 mt-2 rounded-xl bg-[#25D366]/10 border border-[#25D366]/25 font-semibold text-sm flex items-center justify-center gap-2 text-[#25D366] active:scale-95 transition-transform"
         >
-          <Copy size={15} /> Copiar mensagem para WhatsApp
+          <MessageSquare size={15} /> Mensagem para WhatsApp
         </button>
 
         {order.customer?.telefone && (
@@ -411,23 +444,32 @@ export function OrderDetail() {
 
         {/* Checklist */}
         <CardBox title="Checklist de entrada" icon={CheckCircle2}>
-          <div className="grid grid-cols-2 gap-x-4 gap-y-2.5">
-            {CHECK_ENTRADA.slice(0, 10).map((c, i) => {
-              const ok = i % 4 !== 0
-              return (
-                <div key={c} className="flex items-center gap-2 text-sm">
-                  <span
-                    className="w-4 h-4 rounded flex items-center justify-center text-[10px]"
-                    style={{ background: ok ? '#14532D' : '#7F1D1D', color: ok ? '#4ADE80' : '#FCA5A5' }}
-                  >
-                    {ok ? '✓' : '✕'}
-                  </span>
-                  <span className="text-gray-300">{c}</span>
+          {entryChecklist && Object.keys(entryChecklist.itens).length > 0 ? (
+            <>
+              <div className="grid grid-cols-2 gap-x-4 gap-y-2.5">
+                {Object.entries(entryChecklist.itens).map(([item, ok]) => (
+                  <div key={item} className="flex items-center gap-2 text-sm">
+                    <span
+                      className="w-4 h-4 rounded flex items-center justify-center text-[10px] shrink-0"
+                      style={{ background: ok ? '#14532D' : '#7F1D1D', color: ok ? '#4ADE80' : '#FCA5A5' }}
+                    >
+                      {ok ? '✓' : '✕'}
+                    </span>
+                    <span className="text-gray-300">{item}</span>
+                  </div>
+                ))}
+              </div>
+              {entryChecklist.observacoes && (
+                <div className="text-xs text-gray-400 mt-3">
+                  <span className="text-gray-500">Obs:</span> {entryChecklist.observacoes}
                 </div>
-              )
-            })}
-          </div>
-          <div className="text-xs text-gray-500 mt-3">+6 itens no checklist completo</div>
+              )}
+            </>
+          ) : (
+            <p className="text-sm text-gray-500">
+              Checklist nao registrado nesta OS{isLegacyOrder(order) ? ' (importada do sistema antigo)' : ''}.
+            </p>
+          )}
         </CardBox>
 
         {/* Fotos */}
@@ -501,6 +543,52 @@ export function OrderDetail() {
       </div>
 
       {/* Status change modal */}
+      {whatsappOpen && (
+        <div className="fixed inset-0 bg-black/60 z-50 flex items-end md:items-center justify-center" onClick={() => setWhatsappOpen(false)}>
+          <div
+            className="w-full max-w-[480px] max-h-[85vh] overflow-y-auto bg-surface-elevated rounded-t-[24px] md:rounded-[24px] border-t md:border border-white/10 p-5 pb-8"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-center justify-between mb-1">
+              <h2 className="text-lg font-bold">Mensagem para o cliente</h2>
+              <button onClick={() => setWhatsappOpen(false)} className="h-9 w-9 rounded-xl bg-white/5 flex items-center justify-center"><X size={16} /></button>
+            </div>
+            <p className="text-xs text-gray-500 mb-4">
+              Escolha o modelo. Edite os textos em Ajustes &gt; Configuracoes da OS.
+            </p>
+            <div className="space-y-3">
+              {whatsappOptions.map((option) => {
+                const sendUrl = whatsappSendUrl(option.text)
+                return (
+                  <div key={option.id} className="rounded-xl bg-white/[0.03] border border-white/8 p-3">
+                    <div className="text-sm font-semibold mb-1.5">{option.label}</div>
+                    <p className="text-xs text-gray-400 leading-relaxed mb-2.5">{option.text}</p>
+                    <div className="flex gap-2">
+                      <button
+                        onClick={() => copyMessage(option.text)}
+                        className="flex-1 h-9 rounded-lg bg-white/5 border border-white/10 text-xs font-semibold flex items-center justify-center gap-1.5 hover:bg-white/10 transition-colors"
+                      >
+                        <Copy size={13} /> Copiar
+                      </button>
+                      {sendUrl && (
+                        <a
+                          href={sendUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex-1 h-9 rounded-lg bg-[#25D366]/15 border border-[#25D366]/30 text-xs font-semibold text-[#25D366] flex items-center justify-center gap-1.5 hover:bg-[#25D366]/25 transition-colors"
+                        >
+                          <Send size={13} /> Enviar no WhatsApp
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                )
+              })}
+            </div>
+          </div>
+        </div>
+      )}
+
       {showStatusModal && (
         <div className="fixed inset-0 bg-black/60 z-50 flex items-end justify-center" onClick={() => setShowStatusModal(false)}>
           <div

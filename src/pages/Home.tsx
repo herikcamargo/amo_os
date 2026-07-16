@@ -12,6 +12,7 @@ import { filterNotificationsForUser } from '@/lib/notifications'
 import { can } from '@/lib/permissions'
 import { isLegacyOrder } from '@/lib/legacy'
 import { SearchOsModal } from '@/components/SearchOsModal'
+import { DashboardCharts } from '@/components/DashboardCharts'
 import type { OsStatus, ServiceOrder } from '@/types/database'
 
 const MAIN_ACTIONS = [
@@ -178,6 +179,8 @@ export function Home() {
               ))}
             </div>
           </div>
+
+          <DashboardCharts orders={orders} deviceSales={deviceSales} canFinance={canFinance} />
 
           <RecentOrdersTable orders={recentOrders} onOpen={(order) => navigate(`/os/${order.id}`)} onViewAll={() => navigate('/ordens')} />
         </section>

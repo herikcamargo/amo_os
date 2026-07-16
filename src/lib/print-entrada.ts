@@ -10,9 +10,14 @@
 // Usa iframe oculto + window.print() — nao navega, nao abre popup.
 // ═══════════════════════════════════════════════════════════════
 
-import type { AppSettings, ServiceOrder } from '@/types/database'
+import type { AppSettings, ChecklistItem, ServiceOrder } from '@/types/database'
 import { STATUS_CONFIG, brl } from '@/lib/constants'
 import { getOsConfig, type OsConfig } from '@/lib/os-config'
+
+export interface PrintChecklist {
+  itens: ChecklistItem
+  observacoes?: string | null
+}
 
 function esc(value: string | null | undefined): string {
   return String(value ?? '')
@@ -43,7 +48,22 @@ function enderecoCliente(order: ServiceOrder): string {
   return [linha, c.complemento, cidade, c.cep ? `CEP ${c.cep}` : ''].filter(Boolean).join(' · ')
 }
 
-function viaHtml(order: ServiceOrder, settings: AppSettings, config: OsConfig, viaLabel: string): string {
+function checklistHtml(config: OsConfig, checklist?: PrintChecklist | null): string {
+  if (!config.printChecklist || !checklist || Object.keys(checklist.itens).length === 0) return ''
+
+  const itens = Object.entries(checklist.itens)
+    .map(([nome, ok]) => `<span class="chk ${ok ? '' : 'nok'}">${ok ? '&#10003;' : '&#10007;'} ${esc(nome)}</span>`)
+    .join('')
+
+  return `
+    <div class="bloco">
+      <p class="titulo">CHECKLIST DE ENTRADA:</p>
+      <div class="chk-grid">${itens}</div>
+      ${checklist.observacoes ? `<p class="texto chk-obs"><b>Obs:</b> ${esc(checklist.observacoes)}</p>` : ''}
+    </div>`
+}
+
+function viaHtml(order: ServiceOrder, settings: AppSettings, config: OsConfig, viaLabel: string, checklist?: PrintChecklist | null): string {
   const aparelho = [order.device?.marca, order.device?.modelo].filter(Boolean).join(' ') || '—'
   const acessorios = order.device?.acessorios?.length ? order.device.acessorios.join(', ') : 'Nenhum'
   const endereco = enderecoCliente(order)
@@ -51,6 +71,7 @@ function viaHtml(order: ServiceOrder, settings: AppSettings, config: OsConfig, v
   const condicoes = settings.os_entry_terms || ''
   const garantia = settings.warranty_terms || ''
   const mostrarValor = config.printShowValues && order.valor_servico > 0
+  const contato = [config.companyPhone, config.companyEmail].filter(Boolean).join(' · ')
 
   return `
   <section class="via">
@@ -59,7 +80,8 @@ function viaHtml(order: ServiceOrder, settings: AppSettings, config: OsConfig, v
       <div class="empresa">
         <h1>${esc(config.companyName)}</h1>
         <p>${esc(config.companyAddress)}</p>
-        ${config.companyPhone ? `<p>${esc(config.companyPhone)}</p>` : ''}
+        ${contato ? `<p>${esc(contato)}</p>` : ''}
+        ${config.companyCnpj ? `<p>CNPJ: ${esc(config.companyCnpj)}</p>` : ''}
       </div>
       <div class="os-id">
         <h2>COMPROVANTE DE ENTRADA — OS Nº ${esc(order.numero)}</h2>
@@ -90,6 +112,8 @@ function viaHtml(order: ServiceOrder, settings: AppSettings, config: OsConfig, v
       <p class="texto">${esc(order.problema_relatado || '—').replace(/\n/g, '<br/>')}</p>
     </div>
 
+    ${checklistHtml(config, checklist)}
+
     ${mostrarValor ? `
     <div class="bloco">
       <div class="linha">
@@ -116,12 +140,12 @@ function viaHtml(order: ServiceOrder, settings: AppSettings, config: OsConfig, v
   </section>`
 }
 
-export function buildEntradaHtml(order: ServiceOrder, settings: AppSettings, config: OsConfig = getOsConfig()): string {
+export function buildEntradaHtml(order: ServiceOrder, settings: AppSettings, config: OsConfig = getOsConfig(), checklist?: PrintChecklist | null): string {
   const vias = config.printTwoVias
-    ? viaHtml(order, settings, config, 'VIA DO CLIENTE') +
+    ? viaHtml(order, settings, config, 'VIA DO CLIENTE', checklist) +
       '<div class="corte"><span>✂ — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — corte aqui</span></div>' +
-      viaHtml(order, settings, config, 'VIA DA ASSISTENCIA')
-    : viaHtml(order, settings, config, 'VIA UNICA')
+      viaHtml(order, settings, config, 'VIA DA ASSISTENCIA', checklist)
+    : viaHtml(order, settings, config, 'VIA UNICA', checklist)
 
   return `<!doctype html>
 <html lang="pt-BR">
@@ -145,18 +169,22 @@ export function buildEntradaHtml(order: ServiceOrder, settings: AppSettings, con
   .titulo { font-weight: bold; font-size: 10px; margin-bottom: 1mm; }
   .texto { white-space: normal; }
   .condicoes .texto { font-size: 9px; color: #222; margin-bottom: 1mm; }
-  footer { display: flex; justify-content: space-between; gap: 10mm; margin-top: 9mm; }
+  footer { display: flex; justify-content: space-between; gap: 10mm; margin-top: 6mm; }
   .assinatura { flex: 1; border-top: 1px solid #111; padding-top: 1.5mm; text-align: center; font-size: 9px; color: #333; }
   .rodape { text-align: center; font-size: 8.5px; color: #555; margin-top: 2mm; }
   .corte { text-align: center; color: #777; font-size: 9px; padding: 3mm 0; border: 0; }
+  .chk-grid { display: flex; flex-wrap: wrap; gap: 0.8mm 2.4mm; }
+  .chk { font-size: 8px; color: #14532d; white-space: nowrap; }
+  .chk.nok { color: #7f1d1d; font-weight: bold; }
+  .chk-obs { font-size: 8.5px; margin-top: 1mm; }
 </style>
 </head>
 <body>${vias}</body>
 </html>`
 }
 
-export function printEntradaA4(order: ServiceOrder, settings: AppSettings, config: OsConfig = getOsConfig()): void {
-  const html = buildEntradaHtml(order, settings, config)
+export function printEntradaA4(order: ServiceOrder, settings: AppSettings, config: OsConfig = getOsConfig(), checklist?: PrintChecklist | null): void {
+  const html = buildEntradaHtml(order, settings, config, checklist)
 
   const iframe = document.createElement('iframe')
   iframe.style.position = 'fixed'
