@@ -425,6 +425,7 @@ export const usersAdapter = {
       password: input.password,
       options: {
         data: { nome: input.nome.trim() },
+        emailRedirectTo: `${window.location.origin}/login`,
       },
     })
 
