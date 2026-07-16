@@ -44,12 +44,16 @@ export function Reports() {
         <h1 className="text-xl font-bold tracking-tight flex-1">Relatórios</h1>
       </div>
 
-      {/* KPIs */}
+      {/* KPIs — valores financeiros so para quem tem acesso */}
       <div className="grid grid-cols-2 gap-3 mb-5">
         <KpiCard icon={BarChart3} label="Total de OS" value={stats.total} color="#D71920" />
         <KpiCard icon={Clock} label="Em aberto" value={stats.abertas} color="#F59E0B" />
-        <KpiCard icon={DollarSign} label="Faturamento" value={brl(stats.faturamento)} color="#22C55E" />
-        <KpiCard icon={TrendingUp} label="Ticket médio" value={brl(stats.ticket)} color="#3B82F6" />
+        {canFinance && (
+          <>
+            <KpiCard icon={DollarSign} label="Faturamento" value={brl(stats.faturamento)} color="#22C55E" />
+            <KpiCard icon={TrendingUp} label="Ticket médio" value={brl(stats.ticket)} color="#3B82F6" />
+          </>
+        )}
       </div>
 
       {/* Visao geral com graficos e filtro de periodo */}

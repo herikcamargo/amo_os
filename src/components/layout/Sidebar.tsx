@@ -1,7 +1,7 @@
 import { useMemo } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
 import {
-  BarChart3, Bell, Boxes, Cloud, CloudOff, Files, Home, Landmark,
+  BarChart3, Bell, Boxes, Cloud, CloudOff, Files, Home,
   LogOut, Package, Plus, Search, Settings, Users,
 } from 'lucide-react'
 import { useStore } from '@/store/useStore'
@@ -16,7 +16,6 @@ const NAV_ITEMS = [
   { key: '/precos', label: 'Consulta de precos', icon: Search, requires: null },
   { key: '/vendas?tab=estoque', label: 'Estoque', icon: Boxes, requires: null },
   { key: '/relatorios', label: 'Relatorios', icon: BarChart3, requires: 'view_reports' as const },
-  { key: '/relatorios?financeiro=1', label: 'Financeiro', icon: Landmark, requires: 'view_financial' as const },
   { key: '/notificacoes', label: 'Notificacoes', icon: Bell, requires: null },
   { key: '/ajustes', label: 'Ajustes', icon: Settings, requires: null },
 ]
@@ -34,8 +33,6 @@ export function Sidebar() {
   const isActive = (key: string) => {
     if (key === '/vendas?tab=estoque') return location.pathname === '/vendas' && location.search.includes('tab=estoque')
     if (key === '/vendas') return location.pathname === '/vendas' && !location.search.includes('tab=estoque')
-    if (key === '/relatorios?financeiro=1') return location.pathname === '/relatorios' && location.search.includes('financeiro=1')
-    if (key === '/relatorios') return location.pathname === '/relatorios' && !location.search.includes('financeiro=1')
     if (key === '/') return location.pathname === '/'
     return location.pathname.startsWith(key)
   }

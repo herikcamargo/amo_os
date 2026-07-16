@@ -1,4 +1,5 @@
-export type UserRole = 'admin' | 'atendente' | 'tecnico'
+// atendente/tecnico sao legados — tratados como funcionario (ver permissions.ts)
+export type UserRole = 'admin' | 'funcionario' | 'atendente' | 'tecnico'
 export type OsStatus = 'recebido' | 'analise' | 'aprovacao' | 'peca' | 'manutencao' | 'pronto' | 'entregue' | 'cancelado'
 export type ChecklistKind = 'entrada' | 'saida'
 

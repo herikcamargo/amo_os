@@ -6,7 +6,7 @@ import {
 } from 'lucide-react'
 import { useStore } from '@/store/useStore'
 import { IconBtn } from '@/components/ui/IconBtn'
-import { can, roleLabel, roleColor, roleDescription } from '@/lib/permissions'
+import { can, normalizeRole, roleLabel, roleColor, roleDescription } from '@/lib/permissions'
 import { isSupabaseEnabled, usersAdapter } from '@/lib/storage-adapter'
 import type { AppUser, UserRole } from '@/types/database'
 import toast from 'react-hot-toast'
@@ -102,14 +102,14 @@ export function UserManagement() {
             nome: data.nome || '',
             email: data.email || '',
             password: data.password || '',
-            role: data.role || 'atendente',
+            role: data.role || 'funcionario',
             telefone: data.telefone,
           })
           : {
             id: crypto.randomUUID(),
             nome: data.nome || '',
             email: data.email || '',
-            role: data.role || 'atendente',
+            role: data.role || 'funcionario',
             ativo: true,
             telefone: data.telefone,
             created_at: new Date().toISOString(),
@@ -145,8 +145,8 @@ export function UserManagement() {
         </button>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-6">
-        {(['admin', 'atendente', 'tecnico'] as UserRole[]).map((role) => (
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
+        {(['admin', 'funcionario'] as UserRole[]).map((role) => (
           <div
             key={role}
             className="bg-surface-card rounded-[16px] border p-3"
@@ -269,7 +269,7 @@ function UserModal({ user, onClose, onSave }: {
   const [nome, setNome] = useState(user?.nome || '')
   const [email, setEmail] = useState(user?.email || '')
   const [telefone, setTelefone] = useState(user?.telefone || '')
-  const [role, setRole] = useState<UserRole>(user?.role || 'atendente')
+  const [role, setRole] = useState<UserRole>(user ? normalizeRole(user.role) : 'funcionario')
   const [password, setPassword] = useState('')
   const [saving, setSaving] = useState(false)
 
@@ -319,7 +319,7 @@ function UserModal({ user, onClose, onSave }: {
           <div>
             <label className="block text-sm text-gray-400 mb-1.5">Perfil de acesso</label>
             <div className="space-y-2">
-              {(['admin', 'atendente', 'tecnico'] as UserRole[]).map((r) => {
+              {(['admin', 'funcionario'] as UserRole[]).map((r) => {
                 const color = roleColor(r)
                 const active = role === r
                 return (

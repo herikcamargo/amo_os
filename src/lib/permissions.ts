@@ -2,9 +2,12 @@
 // Sistema de Permissões — AMO OS
 //
 // Perfis:
-//   admin     — acesso total: financeiro, relatórios, usuários, banco
-//   atendente — criar/editar OS, atender clientes, SEM financeiro
-//   tecnico   — atualizar status/diagnóstico, SEM financeiro
+//   admin       — acesso total: financeiro, usuários, configurações
+//   funcionario — acesso a tudo, EXCETO financeiro e alterações
+//                 críticas (usuários, configurações, exclusões)
+//
+// Perfis antigos (atendente/tecnico) sao tratados como funcionario
+// caso ainda apareçam em sessões/dados persistidos.
 // ═══════════════════════════════════════════════════════════════
 
 import type { UserRole, AppUser } from '@/types/database'
@@ -24,49 +27,41 @@ export type Permission =
   | 'set_price'             // definir valor do serviço
   | 'export_pdf'            // baixar PDF de OS
 
-const PERMISSIONS: Record<UserRole, Permission[]> = {
+export type EffectiveRole = 'admin' | 'funcionario'
+
+export function normalizeRole(role: UserRole): EffectiveRole {
+  return role === 'admin' ? 'admin' : 'funcionario'
+}
+
+const PERMISSIONS: Record<EffectiveRole, Permission[]> = {
   admin: [
     'view_financial', 'view_reports', 'view_audit_logs',
     'manage_users', 'manage_database', 'manage_integrations', 'manage_settings',
     'create_order', 'edit_order', 'update_status', 'delete_order',
     'set_price', 'export_pdf',
   ],
-  atendente: [
-    'create_order', 'edit_order', 'update_status', 'export_pdf',
-  ],
-  tecnico: [
-    'update_status', 'export_pdf',
+  funcionario: [
+    'view_reports',
+    'create_order', 'edit_order', 'update_status',
+    'set_price', 'export_pdf',
   ],
 }
 
 export function can(user: AppUser | null, action: Permission): boolean {
   if (!user || !user.ativo) return false
-  return PERMISSIONS[user.role]?.includes(action) ?? false
+  return PERMISSIONS[normalizeRole(user.role)].includes(action)
 }
 
 export function roleLabel(role: UserRole): string {
-  switch (role) {
-    case 'admin': return 'Administrador'
-    case 'atendente': return 'Atendente'
-    case 'tecnico': return 'Técnico'
-  }
+  return normalizeRole(role) === 'admin' ? 'Administrador' : 'Funcionário'
 }
 
 export function roleColor(role: UserRole): string {
-  switch (role) {
-    case 'admin': return '#D71920'
-    case 'atendente': return '#3B82F6'
-    case 'tecnico': return '#F59E0B'
-  }
+  return normalizeRole(role) === 'admin' ? '#D71920' : '#3B82F6'
 }
 
 export function roleDescription(role: UserRole): string {
-  switch (role) {
-    case 'admin':
-      return 'Acesso completo: financeiro, relatórios, usuários e configurações'
-    case 'atendente':
-      return 'Cria e edita OS, atende clientes. Sem acesso financeiro.'
-    case 'tecnico':
-      return 'Atualiza status e diagnóstico. Sem acesso financeiro.'
-  }
+  return normalizeRole(role) === 'admin'
+    ? 'Acesso completo: financeiro, relatórios, usuários e configurações'
+    : 'Acesso a tudo do dia a dia (OS, clientes, vendas, preços, relatórios). Sem financeiro nem alterações críticas.'
 }

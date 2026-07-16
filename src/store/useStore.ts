@@ -83,8 +83,7 @@ export const useStore = create<AppState>()(
       user: null,
       users: [
         { id: 'u1', nome: 'Herik', email: 'admin@amocelular.com', role: 'admin', ativo: true, created_at: '2026-01-01T00:00:00Z' },
-        { id: 'u2', nome: 'Bia Souza', email: 'bia@amocelular.com', role: 'atendente', ativo: true, telefone: '(16) 99000-0001', created_at: '2026-02-01T00:00:00Z' },
-        { id: 'u3', nome: 'Léo Martins', email: 'leo@amocelular.com', role: 'tecnico', ativo: true, telefone: '(16) 99000-0002', created_at: '2026-02-15T00:00:00Z' },
+        { id: 'u2', nome: 'Bia Souza', email: 'bia@amocelular.com', role: 'funcionario', ativo: true, telefone: '(16) 99000-0001', created_at: '2026-02-01T00:00:00Z' },
       ],
       orders: DEMO_DATA.orders,
       customers: DEMO_DATA.customers,
