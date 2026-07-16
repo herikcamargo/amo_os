@@ -77,13 +77,22 @@ export const ordersAdapter = {
   async list(): Promise<ServiceOrder[]> {
     if (!isSupabaseEnabled) return []
 
-    const { data, error } = await supabase
-      .from('v_service_orders')
-      .select('*')
-      .order('created_at', { ascending: false })
+    const pageSize = 1000
+    const allRows: ServiceOrderRow[] = []
 
-    if (error) throw error
-    return (data || []).map(rowToOrder)
+    for (let from = 0; ; from += pageSize) {
+      const { data, error } = await supabase
+        .from('v_service_orders')
+        .select('*')
+        .order('created_at', { ascending: false })
+        .range(from, from + pageSize - 1)
+
+      if (error) throw error
+      allRows.push(...((data || []) as ServiceOrderRow[]))
+      if (!data || data.length < pageSize) break
+    }
+
+    return allRows.map(rowToOrder)
   },
 
   async create(order: CreateOrderInput): Promise<ServiceOrder> {
@@ -170,12 +179,22 @@ export const customersAdapter = {
 
   async list(): Promise<Customer[]> {
     if (!isSupabaseEnabled) return []
-    const { data, error } = await supabase
-      .from('customers')
-      .select('*')
-      .order('nome')
-    if (error) throw error
-    return data || []
+    const pageSize = 1000
+    const allCustomers: Customer[] = []
+
+    for (let from = 0; ; from += pageSize) {
+      const { data, error } = await supabase
+        .from('customers')
+        .select('*')
+        .order('nome')
+        .range(from, from + pageSize - 1)
+
+      if (error) throw error
+      allCustomers.push(...((data || []) as Customer[]))
+      if (!data || data.length < pageSize) break
+    }
+
+    return allCustomers
   },
 
   async update(id: string, updates: Partial<Customer>): Promise<Customer> {
@@ -270,9 +289,22 @@ export const saleDevicesAdapter = {
 export const deviceSalesAdapter = {
   async list(customers: Customer[], devices: SaleDevice[]): Promise<DeviceSale[]> {
     if (!isSupabaseEnabled) return []
-    const { data, error } = await supabase.from('device_sales').select('*').order('sold_at', { ascending: false })
-    if (error) throw error
-    return (data || []).map((sale) => ({
+    const pageSize = 1000
+    const data: DeviceSale[] = []
+
+    for (let from = 0; ; from += pageSize) {
+      const { data: page, error } = await supabase
+        .from('device_sales')
+        .select('*')
+        .order('sold_at', { ascending: false })
+        .range(from, from + pageSize - 1)
+
+      if (error) throw error
+      data.push(...((page || []) as DeviceSale[]))
+      if (!page || page.length < pageSize) break
+    }
+
+    return data.map((sale) => ({
       ...sale,
       customer: customers.find((customer) => customer.id === sale.customer_id),
       device: devices.find((device) => device.id === sale.device_id),
@@ -299,12 +331,22 @@ export const deviceSalesAdapter = {
 export const serviceOrderPhotosAdapter = {
   async list(): Promise<ServiceOrderPhoto[]> {
     if (!isSupabaseEnabled) return []
-    const { data, error } = await supabase
-      .from('service_order_photos')
-      .select('*')
-      .order('created_at', { ascending: false })
-    if (error) throw error
-    return data || []
+    const pageSize = 1000
+    const allPhotos: ServiceOrderPhoto[] = []
+
+    for (let from = 0; ; from += pageSize) {
+      const { data, error } = await supabase
+        .from('service_order_photos')
+        .select('*')
+        .order('created_at', { ascending: false })
+        .range(from, from + pageSize - 1)
+
+      if (error) throw error
+      allPhotos.push(...((data || []) as ServiceOrderPhoto[]))
+      if (!data || data.length < pageSize) break
+    }
+
+    return allPhotos
   },
 
   async create(photo: ServiceOrderPhoto): Promise<ServiceOrderPhoto> {
