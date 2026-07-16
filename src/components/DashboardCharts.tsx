@@ -1,5 +1,6 @@
 // ═══════════════════════════════════════════════════════════════
 // Graficos do dashboard — SVG puro, sem dependencias novas.
+// Hover reativo: tooltip proprio, destaque de barra/ponto/fatia.
 //
 // Paleta de status validada (contraste/CVD) contra o surface #141416:
 // aberto #D97706 · andamento #3B82F6 · prontas #16A34A ·
@@ -202,7 +203,7 @@ export function DashboardCharts({ orders, deviceSales, canFinance }: {
           subtitle={`${totalEntradas.toLocaleString('pt-BR')} no periodo`}
           className="lg:col-span-2"
         >
-          <BarChart buckets={data.buckets} values={data.entradas} color="#D71920" />
+          <BarChart buckets={data.buckets} values={data.entradas} color="#D71920" unit="OS" />
         </ChartCard>
 
         <ChartCard title="Situacao das OS" subtitle={`${data.totalPeriodo.toLocaleString('pt-BR')} que entraram no periodo`}>
@@ -240,6 +241,28 @@ function ChartCard({ title, subtitle, className, children }: {
   )
 }
 
+// Tooltip proprio, posicionado sobre o grafico e reativo ao mouse
+function ChartTooltip({ leftPct, topPct, title, value }: {
+  leftPct: number
+  topPct: number
+  title: string
+  value: string
+}) {
+  const clamped = Math.min(88, Math.max(12, leftPct))
+  return (
+    <div
+      className="absolute z-10 pointer-events-none -translate-x-1/2 -translate-y-full"
+      style={{ left: `${clamped}%`, top: `${Math.max(0, topPct)}%` }}
+    >
+      <div className="rounded-lg bg-[#1E1E22] border border-white/15 shadow-xl px-2.5 py-1.5 whitespace-nowrap">
+        <div className="text-[10px] text-gray-400 leading-tight">{title}</div>
+        <div className="text-xs font-bold tabular-nums leading-tight mt-0.5">{value}</div>
+      </div>
+      <div className="mx-auto h-0 w-0 border-x-[5px] border-x-transparent border-t-[5px] border-t-[#1E1E22]" />
+    </div>
+  )
+}
+
 // Barra fina com topo arredondado ancorada na linha de base
 function roundedBarPath(x: number, y: number, w: number, h: number): string {
   const r = Math.min(3, w / 2, h)
@@ -247,7 +270,8 @@ function roundedBarPath(x: number, y: number, w: number, h: number): string {
   return `M ${x} ${y + h} V ${y + r} Q ${x} ${y} ${x + r} ${y} H ${x + w - r} Q ${x + w} ${y} ${x + w} ${y + r} V ${y + h} Z`
 }
 
-function BarChart({ buckets, values, color }: { buckets: Bucket[]; values: number[]; color: string }) {
+function BarChart({ buckets, values, color, unit }: { buckets: Bucket[]; values: number[]; color: string; unit: string }) {
+  const [hover, setHover] = useState<number | null>(null)
   const W = 620; const H = 190
   const padL = 8; const padR = 8; const padT = 16; const padB = 24
   const plotW = W - padL - padR
@@ -256,48 +280,63 @@ function BarChart({ buckets, values, color }: { buckets: Bucket[]; values: numbe
   const n = Math.max(1, buckets.length)
   const step = plotW / n
   const barW = Math.max(3, Math.min(26, step * 0.62))
-  const maxIndex = values.indexOf(Math.max(...values))
-  // No maximo ~8 rotulos no eixo x
   const labelEvery = Math.max(1, Math.ceil(n / 8))
 
   return (
-    <svg viewBox={`0 0 ${W} ${H}`} className="w-full" role="img" aria-label="Entradas de OS por periodo">
-      {/* Linhas-guia discretas */}
-      {[0.25, 0.5, 0.75].map((frac) => (
-        <line key={frac} x1={padL} x2={W - padR} y1={padT + plotH * frac} y2={padT + plotH * frac} stroke="rgba(255,255,255,0.05)" strokeWidth="1" />
-      ))}
-      <line x1={padL} x2={W - padR} y1={padT + plotH} y2={padT + plotH} stroke="rgba(255,255,255,0.14)" strokeWidth="1" />
+    <div className="relative" onMouseLeave={() => setHover(null)}>
+      {hover !== null && (
+        <ChartTooltip
+          leftPct={((padL + hover * step + step / 2) / W) * 100}
+          topPct={((padT + plotH - (values[hover] / max) * plotH) / H) * 100 - 4}
+          title={buckets[hover].label}
+          value={`${values[hover].toLocaleString('pt-BR')} ${unit}`}
+        />
+      )}
+      <svg viewBox={`0 0 ${W} ${H}`} className="w-full" role="img" aria-label={`${unit} por periodo`}>
+        {[0.25, 0.5, 0.75].map((frac) => (
+          <line key={frac} x1={padL} x2={W - padR} y1={padT + plotH * frac} y2={padT + plotH * frac} stroke="rgba(255,255,255,0.05)" strokeWidth="1" />
+        ))}
+        <line x1={padL} x2={W - padR} y1={padT + plotH} y2={padT + plotH} stroke="rgba(255,255,255,0.14)" strokeWidth="1" />
 
-      {buckets.map((bucket, i) => {
-        const h = (values[i] / max) * plotH
-        const x = padL + i * step + (step - barW) / 2
-        const y = padT + plotH - h
-        return (
-          <g key={bucket.key} className="group">
-            {/* Alvo de hover maior que a barra */}
-            <rect x={padL + i * step} y={padT} width={step} height={plotH} fill="transparent">
-              <title>{`${bucket.label}: ${values[i].toLocaleString('pt-BR')} OS`}</title>
-            </rect>
-            <path d={roundedBarPath(x, y, barW, h)} fill={color} opacity={0.88} className="group-hover:opacity-100 pointer-events-none" />
-            {/* Rotulo direto so no pico */}
-            {i === maxIndex && values[i] > 0 && (
-              <text x={x + barW / 2} y={y - 5} textAnchor="middle" fontSize="10" fill="#D1D5DB" className="tabular-nums pointer-events-none">
-                {values[i].toLocaleString('pt-BR')}
-              </text>
-            )}
-            {i % labelEvery === 0 && (
-              <text x={padL + i * step + step / 2} y={H - 8} textAnchor="middle" fontSize="9.5" fill="#6B7280" className="pointer-events-none">
-                {bucket.label}
-              </text>
-            )}
-          </g>
-        )
-      })}
-    </svg>
+        {/* Trilha de destaque da coluna sob o mouse */}
+        {hover !== null && (
+          <rect x={padL + hover * step} y={padT} width={step} height={plotH} fill="rgba(255,255,255,0.045)" rx="4" />
+        )}
+
+        {buckets.map((bucket, i) => {
+          const h = (values[i] / max) * plotH
+          const x = padL + i * step + (step - barW) / 2
+          const y = padT + plotH - h
+          const dimmed = hover !== null && hover !== i
+          return (
+            <g key={bucket.key}>
+              <path
+                d={roundedBarPath(x, y, barW, h)}
+                fill={color}
+                opacity={dimmed ? 0.35 : hover === i ? 1 : 0.88}
+                className="transition-opacity duration-100 pointer-events-none"
+              />
+              {i % labelEvery === 0 && (
+                <text x={padL + i * step + step / 2} y={H - 8} textAnchor="middle" fontSize="9.5" fill={hover === i ? '#D1D5DB' : '#6B7280'} className="pointer-events-none">
+                  {bucket.label}
+                </text>
+              )}
+              {/* Alvo de hover: a coluna inteira */}
+              <rect
+                x={padL + i * step} y={padT} width={step} height={plotH}
+                fill="transparent"
+                onMouseEnter={() => setHover(i)}
+              />
+            </g>
+          )
+        })}
+      </svg>
+    </div>
   )
 }
 
 function AreaChart({ buckets, values, color, money }: { buckets: Bucket[]; values: number[]; color: string; money?: boolean }) {
+  const [hover, setHover] = useState<number | null>(null)
   const W = 620; const H = 170
   const padL = 8; const padR = 8; const padT = 18; const padB = 24
   const plotW = W - padL - padR
@@ -310,55 +349,64 @@ function AreaChart({ buckets, values, color, money }: { buckets: Bucket[]; value
   const areaPath = n > 0
     ? `M ${xAt(0)} ${padT + plotH} L ${points.split(' ').join(' L ')} L ${xAt(n - 1)} ${padT + plotH} Z`
     : ''
-  const maxIndex = values.indexOf(Math.max(...values))
   const labelEvery = Math.max(1, Math.ceil(n / 8))
   const fmt = (v: number) => money ? brl(v) : v.toLocaleString('pt-BR')
+  const slotW = n <= 1 ? plotW : plotW / (n - 1)
 
   return (
-    <svg viewBox={`0 0 ${W} ${H}`} className="w-full" role="img" aria-label="Faturamento por periodo">
-      <defs>
-        <linearGradient id="area-fade" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor={color} stopOpacity="0.28" />
-          <stop offset="100%" stopColor={color} stopOpacity="0.02" />
-        </linearGradient>
-      </defs>
-      {[0.25, 0.5, 0.75].map((frac) => (
-        <line key={frac} x1={padL} x2={W - padR} y1={padT + plotH * frac} y2={padT + plotH * frac} stroke="rgba(255,255,255,0.05)" strokeWidth="1" />
-      ))}
-      <line x1={padL} x2={W - padR} y1={padT + plotH} y2={padT + plotH} stroke="rgba(255,255,255,0.14)" strokeWidth="1" />
+    <div className="relative" onMouseLeave={() => setHover(null)}>
+      {hover !== null && (
+        <ChartTooltip
+          leftPct={(xAt(hover) / W) * 100}
+          topPct={(yAt(values[hover]) / H) * 100 - 5}
+          title={buckets[hover].label}
+          value={fmt(values[hover])}
+        />
+      )}
+      <svg viewBox={`0 0 ${W} ${H}`} className="w-full" role="img" aria-label="Faturamento por periodo">
+        <defs>
+          <linearGradient id="area-fade" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor={color} stopOpacity="0.28" />
+            <stop offset="100%" stopColor={color} stopOpacity="0.02" />
+          </linearGradient>
+        </defs>
+        {[0.25, 0.5, 0.75].map((frac) => (
+          <line key={frac} x1={padL} x2={W - padR} y1={padT + plotH * frac} y2={padT + plotH * frac} stroke="rgba(255,255,255,0.05)" strokeWidth="1" />
+        ))}
+        <line x1={padL} x2={W - padR} y1={padT + plotH} y2={padT + plotH} stroke="rgba(255,255,255,0.14)" strokeWidth="1" />
 
-      {areaPath && <path d={areaPath} fill="url(#area-fade)" />}
-      {n > 1 && <polyline points={points} fill="none" stroke={color} strokeWidth="2" strokeLinejoin="round" strokeLinecap="round" />}
+        {areaPath && <path d={areaPath} fill="url(#area-fade)" className="pointer-events-none" />}
+        {n > 1 && <polyline points={points} fill="none" stroke={color} strokeWidth="2" strokeLinejoin="round" strokeLinecap="round" className="pointer-events-none" />}
 
-      {buckets.map((bucket, i) => (
-        <g key={bucket.key}>
-          <rect x={n <= 1 ? padL : xAt(i) - plotW / (n - 1) / 2} y={padT} width={n <= 1 ? plotW : plotW / (n - 1)} height={plotH} fill="transparent">
-            <title>{`${bucket.label}: ${fmt(values[i])}`}</title>
-          </rect>
-          {i === maxIndex && values[i] > 0 && (
-            <>
-              <circle cx={xAt(i)} cy={yAt(values[i])} r="4" fill={color} stroke="#141416" strokeWidth="2" className="pointer-events-none" />
-              <text
-                x={Math.min(Math.max(xAt(i), 40), W - 60)}
-                y={yAt(values[i]) - 8}
-                textAnchor="middle" fontSize="10" fill="#D1D5DB" className="tabular-nums pointer-events-none"
-              >
-                {fmt(values[i])}
+        {/* Crosshair + ponto no bucket sob o mouse */}
+        {hover !== null && (
+          <>
+            <line x1={xAt(hover)} x2={xAt(hover)} y1={padT} y2={padT + plotH} stroke="rgba(255,255,255,0.18)" strokeWidth="1" strokeDasharray="3 3" className="pointer-events-none" />
+            <circle cx={xAt(hover)} cy={yAt(values[hover])} r="4.5" fill={color} stroke="#141416" strokeWidth="2" className="pointer-events-none" />
+          </>
+        )}
+
+        {buckets.map((bucket, i) => (
+          <g key={bucket.key}>
+            {i % labelEvery === 0 && (
+              <text x={xAt(i)} y={H - 8} textAnchor="middle" fontSize="9.5" fill={hover === i ? '#D1D5DB' : '#6B7280'} className="pointer-events-none">
+                {bucket.label}
               </text>
-            </>
-          )}
-          {i % labelEvery === 0 && (
-            <text x={xAt(i)} y={H - 8} textAnchor="middle" fontSize="9.5" fill="#6B7280" className="pointer-events-none">
-              {bucket.label}
-            </text>
-          )}
-        </g>
-      ))}
-    </svg>
+            )}
+            <rect
+              x={xAt(i) - slotW / 2} y={padT} width={slotW} height={plotH}
+              fill="transparent"
+              onMouseEnter={() => setHover(i)}
+            />
+          </g>
+        ))}
+      </svg>
+    </div>
   )
 }
 
 function StatusDonut({ counts, total }: { counts: number[]; total: number }) {
+  const [hover, setHover] = useState<number | null>(null)
   const R = 52; const STROKE = 15
   const C = 2 * Math.PI * R
   const gapPx = total > 0 ? 2 : 0
@@ -367,44 +415,64 @@ function StatusDonut({ counts, total }: { counts: number[]; total: number }) {
   const segments = STATUS_GROUPS.map((group, i) => {
     const frac = total > 0 ? counts[i] / total : 0
     const len = Math.max(0, frac * C - gapPx)
-    const seg = { ...group, count: counts[i], frac, dash: `${len} ${C - len}`, offset }
+    const seg = { ...group, index: i, count: counts[i], frac, dash: `${len} ${C - len}`, offset }
     offset -= frac * C
     return seg
   }).filter((segment) => segment.count > 0)
 
+  const active = hover !== null ? STATUS_GROUPS[hover] : null
+  const activeCount = hover !== null ? counts[hover] : total
+  const activePct = hover !== null && total > 0 ? Math.round((counts[hover] / total) * 100) : null
+
   return (
-    <div className="flex items-center gap-4">
+    <div className="flex items-center gap-4" onMouseLeave={() => setHover(null)}>
       <div className="relative shrink-0">
         <svg viewBox="0 0 140 140" width="128" height="128" role="img" aria-label="Distribuicao das OS por situacao">
           <circle cx="70" cy="70" r={R} fill="none" stroke="rgba(255,255,255,0.06)" strokeWidth={STROKE} />
-          {segments.map((segment) => (
-            <circle
-              key={segment.key}
-              cx="70" cy="70" r={R}
-              fill="none"
-              stroke={segment.color}
-              strokeWidth={STROKE}
-              strokeDasharray={segment.dash}
-              strokeDashoffset={segment.offset}
-              transform="rotate(-90 70 70)"
-            >
-              <title>{`${segment.label}: ${segment.count.toLocaleString('pt-BR')} (${Math.round(segment.frac * 100)}%)`}</title>
-            </circle>
-          ))}
+          {segments.map((segment) => {
+            const isActive = hover === segment.index
+            const dimmed = hover !== null && !isActive
+            return (
+              <circle
+                key={segment.key}
+                cx="70" cy="70" r={R}
+                fill="none"
+                stroke={segment.color}
+                strokeWidth={isActive ? STROKE + 4 : STROKE}
+                strokeDasharray={segment.dash}
+                strokeDashoffset={segment.offset}
+                transform="rotate(-90 70 70)"
+                opacity={dimmed ? 0.3 : 1}
+                className="transition-all duration-100 cursor-pointer"
+                onMouseEnter={() => setHover(segment.index)}
+              />
+            )
+          })}
         </svg>
-        <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
-          <span className="text-xl font-black tabular-nums">{total.toLocaleString('pt-BR')}</span>
-          <span className="text-[10px] text-gray-500">OS</span>
+        <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none text-center px-4">
+          <span className="text-xl font-black tabular-nums" style={active ? { color: active.color } : undefined}>
+            {activeCount.toLocaleString('pt-BR')}
+          </span>
+          <span className="text-[10px] text-gray-500 leading-tight">
+            {active ? `${active.label}${activePct !== null ? ` · ${activePct}%` : ''}` : 'OS'}
+          </span>
         </div>
       </div>
       <div className="min-w-0 flex-1 space-y-1.5">
-        {STATUS_GROUPS.map((group, i) => (
-          <div key={group.key} className="flex items-center gap-2 text-xs">
-            <span className="w-2.5 h-2.5 rounded-[4px] shrink-0" style={{ background: group.color }} />
-            <span className="text-gray-400 truncate flex-1">{group.label}</span>
-            <span className="font-semibold tabular-nums">{counts[i].toLocaleString('pt-BR')}</span>
-          </div>
-        ))}
+        {STATUS_GROUPS.map((group, i) => {
+          const dimmed = hover !== null && hover !== i
+          return (
+            <div
+              key={group.key}
+              className={`flex items-center gap-2 text-xs rounded-md px-1 -mx-1 py-0.5 cursor-default transition-opacity duration-100 ${dimmed ? 'opacity-40' : ''} ${hover === i ? 'bg-white/[0.05]' : ''}`}
+              onMouseEnter={() => setHover(i)}
+            >
+              <span className="w-2.5 h-2.5 rounded-[4px] shrink-0" style={{ background: group.color }} />
+              <span className="text-gray-400 truncate flex-1">{group.label}</span>
+              <span className="font-semibold tabular-nums">{counts[i].toLocaleString('pt-BR')}</span>
+            </div>
+          )
+        })}
       </div>
     </div>
   )

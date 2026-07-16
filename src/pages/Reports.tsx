@@ -6,11 +6,13 @@ import { IconBtn } from '@/components/ui/IconBtn'
 import { CardBox } from '@/components/ui/CardBox'
 import { STATUS_CONFIG, brl } from '@/lib/constants'
 import { can } from '@/lib/permissions'
+import { DashboardCharts } from '@/components/DashboardCharts'
 import type { OsStatus } from '@/types/database'
 
 export function Reports() {
   const navigate = useNavigate()
-  const { orders, user } = useStore()
+  const { orders, deviceSales, user } = useStore()
+  const canFinance = can(user, 'view_financial')
 
   const stats = useMemo(() => {
     const total = orders.length
@@ -49,6 +51,9 @@ export function Reports() {
         <KpiCard icon={DollarSign} label="Faturamento" value={brl(stats.faturamento)} color="#22C55E" />
         <KpiCard icon={TrendingUp} label="Ticket médio" value={brl(stats.ticket)} color="#3B82F6" />
       </div>
+
+      {/* Visao geral com graficos e filtro de periodo */}
+      <DashboardCharts orders={orders} deviceSales={deviceSales} canFinance={canFinance} />
 
       {/* Por status */}
       <CardBox title="Por status" icon={Wrench}>
