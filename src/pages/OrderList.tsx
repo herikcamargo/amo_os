@@ -1,6 +1,6 @@
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect } from 'react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
-import { Search, ChevronLeft, Filter } from 'lucide-react'
+import { Search, ChevronLeft, ChevronRight, Filter } from 'lucide-react'
 import { useStore } from '@/store/useStore'
 import { IconBtn } from '@/components/ui/IconBtn'
 import { OrderRow } from '@/components/ui/OrderRow'
@@ -14,6 +14,8 @@ const LEGACY_OPTIONS: { key: LegacyFilter; label: string }[] = [
   { key: 'fpq', label: 'FPQ (antigas)' },
   { key: 'todas', label: 'Todas' },
 ]
+
+const PAGE_SIZE = 100
 
 export function OrderList() {
   const navigate = useNavigate()
@@ -39,6 +41,8 @@ export function OrderList() {
     return `${activeStatuses.length} filtros`
   }, [activeStatuses])
 
+  const [page, setPage] = useState(1)
+
   const list = useMemo(() => {
     const filtered = orders.filter((o) => {
       const matchStatus = activeStatuses.length === 0 || activeStatuses.includes(o.status)
@@ -49,6 +53,13 @@ export function OrderList() {
     // Sempre da mais nova para a mais antiga, independente da ordem de chegada dos dados
     return [...filtered].sort((a, b) => Date.parse(b.created_at) - Date.parse(a.created_at))
   }, [q, activeStatuses, legacyFilter, orders])
+
+  // Renderizar milhares de OS de uma vez trava o navegador — pagina.
+  useEffect(() => { setPage(1) }, [q, activeStatuses, legacyFilter])
+
+  const totalPages = Math.max(1, Math.ceil(list.length / PAGE_SIZE))
+  const currentPage = Math.min(page, totalPages)
+  const pageItems = list.slice((currentPage - 1) * PAGE_SIZE, currentPage * PAGE_SIZE)
 
   const toggleStatus = (s: OsStatus) => {
     setActiveStatuses((prev) =>
@@ -124,12 +135,34 @@ export function OrderList() {
       </div>
 
       <div className="bg-surface-card rounded-[20px] border border-white/5 px-4 divide-y divide-white/5">
-        {list.length === 0
+        {pageItems.length === 0
           ? <div className="py-14 text-center text-gray-500 text-sm">Nenhuma ordem encontrada.</div>
-          : list.map((o) => (
+          : pageItems.map((o) => (
             <OrderRow key={o.id} order={o} onClick={() => navigate(`/os/${o.id}`)} showValue />
           ))}
       </div>
+
+      {totalPages > 1 && (
+        <div className="flex items-center justify-between gap-3 mt-4 mb-4">
+          <button
+            onClick={() => setPage((p) => Math.max(1, p - 1))}
+            disabled={currentPage === 1}
+            className="h-10 px-3 rounded-xl bg-white/5 border border-white/10 text-sm font-semibold text-gray-300 disabled:opacity-40 flex items-center gap-1"
+          >
+            <ChevronLeft size={16} /> Anterior
+          </button>
+          <span className="text-xs text-gray-500">
+            Página {currentPage} de {totalPages}
+          </span>
+          <button
+            onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
+            disabled={currentPage === totalPages}
+            className="h-10 px-3 rounded-xl bg-white/5 border border-white/10 text-sm font-semibold text-gray-300 disabled:opacity-40 flex items-center gap-1"
+          >
+            Próxima <ChevronRight size={16} />
+          </button>
+        </div>
+      )}
     </div>
   )
 }
