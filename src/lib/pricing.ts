@@ -173,6 +173,46 @@ export function searchPriceCatalog(query: string, limit = 12): PriceCatalogItem[
     .map(({ item }) => item)
 }
 
+export async function addPriceCatalogItem(brand: string, model: string): Promise<PriceCatalogItem> {
+  const cleanBrand = brand.trim()
+  const cleanModel = model.trim()
+  if (!cleanBrand || !cleanModel) throw new Error('Informe marca e modelo')
+  if (!isSupabaseEnabled) throw new Error('Supabase nao configurado')
+
+  const duplicate = getPriceCatalog().some((item) => (
+    normalize(item.brand) === normalize(cleanBrand)
+    && normalize(item.model) === normalize(cleanModel)
+  ))
+  if (duplicate) throw new Error('Este aparelho ja existe no catalogo')
+
+  const baseId = normalize(`${cleanBrand} ${cleanModel}`).replace(/\s+/g, '-')
+  const id = `${baseId}-${Date.now().toString(36)}`
+  const item: PriceCatalogItem = {
+    id,
+    brand: cleanBrand,
+    model: cleanModel,
+    search: normalize(`${cleanBrand} ${cleanModel}`),
+    services: [],
+  }
+
+  const { error } = await supabase.from('price_catalog').insert({
+    id: item.id,
+    brand: item.brand,
+    model: item.model,
+    search: item.search,
+  })
+  if (error) throw error
+  await syncPricingFromSupabase()
+  return item
+}
+
+export async function deletePriceCatalogItem(itemId: string): Promise<void> {
+  if (!isSupabaseEnabled) throw new Error('Supabase nao configurado')
+  const { error } = await supabase.from('price_catalog').delete().eq('id', itemId)
+  if (error) throw error
+  await syncPricingFromSupabase()
+}
+
 export async function saveServicePrice(itemId: string, serviceKey: string, updates: Partial<PriceService>, userId?: string) {
   const overrides = getOverrides()
   overrides[serviceOverrideKey(itemId, serviceKey)] = {

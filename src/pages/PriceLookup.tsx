@@ -11,10 +11,12 @@ import { useStore } from '@/store/useStore'
 import { can } from '@/lib/permissions'
 import { generateId } from '@/lib/utils'
 import {
+  addPriceCatalogItem,
   addServiceOption,
   calculateInstallmentAmount,
   calculateInstallmentPrice,
   calculateMaxDiscount,
+  deletePriceCatalogItem,
   deleteServiceOption,
   formatCurrency,
   getPriceCatalog,
@@ -52,6 +54,7 @@ export function PriceLookup() {
   const [page, setPage] = useState(1)
   const [selected, setSelected] = useState<PriceCatalogItem | null>(null)
   const [filtersOpen, setFiltersOpen] = useState(false)
+  const [addingDevice, setAddingDevice] = useState(false)
   const [configOpen, setConfigOpen] = useState(false)
   const [syncing, setSyncing] = useState(true)
   const [version, setVersion] = useState(0)
@@ -131,6 +134,7 @@ export function PriceLookup() {
           <ViewButton active={view === 'grid'} onClick={() => setView('grid')} icon={Grid2X2}>Grade</ViewButton>
           <ViewButton active={view === 'list'} onClick={() => setView('list')} icon={List}>Lista</ViewButton>
         </div>
+        {isAdmin && <button onClick={() => setAddingDevice(true)} className="h-10 px-3 rounded-[10px] bg-brand hover:bg-brand-dark flex items-center gap-1.5 text-sm font-semibold" title="Adicionar aparelho"><Plus size={16} /><span className="hidden lg:inline">Aparelho</span></button>}
         {isAdmin && <button onClick={() => setConfigOpen(true)} className="h-10 w-10 rounded-[10px] bg-white/6 border border-white/8 flex items-center justify-center" title="Configurar preços"><SlidersHorizontal size={17} /></button>}
       </div>
 
@@ -187,7 +191,8 @@ export function PriceLookup() {
         )}
       </div>
 
-      {selected && <CatalogDetails item={selected} isAdmin={isAdmin} userId={user?.id} suppliers={activeSuppliers} onQuickSupplier={quickCreateSupplier} onClose={() => setSelected(null)} onChanged={() => { refresh(); setSelected(getPriceCatalog().find((item) => item.id === selected.id) || null) }} />}
+      {selected && <CatalogDetails item={selected} isAdmin={isAdmin} userId={user?.id} suppliers={activeSuppliers} onQuickSupplier={quickCreateSupplier} onClose={() => setSelected(null)} onDelete={async () => { await deletePriceCatalogItem(selected.id); setSelected(null); refresh() }} onChanged={() => { refresh(); setSelected(getPriceCatalog().find((item) => item.id === selected.id) || null) }} />}
+      {addingDevice && <AddDeviceForm onClose={() => setAddingDevice(false)} onSaved={(item) => { setAddingDevice(false); setBrand('Todos'); setQuery(item.model); refresh() }} />}
       {configOpen && <PricingConfigModal userId={user?.id} onClose={() => setConfigOpen(false)} />}
     </div>
   )
@@ -195,6 +200,54 @@ export function PriceLookup() {
 
 function ViewButton({ active, onClick, icon: Icon, children }: { active: boolean; onClick: () => void; icon: LucideIcon; children: string }) {
   return <button onClick={onClick} className={`h-8 px-3 rounded-lg flex items-center gap-2 text-xs font-semibold ${active ? 'bg-brand text-white' : 'text-gray-400'}`}><Icon size={14} />{children}</button>
+}
+
+function AddDeviceForm({ onClose, onSaved }: { onClose: () => void; onSaved: (item: PriceCatalogItem) => void }) {
+  const [brand, setBrand] = useState('')
+  const [model, setModel] = useState('')
+  const [saving, setSaving] = useState(false)
+
+  const save = async () => {
+    if (!brand.trim() || !model.trim()) {
+      toast.error('Informe marca e modelo')
+      return
+    }
+    setSaving(true)
+    try {
+      const item = await addPriceCatalogItem(brand, model)
+      toast.success('Aparelho adicionado ao catálogo')
+      onSaved(item)
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : 'Não foi possível adicionar')
+    } finally {
+      setSaving(false)
+    }
+  }
+
+  return (
+    <div className="fixed inset-0 z-[80] bg-black/70 flex items-end md:items-center md:justify-center" onClick={onClose}>
+      <div className="w-full md:w-[420px] bg-surface-elevated border border-white/10 rounded-t-[18px] md:rounded-[14px] p-5" onClick={(event) => event.stopPropagation()}>
+        <div className="flex items-center justify-between mb-4">
+          <div>
+            <h2 className="font-bold">Adicionar aparelho</h2>
+            <p className="text-xs text-gray-500 mt-0.5">O cadastro será salvo no Supabase.</p>
+          </div>
+          <button onClick={onClose} className="w-9 h-9 rounded-[9px] bg-white/5 flex items-center justify-center"><X size={16} /></button>
+        </div>
+        <div className="space-y-3">
+          <label className="block">
+            <span className="block text-xs text-gray-400 mb-1.5">Marca</span>
+            <input value={brand} onChange={(event) => setBrand(event.target.value)} placeholder="Ex: Apple, Samsung, Motorola" className="w-full h-11 px-3 rounded-[10px] bg-surface-input border border-white/6 outline-none focus:border-brand text-sm" />
+          </label>
+          <label className="block">
+            <span className="block text-xs text-gray-400 mb-1.5">Modelo</span>
+            <input value={model} onChange={(event) => setModel(event.target.value)} placeholder="Ex: iPhone 16 Pro" className="w-full h-11 px-3 rounded-[10px] bg-surface-input border border-white/6 outline-none focus:border-brand text-sm" />
+          </label>
+          <button onClick={() => void save()} disabled={saving} className="w-full h-11 rounded-[10px] bg-brand hover:bg-brand-dark text-sm font-semibold disabled:opacity-50">{saving ? 'Salvando...' : 'Adicionar aparelho'}</button>
+        </div>
+      </div>
+    </div>
+  )
 }
 
 function CatalogCard({ item, list, onOpen }: { item: PriceCatalogItem; list: boolean; onOpen: () => void }) {
@@ -212,7 +265,7 @@ function CatalogCard({ item, list, onOpen }: { item: PriceCatalogItem; list: boo
             {services.length ? services.map((service) => (
               <div key={service.key} className="h-7 flex items-center gap-2 text-xs">
                 <Wrench size={12} className="text-brand shrink-0" />
-                <span className="text-gray-400 truncate flex-1">{service.label}{service.quality ? ` ${service.quality}` : ''}</span>
+                <span className="text-gray-400 truncate flex-1 min-w-0">{service.label}{service.quality ? ` ${service.quality}` : ''}</span>
                 <span className="font-semibold tabular-nums shrink-0">{formatCurrency(service.finalPrice)}</span>
               </div>
             )) : <div className="text-xs text-gray-500 pt-3">Sem preço cadastrado</div>}
@@ -227,17 +280,30 @@ function CatalogCard({ item, list, onOpen }: { item: PriceCatalogItem; list: boo
   )
 }
 
-function CatalogDetails({ item, isAdmin, userId, suppliers, onQuickSupplier, onClose, onChanged }: {
+function CatalogDetails({ item, isAdmin, userId, suppliers, onQuickSupplier, onClose, onDelete, onChanged }: {
   item: PriceCatalogItem
   isAdmin: boolean
   userId?: string
   suppliers: Supplier[]
   onQuickSupplier: (nome: string) => Supplier
   onClose: () => void
+  onDelete: () => Promise<void>
   onChanged: () => void
 }) {
   const [adding, setAdding] = useState(false)
+  const [deleting, setDeleting] = useState(false)
   const groups = groupServices(item.services)
+  const remove = async () => {
+    if (!confirm(`Excluir ${item.brand} ${item.model} e todos os seus serviços?`)) return
+    setDeleting(true)
+    try {
+      await onDelete()
+      toast.success('Aparelho excluído do catálogo')
+    } catch {
+      toast.error('Não foi possível excluir o aparelho')
+      setDeleting(false)
+    }
+  }
   return (
     <div className="fixed inset-0 z-[70] bg-black/70 flex items-end md:items-stretch md:justify-end" onClick={onClose}>
       <div className="w-full md:w-[720px] max-h-[94vh] md:max-h-none overflow-y-auto bg-surface-elevated border border-white/10 rounded-t-[18px] md:rounded-none p-4 md:p-5" onClick={(e) => e.stopPropagation()}>
@@ -249,6 +315,7 @@ function CatalogDetails({ item, isAdmin, userId, suppliers, onQuickSupplier, onC
             <div className="text-xs text-gray-500">{pricedServices(item).length} serviços cadastrados</div>
           </div>
           {isAdmin && <button onClick={() => setAdding(true)} className="h-9 px-3 rounded-[9px] bg-brand text-xs font-semibold flex items-center gap-1.5"><Plus size={14} /> Opção</button>}
+          {isAdmin && <button onClick={() => void remove()} disabled={deleting} className="w-9 h-9 rounded-[9px] bg-red-500/10 text-red-400 flex items-center justify-center disabled:opacity-50" title="Excluir aparelho"><Trash2 size={14} /></button>}
           <button onClick={onClose} className="w-9 h-9 rounded-[9px] bg-white/5 flex items-center justify-center"><X size={16} /></button>
         </div>
         {adding && <AddOptionForm item={item} suppliers={suppliers} onQuickSupplier={onQuickSupplier} onClose={() => setAdding(false)} onSaved={() => { setAdding(false); onChanged() }} />}
