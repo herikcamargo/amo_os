@@ -247,6 +247,7 @@ export interface AppSettings {
   sale_terms: string
   os_entry_terms?: string
   os_exit_terms?: string
+  os_config?: Record<string, unknown> | null
 }
 
 export interface Warranty {

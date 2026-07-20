@@ -217,17 +217,33 @@ export async function generateOsPdf(order: ServiceOrder, kind: OsPrintKind = 'en
   return pdf(<OsPdfDocument order={order} kind={kind} settings={settings} />).toBlob()
 }
 
-export function downloadOsPdf(order: ServiceOrder, kind: OsPrintKind = 'entrada', settings?: AppSettings) {
-  generateOsPdf(order, kind, settings).then((blob) => {
+export async function openOsPdf(
+  order: ServiceOrder,
+  kind: OsPrintKind = 'entrada',
+  settings?: AppSettings,
+  preview?: Window | null,
+) {
+  try {
+    const blob = await generateOsPdf(order, kind, settings)
     const url = URL.createObjectURL(blob)
-    const a = document.createElement('a')
-    a.href = url
-    a.download = `${order.numero}-${kind}.pdf`
-    document.body.appendChild(a)
-    a.click()
-    document.body.removeChild(a)
-    URL.revokeObjectURL(url)
-  })
+    if (preview && !preview.closed) {
+      preview.location.href = url
+      window.setTimeout(() => URL.revokeObjectURL(url), 5 * 60 * 1000)
+      return
+    }
+    const anchor = document.createElement('a')
+    anchor.href = url
+    anchor.target = '_blank'
+    anchor.rel = 'noopener'
+    anchor.download = `${order.numero}-${kind}.pdf`
+    document.body.appendChild(anchor)
+    anchor.click()
+    anchor.remove()
+    window.setTimeout(() => URL.revokeObjectURL(url), 60_000)
+  } catch (error) {
+    preview?.close()
+    throw error
+  }
 }
 
 function SaleReceiptDocument({ sale }: { sale: DeviceSale }) {

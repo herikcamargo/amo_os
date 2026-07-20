@@ -177,14 +177,46 @@ export function buildEntradaHtml(order: ServiceOrder, settings: AppSettings, con
   .chk { font-size: 8px; color: #14532d; white-space: nowrap; }
   .chk.nok { color: #7f1d1d; font-weight: bold; }
   .chk-obs { font-size: 8.5px; margin-top: 1mm; }
+  .print-actions { position: sticky; top: 0; z-index: 10; padding: 12px; text-align: center; background: #fff; }
+  .print-actions button { border: 0; border-radius: 8px; padding: 12px 20px; background: #d71920; color: #fff; font-weight: bold; font-size: 14px; }
+  @media print { .print-actions { display: none; } }
 </style>
 </head>
-<body>${vias}</body>
+<body>
+  <div class="print-actions"><button type="button" onclick="window.print()">Imprimir / salvar PDF</button></div>
+  ${vias}
+</body>
 </html>`
 }
 
-export function printEntradaA4(order: ServiceOrder, settings: AppSettings, config: OsConfig = getOsConfig(), checklist?: PrintChecklist | null): void {
+export function printEntradaA4(
+  order: ServiceOrder,
+  settings: AppSettings,
+  config: OsConfig = getOsConfig(),
+  checklist?: PrintChecklist | null,
+  preview?: Window | null,
+): void {
   const html = buildEntradaHtml(order, settings, config, checklist)
+  const mobile = window.matchMedia('(max-width: 767px)').matches || window.matchMedia('(pointer: coarse)').matches
+
+  if (mobile) {
+    const url = URL.createObjectURL(new Blob([html], { type: 'text/html;charset=utf-8' }))
+    if (preview) {
+      preview.location.href = url
+    } else {
+      const anchor = document.createElement('a')
+      anchor.href = url
+      anchor.target = '_blank'
+      anchor.rel = 'noopener'
+      document.body.appendChild(anchor)
+      anchor.click()
+      anchor.remove()
+    }
+    window.setTimeout(() => URL.revokeObjectURL(url), 5 * 60 * 1000)
+    return
+  }
+
+  preview?.close()
 
   const iframe = document.createElement('iframe')
   iframe.style.position = 'fixed'

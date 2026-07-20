@@ -101,6 +101,21 @@ export function getOsConfig(): OsConfig {
   }
 }
 
+export function resolveOsConfig(value?: Record<string, unknown> | null): OsConfig {
+  if (!value) return getOsConfig()
+  return {
+    ...DEFAULT_OS_CONFIG,
+    ...value,
+    whatsappMessages: {
+      ...DEFAULT_OS_CONFIG.whatsappMessages,
+      ...((value.whatsappMessages as Partial<Record<OsStatus, string>> | undefined) || {}),
+    },
+    whatsappTemplates: Array.isArray(value.whatsappTemplates)
+      ? value.whatsappTemplates as WhatsappTemplate[]
+      : DEFAULT_OS_CONFIG.whatsappTemplates,
+  } as OsConfig
+}
+
 export function saveOsConfig(config: Partial<OsConfig>): OsConfig {
   const next = {
     ...getOsConfig(),

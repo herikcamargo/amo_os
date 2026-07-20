@@ -9,7 +9,7 @@ import { IconBtn } from '@/components/ui/IconBtn'
 import { can } from '@/lib/permissions'
 import { STATUS_CONFIG, STATUS_FLOW } from '@/lib/constants'
 import {
-  ALWAYS_ON_STATUSES, getOsConfig, saveOsConfig, type OsConfig,
+  ALWAYS_ON_STATUSES, resolveOsConfig, saveOsConfig, type OsConfig,
 } from '@/lib/os-config'
 import type { OsStatus } from '@/types/database'
 import toast from 'react-hot-toast'
@@ -19,7 +19,7 @@ const ALL_STATUSES: OsStatus[] = [...STATUS_FLOW, 'cancelado']
 export function OsSettings() {
   const navigate = useNavigate()
   const { user, settings, updateSettings } = useStore()
-  const [config, setConfig] = useState<OsConfig>(() => getOsConfig())
+  const [config, setConfig] = useState<OsConfig>(() => resolveOsConfig(settings.os_config))
   const [entryTerms, setEntryTerms] = useState(settings.os_entry_terms || '')
   const [warrantyTerms, setWarrantyTerms] = useState(settings.warranty_terms || '')
 
@@ -54,7 +54,11 @@ export function OsSettings() {
 
   const handleSave = () => {
     saveOsConfig(config)
-    updateSettings({ os_entry_terms: entryTerms, warranty_terms: warrantyTerms })
+    updateSettings({
+      os_entry_terms: entryTerms,
+      warranty_terms: warrantyTerms,
+      os_config: config as unknown as Record<string, unknown>,
+    })
     toast.success('Configuracoes da OS salvas')
   }
 

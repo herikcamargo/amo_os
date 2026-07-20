@@ -11,9 +11,12 @@ import { generateId } from '@/lib/utils'
 import { compressImage, formatFileSize } from '@/lib/image-compressor'
 import { formatOsPhotoFileName, uploadToDrive } from '@/lib/google-drive'
 import { scanOsImage } from '@/lib/os-scanner'
-import { customersAdapter, devicesAdapter, isSupabaseEnabled, ordersAdapter } from '@/lib/storage-adapter'
+import {
+  customersAdapter, devicesAdapter, isSupabaseEnabled, ordersAdapter, serviceOrderPhotosAdapter,
+} from '@/lib/storage-adapter'
 import { isValidCep, lookupCep, maskCep } from '@/lib/cep'
 import { printEntradaA4 } from '@/lib/print-entrada'
+import { resolveOsConfig } from '@/lib/os-config'
 import { saveChecklist } from '@/lib/checklists'
 import type { ServiceOrder, Customer, Device, CondicaoEstetica } from '@/types/database'
 import toast from 'react-hot-toast'
@@ -231,6 +234,10 @@ export function NewOrder() {
       return
     }
 
+    const mobilePrint = printAfter && (
+      window.matchMedia('(max-width: 767px)').matches || window.matchMedia('(pointer: coarse)').matches
+    )
+    const printPreview = mobilePrint ? window.open('', '_blank') : null
     setSaving(true)
     try {
       const now = new Date().toISOString()
@@ -347,34 +354,43 @@ export function NewOrder() {
       })
 
       toast.loading(`Enviando ${photosWithBlob.length} foto(s)...`, { id: 'upload' })
+      let uploadedPhotos = 0
       for (const [index, photo] of photosWithBlob.entries()) {
         try {
           const fileName = formatOsPhotoFileName(savedOrder.numero, `entrada_${photo.label}`, index)
-          const uploaded = await uploadToDrive(
-            photo.blob!,
-            fileName,
-            savedOrder.numero,
-          )
+          const uploaded = isSupabaseEnabled
+            ? await serviceOrderPhotosAdapter.upload(photo.blob!, `${savedOrder.id}/${fileName}`)
+            : await uploadToDrive(photo.blob!, fileName, savedOrder.numero)
           addServiceOrderPhoto({
             id: generateId(),
             service_order_id: savedOrder.id,
             kind: 'entrada',
-            storage_path: uploaded.fileId || fileName,
+            storage_path: 'storagePath' in uploaded ? uploaded.storagePath : uploaded.fileId || fileName,
             legenda: photo.label,
-            url: uploaded.thumbnailLink || uploaded.webViewLink,
+            url: 'url' in uploaded ? uploaded.url : uploaded.thumbnailLink || uploaded.webViewLink,
             created_at: new Date().toISOString(),
           })
-        } catch {
-          console.warn(`Falha ao enviar foto ${photo.label}`)
+          uploadedPhotos += 1
+        } catch (error) {
+          console.warn(`Falha ao enviar foto ${photo.label}`, error)
         }
       }
-      toast.success(`${photosWithBlob.length} foto(s) salva(s)!`, { id: 'upload' })
+      if (uploadedPhotos !== photosWithBlob.length) {
+        throw new Error(`Somente ${uploadedPhotos} de ${photosWithBlob.length} foto(s) foram salvas`)
+      }
+      toast.success(`${uploadedPhotos} foto(s) salva(s)!`, { id: 'upload' })
 
       if (!isSupabaseEnabled) toast.success(`OS ${savedOrder.numero} criada!`)
 
       if (printAfter) {
         try {
-          printEntradaA4(savedOrder, settings, undefined, { itens: checklist, observacoes: obsChecklist })
+          printEntradaA4(
+            savedOrder,
+            settings,
+            resolveOsConfig(settings.os_config),
+            { itens: checklist, observacoes: obsChecklist },
+            printPreview,
+          )
           toast.success('Impressao de entrada gerada (2 vias)')
         } catch (err) {
           const message = err instanceof Error ? err.message : 'Erro desconhecido'
@@ -384,6 +400,7 @@ export function NewOrder() {
 
       navigate(`/os/${savedOrder.id}`)
     } catch (err) {
+      printPreview?.close()
       console.error('Falha ao criar OS:', err)
       const message = err instanceof Error ? err.message : 'Erro desconhecido'
       toast.error(`Nao consegui salvar a OS: ${message}`)

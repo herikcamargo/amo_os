@@ -12,16 +12,17 @@ import { Row } from '@/components/ui/Row'
 import { StatusBadge } from '@/components/ui/StatusBadge'
 import { STATUS_CONFIG, brl, STATUS_FLOW } from '@/lib/constants'
 import { daysSince, formatDate } from '@/lib/utils'
-import { downloadOsPdf } from '@/lib/generate-pdf'
+import { openOsPdf } from '@/lib/generate-pdf'
 import { can } from '@/lib/permissions'
 import { calculateWarrantyUntil, isPartWarrantyActive, partWarrantyLabel } from '@/lib/warranty'
 import { printEntradaA4, type PrintChecklist } from '@/lib/print-entrada'
-import { applyMessageTemplate, buildWhatsappMessage, getOsConfig } from '@/lib/os-config'
+import { applyMessageTemplate, buildWhatsappMessage, getOsConfig, resolveOsConfig } from '@/lib/os-config'
 import { getChecklist } from '@/lib/checklists'
 import { isLegacyOrder } from '@/lib/legacy'
 import { generateId } from '@/lib/utils'
 import { compressImage, formatFileSize } from '@/lib/image-compressor'
 import { formatOsPhotoFileName, getDemoPhotos, uploadToDrive } from '@/lib/google-drive'
+import { appSettingsAdapter, isSupabaseEnabled, serviceOrderPhotosAdapter } from '@/lib/storage-adapter'
 import type { OsStatus, PartWarranty, WarrantyUnit, Supplier, ServiceOrderPhoto } from '@/types/database'
 import toast from 'react-hot-toast'
 
@@ -162,14 +163,16 @@ export function OrderDetail() {
       let uploadedPhoto: ServiceOrderPhoto | null = null
       if (exitPhoto) {
         const fileName = formatOsPhotoFileName(order.numero, 'saida_retirada', exitPhotos.length)
-        const uploaded = await uploadToDrive(exitPhoto.blob, fileName, order.numero)
+        const uploaded = isSupabaseEnabled
+          ? await serviceOrderPhotosAdapter.upload(exitPhoto.blob, `${order.id}/${fileName}`)
+          : await uploadToDrive(exitPhoto.blob, fileName, order.numero)
         uploadedPhoto = {
           id: generateId(),
           service_order_id: order.id,
           kind: 'saida',
-          storage_path: uploaded.fileId || fileName,
+          storage_path: 'storagePath' in uploaded ? uploaded.storagePath : uploaded.fileId || fileName,
           legenda: 'Saida / retirada',
-          url: uploaded.thumbnailLink || uploaded.webViewLink,
+          url: 'url' in uploaded ? uploaded.url : uploaded.thumbnailLink || uploaded.webViewLink,
           created_at: now,
         }
         addServiceOrderPhoto(uploadedPhoto)
@@ -209,26 +212,35 @@ export function OrderDetail() {
     }
   }
 
-  const handlePrint = (kind: 'entrada' | 'saida') => {
-    if (kind === 'entrada') {
-      // Impressao direta em A4 com 2 vias (cliente + assistencia)
-      printEntradaA4(order, settings, undefined, entryChecklist)
-    } else {
-      downloadOsPdf(order, kind, settings)
+  const handlePrint = async (kind: 'entrada' | 'saida') => {
+    const mobile = window.matchMedia('(max-width: 767px)').matches || window.matchMedia('(pointer: coarse)').matches
+    const preview = mobile ? window.open('', '_blank') : null
+    try {
+      const currentSettings = isSupabaseEnabled
+        ? await appSettingsAdapter.get() || settings
+        : settings
+      if (kind === 'entrada') {
+        printEntradaA4(order, currentSettings, resolveOsConfig(currentSettings.os_config), entryChecklist, preview)
+      } else {
+        await openOsPdf(order, kind, currentSettings, preview)
+      }
+      updateOrder(order.id, {
+        [kind === 'entrada' ? 'printed_entrada_at' : 'printed_saida_at']: new Date().toISOString(),
+      })
+      addAuditLog({
+        id: generateId(),
+        user_id: user?.id,
+        user_name: user?.nome,
+        action: kind === 'entrada' ? 'impressao_os_entrada' : 'impressao_os_saida',
+        entity: 'service_order',
+        entity_id: order.id,
+        created_at: new Date().toISOString(),
+      })
+      toast.success(kind === 'entrada' ? 'OS de entrada pronta para imprimir' : 'OS de saida pronta para imprimir')
+    } catch (error) {
+      preview?.close()
+      toast.error(error instanceof Error ? error.message : 'Nao foi possivel preparar a impressao')
     }
-    updateOrder(order.id, {
-      [kind === 'entrada' ? 'printed_entrada_at' : 'printed_saida_at']: new Date().toISOString(),
-    })
-    addAuditLog({
-      id: generateId(),
-      user_id: user?.id,
-      user_name: user?.nome,
-      action: kind === 'entrada' ? 'impressao_os_entrada' : 'impressao_os_saida',
-      entity: 'service_order',
-      entity_id: order.id,
-      created_at: new Date().toISOString(),
-    })
-    toast.success(kind === 'entrada' ? 'OS de entrada gerada (2 vias)' : 'OS de saida gerada')
   }
 
   const copyMessage = async (message: string) => {
@@ -766,7 +778,7 @@ function PhotoGrid({ photos, emptyText }: { photos: ServiceOrderPhoto[]; emptyTe
       {photos.map((photo) => (
         <a
           key={photo.id}
-          href={photo.url || photo.storage_path}
+          href={photo.url || legacyDriveUrl(photo.storage_path)}
           target="_blank"
           rel="noopener noreferrer"
           className="relative aspect-square rounded-xl overflow-hidden bg-surface-muted border border-white/5 flex items-center justify-center"
@@ -783,6 +795,11 @@ function PhotoGrid({ photos, emptyText }: { photos: ServiceOrderPhoto[]; emptyTe
       ))}
     </div>
   )
+}
+
+function legacyDriveUrl(storagePath: string) {
+  if (/^(https?:|data:)/.test(storagePath)) return storagePath
+  return `https://drive.google.com/file/d/${encodeURIComponent(storagePath)}/view`
 }
 
 function FinishOrderModal({

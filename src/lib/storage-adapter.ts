@@ -329,13 +329,35 @@ export const deviceSalesAdapter = {
 export const serviceOrderPhotosAdapter = {
   async list(): Promise<ServiceOrderPhoto[]> {
     if (!isSupabaseEnabled) return []
-    return fetchAllPages<ServiceOrderPhoto>((from, to) =>
+    const photos = await fetchAllPages<ServiceOrderPhoto>((from, to) =>
       supabase
         .from('service_order_photos')
         .select('*', { count: 'exact' })
         .order('created_at', { ascending: false })
         .range(from, to) as unknown as PromiseLike<{ data: ServiceOrderPhoto[] | null; error: unknown; count?: number | null }>,
     )
+    const storagePaths = photos
+      .map((photo) => photo.storage_path)
+      .filter((path) => path.includes('/'))
+    if (storagePaths.length === 0) return photos
+
+    const { data } = await supabase.storage.from('os-fotos').createSignedUrls(storagePaths, 60 * 60)
+    const urls = new Map((data || []).map((item) => [item.path, item.signedUrl]))
+    return photos.map((photo) => ({ ...photo, url: urls.get(photo.storage_path) || undefined }))
+  },
+
+  async upload(blob: Blob, storagePath: string): Promise<{ storagePath: string; url: string }> {
+    if (!isSupabaseEnabled) throw new Error('Supabase nao configurado')
+    const { error } = await supabase.storage
+      .from('os-fotos')
+      .upload(storagePath, blob, { contentType: 'image/jpeg', upsert: false })
+    if (error) throw error
+
+    const { data, error: signedError } = await supabase.storage
+      .from('os-fotos')
+      .createSignedUrl(storagePath, 60 * 60)
+    if (signedError) throw signedError
+    return { storagePath, url: data.signedUrl }
   },
 
   async create(photo: ServiceOrderPhoto): Promise<ServiceOrderPhoto> {
