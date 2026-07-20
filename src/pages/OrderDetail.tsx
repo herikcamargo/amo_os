@@ -446,6 +446,8 @@ export function OrderDetail() {
           <Row k="Marca / Modelo" v={`${order.device?.marca || ''} ${order.device?.modelo || ''}`} />
           <Row k="Cor" v={order.device?.cor || '—'} />
           <Row k="IMEI" v={order.device?.imei || '—'} mono />
+          {order.device?.senha_desbloqueio && <Row k="Senha / PIN" v={order.device.senha_desbloqueio} mono />}
+          {order.device?.senha_padrao && <Row k="Padrão" v={formatPattern(order.device.senha_padrao)} mono />}
           <Row k="Acessórios" v={order.device?.acessorios?.length ? order.device.acessorios.join(', ') : '—'} />
         </CardBox>
 
@@ -800,6 +802,10 @@ function PhotoGrid({ photos, emptyText }: { photos: ServiceOrderPhoto[]; emptyTe
 function legacyDriveUrl(storagePath: string) {
   if (/^(https?:|data:)/.test(storagePath)) return storagePath
   return `https://drive.google.com/file/d/${encodeURIComponent(storagePath)}/view`
+}
+
+function formatPattern(pattern: string) {
+  return pattern.split('-').join(' -> ')
 }
 
 function FinishOrderModal({

@@ -111,6 +111,7 @@ export function NewOrder() {
   const [cor, setCor] = useState('')
   const [imei, setImei] = useState('')
   const [senhaDesbloqueio, setSenhaDesbloqueio] = useState('')
+  const [senhaPadrao, setSenhaPadrao] = useState<number[]>([])
   const [acessorios, setAcessorios] = useState<string[]>([])
 
   // Problema
@@ -275,6 +276,7 @@ export function NewOrder() {
           cor: cor.trim(),
           imei: imei.trim() || null,
           senha_desbloqueio: senhaDesbloqueio.trim() || null,
+          senha_padrao: senhaPadrao.length ? senhaPadrao.join('-') : null,
           acessorios,
         })
 
@@ -313,6 +315,7 @@ export function NewOrder() {
           cor: cor.trim(),
           imei: imei.trim() || null,
           senha_desbloqueio: senhaDesbloqueio.trim() || null,
+          senha_padrao: senhaPadrao.length ? senhaPadrao.join('-') : null,
           acessorios,
           created_at: now,
         }
@@ -606,8 +609,9 @@ export function NewOrder() {
             )}
             <div className="md:grid md:grid-cols-2 md:gap-3 space-y-3 md:space-y-0">
               <Input label="IMEI" value={imei} onChange={setImei} placeholder="15 dígitos (opcional)" />
-              <Input label="Senha de desbloqueio" value={senhaDesbloqueio} onChange={setSenhaDesbloqueio} placeholder="PIN, padrão ou senha" type="password" />
+              <Input label="Senha / PIN" value={senhaDesbloqueio} onChange={setSenhaDesbloqueio} placeholder="Numero, letras ou senha" />
             </div>
+            <PatternInput value={senhaPadrao} onChange={setSenhaPadrao} />
             <div className="space-y-2">
               <label className="block text-sm text-gray-400">Acessórios deixados</label>
               <div className="flex flex-wrap gap-2">
@@ -882,6 +886,50 @@ function normalizeCustomerSearch(value: string) {
     .replace(/[\u0300-\u036f]/g, '')
     .toLocaleLowerCase('pt-BR')
     .trim()
+}
+
+function PatternInput({ value, onChange }: { value: number[]; onChange: (value: number[]) => void }) {
+  const selectPoint = (point: number) => {
+    if (value.includes(point)) return
+    onChange([...value, point])
+  }
+
+  return (
+    <div className="rounded-xl bg-surface-input border border-white/5 p-3">
+      <div className="flex items-center justify-between mb-3">
+        <div>
+          <div className="text-sm text-gray-300">Senha tipo padrao</div>
+          <div className="text-[11px] text-gray-500">Toque nos pontos na ordem do desenho</div>
+        </div>
+        {value.length > 0 && (
+          <button type="button" onClick={() => onChange([])} className="text-xs font-semibold text-brand">
+            Limpar
+          </button>
+        )}
+      </div>
+      <div className="grid grid-cols-3 gap-3 w-36" aria-label="Padrao de desbloqueio">
+        {Array.from({ length: 9 }, (_, index) => index + 1).map((point) => {
+          const order = value.indexOf(point)
+          return (
+            <button
+              key={point}
+              type="button"
+              onClick={() => selectPoint(point)}
+              aria-label={`Ponto ${point}`}
+              className={`w-10 h-10 rounded-full border flex items-center justify-center text-xs font-bold ${
+                order >= 0
+                  ? 'bg-brand border-brand text-white'
+                  : 'bg-white/5 border-white/15 text-gray-500'
+              }`}
+            >
+              {order >= 0 ? order + 1 : ''}
+            </button>
+          )
+        })}
+      </div>
+      {value.length > 0 && <div className="text-xs text-gray-400 mt-2">Sequencia: {value.join(' - ')}</div>}
+    </div>
+  )
 }
 
 function Input({ label, value, onChange, placeholder, type = 'text', onBlur }: {

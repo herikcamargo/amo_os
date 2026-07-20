@@ -1,6 +1,6 @@
-const MAX_WIDTH = 1600
-const MAX_HEIGHT = 1600
-const JPEG_QUALITY = 0.75
+const MAX_WIDTH = 1024
+const MAX_HEIGHT = 1024
+const JPEG_QUALITY = 0.42
 
 export interface CompressedImage {
   blob: Blob

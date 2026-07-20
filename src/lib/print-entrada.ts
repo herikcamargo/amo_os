@@ -104,6 +104,10 @@ function viaHtml(order: ServiceOrder, settings: AppSettings, config: OsConfig, v
         <span><b>Cor:</b> ${esc(order.device?.cor || '—')}</span>
         ${order.device?.imei ? `<span><b>IMEI:</b> ${esc(order.device.imei)}</span>` : ''}
       </div>
+      ${(order.device?.senha_desbloqueio || order.device?.senha_padrao) ? `<div class="linha">
+        ${order.device?.senha_desbloqueio ? `<span><b>Senha / PIN:</b> ${esc(order.device.senha_desbloqueio)}</span>` : ''}
+        ${order.device?.senha_padrao ? `<span><b>Padrao:</b> ${esc(order.device.senha_padrao.split('-').join(' -> '))}</span>` : ''}
+      </div>` : ''}
       <div class="linha"><span><b>Acessorios:</b> ${esc(acessorios)}</span></div>
     </div>
 

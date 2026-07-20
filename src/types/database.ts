@@ -72,6 +72,7 @@ export interface Device {
   cor: string
   imei?: string | null
   senha_desbloqueio?: string | null
+  senha_padrao?: string | null
   acessorios: string[]
   created_at: string
 }
