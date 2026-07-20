@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useSearchParams } from 'react-router-dom'
 import {
   ChevronLeft, User, Smartphone, Wrench, CheckCircle2, Camera,
   ClipboardCheck, Save, X, ImageIcon, ScanLine, ChevronDown, Printer,
@@ -31,6 +31,7 @@ type SectionKey = 'cliente' | 'aparelho' | 'problema' | 'checklist' | 'fotos'
 
 export function NewOrder() {
   const navigate = useNavigate()
+  const [searchParams] = useSearchParams()
   const { addOrder, nextOsNumber, user, addNotification, addServiceOrderPhoto, settings } = useStore()
   const [saving, setSaving] = useState(false)
   const [scanning, setScanning] = useState(false)
@@ -58,15 +59,18 @@ export function NewOrder() {
   const [loadingCep, setLoadingCep] = useState(false)
 
   // Aparelho
-  const [marca, setMarca] = useState('')
-  const [modelo, setModelo] = useState('')
+  const [marca, setMarca] = useState(() => searchParams.get('marca') || '')
+  const [modelo, setModelo] = useState(() => searchParams.get('modelo') || '')
   const [cor, setCor] = useState('')
   const [imei, setImei] = useState('')
   const [senhaDesbloqueio, setSenhaDesbloqueio] = useState('')
   const [acessorios, setAcessorios] = useState<string[]>([])
 
   // Problema
-  const [problema, setProblema] = useState('')
+  const [problema, setProblema] = useState(() => {
+    const servico = searchParams.get('servico')
+    return servico ? `Serviço solicitado: ${servico}` : ''
+  })
   const [condicao, setCondicao] = useState<CondicaoEstetica>({})
   const [descCondicao, setDescCondicao] = useState('')
 

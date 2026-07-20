@@ -1,5 +1,7 @@
-import { Home, Files, Settings, Plus, Search, Package } from 'lucide-react'
+import { Home, Files, Landmark, Plus, Search, Package } from 'lucide-react'
 import { useNavigate, useLocation } from 'react-router-dom'
+import { useStore } from '@/store/useStore'
+import { can } from '@/lib/permissions'
 
 const LEFT = [
   { key: '/', label: 'Início', icon: Home },
@@ -8,12 +10,14 @@ const LEFT = [
 const RIGHT = [
   { key: '/precos', label: 'Preços', icon: Search },
   { key: '/vendas', label: 'Vendas', icon: Package },
-  { key: '/ajustes', label: 'Ajustes', icon: Settings },
+  { key: '/financeiro', label: 'Caixa', icon: Landmark, adminOnly: true },
 ]
 
 export function BottomNav() {
   const navigate = useNavigate()
   const location = useLocation()
+  const user = useStore((state) => state.user)
+  const visibleRight = RIGHT.filter((item) => !item.adminOnly || can(user, 'view_financial'))
 
   const isActive = (key: string) => {
     if (key === '/') return location.pathname === '/'
@@ -27,15 +31,17 @@ export function BottomNav() {
           <NavItem key={it.key} label={it.label} icon={it.icon} active={isActive(it.key)} onClick={() => navigate(it.key)} />
         ))}
         <div className="w-12" />
-        {RIGHT.map((it) => (
+        {visibleRight.map((it) => (
           <NavItem key={it.key} label={it.label} icon={it.icon} active={isActive(it.key)} onClick={() => navigate(it.key)} />
         ))}
-        <button
-          onClick={() => navigate('/nova-os')}
-          className="absolute left-1/2 -translate-x-1/2 -top-6 w-14 h-14 rounded-full bg-brand hover:bg-brand-dark flex items-center justify-center shadow-lg shadow-brand/40 active:scale-95 transition-colors duration-150"
-        >
-          <Plus size={26} className="text-white" />
-        </button>
+        {location.pathname !== '/financeiro' && (
+          <button
+            onClick={() => navigate('/nova-os')}
+            className="absolute left-1/2 -translate-x-1/2 -top-6 w-14 h-14 rounded-full bg-brand hover:bg-brand-dark flex items-center justify-center shadow-lg shadow-brand/40 active:scale-95 transition-colors duration-150"
+          >
+            <Plus size={26} className="text-white" />
+          </button>
+        )}
       </div>
     </div>
   )

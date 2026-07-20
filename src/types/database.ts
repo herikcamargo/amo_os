@@ -34,6 +34,7 @@ export type DeviceSaleStatus = 'disponivel' | 'reservado' | 'vendido' | 'cancela
 export type DeviceSaleType = 'novo' | 'seminovo' | 'usado'
 export type ProductCategory = 'celular' | 'carregador' | 'pelicula' | 'capa' | 'acessorio' | 'outro'
 export type FiscalStatus = 'nao_solicitado' | 'pendente' | 'emitido' | 'cancelado' | 'erro'
+export type FinancialTransactionType = 'entrada' | 'saida'
 
 export interface Supplier {
   id: string
@@ -224,6 +225,23 @@ export interface DeviceSale {
   device?: SaleDevice
 }
 
+export interface FinancialTransaction {
+  id: string
+  type: FinancialTransactionType
+  category: string
+  description: string
+  amount: number
+  payment_method: string
+  account: string
+  transaction_date: string
+  notes?: string | null
+  source_type?: string | null
+  source_id?: string | null
+  created_at: string
+  updated_at: string
+  created_by: string
+}
+
 export interface AppSettings {
   warranty_terms: string
   sale_terms: string
@@ -256,6 +274,7 @@ export interface Database {
       device_sales: { Row: DeviceSale }
       audit_logs: { Row: AuditLog }
       app_settings: { Row: AppSettings }
+      financial_transactions: { Row: FinancialTransaction }
     }
   }
 }

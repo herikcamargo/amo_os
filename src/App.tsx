@@ -19,6 +19,7 @@ import { GoogleDriveSetup } from '@/pages/GoogleDriveSetup'
 import { PriceLookup } from '@/pages/PriceLookup'
 import { DeviceSales } from '@/pages/DeviceSales'
 import { OsSettings } from '@/pages/OsSettings'
+import { Finance } from '@/pages/Finance'
 
 export default function App() {
   const { user, authReady, isCloudConnected, initializeAuth, syncFromSupabase, signOut } = useStore()
@@ -81,6 +82,7 @@ export default function App() {
         <Route path="/ajustes" element={<Settings />} />
         <Route path="/ajustes/os" element={<OsSettings />} />
         <Route path="/relatorios" element={<Reports />} />
+        <Route path="/financeiro" element={<Finance />} />
         <Route path="/conectar-nuvem" element={<CloudSetup />} />
         <Route path="/google-drive" element={<GoogleDriveSetup />} />
         <Route path="/usuarios" element={<UserManagement />} />

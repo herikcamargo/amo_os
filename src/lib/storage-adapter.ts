@@ -20,6 +20,7 @@ import type {
   AuditLog,
   AppSettings,
   ServiceOrderPhoto,
+  FinancialTransaction,
 } from '@/types/database'
 
 export const isSupabaseEnabled = !isDemoMode
@@ -361,6 +362,44 @@ export const auditLogsAdapter = {
   async create(log: AuditLog): Promise<void> {
     if (!isSupabaseEnabled) return
     const { error } = await supabase.from('audit_logs').insert(log)
+    if (error) throw error
+  },
+}
+
+export const financialTransactionsAdapter = {
+  async list(): Promise<FinancialTransaction[]> {
+    if (!isSupabaseEnabled) return []
+    return fetchAllPages<FinancialTransaction>((from, to) =>
+      supabase
+        .from('financial_transactions')
+        .select('*', { count: 'exact' })
+        .order('transaction_date', { ascending: false })
+        .range(from, to) as unknown as PromiseLike<{ data: FinancialTransaction[] | null; error: unknown; count?: number | null }>,
+    )
+  },
+
+  async create(input: Omit<FinancialTransaction, 'id' | 'created_at' | 'updated_at'>): Promise<FinancialTransaction> {
+    if (!isSupabaseEnabled) throw new Error('Supabase nao configurado')
+    const { data, error } = await supabase.from('financial_transactions').insert(input).select('*').single()
+    if (error) throw error
+    return data as FinancialTransaction
+  },
+
+  async update(id: string, updates: Partial<FinancialTransaction>): Promise<FinancialTransaction> {
+    if (!isSupabaseEnabled) throw new Error('Supabase nao configurado')
+    const { data, error } = await supabase
+      .from('financial_transactions')
+      .update({ ...updates, updated_at: new Date().toISOString() })
+      .eq('id', id)
+      .select('*')
+      .single()
+    if (error) throw error
+    return data as FinancialTransaction
+  },
+
+  async delete(id: string): Promise<void> {
+    if (!isSupabaseEnabled) throw new Error('Supabase nao configurado')
+    const { error } = await supabase.from('financial_transactions').delete().eq('id', id)
     if (error) throw error
   },
 }

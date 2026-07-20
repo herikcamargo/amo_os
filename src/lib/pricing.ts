@@ -165,9 +165,9 @@ export function searchPriceCatalog(query: string, limit = 12): PriceCatalogItem[
       const haystack = normalize(`${item.brand} ${item.model}`)
       const score = words.reduce((sum, word) => sum + (haystack.includes(word) ? 1 : 0), 0)
       const starts = haystack.startsWith(clean) ? 3 : 0
-      return { item, score: score + starts }
+      return { item, score: score + starts, matches: words.every((word) => haystack.includes(word)) }
     })
-    .filter(({ score }) => score > 0)
+    .filter(({ matches }) => matches)
     .sort((a, b) => b.score - a.score || a.item.model.localeCompare(b.item.model))
     .slice(0, limit)
     .map(({ item }) => item)
