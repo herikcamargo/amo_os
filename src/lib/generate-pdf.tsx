@@ -119,6 +119,7 @@ function Header({ order, kind }: { order: ServiceOrder; kind: OsPrintKind }) {
 }
 
 function ClientAndDevice({ order }: { order: ServiceOrder }) {
+  const unlockType = order.device?.tipo_desbloqueio || (order.device?.senha_padrao ? 'padrao' : 'senha_pin')
   return (
     <View style={styles.grid2}>
       <View style={styles.col}>
@@ -133,8 +134,8 @@ function ClientAndDevice({ order }: { order: ServiceOrder }) {
         <View style={styles.row}><Text style={styles.label}>Modelo</Text><Text style={styles.value}>{order.device?.marca} {order.device?.modelo}</Text></View>
         <View style={styles.row}><Text style={styles.label}>Cor</Text><Text style={styles.value}>{order.device?.cor || '--'}</Text></View>
         <View style={styles.row}><Text style={styles.label}>IMEI</Text><Text style={styles.value}>{order.device?.imei || '--'}</Text></View>
-        {order.device?.senha_desbloqueio && <View style={styles.row}><Text style={styles.label}>Senha / PIN</Text><Text style={styles.value}>{order.device.senha_desbloqueio}</Text></View>}
-        {order.device?.senha_padrao && <View style={styles.row}><Text style={styles.label}>Padrao</Text><Text style={styles.value}>{order.device.senha_padrao.split('-').join(' -> ')}</Text></View>}
+        {unlockType === 'senha_pin' && order.device?.senha_desbloqueio && <View style={styles.row}><Text style={styles.label}>Senha / PIN</Text><Text style={styles.value}>{order.device.senha_desbloqueio}</Text></View>}
+        {unlockType === 'padrao' && order.device?.senha_padrao && <View style={styles.row}><Text style={styles.label}>Padrao</Text><Text style={styles.value}>{order.device.senha_padrao.split('-').join(' -> ')}</Text></View>}
         <View style={styles.row}><Text style={styles.label}>Acessorios</Text><Text style={styles.value}>{order.device?.acessorios?.join(', ') || 'Nenhum'}</Text></View>
       </View>
     </View>

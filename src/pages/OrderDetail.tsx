@@ -101,6 +101,7 @@ export function OrderDetail() {
   const partActive = isPartWarrantyActive(part)
   const entryPhotos = photos.filter((photo) => photo.kind === 'entrada')
   const exitPhotos = photos.filter((photo) => photo.kind === 'saida')
+  const unlockType = order.device?.tipo_desbloqueio || (order.device?.senha_padrao ? 'padrao' : 'senha_pin')
 
   const handleStatusChange = (newStatus: OsStatus) => {
     if (newStatus === 'entregue') {
@@ -446,8 +447,8 @@ export function OrderDetail() {
           <Row k="Marca / Modelo" v={`${order.device?.marca || ''} ${order.device?.modelo || ''}`} />
           <Row k="Cor" v={order.device?.cor || '—'} />
           <Row k="IMEI" v={order.device?.imei || '—'} mono />
-          {order.device?.senha_desbloqueio && <Row k="Senha / PIN" v={order.device.senha_desbloqueio} mono />}
-          {order.device?.senha_padrao && <Row k="Padrão" v={formatPattern(order.device.senha_padrao)} mono />}
+          {unlockType === 'senha_pin' && order.device?.senha_desbloqueio && <Row k="Senha / PIN" v={order.device.senha_desbloqueio} mono />}
+          {unlockType === 'padrao' && order.device?.senha_padrao && <Row k="Padrão" v={formatPattern(order.device.senha_padrao)} mono />}
           <Row k="Acessórios" v={order.device?.acessorios?.length ? order.device.acessorios.join(', ') : '—'} />
         </CardBox>
 

@@ -72,6 +72,7 @@ function viaHtml(order: ServiceOrder, settings: AppSettings, config: OsConfig, v
   const garantia = settings.warranty_terms || ''
   const mostrarValor = config.printShowValues && order.valor_servico > 0
   const contato = [config.companyPhone, config.companyEmail].filter(Boolean).join(' · ')
+  const unlockType = order.device?.tipo_desbloqueio || (order.device?.senha_padrao ? 'padrao' : 'senha_pin')
 
   return `
   <section class="via">
@@ -105,8 +106,8 @@ function viaHtml(order: ServiceOrder, settings: AppSettings, config: OsConfig, v
         ${order.device?.imei ? `<span><b>IMEI:</b> ${esc(order.device.imei)}</span>` : ''}
       </div>
       ${(order.device?.senha_desbloqueio || order.device?.senha_padrao) ? `<div class="linha">
-        ${order.device?.senha_desbloqueio ? `<span><b>Senha / PIN:</b> ${esc(order.device.senha_desbloqueio)}</span>` : ''}
-        ${order.device?.senha_padrao ? `<span><b>Padrao:</b> ${esc(order.device.senha_padrao.split('-').join(' -> '))}</span>` : ''}
+        ${unlockType === 'senha_pin' && order.device?.senha_desbloqueio ? `<span><b>Senha / PIN:</b> ${esc(order.device.senha_desbloqueio)}</span>` : ''}
+        ${unlockType === 'padrao' && order.device?.senha_padrao ? `<span><b>Padrao:</b> ${esc(order.device.senha_padrao.split('-').join(' -> '))}</span>` : ''}
       </div>` : ''}
       <div class="linha"><span><b>Acessorios:</b> ${esc(acessorios)}</span></div>
     </div>

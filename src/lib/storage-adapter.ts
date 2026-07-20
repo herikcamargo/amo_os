@@ -682,6 +682,7 @@ interface ServiceOrderRow {
   device_imei?: string | null
   device_senha_desbloqueio?: string | null
   device_senha_padrao?: string | null
+  device_tipo_desbloqueio?: 'senha_pin' | 'padrao' | null
   device_acessorios?: string[]
 }
 
@@ -735,6 +736,7 @@ function rowToOrder(row: ServiceOrderRow): ServiceOrder {
       imei: row.device_imei,
       senha_desbloqueio: row.device_senha_desbloqueio,
       senha_padrao: row.device_senha_padrao,
+      tipo_desbloqueio: row.device_tipo_desbloqueio,
       acessorios: row.device_acessorios || [],
       created_at: row.created_at,
     } : undefined,

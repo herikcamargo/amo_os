@@ -112,6 +112,7 @@ export function NewOrder() {
   const [imei, setImei] = useState('')
   const [senhaDesbloqueio, setSenhaDesbloqueio] = useState('')
   const [senhaPadrao, setSenhaPadrao] = useState<number[]>([])
+  const [tipoDesbloqueio, setTipoDesbloqueio] = useState<'senha_pin' | 'padrao'>('senha_pin')
   const [acessorios, setAcessorios] = useState<string[]>([])
 
   // Problema
@@ -275,8 +276,9 @@ export function NewOrder() {
           modelo: modelo.trim(),
           cor: cor.trim(),
           imei: imei.trim() || null,
-          senha_desbloqueio: senhaDesbloqueio.trim() || null,
-          senha_padrao: senhaPadrao.length ? senhaPadrao.join('-') : null,
+          senha_desbloqueio: tipoDesbloqueio === 'senha_pin' ? senhaDesbloqueio.trim() || null : null,
+          senha_padrao: tipoDesbloqueio === 'padrao' && senhaPadrao.length ? senhaPadrao.join('-') : null,
+          tipo_desbloqueio: tipoDesbloqueio,
           acessorios,
         })
 
@@ -314,8 +316,9 @@ export function NewOrder() {
           modelo: modelo.trim(),
           cor: cor.trim(),
           imei: imei.trim() || null,
-          senha_desbloqueio: senhaDesbloqueio.trim() || null,
-          senha_padrao: senhaPadrao.length ? senhaPadrao.join('-') : null,
+          senha_desbloqueio: tipoDesbloqueio === 'senha_pin' ? senhaDesbloqueio.trim() || null : null,
+          senha_padrao: tipoDesbloqueio === 'padrao' && senhaPadrao.length ? senhaPadrao.join('-') : null,
+          tipo_desbloqueio: tipoDesbloqueio,
           acessorios,
           created_at: now,
         }
@@ -607,11 +610,31 @@ export function NewOrder() {
                 </div>
               </div>
             )}
-            <div className="md:grid md:grid-cols-2 md:gap-3 space-y-3 md:space-y-0">
-              <Input label="IMEI" value={imei} onChange={setImei} placeholder="15 dígitos (opcional)" />
-              <Input label="Senha / PIN" value={senhaDesbloqueio} onChange={setSenhaDesbloqueio} placeholder="Numero, letras ou senha" />
+            <Input label="IMEI" value={imei} onChange={setImei} placeholder="15 dígitos (opcional)" />
+            <div>
+              <label className="block text-sm text-gray-400 mb-1.5">Tipo de desbloqueio</label>
+              <div className="grid grid-cols-2 gap-1 rounded-xl bg-surface-input border border-white/5 p-1">
+                <button
+                  type="button"
+                  onClick={() => { setTipoDesbloqueio('senha_pin'); setSenhaPadrao([]) }}
+                  className={`h-10 rounded-lg text-xs font-semibold ${tipoDesbloqueio === 'senha_pin' ? 'bg-brand text-white' : 'text-gray-400'}`}
+                >
+                  Senha / PIN
+                </button>
+                <button
+                  type="button"
+                  onClick={() => { setTipoDesbloqueio('padrao'); setSenhaDesbloqueio('') }}
+                  className={`h-10 rounded-lg text-xs font-semibold ${tipoDesbloqueio === 'padrao' ? 'bg-brand text-white' : 'text-gray-400'}`}
+                >
+                  Padrão
+                </button>
+              </div>
             </div>
-            <PatternInput value={senhaPadrao} onChange={setSenhaPadrao} />
+            {tipoDesbloqueio === 'senha_pin' ? (
+              <Input label="Senha / PIN" value={senhaDesbloqueio} onChange={setSenhaDesbloqueio} placeholder="Numero, letras ou senha" />
+            ) : (
+              <PatternInput value={senhaPadrao} onChange={setSenhaPadrao} />
+            )}
             <div className="space-y-2">
               <label className="block text-sm text-gray-400">Acessórios deixados</label>
               <div className="flex flex-wrap gap-2">
