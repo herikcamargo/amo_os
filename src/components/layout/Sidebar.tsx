@@ -1,25 +1,12 @@
 import { useMemo } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
 import {
-  BarChart3, Bell, Boxes, Cloud, CloudOff, Files, Home, Landmark,
-  LogOut, Package, Plus, Search, Settings, Users,
+  Cloud, CloudOff, LogOut, Plus,
 } from 'lucide-react'
 import { useStore } from '@/store/useStore'
 import { filterNotificationsForUser } from '@/lib/notifications'
 import { can, roleLabel } from '@/lib/permissions'
-
-const NAV_ITEMS = [
-  { key: '/', label: 'Inicio', icon: Home, requires: null as null | 'view_reports' },
-  { key: '/ordens', label: 'Ordens', icon: Files, requires: null },
-  { key: '/vendas', label: 'Vendas', icon: Package, requires: null },
-  { key: '/clientes', label: 'Clientes', icon: Users, requires: null },
-  { key: '/precos', label: 'Consulta de precos', icon: Search, requires: null },
-  { key: '/vendas?tab=estoque', label: 'Estoque', icon: Boxes, requires: null },
-  { key: '/relatorios', label: 'Relatorios', icon: BarChart3, requires: 'view_reports' as const },
-  { key: '/financeiro', label: 'Financeiro', icon: Landmark, requires: 'view_financial' as const },
-  { key: '/notificacoes', label: 'Notificacoes', icon: Bell, requires: null },
-  { key: '/ajustes', label: 'Ajustes', icon: Settings, requires: null },
-]
+import { NAV_ITEMS } from './navigation'
 
 export function Sidebar() {
   const navigate = useNavigate()
@@ -116,14 +103,14 @@ export function Sidebar() {
               {user ? roleLabel(user.role) : ''}
             </div>
           </div>
-          <button
-            onClick={handleSignOut}
-            title="Sair da conta"
-            className="text-gray-500 hover:text-red-400 transition-colors"
-          >
-            <LogOut size={16} />
-          </button>
         </div>
+        <button
+          onClick={handleSignOut}
+          className="w-full mt-2 px-3 py-2.5 rounded-[10px] flex items-center gap-3 text-sm font-medium text-gray-400 hover:bg-red-500/10 hover:text-red-400 transition-colors"
+        >
+          <LogOut size={17} />
+          Sair da conta
+        </button>
       </div>
     </aside>
   )

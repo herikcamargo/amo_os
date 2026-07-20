@@ -1,6 +1,7 @@
 import { Outlet, useLocation } from 'react-router-dom'
 import { BottomNav } from './BottomNav'
 import { Sidebar } from './Sidebar'
+import { MobileMenu } from './MobileMenu'
 
 // Rotas de tarefa em tela cheia: escondem o BottomNav no mobile
 // para dar lugar a barra de comandos propria da tela.
@@ -25,6 +26,7 @@ export function AppShell() {
           <BottomNav />
         </div>
       )}
+      {hideBottomNav && <MobileMenu floating />}
     </div>
   )
 }
