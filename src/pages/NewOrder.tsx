@@ -1,8 +1,8 @@
-import { useState, useRef } from 'react'
+import { useMemo, useState, useRef } from 'react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 import {
   ChevronLeft, User, Smartphone, Wrench, CheckCircle2, Camera,
-  ClipboardCheck, Save, X, ImageIcon, ScanLine, ChevronDown, Printer,
+  ClipboardCheck, Save, X, ImageIcon, ScanLine, ChevronDown, Printer, Search, UserCheck,
 } from 'lucide-react'
 import { useStore } from '@/store/useStore'
 import { IconBtn } from '@/components/ui/IconBtn'
@@ -32,7 +32,7 @@ type SectionKey = 'cliente' | 'aparelho' | 'problema' | 'checklist' | 'fotos'
 export function NewOrder() {
   const navigate = useNavigate()
   const [searchParams] = useSearchParams()
-  const { addOrder, nextOsNumber, user, addNotification, addServiceOrderPhoto, settings } = useStore()
+  const { addOrder, nextOsNumber, user, customers, updateCustomer, addNotification, addServiceOrderPhoto, settings } = useStore()
   const [saving, setSaving] = useState(false)
   const [scanning, setScanning] = useState(false)
 
@@ -57,6 +57,50 @@ export function NewOrder() {
   const [uf, setUf] = useState('')
   const [dataHoraOrigem, setDataHoraOrigem] = useState('')
   const [loadingCep, setLoadingCep] = useState(false)
+  const [customerSearch, setCustomerSearch] = useState('')
+  const [selectedCustomerId, setSelectedCustomerId] = useState<string | null>(null)
+  const customerSuggestions = useMemo(() => {
+    const term = normalizeCustomerSearch(customerSearch)
+    if (term.length < 2) return []
+    const digits = customerSearch.replace(/\D/g, '')
+    return customers
+      .filter((customer) => (
+        normalizeCustomerSearch(customer.nome).includes(term)
+        || (digits.length >= 3 && (customer.cpf || '').replace(/\D/g, '').includes(digits))
+      ))
+      .sort((a, b) => a.nome.localeCompare(b.nome, 'pt-BR'))
+      .slice(0, 8)
+  }, [customerSearch, customers])
+
+  const selectCustomer = (customer: Customer) => {
+    setSelectedCustomerId(customer.id)
+    setCustomerSearch(customer.nome)
+    setNome(customer.nome)
+    setTelefone(customer.telefone)
+    setCpf(customer.cpf || '')
+    setCep(customer.cep || '')
+    setEndereco(customer.logradouro || '')
+    setNumeroEndereco(customer.numero || '')
+    setComplemento(customer.complemento || '')
+    setBairro(customer.bairro || '')
+    setCidade(customer.cidade || '')
+    setUf(customer.uf || '')
+  }
+
+  const clearCustomer = () => {
+    setSelectedCustomerId(null)
+    setCustomerSearch('')
+    setNome('')
+    setTelefone('')
+    setCpf('')
+    setCep('')
+    setEndereco('')
+    setNumeroEndereco('')
+    setComplemento('')
+    setBairro('')
+    setCidade('')
+    setUf('')
+  }
 
   // Aparelho
   const [marca, setMarca] = useState(() => searchParams.get('marca') || '')
@@ -196,23 +240,26 @@ export function NewOrder() {
       ].filter(Boolean).join('\n')
       const problemaFinal = [problema.trim(), dadosMigrados].filter(Boolean).join('\n\n')
       const condicaoEstetica = { ...condicao, descricao: descCondicao || undefined }
+      const customerData = {
+        nome: nome.trim(),
+        telefone: telefone.trim(),
+        cpf: cpf.trim() || null,
+        cep: cep.trim() || null,
+        logradouro: endereco.trim() || null,
+        numero: numeroEndereco.trim() || null,
+        complemento: complemento.trim() || null,
+        bairro: bairro.trim() || null,
+        cidade: cidade.trim() || null,
+        uf: uf.trim() || null,
+      }
       let savedOrder: ServiceOrder
 
       if (isSupabaseEnabled) {
         toast.loading('Salvando OS na nuvem...', { id: 'save-os' })
 
-        const customer = await customersAdapter.create({
-          nome: nome.trim(),
-          telefone: telefone.trim(),
-          cpf: cpf.trim() || null,
-          cep: cep.trim() || null,
-          logradouro: endereco.trim() || null,
-          numero: numeroEndereco.trim() || null,
-          complemento: complemento.trim() || null,
-          bairro: bairro.trim() || null,
-          cidade: cidade.trim() || null,
-          uf: uf.trim() || null,
-        })
+        const customer = selectedCustomerId
+          ? await customersAdapter.update(selectedCustomerId, customerData)
+          : await customersAdapter.create(customerData)
 
         const device = await devicesAdapter.create({
           customer_id: customer.id,
@@ -240,25 +287,17 @@ export function NewOrder() {
         savedOrder = { ...order, customer, device }
         toast.success(`OS ${savedOrder.numero} salva na nuvem!`, { id: 'save-os' })
       } else {
-        const customerId = generateId()
+        const customerId = selectedCustomerId || generateId()
         const deviceId = generateId()
         const orderId = generateId()
         const orderNum = nextOsNumber()
 
         const customer: Customer = {
           id: customerId,
-          nome: nome.trim(),
-          telefone: telefone.trim(),
-          cpf: cpf.trim() || null,
-          cep: cep.trim() || null,
-          logradouro: endereco.trim() || null,
-          numero: numeroEndereco.trim() || null,
-          complemento: complemento.trim() || null,
-          bairro: bairro.trim() || null,
-          cidade: cidade.trim() || null,
-          uf: uf.trim() || null,
-          created_at: now,
+          ...customerData,
+          created_at: customers.find((item) => item.id === customerId)?.created_at || now,
         }
+        if (selectedCustomerId) updateCustomer(selectedCustomerId, customerData)
         const device: Device = {
           id: deviceId,
           customer_id: customerId,
@@ -426,6 +465,49 @@ export function NewOrder() {
             summary={nome ? `${nome}${telefone ? ` · ${telefone}` : ''}` : 'Nome e telefone obrigatorios'}
             done={Boolean(nome.trim() && telefone.trim())}
           >
+            <div className="relative">
+              <label className="block text-sm text-gray-400 mb-1.5">Buscar cliente cadastrado</label>
+              <Search size={16} className="absolute left-3 top-[39px] -translate-y-1/2 text-gray-500" />
+              <input
+                value={customerSearch}
+                onChange={(event) => {
+                  if (selectedCustomerId) clearCustomer()
+                  setCustomerSearch(event.target.value)
+                  setSelectedCustomerId(null)
+                }}
+                placeholder="Digite nome ou CPF..."
+                className="w-full h-11 pl-9 pr-3 rounded-xl bg-surface-input border border-white/5 focus:border-brand outline-none text-sm"
+              />
+              {!selectedCustomerId && customerSuggestions.length > 0 && (
+                <div className="absolute z-30 top-full mt-1 w-full rounded-xl bg-surface-elevated border border-white/10 shadow-2xl overflow-hidden">
+                  {customerSuggestions.map((customer) => (
+                    <button
+                      key={customer.id}
+                      type="button"
+                      onClick={() => selectCustomer(customer)}
+                      className="w-full px-3 py-2.5 flex items-center gap-3 text-left border-b border-white/5 last:border-0 hover:bg-white/5"
+                    >
+                      <div className="w-8 h-8 rounded-lg bg-brand/15 text-brand flex items-center justify-center shrink-0">
+                        <User size={14} />
+                      </div>
+                      <div className="min-w-0 flex-1">
+                        <div className="text-sm font-semibold truncate">{customer.nome}</div>
+                        <div className="text-[11px] text-gray-500 truncate">
+                          {[customer.cpf, customer.telefone].filter(Boolean).join(' · ')}
+                        </div>
+                      </div>
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+            {selectedCustomerId && (
+              <div className="rounded-xl bg-emerald-500/8 border border-emerald-500/20 px-3 py-2.5 flex items-center gap-2">
+                <UserCheck size={16} className="text-emerald-400 shrink-0" />
+                <span className="text-xs text-emerald-300 flex-1">Cadastro existente selecionado</span>
+                <button type="button" onClick={clearCustomer} className="text-xs font-semibold text-white hover:text-brand">Novo cliente</button>
+              </div>
+            )}
             <div className="md:grid md:grid-cols-2 md:gap-3 space-y-3 md:space-y-0">
               <Input label="Nome *" value={nome} onChange={setNome} placeholder="Nome completo do cliente" />
               <Input label="Telefone *" value={telefone} onChange={setTelefone} placeholder="(16) 99999-9999" />
@@ -775,6 +857,14 @@ function CollapsibleSection({ title, icon: Icon, open, onToggle, summary, done, 
       </div>
     </div>
   )
+}
+
+function normalizeCustomerSearch(value: string) {
+  return value
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLocaleLowerCase('pt-BR')
+    .trim()
 }
 
 function Input({ label, value, onChange, placeholder, type = 'text', onBlur }: {
