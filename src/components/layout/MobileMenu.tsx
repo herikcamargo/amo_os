@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react'
+import { createPortal } from 'react-dom'
 import { LogOut, Menu, X } from 'lucide-react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { useStore } from '@/store/useStore'
@@ -42,7 +43,7 @@ export function MobileMenu({ floating = false }: { floating?: boolean }) {
         {!floating && <span className="text-[10px] font-medium text-gray-500">Mais</span>}
       </button>
 
-      {open && (
+      {open && createPortal(
         <div className="fixed inset-0 z-[100] bg-black/70 md:hidden" onClick={() => setOpen(false)}>
           <aside
             className="absolute right-0 top-0 h-full w-[min(88vw,360px)] bg-surface-card border-l border-white/10 p-5 flex flex-col shadow-2xl"
@@ -104,7 +105,8 @@ export function MobileMenu({ floating = false }: { floating?: boolean }) {
               </button>
             </div>
           </aside>
-        </div>
+        </div>,
+        document.body,
       )}
     </>
   )
